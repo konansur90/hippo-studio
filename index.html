@@ -14,7 +14,7 @@
   --bad:#e0453a;--bad-soft:#fde8e6;--info:#1f8fd6;--info-soft:#e2f2fc;
   --shadow:0 1px 2px rgba(20,22,40,.04),0 4px 16px rgba(20,22,40,.05);--shadow-lg:0 12px 40px rgba(20,22,40,.18);
   --r:14px;--r-sm:9px;--side:236px;
-  --ev-film:#7c5cff;--ev-book:#1f8fd6;--ev-plan:#e09a00;--ev-pub:#12a36b;--ev-dep:#d0569f;--ev-final:#0e9aa7;--ev-over:#e0453a;--ev-appt:#64748b;
+  --ev-film:#7c5cff;--ev-book:#1f8fd6;--ev-plan:#e09a00;--ev-pub:#12a36b;--ev-dep:#d0569f;--ev-final:#0e9aa7;--ev-over:#e0453a;--ev-appt:#64748b;--ev-flight:#0ea5e9;--ev-stay:#14b8a6;
   font-family:"Inter","Noto Sans KR","Noto Sans SC",system-ui,-apple-system,sans-serif;
 }
 [data-theme=dark]{
@@ -203,6 +203,18 @@ table.tbl{width:100%;border-collapse:collapse;font-size:13px}
 
 .kpi .lbl svg{width:15px;height:15px;flex:none}
 a svg,.small svg{width:14px;height:14px;vertical-align:-2px}
+
+.sched .strip{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:4px;margin-bottom:12px}
+.sched .sd{text-align:center;padding:6px 0;border-radius:10px;cursor:pointer;background:var(--surface-2)}
+.sched .sd:hover{outline:1px solid var(--border)}
+.sched .sd.today{background:var(--accent);color:#fff}.sched .sd.today .w{color:rgba(255,255,255,.8)}
+.sched .sd .w{font-size:10.5px;color:var(--muted);font-weight:600}.sched .sd .n{font-weight:700;font-size:15px}
+.sched .sd .dots{display:flex;gap:2px;justify-content:center;min-height:6px;margin-top:3px}.sched .sd .dots i{width:5px;height:5px;border-radius:50%;display:block}
+.sched .agenda{display:flex;flex-direction:column;gap:10px;max-height:360px;overflow:auto}
+.ag-day{display:flex;flex-direction:column;gap:4px}.ag-date{font-size:12px;font-weight:700;color:var(--muted)}
+.ag-ev{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--surface-2);cursor:pointer;font-size:13px}
+.ag-ev:hover{outline:1px solid var(--border)}.ag-ev i{width:8px;height:8px;border-radius:50%;flex:none}.ag-ev span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}.ag-ev em{font-style:normal;font-size:11px;color:var(--muted);white-space:nowrap}
+@media (max-width:760px){.sched .strip{grid-template-columns:repeat(7,minmax(0,1fr))}.sched h3{flex-wrap:wrap}}
 
 .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;background:radial-gradient(circle at 20% 0%,var(--accent-soft),transparent 60%),var(--bg)}
 .auth-card{width:min(400px,100%);background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-lg);padding:28px 24px;display:flex;flex-direction:column;gap:12px}
@@ -510,7 +522,7 @@ const CORE = (() => {
 
 /* ===== Translations: English / 한국어 ===== */
 const I18N = { en: {
-tagline:'Creator business studio', archived:'Archived', unarchive:'Restore', mig_archived:'Notion history imported and archived on Nov 7, 2026 — tap to view the original import notes', archived_note:'Archived (imported history before November). Kept for reports, but hidden from Outstanding, Overdue and review.', nav_overview:'Overview', nav_campaigns:'Campaigns', nav_calendar:'Calendar', nav_payments:'Deposits & Payments', nav_expenses:'Expenses', nav_finance:'Finance', nav_reports:'Reports', nav_setup:'Settings',
+tagline:'Creator business studio', sched_title:'Our schedule (next 2 weeks)', sched_empty:'Nothing scheduled in the next 2 weeks. Add a flight or shoot.', open_cal:'Calendar', new_event:'New event', ev_kind:'Type', k_flight:'Flight', k_shoot:'Shoot', k_stay:'Stay', k_meeting:'Meeting', k_other:'Other', fl_from:'From (airport/city)', fl_to:'To (airport/city)', fl_no:'Flight number (optional)', fl_depart:'Departure date', fl_arrive:'Arrival time', check_in:'Check-in', check_out:'Check-out', end_date:'End date', end_date_opt:'End date (optional, for multi-day)', who:'Who', who_both:'Both', ev_note_ph:'Booking ref, hotel address, meeting point…', fl_need:'Enter where you’re flying from/to and the date', end_before:'End date is before the start date', ev_flight:'Flight', ev_stay:'Stay', pop_new_flight:'New flight', archived:'Archived', unarchive:'Restore', mig_archived:'Notion history imported and archived on Nov 7, 2026 — tap to view the original import notes', archived_note:'Archived (imported history before November). Kept for reports, but hidden from Outstanding, Overdue and review.', nav_overview:'Overview', nav_campaigns:'Campaigns', nav_calendar:'Calendar', nav_payments:'Deposits & Payments', nav_expenses:'Expenses', nav_finance:'Finance', nav_reports:'Reports', nav_setup:'Settings',
 light:'Light', dark:'Dark', system:'System', collapse:'Collapse', loading:'Loading shared data…', new_campaign:'New campaign', expense:'Expense',
 sync_on:'Synced', sync_off:'Not saved', sync_wait:'Connecting', sync_tip:'Changes are saved to the shared database and appear for both of you live.',
 ban_local:'Shared storage is not available in this view (signed out or opened outside Claude). Changes you make now last only until you close this page.',
@@ -598,7 +610,7 @@ fl_paidNoAmount:'Notion “Paid” is checked but no amount was recorded.', fl_m
 fl_missingAmount:'Amount missing.', fl_missingPayer:'“Paid by” missing.', fl_missingDate:'Expense date missing (reporting month kept).', fl_missingFx:'CNY expense without an FX rate.', fl_noSourceUrl:'No Notion URL in the CSV row.', fl_possibleDuplicate:'Possible duplicate of another record — check before counting twice.', fl_categoryCheck:'Category may be wrong (check).',
 f_brand:'Brand', f_status:'Status', f_fee:'Fee', f_currency:'Currency', f_filmDate:'Filming date', f_actPubDate:'Actual publication', f_expPubDate:'Planned publication', f_notes:'Notes', f_termsType:'Terms', f_depositMode:'Deposit', f_platforms:'Platforms', f_city:'City', f_contact:'Contact', f_wechat:'WeChat', f_description:'Description', f_location:'Location', f_account:'Account', f_bookingDate:'Booking date', f_filmTime:'Filming time', f_filmTz:'Time zone', f_depositPct:'Deposit %', f_depositFixed:'Deposit amount', f_depositDue:'Deposit deadline', f_termsDays:'Terms days', f_manualDue:'Due date', f_taxCountry:'Tax country', f_taxAmountKrw:'Tax amount', f_taxPaid:'Tax paid', f_notionUrl:'Notion URL', f_reportMonth:'Reporting month', f_fxToKrw:'FX rate'
 }, ko: {
-tagline:'크리에이터 비즈니스 스튜디오', archived:'보관됨', unarchive:'복원', mig_archived:'노션 기록을 가져와 2026년 11월 7일에 보관함 — 눌러서 원래 가져오기 메모 보기', archived_note:'보관됨 (11월 이전 가져온 기록). 리포트용으로 보관되며 미수금·연체·확인 목록에서는 숨겨집니다.', nav_overview:'개요', nav_campaigns:'캠페인', nav_calendar:'캘린더', nav_payments:'계약금 & 입금', nav_expenses:'경비', nav_finance:'재무', nav_reports:'리포트', nav_setup:'설정',
+tagline:'크리에이터 비즈니스 스튜디오', sched_title:'우리 일정 (향후 2주)', sched_empty:'향후 2주간 일정이 없습니다. 항공편이나 촬영을 추가하세요.', open_cal:'캘린더', new_event:'새 일정', ev_kind:'종류', k_flight:'항공편', k_shoot:'촬영', k_stay:'숙박', k_meeting:'미팅', k_other:'기타', fl_from:'출발 (공항/도시)', fl_to:'도착 (공항/도시)', fl_no:'편명 (선택)', fl_depart:'출발일', fl_arrive:'도착 시간', check_in:'체크인', check_out:'체크아웃', end_date:'종료일', end_date_opt:'종료일 (선택, 여러 날 일정)', who:'누가', who_both:'둘 다', ev_note_ph:'예약번호, 호텔 주소, 만나는 장소…', fl_need:'출발지/도착지와 날짜를 입력하세요', end_before:'종료일이 시작일보다 빠릅니다', ev_flight:'항공편', ev_stay:'숙박', pop_new_flight:'새 항공편', archived:'보관됨', unarchive:'복원', mig_archived:'노션 기록을 가져와 2026년 11월 7일에 보관함 — 눌러서 원래 가져오기 메모 보기', archived_note:'보관됨 (11월 이전 가져온 기록). 리포트용으로 보관되며 미수금·연체·확인 목록에서는 숨겨집니다.', nav_overview:'개요', nav_campaigns:'캠페인', nav_calendar:'캘린더', nav_payments:'계약금 & 입금', nav_expenses:'경비', nav_finance:'재무', nav_reports:'리포트', nav_setup:'설정',
 light:'라이트', dark:'다크', system:'시스템', collapse:'접기', loading:'공유 데이터 불러오는 중…', new_campaign:'새 캠페인', expense:'경비',
 sync_on:'동기화됨', sync_off:'저장 안 됨', sync_wait:'연결 중', sync_tip:'변경 사항은 공유 데이터베이스에 저장되며 두 사람 모두에게 실시간으로 보입니다.',
 ban_local:'이 화면에서는 공유 저장소를 사용할 수 없습니다(로그아웃 상태이거나 Claude 밖에서 열림). 지금 입력한 내용은 페이지를 닫으면 사라집니다.',
@@ -1021,6 +1033,7 @@ VIEWS_R.overview = () => {
   const flaggedN = camps().filter(c => flagsOf(c).length).length;
   return `${periodBar()}
   ${flaggedN ? `<div class="issue" style="margin-bottom:14px"><b>⚑</b><div>${t('ov_review', { n: flaggedN })} <a href="#setup">${t('ov_review_link')}</a></div></div>` : ''}
+  ${scheduleCard().replace('margin-top:14px', 'margin-bottom:14px')}
   <div class="grid g4">
     ${kpi(t('k_contracted'), multiKpi(m.contracted), t('k_contracted_sub', { n: m.contractedN }) + (m.unknownFeeN ? ` · <span class="flag">${t('k_unknownfee', { n: m.unknownFeeN })}</span>` : ''), 'accent')}
     ${kpi(t('k_cash'), multiKpi(m.cash), UI.period !== 'all' && m.undatedN ? t('k_undated', { n: m.undatedN, v: multi(m.undated, { sep: ' · ' }) }) : t('k_cash_sub'))}
@@ -1047,6 +1060,20 @@ VIEWS_R.overview = () => {
   ${overdueList.length ? `<div class="card" style="margin-top:14px"><h3 style="color:var(--bad)">${t('ov_overdue')}</h3><div class="list">${overdueList.map(([c, s]) => s.overdue.map(o => li(c, o.date, t(o.kind === 'deposit' ? 'deposit_due' : 'balance_due') + ' · ' + t('days_late', { n: C.daysBetween(o.date, td) }), `<b style="color:var(--bad)">${F(o.amount, c.currency)}</b>`)).join('')).join('')}</div></div>` : ''}
   <p class="hint" style="margin-top:18px">${t('disclaimer')}</p>`;
 };
+function scheduleCard() {
+  const td = today(); const days = []; for (let i = 0; i < 14; i++) days.push(C.addDays(td, i));
+  const ev = calEvents().filter(e => e.date >= td && e.date <= days[13] && !['book', 'pub'].includes(e.type) && !e.cont);
+  const by = {}; ev.forEach(e => (by[e.date] = by[e.date] || []).push(e));
+  const order = ['over', 'flight', 'film', 'stay', 'dep', 'final', 'plan', 'appt'];
+  const strip = days.map(d => { const es = by[d] || []; const dn = new Date(d + 'T00:00:00Z');
+    return `<div class="sd ${d === td ? 'today' : ''}" data-act="cal-day" data-date="${d}"><div class="w">${dn.toLocaleDateString(LANG === 'ko' ? 'ko-KR' : 'en-US', { weekday: 'short', timeZone: 'UTC' })}</div><div class="n">${dn.getUTCDate()}</div><div class="dots">${es.slice(0, 4).map(e => `<i style="background:var(${EVT[e.type][0]})"></i>`).join('')}</div></div>`; }).join('');
+  const agenda = days.filter(d => by[d]).map(d => `<div class="ag-day"><div class="ag-date">${d === td ? t('today') : fmtDate(d, { short: true, wd: true })}</div>${by[d].sort((x, y) => order.indexOf(x.type) - order.indexOf(y.type)).map(e => `<div class="ag-ev" data-act="cal-ev" ${e.id ? `data-id="${e.id}"` : ''} ${e.appt ? `data-appt="${e.appt}"` : ''}><i style="background:var(${EVT[e.type][0]})"></i><span>${esc(e.label)}</span><em>${t(EVT[e.type][1])}</em></div>`).join('')}</div>`).join('');
+  return `<div class="card sched" style="margin-top:14px"><h3>📅 ${t('sched_title')}<span class="sp"></span>
+    <button class="btn sm" data-act="ev-new" data-k="flight">✈️ ${t('k_flight')}</button><button class="btn sm" data-act="ev-new" data-k="shoot">🎬 ${t('k_shoot')}</button><button class="btn sm hide-m" data-act="ev-new" data-k="stay">🏨 ${t('k_stay')}</button><a class="btn sm ghost" href="#calendar">${t('open_cal')} →</a></h3>
+    <div class="strip">${strip}</div>
+    <div class="agenda">${agenda || `<div class="empty small">${t('sched_empty')}</div>`}</div></div>`;
+}
+ACT['ev-new'] = el => apptModal(null, today(), el.dataset.k);
 ACT['goto-landing'] = () => { UI.payTab = 'land'; location.hash = 'payments'; };
 ACT['goto-status'] = el => { UI.camp.status = el.dataset.v; location.hash = 'campaigns'; };
 
@@ -1426,7 +1453,7 @@ function landingModal(ids) {
 }
 
 /* ---------- Calendar ---------- */
-const EVT = { film: ['--ev-film', 'ev_film'], book: ['--ev-book', 'ev_book'], plan: ['--ev-plan', 'ev_plan'], pub: ['--ev-pub', 'ev_pub'], dep: ['--ev-dep', 'ev_dep'], final: ['--ev-final', 'ev_final'], over: ['--ev-over', 'ev_over'], appt: ['--ev-appt', 'ev_appt'] };
+const EVT = { flight: ['--ev-flight', 'ev_flight'], stay: ['--ev-stay', 'ev_stay'], film: ['--ev-film', 'ev_film'], book: ['--ev-book', 'ev_book'], plan: ['--ev-plan', 'ev_plan'], pub: ['--ev-pub', 'ev_pub'], dep: ['--ev-dep', 'ev_dep'], final: ['--ev-final', 'ev_final'], over: ['--ev-over', 'ev_over'], appt: ['--ev-appt', 'ev_appt'] };
 function calEvents() {
   const ev = []; const td = today();
   for (const c of camps()) {
@@ -1439,13 +1466,18 @@ function calEvents() {
     if (c.depositDue && depShort > 0) ev.push({ date: c.depositDue, type: c.depositDue < td ? 'over' : 'dep', label: `${c.brand} ${F(depShort, c.currency)}`, id: c.id });
     if (s.due && s.outstanding > 0) ev.push({ date: s.due.date, type: s.due.enforceable && s.due.date < td ? 'over' : 'final', est: !s.due.enforceable, label: `${c.brand} ${F(s.outstanding, c.currency)}`, id: c.id });
   }
-  for (const a of list('appts')) ev.push({ date: a.date, type: 'appt', label: (a.time ? a.time + ' ' : '') + a.title, appt: a.id });
+  for (const a of list('appts')) {
+    const type = a.kind === 'flight' ? 'flight' : a.kind === 'stay' ? 'stay' : a.kind === 'shoot' ? 'film' : 'appt';
+    const lbl = apptLabel(a) + (a.who && a.who !== 'both' ? ' · ' + whoLabel(a.who) : '');
+    if (a.endDate && a.endDate > a.date) { for (let d = a.date, i = 0; d <= a.endDate && i < 60; d = C.addDays(d, 1), i++) ev.push({ date: d, type, label: i ? (a.kind === 'stay' ? '🏨 ' + (a.title || '') : lbl) : lbl, appt: a.id, cont: i > 0 }); }
+    else ev.push({ date: a.date, type, label: lbl, appt: a.id, time: a.time });
+  }
   const on = UI.cal.types; return on ? ev.filter(e => on.includes(e.type)) : ev;
 }
 VIEWS_R.calendar = () => {
   const k = UI.cal; const [y, mo, dd] = k.anchor.split('-').map(Number); const td = today();
   const ev = calEvents(); const byDay = {}; ev.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
-  const order = ['over', 'film', 'dep', 'final', 'plan', 'pub', 'book', 'appt'];
+  const order = ['over', 'flight', 'film', 'stay', 'dep', 'final', 'plan', 'pub', 'book', 'appt'];
   Object.values(byDay).forEach(a => a.sort((p, q) => order.indexOf(p.type) - order.indexOf(q.type)));
   let days = [], title;
   if (k.mode === 'month') {
@@ -1483,26 +1515,63 @@ ACT['cal-ev'] = el => { if (el.dataset.appt) apptModal(S.data.appts[el.dataset.a
 ACT['cal-day'] = (el, e) => {
   $('.pop')?.remove(); const date = el.dataset.date; const p = document.createElement('div'); p.className = 'pop';
   p.innerHTML = `<div class="ttl">${fmtDate(date, { wd: true })}</div>
-    <button data-pa="camp">🎬 ${t('pop_new_camp')}</button><button data-pa="appt">📌 ${t('pop_new_appt')}</button><button data-pa="exp">🧾 ${t('pop_new_exp')}</button>`;
+    <button data-pa="flight">✈️ ${t('pop_new_flight')}</button><button data-pa="camp">🎬 ${t('pop_new_camp')}</button><button data-pa="appt">📌 ${t('pop_new_appt')}</button><button data-pa="exp">🧾 ${t('pop_new_exp')}</button>`;
   document.body.appendChild(p); const r = el.getBoundingClientRect();
   p.style.left = Math.min(r.left, innerWidth - 240) + 'px'; p.style.top = Math.min(r.top + 30, innerHeight - 170) + 'px';
   p.onclick = ev => { const a = ev.target.closest('[data-pa]')?.dataset.pa; if (!a) return; p.remove();
-    if (a === 'camp') quickCampaign({ filmDate: date }); if (a === 'appt') apptModal(null, date); if (a === 'exp') expenseModal(null, { date }); };
+    if (a === 'camp') quickCampaign({ filmDate: date }); if (a === 'appt') apptModal(null, date, 'other'); if (a === 'flight') apptModal(null, date, 'flight'); if (a === 'exp') expenseModal(null, { date }); };
   setTimeout(() => document.addEventListener('click', function h(ev) { if (!p.contains(ev.target)) { p.remove(); document.removeEventListener('click', h); } }), 0);
 };
-function apptModal(a, date) {
-  const editing = !!a; a = a || { title: '', date, time: '', tz: 'KST', campaignId: '', note: '' };
-  const m = modal(`<header><h2>${editing ? t('edit_appt') : t('pop_new_appt')}</h2><button class="btn icon ghost" data-close>${ic('x')}</button></header>
-  <div class="body"><div class="field"><label>${t('title')}</label><input class="inp" id="a-title" value="${esc(a.title)}" placeholder="${t('appt_ph')}"></div>
-  <div class="fgrid"><div class="field"><label>${t('date')}</label><input type="date" class="inp" id="a-date" value="${a.date || ''}"></div>
-  <div class="field"><label>${t('time')}</label><div class="row" style="flex-wrap:nowrap"><input type="time" class="inp" id="a-time" value="${a.time || ''}"><select class="inp" id="a-tz" style="width:100px"><option ${a.tz !== 'CST' ? 'selected' : ''}>KST</option><option ${a.tz === 'CST' ? 'selected' : ''}>CST</option></select></div><div class="hint" id="a-tzh"></div></div></div>
-  <div class="field"><label>${t('campaign')} (${t('optional')})</label><select class="inp" id="a-camp"><option value="">—</option>${camps().map(c => `<option value="${c.id}" ${a.campaignId === c.id ? 'selected' : ''}>${esc(c.brand)}</option>`).join('')}</select></div>
-  <div class="field"><label>${t('notes')}</label><input class="inp" id="a-note" value="${esc(a.note)}"></div></div>
+const EV_KINDS = [['flight', '✈️'], ['shoot', '🎬'], ['stay', '🏨'], ['meeting', '🤝'], ['other', '📌']];
+const WHO = [['both', 'who_both'], ['konan', null], ['seohee', null]];
+function whoLabel(w) { const s = settings(); return w === 'konan' ? s.youName : w === 'seohee' ? s.partnerName : t('who_both'); }
+function apptLabel(a) {
+  const k = a.kind || 'other';
+  if (k === 'flight') return `✈️ ${a.time ? a.time + ' ' : ''}${[a.from, a.to].filter(Boolean).join('→') || a.title || ''}${a.flightNo ? ' ' + a.flightNo : ''}`;
+  if (k === 'stay') return `🏨 ${a.title || a.place || ''}`;
+  return `${(EV_KINDS.find(x => x[0] === k) || ['', '📌'])[1]} ${a.time ? a.time + ' ' : ''}${a.title || ''}`;
+}
+function apptModal(a, date, kind) {
+  const editing = !!a; a = a || { kind: kind || 'shoot', title: '', date, endDate: '', time: '', endTime: '', tz: 'KST', from: '', to: '', flightNo: '', who: 'both', campaignId: '', note: '' };
+  const st = settings();
+  const m = modal(`<header><h2>${editing ? t('edit_appt') : t('new_event')}</h2><button class="btn icon ghost" data-close>${ic('x')}</button></header>
+  <div class="body">
+    <div class="field"><label>${t('ev_kind')}</label>${chips('a-kind', EV_KINDS.map(([k, e]) => [k, e + ' ' + t('k_' + k)]), a.kind || 'other')}</div>
+    <div class="fgrid" data-k="flight"><div class="field"><label>${t('fl_from')}</label><input class="inp" id="a-from" value="${esc(a.from || '')}" placeholder="ICN" autocapitalize="characters"></div><div class="field"><label>${t('fl_to')}</label><input class="inp" id="a-to" value="${esc(a.to || '')}" placeholder="CAN" autocapitalize="characters"></div>
+      <div class="field full"><label>${t('fl_no')}</label><input class="inp" id="a-fno" value="${esc(a.flightNo || '')}" placeholder="KE865" autocapitalize="characters"></div></div>
+    <div class="field" data-k="notflight"><label>${t('title')}</label><input class="inp" id="a-title" value="${esc(a.title || '')}" placeholder="${t('appt_ph')}"></div>
+    <div class="fgrid">
+      <div class="field"><label id="a-dlbl">${t('date')}</label><input type="date" class="inp" id="a-date" value="${a.date || ''}"></div>
+      <div class="field"><label>${t('time')}</label><div class="row" style="flex-wrap:nowrap"><input type="time" class="inp" id="a-time" value="${a.time || ''}"><select class="inp" id="a-tz" style="width:100px"><option ${a.tz !== 'CST' ? 'selected' : ''}>KST</option><option ${a.tz === 'CST' ? 'selected' : ''}>CST</option></select></div><div class="hint" id="a-tzh"></div></div>
+      <div class="field" data-k="multi"><label id="a-elbl">${t('end_date')}</label><input type="date" class="inp" id="a-end" value="${a.endDate || ''}"></div>
+      <div class="field" data-k="flight"><label>${t('fl_arrive')}</label><input type="time" class="inp" id="a-etime" value="${a.endTime || ''}"></div>
+    </div>
+    <div class="field"><label>${t('who')}</label>${chips('a-who', [['both', t('who_both')], ['konan', st.youName], ['seohee', st.partnerName]], a.who || 'both')}</div>
+    <div class="field"><label>${t('campaign')} (${t('optional')})</label><select class="inp" id="a-camp"><option value="">—</option>${camps().filter(c => !c.archived || c.id === a.campaignId).sort((x, y) => x.brand.localeCompare(y.brand)).map(c => `<option value="${c.id}" ${a.campaignId === c.id ? 'selected' : ''}>${esc(c.brand)}</option>`).join('')}</select></div>
+    <div class="field"><label>${t('notes')}</label><input class="inp" id="a-note" value="${esc(a.note || '')}" placeholder="${t('ev_note_ph')}"></div>
+  </div>
   <footer>${editing ? `<button class="btn danger" id="a-del">${t('delete')}</button>` : ''}<span style="flex:1"></span><button class="btn" data-close>${t('cancel')}</button><button class="btn primary" id="a-save">${t('save')}</button></footer>`);
-  const el = m.el; const h = () => $('#a-tzh', el).textContent = tzHint($('#a-time', el).value, $('#a-tz', el).value); el.addEventListener('input', h); el.addEventListener('change', h); h();
-  $('#a-save', el).onclick = async () => { const title = $('#a-title', el).value.trim(); if (!title || !$('#a-date', el).value) return toast(t('appt_need'), 'bad');
-    await put('appts', editing ? a.id : uid('a'), { title, date: $('#a-date', el).value, time: $('#a-time', el).value || null, tz: $('#a-tz', el).value, campaignId: $('#a-camp', el).value || null, note: $('#a-note', el).value.trim() }, { replace: !editing }); m.close(); toast(t('toast_saved')); };
-  if (editing) $('#a-del', el).onclick = async () => { if (await confirmBox(t('delete'), esc(a.title), t('delete'), true)) { await del('appts', a.id); m.close(); } };
+  const el = m.el;
+  const vis = () => { const k = chipVal(el, 'a-kind');
+    $$('[data-k=flight]', el).forEach(x => x.style.display = k === 'flight' ? '' : 'none');
+    $$('[data-k=notflight]', el).forEach(x => x.style.display = k === 'flight' ? 'none' : '');
+    $$('[data-k=multi]', el).forEach(x => x.style.display = k === 'flight' ? 'none' : '');
+    $('#a-dlbl', el).textContent = k === 'flight' ? t('fl_depart') : k === 'stay' ? t('check_in') : t('date');
+    $('#a-elbl', el).textContent = k === 'stay' ? t('check_out') : t('end_date_opt');
+    $('#a-tzh', el).textContent = tzHint($('#a-time', el).value, $('#a-tz', el).value); };
+  el.addEventListener('input', vis); el.addEventListener('change', vis); el.addEventListener('chipchange', vis); vis();
+  $('#a-save', el).onclick = async () => {
+    const kind = chipVal(el, 'a-kind'); const date = $('#a-date', el).value;
+    const from = $('#a-from', el).value.trim().toUpperCase(), to = $('#a-to', el).value.trim().toUpperCase();
+    const title = kind === 'flight' ? [from, to].filter(Boolean).join(' → ') : $('#a-title', el).value.trim();
+    if (!title || !date) return toast(kind === 'flight' ? t('fl_need') : t('appt_need'), 'bad');
+    const end = kind === 'flight' ? null : ($('#a-end', el).value || null);
+    if (end && end < date) return toast(t('end_before'), 'bad');
+    await put('appts', editing ? a.id : uid('a'), { kind, title, date, endDate: end, time: $('#a-time', el).value || null, endTime: kind === 'flight' ? ($('#a-etime', el).value || null) : null, tz: $('#a-tz', el).value,
+      from: kind === 'flight' ? from : null, to: kind === 'flight' ? to : null, flightNo: kind === 'flight' ? $('#a-fno', el).value.trim().toUpperCase() : null,
+      who: chipVal(el, 'a-who'), campaignId: $('#a-camp', el).value || null, note: $('#a-note', el).value.trim() }, { replace: !editing });
+    m.close(); toast(t('toast_saved')); };
+  if (editing) $('#a-del', el).onclick = async () => { if (await confirmBox(t('delete'), esc(apptLabel(a)), t('delete'), true)) { await del('appts', a.id); m.close(); } };
 }
 
 /* ===== APP part 3: payments view, expenses, finance, reports, setup, boot ===== */
