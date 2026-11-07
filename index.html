@@ -217,6 +217,8 @@ a svg,.small svg{width:14px;height:14px;vertical-align:-2px}
 .sched-btns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:-2px 0 12px}.sched-btns .btn{justify-content:center;padding:8px 6px}
 @media (max-width:760px){.sched .strip{grid-template-columns:repeat(7,minmax(0,1fr))}.sched h3{flex-wrap:nowrap;font-size:13.5px}.sched-btns .btn{font-size:12.5px}}
 
+.trm{font-size:11px;opacity:.7;cursor:help}
+
 .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;background:radial-gradient(circle at 20% 0%,var(--accent-soft),transparent 60%),var(--bg)}
 .auth-card{width:min(400px,100%);background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-lg);padding:28px 24px;display:flex;flex-direction:column;gap:12px}
 .auth-card h2{margin:4px 0 0;font-size:20px}.auth-card p{margin:0}
@@ -523,7 +525,7 @@ const CORE = (() => {
 
 /* ===== Translations: English / 한국어 ===== */
 const I18N = { en: {
-tagline:'Creator business studio', sched_title:'Our schedule (next 2 weeks)', sched_empty:'Nothing scheduled in the next 2 weeks. Add a flight or shoot.', open_cal:'Calendar', new_event:'New event', ev_kind:'Type', k_flight:'Flight', k_shoot:'Shoot', k_stay:'Stay', k_meeting:'Meeting', k_other:'Other', fl_from:'From (airport/city)', fl_to:'To (airport/city)', fl_no:'Flight number (optional)', fl_depart:'Departure date', fl_arrive:'Arrival time', check_in:'Check-in', check_out:'Check-out', end_date:'End date', end_date_opt:'End date (optional, for multi-day)', who:'Who', who_both:'Both', ev_note_ph:'Booking ref, hotel address, meeting point…', fl_need:'Enter where you’re flying from/to and the date', end_before:'End date is before the start date', ev_flight:'Flight', ev_stay:'Stay', pop_new_flight:'New flight', archived:'Archived', unarchive:'Restore', mig_archived:'Notion history imported and archived on Nov 7, 2026 — tap to view the original import notes', archived_note:'Archived (imported history before November). Kept for reports, but hidden from Outstanding, Overdue and review.', nav_overview:'Overview', nav_campaigns:'Campaigns', nav_calendar:'Calendar', nav_payments:'Deposits & Payments', nav_expenses:'Expenses', nav_finance:'Finance', nav_reports:'Reports', nav_setup:'Settings',
+tagline:'Creator business studio', tr_original:'Original', tr_setting:'Korean/Chinese text', tr_show_en:'Show English', tr_show_orig:'Show original', tr_hint:'Text typed in Korean or Chinese is translated to English automatically (DeepL). The original is always kept — tap 🌐 to see it.', tr_failed:'Saved — translation will retry later', sched_title:'Our schedule (next 2 weeks)', sched_empty:'Nothing scheduled in the next 2 weeks. Add a flight or shoot.', open_cal:'Calendar', new_event:'New event', ev_kind:'Type', k_flight:'Flight', k_shoot:'Shoot', k_stay:'Stay', k_meeting:'Meeting', k_other:'Other', fl_from:'From (airport/city)', fl_to:'To (airport/city)', fl_no:'Flight number (optional)', fl_depart:'Departure date', fl_arrive:'Arrival time', check_in:'Check-in', check_out:'Check-out', end_date:'End date', end_date_opt:'End date (optional, for multi-day)', who:'Who', who_both:'Both', ev_note_ph:'Booking ref, hotel address, meeting point…', fl_need:'Enter where you’re flying from/to and the date', end_before:'End date is before the start date', ev_flight:'Flight', ev_stay:'Stay', pop_new_flight:'New flight', archived:'Archived', unarchive:'Restore', mig_archived:'Notion history imported and archived on Nov 7, 2026 — tap to view the original import notes', archived_note:'Archived (imported history before November). Kept for reports, but hidden from Outstanding, Overdue and review.', nav_overview:'Overview', nav_campaigns:'Campaigns', nav_calendar:'Calendar', nav_payments:'Deposits & Payments', nav_expenses:'Expenses', nav_finance:'Finance', nav_reports:'Reports', nav_setup:'Settings',
 light:'Light', dark:'Dark', system:'System', collapse:'Collapse', loading:'Loading shared data…', new_campaign:'New campaign', expense:'Expense',
 sync_on:'Synced', sync_off:'Not saved', sync_wait:'Connecting', sync_tip:'Changes are saved to the shared database and appear for both of you live.',
 ban_local:'Shared storage is not available in this view (signed out or opened outside Claude). Changes you make now last only until you close this page.',
@@ -611,7 +613,7 @@ fl_paidNoAmount:'Notion “Paid” is checked but no amount was recorded.', fl_m
 fl_missingAmount:'Amount missing.', fl_missingPayer:'“Paid by” missing.', fl_missingDate:'Expense date missing (reporting month kept).', fl_missingFx:'CNY expense without an FX rate.', fl_noSourceUrl:'No Notion URL in the CSV row.', fl_possibleDuplicate:'Possible duplicate of another record — check before counting twice.', fl_categoryCheck:'Category may be wrong (check).',
 f_brand:'Brand', f_status:'Status', f_fee:'Fee', f_currency:'Currency', f_filmDate:'Filming date', f_actPubDate:'Actual publication', f_expPubDate:'Planned publication', f_notes:'Notes', f_termsType:'Terms', f_depositMode:'Deposit', f_platforms:'Platforms', f_city:'City', f_contact:'Contact', f_wechat:'WeChat', f_description:'Description', f_location:'Location', f_account:'Account', f_bookingDate:'Booking date', f_filmTime:'Filming time', f_filmTz:'Time zone', f_depositPct:'Deposit %', f_depositFixed:'Deposit amount', f_depositDue:'Deposit deadline', f_termsDays:'Terms days', f_manualDue:'Due date', f_taxCountry:'Tax country', f_taxAmountKrw:'Tax amount', f_taxPaid:'Tax paid', f_notionUrl:'Notion URL', f_reportMonth:'Reporting month', f_fxToKrw:'FX rate'
 }, ko: {
-tagline:'크리에이터 비즈니스 스튜디오', sched_title:'우리 일정 (향후 2주)', sched_empty:'향후 2주간 일정이 없습니다. 항공편이나 촬영을 추가하세요.', open_cal:'캘린더', new_event:'새 일정', ev_kind:'종류', k_flight:'항공편', k_shoot:'촬영', k_stay:'숙박', k_meeting:'미팅', k_other:'기타', fl_from:'출발 (공항/도시)', fl_to:'도착 (공항/도시)', fl_no:'편명 (선택)', fl_depart:'출발일', fl_arrive:'도착 시간', check_in:'체크인', check_out:'체크아웃', end_date:'종료일', end_date_opt:'종료일 (선택, 여러 날 일정)', who:'누가', who_both:'둘 다', ev_note_ph:'예약번호, 호텔 주소, 만나는 장소…', fl_need:'출발지/도착지와 날짜를 입력하세요', end_before:'종료일이 시작일보다 빠릅니다', ev_flight:'항공편', ev_stay:'숙박', pop_new_flight:'새 항공편', archived:'보관됨', unarchive:'복원', mig_archived:'노션 기록을 가져와 2026년 11월 7일에 보관함 — 눌러서 원래 가져오기 메모 보기', archived_note:'보관됨 (11월 이전 가져온 기록). 리포트용으로 보관되며 미수금·연체·확인 목록에서는 숨겨집니다.', nav_overview:'개요', nav_campaigns:'캠페인', nav_calendar:'캘린더', nav_payments:'계약금 & 입금', nav_expenses:'경비', nav_finance:'재무', nav_reports:'리포트', nav_setup:'설정',
+tagline:'크리에이터 비즈니스 스튜디오', tr_original:'원문', tr_setting:'한국어/중국어 텍스트', tr_show_en:'영어로 보기', tr_show_orig:'원문으로 보기', tr_hint:'한국어나 중국어로 입력한 내용은 자동으로 영어로 번역됩니다 (DeepL). 원문은 항상 보관되며 🌐를 누르면 볼 수 있습니다.', tr_failed:'저장됨 — 번역은 나중에 다시 시도합니다', sched_title:'우리 일정 (향후 2주)', sched_empty:'향후 2주간 일정이 없습니다. 항공편이나 촬영을 추가하세요.', open_cal:'캘린더', new_event:'새 일정', ev_kind:'종류', k_flight:'항공편', k_shoot:'촬영', k_stay:'숙박', k_meeting:'미팅', k_other:'기타', fl_from:'출발 (공항/도시)', fl_to:'도착 (공항/도시)', fl_no:'편명 (선택)', fl_depart:'출발일', fl_arrive:'도착 시간', check_in:'체크인', check_out:'체크아웃', end_date:'종료일', end_date_opt:'종료일 (선택, 여러 날 일정)', who:'누가', who_both:'둘 다', ev_note_ph:'예약번호, 호텔 주소, 만나는 장소…', fl_need:'출발지/도착지와 날짜를 입력하세요', end_before:'종료일이 시작일보다 빠릅니다', ev_flight:'항공편', ev_stay:'숙박', pop_new_flight:'새 항공편', archived:'보관됨', unarchive:'복원', mig_archived:'노션 기록을 가져와 2026년 11월 7일에 보관함 — 눌러서 원래 가져오기 메모 보기', archived_note:'보관됨 (11월 이전 가져온 기록). 리포트용으로 보관되며 미수금·연체·확인 목록에서는 숨겨집니다.', nav_overview:'개요', nav_campaigns:'캠페인', nav_calendar:'캘린더', nav_payments:'계약금 & 입금', nav_expenses:'경비', nav_finance:'재무', nav_reports:'리포트', nav_setup:'설정',
 light:'라이트', dark:'다크', system:'시스템', collapse:'접기', loading:'공유 데이터 불러오는 중…', new_campaign:'새 캠페인', expense:'경비',
 sync_on:'동기화됨', sync_off:'저장 안 됨', sync_wait:'연결 중', sync_tip:'변경 사항은 공유 데이터베이스에 저장되며 두 사람 모두에게 실시간으로 보입니다.',
 ban_local:'이 화면에서는 공유 저장소를 사용할 수 없습니다(로그아웃 상태이거나 Claude 밖에서 열림). 지금 입력한 내용은 페이지를 닫으면 사라집니다.',
@@ -814,6 +816,9 @@ function paymentKRW(p) {
 }
 const expenseKRW = e => C.toKRW(Number(e.amount), e.currency, { recordRate: e.fx, date: e.date || (e.reportMonth && e.reportMonth + '-15'), rates: rates() });
 function flagsOf(c) { if (c.archived) return []; return (c.flags || []).filter(f => !(c.resolvedFlags || []).includes(f)); }
+const CJK = /[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af\uf900-\ufaff]/;
+function D(x, f) { const v = x ? x[f] : ''; if (!x || PREF.showOriginal || !v) return v ?? ''; const tr = x.tr && x.tr[f]; return tr && x.trOf && x.trOf[f] === v ? tr : v; }
+function trMark(x, f) { return !PREF.showOriginal && x && x.tr && x.tr[f] && x.trOf && x.trOf[f] === x[f] ? ` <span class="trm" title="${esc(x[f])}">🌐</span>` : ''; }
 const liveCamps = () => camps().filter(c => !c.archived);
 
 /* ---------- UI primitives ---------- */
@@ -857,10 +862,12 @@ function modal(html, opt = {}) {
   document.body.appendChild(sc);
   const close = () => { sc.remove(); opt.onClose && opt.onClose(); };
   sc.addEventListener('mousedown', e => { if (e.target === sc) close(); });
+  sc._close = close;
   $$('[data-close]', sc).forEach(b => b.onclick = close);
-  const f = $('input:not([type=checkbox]):not([type=hidden]),select,textarea', sc); if (f && !opt.noFocus) setTimeout(() => f.focus(), 30);
+  const f = $$('input:not([type=checkbox]):not([type=hidden]),select,textarea', sc).find(x => x.offsetParent !== null); if (f && !opt.noFocus) setTimeout(() => f.focus(), 30);
   return { el: sc, close };
 }
+document.addEventListener('keydown', e => { if (e.key !== 'Escape') return; const top = $$('.scrim').pop(); if (top && top._close) { e.stopPropagation(); e.preventDefault(); top._close(); } }, true);
 function confirmBox(title, msg, okLabel, danger) {
   return new Promise(res => {
     const m = modal(`<header><h2>${esc(title)}</h2></header><div class="body"><div>${msg}</div></div>
@@ -1030,7 +1037,7 @@ VIEWS_R.overview = () => {
   const counts = Object.fromEntries(C.STATUSES.map(s => [s, 0])); liveCamps().forEach(c => counts[c.status] = (counts[c.status] || 0) + 1);
   const maxCount = Math.max(1, ...Object.values(counts));
   const stColor = { Inquiry: 'var(--faint)', Negotiating: 'var(--info)', Confirmed: 'var(--accent)', Filmed: 'var(--accent-2)', Editing: 'var(--warn)', Published: 'var(--good)', Completed: '#0e9a6a', Cancelled: 'var(--bad)' };
-  const li = (c, date, sub, extra = '') => `<div class="it" data-act="open-campaign" data-id="${c.id}"><div class="dt">${fmtDate(date, { short: true }).replace(' ', '<b>').replace(/$/, '</b>')}</div><div class="mn"><div class="b">${esc(c.brand)}</div><div class="small muted">${sub}</div></div>${extra}</div>`;
+  const li = (c, date, sub, extra = '') => `<div class="it" data-act="open-campaign" data-id="${c.id}"><div class="dt">${fmtDate(date, { short: true }).replace(' ', '<b>').replace(/$/, '</b>')}</div><div class="mn"><div class="b">${esc(D(c, 'brand'))}</div><div class="small muted">${sub}</div></div>${extra}</div>`;
   const flaggedN = camps().filter(c => flagsOf(c).length).length;
   return `${periodBar()}
   ${flaggedN ? `<div class="issue" style="margin-bottom:14px"><b>⚑</b><div>${t('ov_review', { n: flaggedN })} <a href="#setup">${t('ov_review_link')}</a></div></div>` : ''}
@@ -1055,7 +1062,7 @@ VIEWS_R.overview = () => {
       <table class="tbl" style="font-size:13px"><thead><tr><th style="cursor:default">${t('window')}</th><th class="num" style="cursor:default">${t('contractual')}</th><th class="num" style="cursor:default">${t('estimated')}</th></tr></thead>
       <tbody>${flows.map(([d, f]) => `<tr style="cursor:default"><td>${t('next_days', { n: d })}</td><td class="num">${multi(f.sure, { sep: '<br>' })}</td><td class="num muted">${multi(f.est, { sep: '<br>' })}</td></tr>`).join('')}</tbody></table>
       <div class="hint" style="margin-top:8px">${t('ov_flow_hint')}</div></div>
-    <div class="card"><h3>🎬 ${t('ov_film')}</h3><div class="list">${upcomingFilm.slice(0, 6).map(c => li(c, c.filmDate, [c.city, c.filmTime ? c.filmTime + ' ' + (c.filmTz || '') : ''].filter(Boolean).map(esc).join(' · ') || tStatus(c.status))).join('') || `<div class="empty small">${t('none_upcoming')}</div>`}</div></div>
+    <div class="card"><h3>🎬 ${t('ov_film')}</h3><div class="list">${upcomingFilm.slice(0, 6).map(c => li(c, c.filmDate, [D(c, 'city'), c.filmTime ? c.filmTime + ' ' + (c.filmTz || '') : ''].filter(Boolean).map(esc).join(' · ') || tStatus(c.status))).join('') || `<div class="empty small">${t('none_upcoming')}</div>`}</div></div>
     <div class="card"><h3>📤 ${t('ov_pub')}</h3><div class="list">${upcomingPub.slice(0, 6).map(c => li(c, c.expPubDate, c.expPubDate < td ? `<span style="color:var(--bad)">${t('late')}</span>` : t('planned_pub'))).join('') || `<div class="empty small">${t('ov_pub_none')}</div>`}</div></div>
   </div>
   ${overdueList.length ? `<div class="card" style="margin-top:14px"><h3 style="color:var(--bad)">${t('ov_overdue')}</h3><div class="list">${overdueList.map(([c, s]) => s.overdue.map(o => li(c, o.date, t(o.kind === 'deposit' ? 'deposit_due' : 'balance_due') + ' · ' + t('days_late', { n: C.daysBetween(o.date, td) }), `<b style="color:var(--bad)">${F(o.amount, c.currency)}</b>`)).join('')).join('')}</div></div>` : ''}
@@ -1146,7 +1153,7 @@ VIEWS_R.campaigns = () => {
   ${rows.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr>
     <th>${t('brand')}</th><th>${t('status')}</th><th class="hide-m">${t('platform')}</th><th>${t('filming')}</th><th class="num">${t('fee')}</th><th class="hide-m" style="min-width:130px">${t('received')}</th><th class="num">${t('outstanding')}</th><th class="hide-m">${t('next_due')}</th><th></th></tr></thead><tbody>
     ${rows.map(([c, s]) => `<tr data-act="open-campaign" data-id="${c.id}">
-      <td><div class="b">${esc(c.brand)} ${flagsOf(c).length ? `<span class="flag" title="${esc(flagsOf(c).map(x => t('fl_' + x)).join('\n'))}">⚑</span>` : ''}</div><div class="small muted">${esc([c.city, c.account].filter(Boolean).join(' · '))}</div></td>
+      <td><div class="b">${esc(D(c, 'brand'))}${trMark(c, 'brand')} ${flagsOf(c).length ? `<span class="flag" title="${esc(flagsOf(c).map(x => t('fl_' + x)).join('\n'))}">⚑</span>` : ''}</div><div class="small muted">${esc([D(c, 'city'), c.account].filter(Boolean).join(' · '))}</div></td>
       <td>${statusPill(c.status)}</td>
       <td class="hide-m small">${esc((c.platforms || []).join(', ')) || '<span class="faint">—</span>'}</td>
       <td class="nowrap small">${fmtDate(c.filmDate, { short: true })}${c.filmTime ? ` <span class="faint">${c.filmTime}</span>` : ''}</td>
@@ -1270,7 +1277,7 @@ function refreshDrawerMoney() {
 function openCampaign(id) {
   const c = S.data.campaigns[id]; if (!c) return; const st = settings();
   const fl = flagsOf(c);
-  const d = drawer(`<header><button class="btn icon ghost" data-dclose>${ic('x')}</button><h2>${esc(c.brand)}</h2>${statusPill(c.status)}</header>
+  const d = drawer(`<header><button class="btn icon ghost" data-dclose>${ic('x')}</button><h2>${esc(D(c, 'brand'))}</h2>${statusPill(c.status)}</header>
   <div class="body">
     <div class="issue remote-note" style="display:none"><b>↻</b><div>${t('remote_changed')} <button class="btn sm" data-act="reload-drawer">${t('reload')}</button></div></div>
     ${c.archived ? `<div class="issue"><b>🗄</b><div style="flex:1">${t('archived_note')}</div><button class="btn sm" data-act="unarchive" data-id="${c.id}">${t('unarchive')}</button></div>` : ''}
@@ -1279,15 +1286,15 @@ function openCampaign(id) {
     <div class="card"><h3>${t('payments')}<span class="sp"></span></h3><div id="d-pays">${paymentRows(c)}</div></div>
     <div class="card"><h3>${t('pipeline')}</h3>${chips('d-status', C.STATUSES.map(s => [s, tStatus(s)]), c.status)}</div>
     <div class="card"><h3>${t('details')}</h3><div class="fgrid">
-      <div class="field full"><label>${t('brand')}</label><input class="inp" data-f="brand" value="${esc(c.brand)}"></div>
-      <div class="field"><label>${t('contact')}</label><input class="inp" data-f="contact" value="${esc(c.contact)}"></div>
+      <div class="field full"><label>${t('brand')}</label><input class="inp" data-f="brand" value="${esc(c.brand)}">${trHint(c, 'brand')}</div>
+      <div class="field"><label>${t('contact')}</label><input class="inp" data-f="contact" value="${esc(c.contact)}">${trHint(c, 'contact')}</div>
       <div class="field"><label>${t('wechat')}</label><input class="inp" data-f="wechat" value="${esc(c.wechat)}"></div>
       <div class="field full"><label>${t('platform')}</label>${chips('d-plat', st.platforms.map(p => [p, p]), c.platforms || [], true)}</div>
       <div class="field"><label>${t('account')}</label><input class="inp" data-f="account" list="acct-list" value="${esc(c.account)}"><datalist id="acct-list">${st.accounts.map(a => `<option value="${esc(a)}">`).join('')}</datalist></div>
-      <div class="field"><label>${t('city')}</label><input class="inp" data-f="city" value="${esc(c.city)}"></div>
-      <div class="field full"><label>${t('location')}</label><input class="inp" data-f="location" value="${esc(c.location)}"></div>
-      <div class="field full"><label>${t('description')}</label><textarea class="inp" data-f="description">${esc(c.description)}</textarea></div>
-      <div class="field full"><label>${t('notes')}</label><textarea class="inp" data-f="notes">${esc(c.notes)}</textarea></div>
+      <div class="field"><label>${t('city')}</label><input class="inp" data-f="city" value="${esc(c.city)}">${trHint(c, 'city')}</div>
+      <div class="field full"><label>${t('location')}</label><input class="inp" data-f="location" value="${esc(c.location)}">${trHint(c, 'location')}</div>
+      <div class="field full"><label>${t('description')}</label><textarea class="inp" data-f="description">${esc(c.description)}</textarea>${trHint(c, 'description')}</div>
+      <div class="field full"><label>${t('notes')}</label><textarea class="inp" data-f="notes">${esc(c.notes)}</textarea>${trHint(c, 'notes')}</div>
     </div></div>
     <div class="card"><h3>${t('schedule')}</h3><div class="fgrid">
       <div class="field"><label>${t('booking_date')}</label><input type="date" class="inp" data-f="bookingDate" value="${c.bookingDate || ''}"></div>
@@ -1372,7 +1379,7 @@ function paymentModal(p, pre = {}) {
   const via0 = p.via || (c0?.currency === 'KRW' ? 'krbank' : 'wechat');
   const m = modal(`<header><h2>${editing ? t('edit_payment') : t('record_payment')}</h2><button class="btn icon ghost" data-close>${ic('x')}</button></header>
   <div class="body">
-    <div class="field"><label>${t('campaign')}</label><select class="inp" id="p-camp" ${editing ? 'disabled' : ''}>${!p.campaignId ? `<option value="">${t('choose')}</option>` : ''}${active.map(c => `<option value="${c.id}" ${c.id === p.campaignId ? 'selected' : ''}>${esc(c.brand)} (${c.currency})</option>`).join('')}</select></div>
+    <div class="field"><label>${t('campaign')}</label><select class="inp" id="p-camp" ${editing ? 'disabled' : ''}>${!p.campaignId ? `<option value="">${t('choose')}</option>` : ''}${active.map(c => `<option value="${c.id}" ${c.id === p.campaignId ? 'selected' : ''}>${esc(D(c, 'brand'))} (${c.currency})</option>`).join('')}</select></div>
     <div class="field"><label>${t('amount')} <span id="p-cur" class="pill"></span></label><input class="inp big" id="p-amt" inputmode="decimal" value="${p.amount ?? ''}"></div>
     <div class="field"><label>${t('type')}</label>${chips('p-type', ['deposit', 'installment', 'final', 'full', 'adjustment'].map(x => [x, t('pt_' + x)]), p.type)}<div class="hint">${t('adj_hint')}</div></div>
     <div class="fgrid"><div class="field"><label>${t('date_received')}</label><input type="date" class="inp" id="p-date" value="${p.date || ''}"><label class="row small" style="gap:5px"><input type="checkbox" id="p-nodate" ${editing && !p.date ? 'checked' : ''}>${t('date_unknown')}</label></div>
@@ -1459,18 +1466,18 @@ function calEvents() {
   const ev = []; const td = today();
   for (const c of camps()) {
     if (c.status === 'Cancelled') continue; const s = sumOf(c);
-    if (c.filmDate) ev.push({ date: c.filmDate, type: 'film', label: (c.filmTime ? c.filmTime + ' ' : '') + c.brand, id: c.id });
-    if (c.bookingDate && C.CONFIRMED_SET.has(c.status)) ev.push({ date: c.bookingDate, type: 'book', label: c.brand, id: c.id });
-    if (c.expPubDate && !c.actPubDate) ev.push({ date: c.expPubDate, type: 'plan', label: c.brand, id: c.id });
-    if (c.actPubDate) ev.push({ date: c.actPubDate, type: 'pub', label: c.brand, id: c.id });
+    if (c.filmDate) ev.push({ date: c.filmDate, type: 'film', label: (c.filmTime ? c.filmTime + ' ' : '') + D(c, 'brand'), id: c.id });
+    if (c.bookingDate && C.CONFIRMED_SET.has(c.status)) ev.push({ date: c.bookingDate, type: 'book', label: D(c, 'brand'), id: c.id });
+    if (c.expPubDate && !c.actPubDate) ev.push({ date: c.expPubDate, type: 'plan', label: D(c, 'brand'), id: c.id });
+    if (c.actPubDate) ev.push({ date: c.actPubDate, type: 'pub', label: D(c, 'brand'), id: c.id });
     const depShort = s.depReq ? s.depReq - s.depReceived : 0;
-    if (c.depositDue && depShort > 0) ev.push({ date: c.depositDue, type: c.depositDue < td ? 'over' : 'dep', label: `${c.brand} ${F(depShort, c.currency)}`, id: c.id });
-    if (s.due && s.outstanding > 0) ev.push({ date: s.due.date, type: s.due.enforceable && s.due.date < td ? 'over' : 'final', est: !s.due.enforceable, label: `${c.brand} ${F(s.outstanding, c.currency)}`, id: c.id });
+    if (c.depositDue && depShort > 0) ev.push({ date: c.depositDue, type: c.depositDue < td ? 'over' : 'dep', label: `${D(c, 'brand')} ${F(depShort, c.currency)}`, id: c.id });
+    if (s.due && s.outstanding > 0) ev.push({ date: s.due.date, type: s.due.enforceable && s.due.date < td ? 'over' : 'final', est: !s.due.enforceable, label: `${D(c, 'brand')} ${F(s.outstanding, c.currency)}`, id: c.id });
   }
   for (const a of list('appts')) {
     const type = a.kind === 'flight' ? 'flight' : a.kind === 'stay' ? 'stay' : a.kind === 'shoot' ? 'film' : 'appt';
     const lbl = apptLabel(a);
-    if (a.endDate && a.endDate > a.date) { for (let d = a.date, i = 0; d <= a.endDate && i < 60; d = C.addDays(d, 1), i++) ev.push({ date: d, type, label: i ? (a.kind === 'stay' ? '🏨 ' + (a.title || '') : lbl) : lbl, appt: a.id, cont: i > 0 }); }
+    if (a.endDate && a.endDate > a.date) { for (let d = a.date, i = 0; d <= a.endDate && i < 60; d = C.addDays(d, 1), i++) ev.push({ date: d, type, label: i ? (a.kind === 'stay' ? '🏨 ' + D(a, 'title') : lbl) : lbl, appt: a.id, cont: i > 0 }); }
     else ev.push({ date: a.date, type, label: lbl, appt: a.id, time: a.time });
   }
   const on = UI.cal.types; return on ? ev.filter(e => on.includes(e.type)) : ev;
@@ -1526,11 +1533,12 @@ ACT['cal-day'] = (el, e) => {
 const EV_KINDS = [['flight', '✈️'], ['shoot', '🎬'], ['stay', '🏨'], ['other', '📌']];
 const WHO = [['both', 'who_both'], ['konan', null], ['seohee', null]];
 function whoLabel(w) { const s = settings(); return w === 'konan' ? s.youName : w === 'seohee' ? s.partnerName : t('who_both'); }
+function trHint(x, f) { return x && x.tr && x.tr[f] && x.trOf && x.trOf[f] === x[f] ? `<div class="hint">🌐 ${PREF.showOriginal ? 'English' : t('tr_original')}: ${esc(PREF.showOriginal ? x.tr[f] : x[f])}</div>` : ''; }
 function apptLabel(a) {
   const k = a.kind || 'other';
-  if (k === 'flight') return `✈️ ${a.time ? a.time + ' ' : ''}${[a.from, a.to].filter(Boolean).join('→') || a.title || ''}${a.flightNo ? ' ' + a.flightNo : ''}`;
-  if (k === 'stay') return `🏨 ${a.title || a.place || ''}`;
-  return `${(EV_KINDS.find(x => x[0] === k) || ['', '📌'])[1]} ${a.time ? a.time + ' ' : ''}${a.title || ''}`;
+  if (k === 'flight') return `✈️ ${a.time ? a.time + ' ' : ''}${[a.from, a.to].filter(Boolean).join('→') || D(a, 'title')}${a.flightNo ? ' ' + a.flightNo : ''}`;
+  if (k === 'stay') return `🏨 ${D(a, 'title')}`;
+  return `${(EV_KINDS.find(x => x[0] === k) || ['', '📌'])[1]} ${a.time ? a.time + ' ' : ''}${D(a, 'title')}`;
 }
 function apptModal(a, date, kind) {
   const editing = !!a; a = a || { kind: kind || 'shoot', title: '', date, endDate: '', time: '', endTime: '', tz: 'KST', from: '', to: '', flightNo: '', who: 'both', campaignId: '', note: '' };
@@ -1540,15 +1548,15 @@ function apptModal(a, date, kind) {
     <div class="field"><label>${t('ev_kind')}</label>${chips('a-kind', EV_KINDS.map(([k, e]) => [k, e + ' ' + t('k_' + k)]), a.kind || 'other')}</div>
     <div class="fgrid" data-k="flight"><div class="field"><label>${t('fl_from')}</label><input class="inp" id="a-from" value="${esc(a.from || '')}" placeholder="ICN" autocapitalize="characters"></div><div class="field"><label>${t('fl_to')}</label><input class="inp" id="a-to" value="${esc(a.to || '')}" placeholder="CAN" autocapitalize="characters"></div>
       <div class="field full"><label>${t('fl_no')}</label><input class="inp" id="a-fno" value="${esc(a.flightNo || '')}" placeholder="KE865" autocapitalize="characters"></div></div>
-    <div class="field" data-k="notflight"><label>${t('title')}</label><input class="inp" id="a-title" value="${esc(a.title || '')}" placeholder="${t('appt_ph')}"></div>
+    <div class="field" data-k="notflight"><label>${t('title')}</label><input class="inp" id="a-title" value="${esc(a.title || '')}" placeholder="${t('appt_ph')}">${trHint(a, 'title')}</div>
     <div class="fgrid">
       <div class="field"><label id="a-dlbl">${t('date')}</label><input type="date" class="inp" id="a-date" value="${a.date || ''}"></div>
       <div class="field"><label>${t('time')}</label><div class="row" style="flex-wrap:nowrap"><input type="time" class="inp" id="a-time" value="${a.time || ''}"><select class="inp" id="a-tz" style="width:100px"><option ${a.tz !== 'CST' ? 'selected' : ''}>KST</option><option ${a.tz === 'CST' ? 'selected' : ''}>CST</option></select></div><div class="hint" id="a-tzh"></div></div>
       <div class="field" data-k="multi"><label id="a-elbl">${t('end_date')}</label><input type="date" class="inp" id="a-end" value="${a.endDate || ''}"></div>
       <div class="field" data-k="flight"><label>${t('fl_arrive')}</label><input type="time" class="inp" id="a-etime" value="${a.endTime || ''}"></div>
     </div>
-    <div class="field"><label>${t('campaign')} (${t('optional')})</label><select class="inp" id="a-camp"><option value="">—</option>${camps().filter(c => !c.archived || c.id === a.campaignId).sort((x, y) => x.brand.localeCompare(y.brand)).map(c => `<option value="${c.id}" ${a.campaignId === c.id ? 'selected' : ''}>${esc(c.brand)}</option>`).join('')}</select></div>
-    <div class="field"><label>${t('notes')}</label><input class="inp" id="a-note" value="${esc(a.note || '')}" placeholder="${t('ev_note_ph')}"></div>
+    <div class="field"><label>${t('campaign')} (${t('optional')})</label><select class="inp" id="a-camp"><option value="">—</option>${camps().filter(c => !c.archived || c.id === a.campaignId).sort((x, y) => x.brand.localeCompare(y.brand)).map(c => `<option value="${c.id}" ${a.campaignId === c.id ? 'selected' : ''}>${esc(D(c, 'brand'))}</option>`).join('')}</select></div>
+    <div class="field"><label>${t('notes')}</label><input class="inp" id="a-note" value="${esc(a.note || '')}" placeholder="${t('ev_note_ph')}">${trHint(a, 'note')}</div>
   </div>
   <footer>${editing ? `<button class="btn danger" id="a-del">${t('delete')}</button>` : ''}<span style="flex:1"></span><button class="btn" data-close>${t('cancel')}</button><button class="btn primary" id="a-save">${t('save')}</button></footer>`);
   const el = m.el;
@@ -1583,7 +1591,7 @@ VIEWS_R.payments = () => {
     const rows = liveCamps().filter(c => c.status !== 'Cancelled').map(c => [c, sumOf(c)]).filter(([c, s]) => s.outstanding || s.fee === null || s.overdue.length)
       .sort((a, b) => (b[1].overdue.length - a[1].overdue.length) || ((a[1].due?.date || '9') > (b[1].due?.date || '9') ? 1 : -1));
     body = rows.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('brand')}</th><th class="num">${t('fee')}</th><th class="num hide-m">${t('received')}</th><th class="num">${t('outstanding')}</th><th class="hide-m">${t('deposit')}</th><th>${t('next_due')}</th><th></th></tr></thead><tbody>
-      ${rows.map(([c, s]) => `<tr data-act="open-campaign" data-id="${c.id}"><td><div class="b">${esc(c.brand)}</div><div class="small muted">${tStatus(c.status)}</div></td>
+      ${rows.map(([c, s]) => `<tr data-act="open-campaign" data-id="${c.id}"><td><div class="b">${esc(D(c, 'brand'))}</div><div class="small muted">${tStatus(c.status)}</div></td>
       <td class="num">${s.fee === null ? `<span class="flag">${t('unknown')}</span>` : F(s.fee, c.currency)}</td><td class="num hide-m">${F(s.received, c.currency)}</td>
       <td class="num b">${s.outstanding === null ? '?' : F(s.outstanding, c.currency)}</td>
       <td class="hide-m small">${c.depositMode === 'none' ? '<span class="faint">—</span>' : `${F(s.depReceived, c.currency)} / ${F(s.depReq, c.currency)}${c.depositDue ? `<div class="faint">${t('due')} ${fmtDate(c.depositDue, { short: true })}</div>` : ''}`}</td>
@@ -1597,7 +1605,7 @@ VIEWS_R.payments = () => {
     const tot = C.zero(); ps.forEach(p => C.addTo(tot, p.currency, Number(p.amount)));
     body = `<div class="toolbar"><div class="search">${ic('search')}<input class="inp" id="tx-q" placeholder="${t('search')}" value="${esc(UI.txq)}"></div><span class="muted small">${t('total')}: ${multi(tot)}</span></div>
     ${ps.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('date')}</th><th>${t('campaign')}</th><th>${t('type')}</th><th class="num">${t('amount')}</th><th class="hide-m">${t('received_via')}</th><th>${t('land_status')}</th><th class="hide-m">${t('notes')}</th></tr></thead><tbody>
-    ${ps.map(p => `<tr data-act="edit-payment" data-id="${p.id}"><td class="nowrap small">${p.date ? fmtDate(p.date) : `<span class="flag">${t('date_unknown')}</span>`}</td><td>${esc(S.data.campaigns[p.campaignId]?.brand || t('deleted_camp'))}</td><td><span class="pill">${t('pt_' + p.type)}</span></td><td class="num b">${F(Number(p.amount), p.currency)}</td><td class="hide-m small">${p.via ? t('via_' + p.via) : '—'}</td><td>${landPill(p)}</td><td class="hide-m small muted">${esc(p.note || '')}</td></tr>`).join('')}</tbody></table></div>` : `<div class="card empty">${t('no_payments')}</div>`}`;
+    ${ps.map(p => `<tr data-act="edit-payment" data-id="${p.id}"><td class="nowrap small">${p.date ? fmtDate(p.date) : `<span class="flag">${t('date_unknown')}</span>`}</td><td>${esc(S.data.campaigns[p.campaignId] ? D(S.data.campaigns[p.campaignId], 'brand') : t('deleted_camp'))}</td><td><span class="pill">${t('pt_' + p.type)}</span></td><td class="num b">${F(Number(p.amount), p.currency)}</td><td class="hide-m small">${p.via ? t('via_' + p.via) : '—'}</td><td>${landPill(p)}</td><td class="hide-m small muted">${esc(p.note || '')}</td></tr>`).join('')}</tbody></table></div>` : `<div class="card empty">${t('no_payments')}</div>`}`;
   }
   if (tab === 'land') {
     const ps = pays().filter(p => !p.archived); const sel = UI.landSel;
@@ -1606,7 +1614,7 @@ VIEWS_R.payments = () => {
     const trs = list('transfers').sort((a, b) => b.date > a.date ? 1 : -1);
     const landedMonth = ps.filter(p => p.landStatus === 'landed' && (p.landDate || '').slice(0, 7) === today().slice(0, 7)).reduce((s, p) => s + (C.landedKRW(p, S.data.transfers) || 0), 0);
     const totC = trs.reduce((s, x) => s + Number(x.cnyTotal || 0), 0), totK = trs.reduce((s, x) => s + Number(x.krwReceived || 0), 0);
-    const row = p => `<tr><td style="width:30px"><input type="checkbox" data-landsel="${p.id}" ${sel.has(p.id) ? 'checked' : ''}></td><td data-act="edit-payment" data-id="${p.id}" style="cursor:pointer"><div class="b">${esc(S.data.campaigns[p.campaignId]?.brand || '?')}</div><div class="small muted">${t('pt_' + p.type)} · ${p.via ? t('via_' + p.via) : ''}</div></td><td class="small">${p.date ? fmtDate(p.date) : t('date_unknown')}</td><td class="num b">${F(Number(p.amount), p.currency)}</td><td>${landPill(p)}</td></tr>`;
+    const row = p => `<tr><td style="width:30px"><input type="checkbox" data-landsel="${p.id}" ${sel.has(p.id) ? 'checked' : ''}></td><td data-act="edit-payment" data-id="${p.id}" style="cursor:pointer"><div class="b">${esc(S.data.campaigns[p.campaignId] ? D(S.data.campaigns[p.campaignId], 'brand') : '?')}</div><div class="small muted">${t('pt_' + p.type)} · ${p.via ? t('via_' + p.via) : ''}</div></td><td class="small">${p.date ? fmtDate(p.date) : t('date_unknown')}</td><td class="num b">${F(Number(p.amount), p.currency)}</td><td>${landPill(p)}</td></tr>`;
     const group = (title, arr, hint) => `<div class="sec-title">${title} <span class="faint">(${arr.length})</span></div>${hint ? `<p class="hint" style="margin-top:-4px">${hint}</p>` : ''}${arr.length ? `<div class="tbl-wrap"><table class="tbl"><tbody>${arr.map(row).join('')}</tbody></table></div>` : `<div class="hint">${t('none')}</div>`}`;
     body = `<div class="card" style="margin-bottom:14px"><div class="landflow"><span class="st on">① ${t('land_held')}</span>→<span class="st on">② ${t('land_transit')}</span>→<span class="st done">③ ${t('land_landed')}</span></div><p class="hint" style="margin-bottom:0">${t('land_explain')}</p></div>
     <div class="grid g4">
@@ -1670,7 +1678,7 @@ VIEWS_R.expenses = () => {
         <button class="btn primary" data-act="new-expense">+ ${t('expense')}</button></div>
       ${rows.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('date')}</th><th>${t('expense')}</th><th class="hide-m">${t('category')}</th><th class="num">${t('amount')}</th><th class="num hide-m">≈ KRW</th><th>${t('paid_by')}</th><th class="hide-m">${t('reimb')}</th></tr></thead><tbody>
       ${rows.map(e => { const k = expenseKRW(e); const rs = reimbState(e); return `<tr data-act="edit-expense" data-id="${e.id}"><td class="small nowrap">${e.date ? fmtDate(e.date, { short: true }) : `<span class="faint">${fmtMonth(e.reportMonth)}</span>`}</td>
-        <td><div class="b" style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(e.name)} ${flagsOf(e).length ? `<span class="flag" title="${esc(flagsOf(e).map(x => t('fl_' + x)).join('\n'))}">⚑</span>` : ''}</div>${e.campaignId && S.data.campaigns[e.campaignId] ? `<div class="small muted">↳ ${esc(S.data.campaigns[e.campaignId].brand)}</div>` : ''}</td>
+        <td><div class="b" style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(D(e, 'name'))}${trMark(e, 'name')} ${flagsOf(e).length ? `<span class="flag" title="${esc(flagsOf(e).map(x => t('fl_' + x)).join('\n'))}">⚑</span>` : ''}</div>${e.campaignId && S.data.campaigns[e.campaignId] ? `<div class="small muted">↳ ${esc(D(S.data.campaigns[e.campaignId], 'brand'))}</div>` : ''}</td>
         <td class="hide-m small">${t('cat_' + (e.category || 'misc'))}</td><td class="num b">${F(Number(e.amount), e.currency)}</td><td class="num hide-m small muted" title="${esc(k.how)}">${e.currency === 'KRW' ? '' : k.krw === null ? '<span class="flag">?</span>' : F(k.krw, 'KRW')}</td>
         <td class="small">${e.paidBy ? esc(payerName(e.paidBy)) : `<span class="flag">${t('unknown')}</span>`}</td><td class="hide-m"><span class="pill ${{ owed: 'warn', done: 'good', na: '', unknown: '' }[rs]}">${t('rb_' + rs)}</span></td></tr>`; }).join('')}</tbody></table></div>` : `<div class="card empty">${t('no_expenses')}</div>`}
     </div>
@@ -1688,7 +1696,7 @@ function expenseModal(x, pre = {}) {
   const m = modal(`<header><h2>${editing ? t('edit_expense') : t('new_expense')}</h2><button class="btn icon ghost" data-close>${ic('x')}</button></header>
   <div class="body">
     ${fl.map(f => `<div class="issue"><b>⚑</b><div style="flex:1">${t('fl_' + f)}</div><button class="btn sm" data-act="resolve-flag" data-id="${x.id}" data-f="${f}">${t('mark_resolved')}</button></div>`).join('')}
-    <div class="field"><label>${t('what')}</label><input class="inp" id="e-name" value="${esc(x.name)}" placeholder="${t('exp_ph')}"></div>
+    <div class="field"><label>${t('what')}</label><input class="inp" id="e-name" value="${esc(x.name)}" placeholder="${t('exp_ph')}">${trHint(x, 'name')}</div>
     <div class="field"><label>${t('amount')}</label><div class="moneyin">${chips('e-cur', [['CNY', '¥ CNY'], ['KRW', '₩ KRW']], x.currency)}<input class="inp big" id="e-amt" inputmode="decimal" value="${x.amount ?? ''}"></div></div>
     <div class="field"><label>${t('category')}</label>${chips('e-cat', EXP_CATS.map(c => [c, t('cat_' + c)]), x.category)}</div>
     <div class="field"><label>${t('paid_by')}</label>${chips('e-by', PAYERS.map(p => [p, payerName(p)]), x.paidBy)}</div>
@@ -1916,6 +1924,7 @@ VIEWS_R.setup = () => {
   return `<div class="grid g2 stackm">
     <div class="card"><h3>${t('prefs')}</h3><div class="stack">
       <div class="field"><label>${t('language')}</label><div class="seg"><button class="${LANG === 'en' ? 'on' : ''}" data-act="set-lang" data-v="en">English</button><button class="${LANG === 'ko' ? 'on' : ''}" data-act="set-lang" data-v="ko">한국어</button></div><div class="hint">${t('lang_hint')}</div></div>
+      <div class="field"><label>🌐 ${t('tr_setting')}</label><div class="seg"><button class="${!PREF.showOriginal ? 'on' : ''}" data-act="tr-show" data-v="en">${t('tr_show_en')}</button><button class="${PREF.showOriginal ? 'on' : ''}" data-act="tr-show" data-v="orig">${t('tr_show_orig')}</button></div><div class="hint">${t('tr_hint')}</div></div>
       <div class="field"><label>${t('theme')}</label><div class="seg">${['light', 'dark', 'system'].map(k => `<button class="${(PREF.theme || 'system') === k ? 'on' : ''}" data-act="set-theme" data-v="${k}">${t(k)}</button>`).join('')}</div></div>
     </div></div>
     <div class="card"><h3>${t('sharing')}</h3><div class="stack small">
@@ -1942,6 +1951,7 @@ VIEWS_R.setup = () => {
   </div>`;
 };
 ACT['set-lang'] = el => { LANG = el.dataset.v; savePref('lang', LANG); render(); };
+ACT['tr-show'] = el => { savePref('showOriginal', el.dataset.v === 'orig'); render(); };
 ACT['set-theme'] = el => { savePref('theme', el.dataset.v); render(); };
 ACT['save-settings'] = async () => { const d = {}; $$('[data-sf]').forEach(i => { const k = i.dataset.sf; d[k] = ['accounts', 'platforms'].includes(k) ? i.value.split(',').map(s => s.trim()).filter(Boolean) : k === 'defaultDepositPct' ? C.parseAmount(i.value) : i.value.trim(); });
   await put('config', 'main', d); toast(t('toast_saved')); };
@@ -2095,7 +2105,7 @@ async function afterLogin() {
   STARTED = true; S.mode = 'connecting'; render();
   DB = makeDB();
   const timer = setTimeout(() => { if (S.mode === 'connecting') { S.mode = 'timeout'; render(); } }, 10000);
-  let n = 0; const total = COLLS.length + 1; const done = () => { if (++n === total) { clearTimeout(timer); S.mode = 'cloud'; schedule(); } };
+  let n = 0; const total = COLLS.length + 1; const done = () => { if (++n === total) { clearTimeout(timer); S.mode = 'cloud'; schedule(); setTimeout(translateBacklog, 1500); } };
   COLLS.forEach(c => { let first = true; DB.collection(c).onSnapshot(snap => {
     const o = {}; snap.docs.forEach(d => { o[d.id] = { ...d.data(), id: d.id }; }); S.data[c] = o; if (first) { first = false; S.loaded.add(c); done(); } onRemoteChange(c); schedule();
   }, () => { S.stale = true; schedule(); }); });
@@ -2136,6 +2146,36 @@ async function offerFile(name, text) {
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click();
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000); toast(t('toast_dl'));
   } catch (e) { if (e && e.name !== 'AbortError') toast(t('toast_savefail'), 'bad'); }
+}
+
+
+/* ---------- auto-translate Korean/Chinese → English via DeepL (edge function) ---------- */
+var TR_FIELDS = { appts: ['title', 'note'], campaigns: ['brand', 'city', 'location', 'contact', 'description', 'notes'], expenses: ['name', 'notes'] };
+var _rawPut = put;
+put = async function (coll, id, data, opt) {
+  await _rawPut(coll, id, data, opt);
+  if (TR_FIELDS[coll] && TR_FIELDS[coll].some(f => typeof data[f] === 'string')) translateDoc(coll, id).catch(() => {});
+};
+var TR_BUSY = new Set();
+async function translateDoc(coll, id) {
+  const key = coll + '/' + id; if (TR_BUSY.has(key)) return; TR_BUSY.add(key);
+  try {
+    const doc = S.data[coll][id]; if (!doc) return;
+    const trOf = doc.trOf || {}; const need = TR_FIELDS[coll].filter(f => typeof doc[f] === 'string' && doc[f].trim() && CJK.test(doc[f]) && trOf[f] !== doc[f]);
+    if (!need.length) return;
+    const { data, error } = await sbc().functions.invoke('translate', { body: { texts: need.map(f => doc[f]), target: 'EN' } });
+    if (error || !data || !data.translations) { console.warn('translate failed', error || data); return; }
+    const tr = { ...(doc.tr || {}) }, of = { ...trOf };
+    need.forEach((f, i) => { tr[f] = data.translations[i].text; of[f] = doc[f]; });
+    await _rawPut(coll, id, { tr, trOf: of });
+  } finally { TR_BUSY.delete(key); }
+}
+// Catch up anything typed while offline / before the key existed (runs quietly after data loads)
+function translateBacklog() {
+  for (const coll of Object.keys(TR_FIELDS)) for (const d of Object.values(S.data[coll] || {})) {
+    if (d.archived) continue;
+    if (TR_FIELDS[coll].some(f => typeof d[f] === 'string' && CJK.test(d[f]) && (d.trOf || {})[f] !== d[f])) translateDoc(coll, d.id).catch(() => {});
+  }
 }
 
 /* ---------- start ---------- */
