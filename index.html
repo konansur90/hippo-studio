@@ -2070,6 +2070,7 @@ async function offerFile(name, text) {
 }
 
 /* ---------- start ---------- */
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(r => { r.update(); document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') r.update(); }); }).catch(() => {});
+navigator.serviceWorker && navigator.serviceWorker.addEventListener('controllerchange', () => { if (!window.__reloaded) { window.__reloaded = true; location.reload(); } });
 render(); initStore();
 </script></body></html>
