@@ -1640,6 +1640,7 @@ function flightLinks(from, to, date, fno) {
   if (f && tt && date) {
     out.push(['Google Flights', `https://www.google.com/travel/flights?q=${encodeURIComponent(`one way flights from ${f} to ${tt} on ${date}`)}&curr=KRW&hl=en`]);
     out.push(['Skyscanner', `https://www.skyscanner.co.kr/transport/flights/${f.toLowerCase()}/${tt.toLowerCase()}/${date.slice(2, 4)}${date.slice(5, 7)}${date.slice(8, 10)}/?adultsv2=1&cabinclass=economy&rtn=0`]);
+    out.push(['🐬 Ctrip', `https://flights.ctrip.com/online/list/oneway-${f.toLowerCase()}-${tt.toLowerCase()}?depdate=${date}&cabin=y_s&adult=1`]);
     out.push(['Trip.com', `https://www.trip.com/flights/showfarefirst?dcity=${f.toLowerCase()}&acity=${tt.toLowerCase()}&ddate=${date}&triptype=ow&class=y&quantity=1&curr=KRW`]);
   }
   const n = String(fno || '').replace(/\s+/g, '').toUpperCase();
