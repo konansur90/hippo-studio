@@ -228,6 +228,14 @@ a svg,.small svg{width:14px;height:14px;vertical-align:-2px}
 .fopt{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:8px 10px}.fopt.best{border-color:var(--good)}
 a.chip{text-decoration:none;color:inherit}
 
+.ap-field{position:relative}
+.ap-list{display:none;position:absolute;left:0;right:0;top:66px;z-index:5;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow-lg);overflow:hidden;max-height:280px;overflow-y:auto}
+.ap-list button{display:flex;gap:10px;align-items:center;width:100%;text-align:left;border:0;background:none;padding:9px 12px;cursor:pointer;border-bottom:1px solid var(--border)}
+.ap-list button:last-child{border-bottom:0}.ap-list button:hover{background:var(--surface-2)}
+.ap-list b{font-size:14px;min-width:38px;color:var(--accent)}.ap-list span{display:flex;flex-direction:column;font-size:13px;min-width:0}
+.ap-list small{color:var(--muted);font-size:11.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ap-lbl{min-height:16px}
+
 .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;background:radial-gradient(circle at 20% 0%,var(--accent-soft),transparent 60%),var(--bg)}
 .auth-card{width:min(400px,100%);background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-lg);padding:28px 24px;display:flex;flex-direction:column;gap:12px}
 .auth-card h2{margin:4px 0 0;font-size:20px}.auth-card p{margin:0}
@@ -534,7 +542,7 @@ const CORE = (() => {
 
 /* ===== Translations: English / 한국어 ===== */
 const I18N = { en: {
-tagline:'Creator business studio', fx_live:'Live rate', fx_loading:'Loading today’s CNY→KRW rate…', fx_asof:'official rate {d}', fx_note:'Reference rate — your bank/Wise rate will be a bit lower.', fx_save:'Save as stored rate', fx_saved:'Saved to stored FX rates', fp_title:'Cheapest fares (Google Flights)', fp_check:'Check prices', fp_recheck:'Check again', fp_checking:'Checking…', fp_checked:'Checked {d} · {r}', fp_cheapest:'cheapest', fp_stops:'{n} stop(s)', fp_direct:'direct', fp_none:'No fares found for this date.', fp_hint:'Enter from, to and the date, then tap Check prices. Each check uses 1 of your 250 free searches a month.', fp_need:'Enter from/to (airport code or city) and a date first', fp_unavail:'Price check isn’t available here', fp_failed:'Couldn’t get prices', fp_level_low:'Low price', fp_level_typical:'Typical price', fp_level_high:'High price', tr_original:'Original', tr_setting:'Korean/Chinese text', tr_show_en:'Show English', tr_show_orig:'Show original', tr_hint:'Text typed in Korean or Chinese is translated to English automatically (DeepL). The original is always kept — tap 🌐 to see it.', tr_failed:'Saved — translation will retry later', sched_title:'Our schedule (next 2 weeks)', sched_empty:'Nothing scheduled in the next 2 weeks. Add a flight or shoot.', open_cal:'Calendar', new_event:'New event', ev_kind:'Type', k_flight:'Flight', k_shoot:'Shoot', k_stay:'Stay', k_meeting:'Meeting', k_other:'Other', fl_from:'From (airport/city)', fl_to:'To (airport/city)', fl_no:'Flight number (optional)', fl_depart:'Departure date', fl_arrive:'Arrival time', check_in:'Check-in', check_out:'Check-out', end_date:'End date', end_date_opt:'End date (optional, for multi-day)', who:'Who', who_both:'Both', ev_note_ph:'Booking ref, hotel address, meeting point…', fl_need:'Enter where you’re flying from/to and the date', end_before:'End date is before the start date', ev_flight:'Flight', ev_stay:'Stay', pop_new_flight:'New flight', archived:'Archived', unarchive:'Restore', mig_archived:'Notion history imported and archived on Nov 7, 2026 — tap to view the original import notes', archived_note:'Archived (imported history before November). Kept for reports, but hidden from Outstanding, Overdue and review.', nav_overview:'Overview', nav_campaigns:'Campaigns', nav_calendar:'Calendar', nav_payments:'Deposits & Payments', nav_expenses:'Expenses', nav_finance:'Finance', nav_reports:'Reports', nav_setup:'Settings',
+tagline:'Creator business studio', ap_ph_from:'City or airport, e.g. Daegu', ap_ph_to:'City or airport, e.g. Guangzhou', ap_notfound:'Airport not found — try the city name or 3-letter code', fx_live:'Live rate', fx_loading:'Loading today’s CNY→KRW rate…', fx_asof:'official rate {d}', fx_note:'Reference rate — your bank/Wise rate will be a bit lower.', fx_save:'Save as stored rate', fx_saved:'Saved to stored FX rates', fp_title:'Cheapest fares (Google Flights)', fp_check:'Check prices', fp_recheck:'Check again', fp_checking:'Checking…', fp_checked:'Checked {d} · {r}', fp_cheapest:'cheapest', fp_stops:'{n} stop(s)', fp_direct:'direct', fp_none:'No fares found for this date.', fp_hint:'Enter from, to and the date, then tap Check prices. Each check uses 1 of your 250 free searches a month.', fp_need:'Pick the departure and arrival airports and a date first', fp_unavail:'Price check isn’t available here', fp_failed:'Couldn’t get prices', fp_level_low:'Low price', fp_level_typical:'Typical price', fp_level_high:'High price', tr_original:'Original', tr_setting:'Korean/Chinese text', tr_show_en:'Show English', tr_show_orig:'Show original', tr_hint:'Text typed in Korean or Chinese is translated to English automatically (DeepL). The original is always kept — tap 🌐 to see it.', tr_failed:'Saved — translation will retry later', sched_title:'Our schedule (next 2 weeks)', sched_empty:'Nothing scheduled in the next 2 weeks. Add a flight or shoot.', open_cal:'Calendar', new_event:'New event', ev_kind:'Type', k_flight:'Flight', k_shoot:'Shoot', k_stay:'Stay', k_meeting:'Meeting', k_other:'Other', fl_from:'From (airport/city)', fl_to:'To (airport/city)', fl_no:'Flight number (optional)', fl_depart:'Departure date', fl_arrive:'Arrival time', check_in:'Check-in', check_out:'Check-out', end_date:'End date', end_date_opt:'End date (optional, for multi-day)', who:'Who', who_both:'Both', ev_note_ph:'Booking ref, hotel address, meeting point…', fl_need:'Enter where you’re flying from/to and the date', end_before:'End date is before the start date', ev_flight:'Flight', ev_stay:'Stay', pop_new_flight:'New flight', archived:'Archived', unarchive:'Restore', mig_archived:'Notion history imported and archived on Nov 7, 2026 — tap to view the original import notes', archived_note:'Archived (imported history before November). Kept for reports, but hidden from Outstanding, Overdue and review.', nav_overview:'Overview', nav_campaigns:'Campaigns', nav_calendar:'Calendar', nav_payments:'Deposits & Payments', nav_expenses:'Expenses', nav_finance:'Finance', nav_reports:'Reports', nav_setup:'Settings',
 light:'Light', dark:'Dark', system:'System', collapse:'Collapse', loading:'Loading shared data…', new_campaign:'New campaign', expense:'Expense',
 sync_on:'Synced', sync_off:'Not saved', sync_wait:'Connecting', sync_tip:'Changes are saved to the shared database and appear for both of you live.',
 ban_local:'Shared storage is not available in this view (signed out or opened outside Claude). Changes you make now last only until you close this page.',
@@ -622,7 +630,7 @@ fl_paidNoAmount:'Notion “Paid” is checked but no amount was recorded.', fl_m
 fl_missingAmount:'Amount missing.', fl_missingPayer:'“Paid by” missing.', fl_missingDate:'Expense date missing (reporting month kept).', fl_missingFx:'CNY expense without an FX rate.', fl_noSourceUrl:'No Notion URL in the CSV row.', fl_possibleDuplicate:'Possible duplicate of another record — check before counting twice.', fl_categoryCheck:'Category may be wrong (check).',
 f_brand:'Brand', f_status:'Status', f_fee:'Fee', f_currency:'Currency', f_filmDate:'Filming date', f_actPubDate:'Actual publication', f_expPubDate:'Planned publication', f_notes:'Notes', f_termsType:'Terms', f_depositMode:'Deposit', f_platforms:'Platforms', f_city:'City', f_contact:'Contact', f_wechat:'WeChat', f_description:'Description', f_location:'Location', f_account:'Account', f_bookingDate:'Booking date', f_filmTime:'Filming time', f_filmTz:'Time zone', f_depositPct:'Deposit %', f_depositFixed:'Deposit amount', f_depositDue:'Deposit deadline', f_termsDays:'Terms days', f_manualDue:'Due date', f_taxCountry:'Tax country', f_taxAmountKrw:'Tax amount', f_taxPaid:'Tax paid', f_notionUrl:'Notion URL', f_reportMonth:'Reporting month', f_fxToKrw:'FX rate'
 }, ko: {
-tagline:'크리에이터 비즈니스 스튜디오', fx_live:'실시간 환율', fx_loading:'오늘의 위안→원 환율 불러오는 중…', fx_asof:'{d} 기준 고시 환율', fx_note:'기준 환율입니다 — 은행/Wise 실제 환율은 조금 낮습니다.', fx_save:'저장된 환율로 추가', fx_saved:'환율이 저장되었습니다', fp_title:'최저가 (구글 항공권)', fp_check:'가격 확인', fp_recheck:'다시 확인', fp_checking:'확인 중…', fp_checked:'{d} 확인 · {r}', fp_cheapest:'최저가', fp_stops:'경유 {n}회', fp_direct:'직항', fp_none:'이 날짜에 찾은 항공권이 없습니다.', fp_hint:'출발지, 도착지, 날짜를 입력하고 가격 확인을 누르세요. 확인 1회당 월 250회 무료 검색 중 1회가 사용됩니다.', fp_need:'먼저 출발/도착지(공항 코드 또는 도시)와 날짜를 입력하세요', fp_unavail:'여기서는 가격 확인을 사용할 수 없습니다', fp_failed:'가격을 가져오지 못했습니다', fp_level_low:'저렴한 가격', fp_level_typical:'보통 가격', fp_level_high:'비싼 가격', tr_original:'원문', tr_setting:'한국어/중국어 텍스트', tr_show_en:'영어로 보기', tr_show_orig:'원문으로 보기', tr_hint:'한국어나 중국어로 입력한 내용은 자동으로 영어로 번역됩니다 (DeepL). 원문은 항상 보관되며 🌐를 누르면 볼 수 있습니다.', tr_failed:'저장됨 — 번역은 나중에 다시 시도합니다', sched_title:'우리 일정 (향후 2주)', sched_empty:'향후 2주간 일정이 없습니다. 항공편이나 촬영을 추가하세요.', open_cal:'캘린더', new_event:'새 일정', ev_kind:'종류', k_flight:'항공편', k_shoot:'촬영', k_stay:'숙박', k_meeting:'미팅', k_other:'기타', fl_from:'출발 (공항/도시)', fl_to:'도착 (공항/도시)', fl_no:'편명 (선택)', fl_depart:'출발일', fl_arrive:'도착 시간', check_in:'체크인', check_out:'체크아웃', end_date:'종료일', end_date_opt:'종료일 (선택, 여러 날 일정)', who:'누가', who_both:'둘 다', ev_note_ph:'예약번호, 호텔 주소, 만나는 장소…', fl_need:'출발지/도착지와 날짜를 입력하세요', end_before:'종료일이 시작일보다 빠릅니다', ev_flight:'항공편', ev_stay:'숙박', pop_new_flight:'새 항공편', archived:'보관됨', unarchive:'복원', mig_archived:'노션 기록을 가져와 2026년 11월 7일에 보관함 — 눌러서 원래 가져오기 메모 보기', archived_note:'보관됨 (11월 이전 가져온 기록). 리포트용으로 보관되며 미수금·연체·확인 목록에서는 숨겨집니다.', nav_overview:'개요', nav_campaigns:'캠페인', nav_calendar:'캘린더', nav_payments:'계약금 & 입금', nav_expenses:'경비', nav_finance:'재무', nav_reports:'리포트', nav_setup:'설정',
+tagline:'크리에이터 비즈니스 스튜디오', ap_ph_from:'도시 또는 공항, 예: 대구', ap_ph_to:'도시 또는 공항, 예: 광저우', ap_notfound:'공항을 찾을 수 없습니다 — 도시 이름이나 3자리 코드로 입력해 보세요', fx_live:'실시간 환율', fx_loading:'오늘의 위안→원 환율 불러오는 중…', fx_asof:'{d} 기준 고시 환율', fx_note:'기준 환율입니다 — 은행/Wise 실제 환율은 조금 낮습니다.', fx_save:'저장된 환율로 추가', fx_saved:'환율이 저장되었습니다', fp_title:'최저가 (구글 항공권)', fp_check:'가격 확인', fp_recheck:'다시 확인', fp_checking:'확인 중…', fp_checked:'{d} 확인 · {r}', fp_cheapest:'최저가', fp_stops:'경유 {n}회', fp_direct:'직항', fp_none:'이 날짜에 찾은 항공권이 없습니다.', fp_hint:'출발지, 도착지, 날짜를 입력하고 가격 확인을 누르세요. 확인 1회당 월 250회 무료 검색 중 1회가 사용됩니다.', fp_need:'먼저 출발/도착지(공항 코드 또는 도시)와 날짜를 입력하세요', fp_unavail:'여기서는 가격 확인을 사용할 수 없습니다', fp_failed:'가격을 가져오지 못했습니다', fp_level_low:'저렴한 가격', fp_level_typical:'보통 가격', fp_level_high:'비싼 가격', tr_original:'원문', tr_setting:'한국어/중국어 텍스트', tr_show_en:'영어로 보기', tr_show_orig:'원문으로 보기', tr_hint:'한국어나 중국어로 입력한 내용은 자동으로 영어로 번역됩니다 (DeepL). 원문은 항상 보관되며 🌐를 누르면 볼 수 있습니다.', tr_failed:'저장됨 — 번역은 나중에 다시 시도합니다', sched_title:'우리 일정 (향후 2주)', sched_empty:'향후 2주간 일정이 없습니다. 항공편이나 촬영을 추가하세요.', open_cal:'캘린더', new_event:'새 일정', ev_kind:'종류', k_flight:'항공편', k_shoot:'촬영', k_stay:'숙박', k_meeting:'미팅', k_other:'기타', fl_from:'출발 (공항/도시)', fl_to:'도착 (공항/도시)', fl_no:'편명 (선택)', fl_depart:'출발일', fl_arrive:'도착 시간', check_in:'체크인', check_out:'체크아웃', end_date:'종료일', end_date_opt:'종료일 (선택, 여러 날 일정)', who:'누가', who_both:'둘 다', ev_note_ph:'예약번호, 호텔 주소, 만나는 장소…', fl_need:'출발지/도착지와 날짜를 입력하세요', end_before:'종료일이 시작일보다 빠릅니다', ev_flight:'항공편', ev_stay:'숙박', pop_new_flight:'새 항공편', archived:'보관됨', unarchive:'복원', mig_archived:'노션 기록을 가져와 2026년 11월 7일에 보관함 — 눌러서 원래 가져오기 메모 보기', archived_note:'보관됨 (11월 이전 가져온 기록). 리포트용으로 보관되며 미수금·연체·확인 목록에서는 숨겨집니다.', nav_overview:'개요', nav_campaigns:'캠페인', nav_calendar:'캘린더', nav_payments:'계약금 & 입금', nav_expenses:'경비', nav_finance:'재무', nav_reports:'리포트', nav_setup:'설정',
 light:'라이트', dark:'다크', system:'시스템', collapse:'접기', loading:'공유 데이터 불러오는 중…', new_campaign:'새 캠페인', expense:'경비',
 sync_on:'동기화됨', sync_off:'저장 안 됨', sync_wait:'연결 중', sync_tip:'변경 사항은 공유 데이터베이스에 저장되며 두 사람 모두에게 실시간으로 보입니다.',
 ban_local:'이 화면에서는 공유 저장소를 사용할 수 없습니다(로그아웃 상태이거나 Claude 밖에서 열림). 지금 입력한 내용은 페이지를 닫으면 사라집니다.',
@@ -1573,7 +1581,60 @@ const WHO = [['both', 'who_both'], ['konan', null], ['seohee', null]];
 function whoLabel(w) { const s = settings(); return w === 'konan' ? s.youName : w === 'seohee' ? s.partnerName : t('who_both'); }
 function trHint(x, f) { return x && x.tr && x.tr[f] && x.trOf && x.trOf[f] === x[f] ? `<div class="hint">🌐 ${PREF.showOriginal ? 'English' : t('tr_original')}: ${esc(PREF.showOriginal ? x.tr[f] : x[f])}</div>` : ''; }
 const CITY_IATA = { seoul: 'ICN', incheon: 'ICN', gimpo: 'GMP', busan: 'PUS', jeju: 'CJU', guangzhou: 'CAN', shenzhen: 'SZX', shanghai: 'PVG', pudong: 'PVG', hongqiao: 'SHA', beijing: 'PEK', daxing: 'PKX', chengdu: 'TFU', chongqing: 'CKG', hangzhou: 'HGH', nanjing: 'NKG', dalian: 'DLC', qingdao: 'TAO', shantou: 'SWA', xiamen: 'XMN', wuhan: 'WUH', changsha: 'CSX', xian: 'XIY', "xi'an": 'XIY', kunming: 'KMG', harbin: 'HRB', shenyang: 'SHE', tianjin: 'TSN', sanya: 'SYX', haikou: 'HAK', yanji: 'YNJ', 'hong kong': 'HKG', macau: 'MFM', taipei: 'TPE', tokyo: 'NRT', osaka: 'KIX', '서울': 'ICN', '인천': 'ICN', '김포': 'GMP', '부산': 'PUS', '제주': 'CJU', '광저우': 'CAN', '선전': 'SZX', '심천': 'SZX', '상하이': 'PVG', '베이징': 'PEK', '청두': 'TFU', '충칭': 'CKG', '항저우': 'HGH', '다롄': 'DLC', '칭다오': 'TAO', '산터우': 'SWA', '홍콩': 'HKG', '广州': 'CAN', '深圳': 'SZX', '上海': 'PVG', '北京': 'PEK', '成都': 'TFU', '重庆': 'CKG', '杭州': 'HGH', '大连': 'DLC', '青岛': 'TAO', '汕头': 'SWA', '首尔': 'ICN', '釜山': 'PUS' };
-function toIATA(v) { v = String(v || '').trim(); if (/^[A-Za-z]{3}$/.test(v)) return v.toUpperCase(); return CITY_IATA[v.toLowerCase()] || null; }
+var AIRPORTS = null, AP_LOADING = null;
+function loadAirports() {
+  if (AIRPORTS || AP_LOADING) return AP_LOADING;
+  AP_LOADING = fetch('airports.txt').then(r => r.text()).then(txt => {
+    AIRPORTS = txt.split('\n').map(l => { const [c, city, name, cc, big, extra] = l.split('|'); return { c, city, name, cc, big: big === '1', extra: extra || '', hay: (city + ' ' + name + ' ' + (extra || '')).toLowerCase() }; });
+    AIRPORTS.byCode = Object.fromEntries(AIRPORTS.map(a => [a.c, a]));
+  }).catch(() => { AP_LOADING = null; });
+  return AP_LOADING;
+}
+function searchAirports(q, n = 6) {
+  q = String(q || '').trim(); if (!q || !AIRPORTS) return [];
+  const ql = q.toLowerCase(), qu = q.toUpperCase(); const out = [];
+  for (const a of AIRPORTS) {
+    let sc = 0; const city = a.city.toLowerCase();
+    if (a.c === qu) sc = 100;
+    else if (city === ql) sc = 80;
+    else if (a.extra && a.extra.split(' ').some(w => w.toLowerCase() === ql)) sc = 78;
+    else if (city.startsWith(ql)) sc = 60;
+    else if (a.extra.toLowerCase().includes(ql)) sc = 50;
+    else if (a.hay.includes(ql) && ql.length >= 3) sc = 35;
+    if (!sc) continue;
+    sc += (a.big ? 6 : 0) + (a.cc === 'KR' || a.cc === 'CN' ? 8 : 0);
+    out.push([sc, a]);
+  }
+  return out.sort((x, y) => y[0] - x[0]).slice(0, n).map(x => x[1]);
+}
+const FLAG = cc => cc && cc.length === 2 ? String.fromCodePoint(...[...cc].map(ch => 127397 + ch.charCodeAt(0))) : '';
+function toIATA(v) {
+  v = String(v || '').trim(); if (!v) return null;
+  if (/^[A-Za-z]{3}$/.test(v) && (!AIRPORTS || AIRPORTS.byCode[v.toUpperCase()])) return v.toUpperCase();
+  if (AIRPORTS) { const m = searchAirports(v, 1)[0]; return m ? m.c : null; }
+  return CITY_IATA[v.toLowerCase()] || (/^[A-Za-z]{3}$/.test(v) ? v.toUpperCase() : null);
+}
+function apLabel(code) { const a = AIRPORTS && AIRPORTS.byCode[code]; return a ? `${FLAG(a.cc)} ${a.city} — ${a.name}` : ''; }
+function apResolve(inp) {
+  const lbl = inp.parentElement.querySelector('.ap-lbl'); const code = toIATA(inp.value);
+  if (code && inp.value.trim().toUpperCase() !== code) inp.value = code;
+  if (lbl) lbl.textContent = code ? apLabel(code) : (inp.value.trim() ? t('ap_notfound') : '');
+}
+document.addEventListener('input', e => {
+  const inp = e.target; if (!inp.dataset || !inp.dataset.ap) return;
+  loadAirports();
+  const box = inp.parentElement.querySelector('.ap-list'); if (!box) return;
+  const show = () => { const res = searchAirports(inp.value);
+    box.innerHTML = res.map(a => `<button type="button" data-code="${a.c}"><b>${a.c}</b><span>${FLAG(a.cc)} ${esc(a.city)}<small>${esc(a.name)}</small></span></button>`).join('');
+    box.style.display = res.length ? 'block' : 'none'; };
+  if (AIRPORTS) show(); else AP_LOADING && AP_LOADING.then(show);
+});
+document.addEventListener('mousedown', e => {
+  const b = e.target.closest('.ap-list button'); if (!b) return; e.preventDefault();
+  const inp = b.closest('.field').querySelector('[data-ap]'); inp.value = b.dataset.code; b.parentElement.style.display = 'none'; apResolve(inp); inp.dispatchEvent(new Event('change', { bubbles: true }));
+});
+document.addEventListener('focusout', e => { const inp = e.target; if (!inp.dataset || !inp.dataset.ap) return;
+  setTimeout(() => { const box = inp.parentElement.querySelector('.ap-list'); if (box) box.style.display = 'none'; if (AIRPORTS) apResolve(inp); else loadAirports()?.then(() => apResolve(inp)); }, 150); });
 function flightLinks(from, to, date, fno) {
   const f = toIATA(from), tt = toIATA(to); const out = [];
   if (f && tt && date) {
@@ -1621,7 +1682,7 @@ function apptModal(a, date, kind) {
   const m = modal(`<header><h2>${editing ? t('edit_appt') : t('new_event')}</h2><button class="btn icon ghost" data-close>${ic('x')}</button></header>
   <div class="body">
     <div class="field"><label>${t('ev_kind')}</label>${chips('a-kind', EV_KINDS.map(([k, e]) => [k, e + ' ' + t('k_' + k)]), a.kind || 'other')}</div>
-    <div class="fgrid" data-k="flight"><div class="field"><label>${t('fl_from')}</label><input class="inp" id="a-from" value="${esc(a.from || '')}" placeholder="ICN / Seoul" autocapitalize="characters"></div><div class="field"><label>${t('fl_to')}</label><input class="inp" id="a-to" value="${esc(a.to || '')}" placeholder="CAN / Guangzhou" autocapitalize="characters"></div>
+    <div class="fgrid" data-k="flight"><div class="field ap-field"><label>${t('fl_from')}</label><input class="inp" id="a-from" data-ap="1" autocomplete="off" value="${esc(a.from || '')}" placeholder="${t('ap_ph_from')}"><div class="ap-list"></div><div class="hint ap-lbl"></div></div><div class="field ap-field"><label>${t('fl_to')}</label><input class="inp" id="a-to" data-ap="1" autocomplete="off" value="${esc(a.to || '')}" placeholder="${t('ap_ph_to')}"><div class="ap-list"></div><div class="hint ap-lbl"></div></div>
       <div class="field full"><label>${t('fl_no')}</label><input class="inp" id="a-fno" value="${esc(a.flightNo || '')}" placeholder="KE865" autocapitalize="characters"></div></div>
     <div class="field" data-k="notflight"><label>${t('title')}</label><input class="inp" id="a-title" value="${esc(a.title || '')}" placeholder="${t('appt_ph')}">${trHint(a, 'title')}</div>
     <div class="fgrid">
@@ -1636,6 +1697,7 @@ function apptModal(a, date, kind) {
   </div>
   <footer>${editing ? `<button class="btn danger" id="a-del">${t('delete')}</button>` : ''}<span style="flex:1"></span><button class="btn" data-close>${t('cancel')}</button><button class="btn primary" id="a-save">${t('save')}</button></footer>`);
   const el = m.el; $('.modal', el)._apptId = editing ? a.id : null;
+  loadAirports()?.then(() => $$('[data-ap]', el).forEach(i => { if (i.value) apResolve(i); }));
   const vis = () => { const k = chipVal(el, 'a-kind');
     $$('[data-k=flight]', el).forEach(x => x.style.display = k === 'flight' ? '' : 'none');
     $$('[data-k=notflight]', el).forEach(x => x.style.display = k === 'flight' ? 'none' : '');

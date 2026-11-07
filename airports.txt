@@ -1,0 +1,3245 @@
+WKK|Aleknagik|Aleknagik / New Airport|US|0|
+BBQ|Codrington|Burton-Nibbs International Airport|AG|0|
+HIR|Honiara|Honiara International Airport|SB|1|
+MUA|Munda|Munda Airport|SB|0|
+INU|Yaren|Nauru International Airport|NR|0|
+WSI|Sydney|Western Sydney International (Nancy-Bird Walton) Airport|AU|1|
+AXF|Bayanhot|Alxa Left Banner Bayanhot Airport|CN|0|
+VMU|Baimuru|Baimuru Airport|PG|0|
+BUA|Buka Island|Buka Airport|PG|0|
+OPU|Balimo|Balimo Airport|PG|0|
+CMU|Kundiawa|Chimbu Airport|PG|0|
+DAU|Daru|Daru Airport|PG|0|
+GKA|Goronka|Goroka Airport|PG|0|
+GUR|Gurney|Gurney Airport|PG|0|
+PNP|Popondetta|Girua Airport|PG|0|
+HKN|Kimbe|Hoskins Airport|PG|0|
+KMA|Kerema|Kerema Airport|PG|0|
+KVG|Kavieng|Kavieng Airport|PG|0|
+MAG|Madang|Madang Airport|PG|0|
+HGU|Mount Hagen|Mount Hagen Kagamuga Airport|PG|0|
+MDU|Mendi|Mendi Airport|PG|0|
+MAS|Manus Island|Momote Airport|PG|0|
+LAE|Lae|Nadzab Tomodachi International Airport|PG|1|
+POM|Port Moresby|Port Moresby Jacksons International Airport|PG|1|
+RAB|Kokopo|Tokua Airport|PG|0|
+VAI|Vanimo|Vanimo Airport|PG|0|
+WBM|Wapenamanda|Wapenamanda Airport|PG|0|
+WWK|Wewak|Wewak International Airport|PG|0|
+JEG|Aasiaat|Aasiaat Airport|GL|0|
+CNP|Neerlerit Inaat|Neerlerit Inaat Airport|GL|0|
+GOH|Nuuk|Nuuk International Airport|GL|1|
+JAV|Ilulissat|Ilulissat Airport|GL|1|
+KUS|Kulusuk|Kulusuk Airport|GL|0|
+NAQ|Qaanaaq|Qaanaaq Airport|GL|0|
+SFJ|Kangerlussuaq|Kangerlussuaq International Airport|GL|0|
+JHS|Sisimiut|Sisimiut Airport|GL|0|
+AEY|Akureyri|Akureyri International Airport|IS|1|
+EGS|Egilsstaðir|Egilsstaðir Airport|IS|0|
+GRY|Grímsey/Sandvík|Grímsey Airport|IS|0|
+HFN|Höfn|Hornafjörður Airport|IS|0|
+IFJ|Ísafjörður|Ísafjörður Airport|IS|0|
+KEF|Reykjavík|Keflavik International Airport|IS|1|
+RKV|Reykjavík|Reykjavík Domestic Airport|IS|0|
+VPN|Vopnafjörður|Vopnafjörður Airport|IS|0|
+PRN|Prishtina|Priština Adem Jashari International Airport|XK|1|
+VDC|Vitória da Conquista|Glauber de Andrade Rocha Airport|BR|0|
+CUK|Caye Caulker|Caye Caulker Airport|BZ|0|
+CYC|Caye Chapel|Caye Chapel Airport|BZ|0|
+CZH|Corozal|Corozal Airport|BZ|0|
+DGA|Dangriga|Dangriga Airport|BZ|0|
+SPR|San Pedro|John Greif II Airport|BZ|0|
+TZA|Belize City|Sir Barry Bowen Municipal Airport|BZ|0|
+YAA|Anahim Lake|Anahim Lake Airport|CA|0|
+XQU|Qualicum Beach|Qualicum Beach Airport|CA|0|
+ZEL|Bella Bella|Bella Bella (Campbell Island) Airport|CA|0|
+BZX|Bazhong|Bazhong Enyang Airport|CN|0|
+HSC|Shaoguan|Shaoguan Danxia Airport|CN|0|
+JGS|Ji'an|Jinggangshan Airport|CN|0|
+JNH|Xiuzhou, Hangzhou|Jiaxing Nanhu Airport|CN|0|
+DDR|Xigazê|Shigatse Tingri Airport|CN|0|
+HQL|Tashikuergan|Tashikuergan Hongqilafu Airport|CN|0|
+LSG|Leshan|Leshan Airport|CN|0|
+ZAT|Zhaotong|Zhaotong Zhaoyang Airport|CN|0|
+BFY|Bengbu|Bengbu Tenghu Airport|CN|0|蚌埠滕湖机场
+YAG|Fort Frances|Fort Frances Municipal Airport|CA|0|
+YAM|Sault Ste Marie|Sault Ste Marie Airport|CA|0|
+XKS|Kasabonika|Kasabonika Airport|CA|0|
+YAY|St. Anthony|St. Anthony Airport|CA|0|
+YAZ|Tofino|Tofino / Long Beach Airport|CA|0|
+YBC|Baie-Comeau|Baie-Comeau Airport|CA|0|
+QBC|Bella Coola|Bella Coola Airport|CA|0|
+YBY|Bonnyville|Bonnyville Airport|CA|0|
+YBG|Saguenay|Saguenay-Bagotville Airport|CA|0|
+YBK|Baker Lake|Baker Lake Airport|CA|0|
+YBL|Campbell River|Campbell River Airport|CA|0|
+YBR|Brandon|Brandon Municipal Airport|CA|0|
+YBX|Blanc-Sablon|Lourdes-de-Blanc-Sablon Airport|CA|0|
+YCB|Cambridge Bay|Cambridge Bay Airport|CA|0|
+YCD|Nanaimo|Nanaimo Airport|CA|0|
+YCG|Castlegar|Castlegar/West Kootenay Regional Airport|CA|0|
+YDA|Dawson City|Dawson City Airport|CA|0|
+YDF|Deer Lake|Deer Lake Airport|CA|0|
+YDN|Dauphin|Dauphin Barker Airport|CA|0|
+YEG|Edmonton|Edmonton International Airport|CA|1|
+YEV|Inuvik|Inuvik Mike Zubko Airport|CA|0|
+YFB|Iqaluit|Iqaluit Airport|CA|0|
+YFC|Fredericton|Fredericton International Airport|CA|0|
+YFS|Fort Simpson|Fort Simpson Airport|CA|0|
+YGL|La Grande Rivière|La Grande Rivière Airport|CA|0|
+YGP|Gaspé|Michel-Pouliot Gaspé Airport|CA|0|
+YGR|Les Îles-de-la-Madeleine|Îles-de-la-Madeleine Airport|CA|0|
+YGV|Havre-Saint-Pierre|Havre-Saint-Pierre Airport|CA|0|
+YGW|Kuujjuarapik|Kuujjuarapik Airport|CA|0|
+YHM|Hamilton|John C. Munro Hamilton International Airport|CA|1|
+YHU|Montréal|Montréal / Saint-Hubert Metropolitan Airport|CA|0|
+YHY|Hay River|Hay River / Merlyn Carter Airport|CA|0|
+YHZ|Halifax|Halifax / Stanfield International Airport|CA|1|
+YIF|St-Augustin|St Augustin Airport|CA|0|
+YIV|Island Lake|Island Lake Airport|CA|0|
+YKA|Kamloops|Kamloops John Moose Fulton Field Regional Airport|CA|0|
+YKF|Breslau|Region of Waterloo International Airport|CA|0|
+YKL|Schefferville|Schefferville Airport|CA|0|
+YLL|Lloydminster|Lloydminster Airport|CA|0|
+YLK|Barrie|Barrie-Lake Simcoe Regional Airport|CA|0|
+YLW|Kelowna|Kelowna International Airport|CA|1|
+YMM|Fort McMurray|Fort McMurray International Airport|CA|0|
+YMO|Moosonee|Moosonee Airport|CA|0|
+YMT|Chibougamau|Chapais Airport|CA|0|
+YMX|Montréal|Montreal Mirabel International Airport|CA|0|
+YNA|Natashquan|Natashquan Airport|CA|0|
+YND|Gatineau|Ottawa / Gatineau Airport|CA|0|
+YNL|Points North Landing|Points North Landing Airport|CA|0|
+YOJ|High Level|High Level Airport|CA|0|
+YOW|Ottawa|Ottawa Macdonald-Cartier International Airport|CA|1|
+YPA|Prince Albert|Prince Albert Glass Field|CA|0|
+YPE|Peace River|Peace River Airport|CA|0|
+YPL|Pickle Lake|Pickle Lake Airport|CA|0|
+YPN|Port-Menier|Port-Menier Airport|CA|0|
+YPQ|Peterborough|Peterborough Regional Airport|CA|0|
+YPR|Prince Rupert|Prince Rupert Airport|CA|0|
+YPW|Powell River|Powell River Airport|CA|0|
+YPX|Puvirnituq|Puvirnituq Airport|CA|0|
+YPY|Fort Chipewyan|Fort Chipewyan Airport|CA|0|
+YPZ|Burns Lake|Burns Lake Airport|CA|0|
+YQA|Gravenhurst|Muskoka Airport|CA|0|
+YQB|Quebec|Quebec Jean Lesage International Airport|CA|1|
+YQD|The Pas|The Pas Airport|CA|0|
+YQG|Windsor|Windsor International Airport|CA|1|
+YQH|Watson Lake|Watson Lake Airport|CA|0|
+YQK|Kenora|Kenora Airport|CA|0|
+YQL|Lethbridge|Lethbridge County Airport|CA|0|
+YQM|Moncton|Greater Moncton Roméo LeBlanc International Airport|CA|0|
+YQN|Nakina|Nakina Airport|CA|0|
+YQQ|Comox|Comox Valley International Airport / CFB Comox|CA|0|
+YQR|Regina|Regina International Airport|CA|0|
+YQT|Thunder Bay|Thunder Bay International Airport|CA|0|
+YQU|Grande Prairie|Grande Prairie Airport|CA|0|
+YQX|Gander|Gander International Airport|CA|0|
+YQY|Sydney|Sydney / J.A. Douglas McCurdy Airport|CA|0|
+YQZ|Quesnel|Quesnel Airport|CA|0|
+YRB|Resolute Bay|Resolute Bay Airport|CA|0|
+YRJ|Roberval|Roberval Airport|CA|0|
+YRL|Red Lake|Red Lake Airport|CA|0|
+YRO|Ottawa|Ottawa / Rockcliffe Airport|CA|0|
+YRT|Rankin Inlet|Rankin Inlet Airport|CA|0|
+YSB|Sudbury|Sudbury Airport|CA|0|
+YSF|Stony Rapids|Stony Rapids Airport|CA|0|
+YSJ|Saint John|Saint John Airport|CA|0|
+YSM|Fort Smith|Fort Smith Airport|CA|0|
+YCM|Niagara-on-the-Lake|Niagara District Airport|CA|0|
+YTH|Thompson|Thompson Airport|CA|0|
+YTS|Timmins|Timmins/Victor M. Power|CA|0|
+YTZ|Toronto|Billy Bishop Toronto City Airport|CA|0|
+YUL|Montréal|Montreal / Pierre Elliott Trudeau International Airport|CA|1|
+YUX|Sanirajak|Hall Beach Airport|CA|0|
+YUY|Rouyn-Noranda|Rouyn Noranda Airport|CA|0|
+YVB|Bonaventure|Bonaventure Airport|CA|0|
+YVC|La Ronge|La Ronge Airport|CA|0|
+YVO|Val-d'Or|Val-d'Or Airport|CA|0|
+YVP|Kuujjuaq|Kuujjuaq Airport|CA|0|
+YVQ|Norman Wells|Norman Wells Airport|CA|0|
+YVR|Vancouver|Vancouver International Airport|CA|1|
+YVV|Wiarton|Wiarton Airport|CA|0|
+YWG|Winnipeg|Winnipeg / James Armstrong Richardson International Airport|CA|1|
+YWK|Wabush|Wabush Airport|CA|0|
+YWL|Williams Lake|Williams Lake Airport|CA|0|
+YXC|Cranbrook|Cranbrook/Canadian Rockies International Airport|CA|0|
+YXE|Saskatoon|Saskatoon John G. Diefenbaker International Airport|CA|1|
+YXH|Medicine Hat|Medicine Hat Regional Airport|CA|0|
+YXJ|Fort Saint John|Fort St John / North Peace Regional Airport|CA|0|
+YXL|Sioux Lookout|Sioux Lookout Airport|CA|0|
+YXS|Prince George|Prince George (International) Airport|CA|0|
+YXT|Terrace|Northwest Regional Airport Terrace-Kitimat|CA|0|
+YXU|London|London International Airport|CA|0|
+YXX|Abbotsford|Abbotsford International Airport|CA|0|
+YXY|Whitehorse|Whitehorse / Erik Nielsen International Airport|CA|0|
+YYB|North Bay|North Bay Jack Garland Airport|CA|0|
+YYC|Calgary|Calgary International Airport|CA|1|
+YYD|Smithers|Smithers Airport|CA|0|
+YYE|Fort Nelson|Fort Nelson Airport|CA|0|
+YYF|Penticton|Penticton Airport|CA|0|
+YYG|Charlottetown|Charlottetown Airport|CA|0|
+YYJ|Victoria|Victoria International Airport|CA|1|
+YYL|Lynn Lake|Lynn Lake Airport|CA|0|
+YYQ|Churchill|Churchill Airport|CA|0|
+YYR|Goose Bay|Goose Bay Airport|CA|0|
+YYT|St. John's|St. John's International Airport|CA|1|
+YYY|Mont-Joli|Mont Joli Airport|CA|0|
+YYZ|Toronto|Toronto Pearson International Airport|CA|1|
+YZF|Yellowknife|Yellowknife International Airport|CA|0|
+YZP|Sandspit|Sandspit Airport|CA|0|
+YZS|Coral Harbour|Coral Harbour Airport|CA|0|
+YZT|Port Hardy|Port Hardy Airport|CA|0|
+YZU|Whitecourt|Whitecourt Airport|CA|0|
+YZV|Sept-Îles|Sept-Îles Airport|CA|0|
+ZBF|South Tetagouche|Bathurst Airport|CA|0|
+ZMT|Masset|Masset Airport|CA|0|
+ZSJ|Sandy Lake|Sandy Lake Airport|CA|0|
+BJA|Béjaïa|Soummam–Abane Ramdane Airport|DZ|1|
+ALG|Algiers|Houari Boumediene Airport|DZ|1|
+DJG|Djanet|Tiska Djanet Airport|DZ|1|
+VVZ|Illizi|Illizi Takhamalt Airport|DZ|0|
+QSF|Sétif|Ain Arnat Airport|DZ|0|
+TMR|Tamanrasset|Aguenar – Hadj Bey Akhamok Airport|DZ|1|
+GJL|Tahir|Jijel Ferhat Abbas Airport|DZ|1|
+MZW|Mecheria|Mecheria Airport|DZ|0|
+AAE|Annaba|Annaba Rabah Bitat Airport|DZ|1|
+CZL|Constantine|Mohamed Boudiaf International Airport|DZ|1|
+TEE|Tébessi|Cheikh Larbi Tébessi Airport|DZ|0|
+BLJ|Batna|Batna Mostefa Ben Boulaid Airport|DZ|1|
+TIN|Tindouf|Tindouf Airport|DZ|0|
+CFK|Chlef|Chlef Aboubakr Belkaid International Airport|DZ|1|
+TLM|Zenata|Zenata – Messali El Hadj Airport|DZ|1|
+ORN|Es-Sénia|Oran Es-Sénia (Ahmed Ben Bella) International Airport|DZ|1|
+CBH|Béchar|Béchar Boudghene Ben Ali Lotfi Airport|DZ|0|
+BMW|Bordj Badji Mokhtar|Bordj Badji Mokhtar Airport|DZ|0|
+AZR|Adrar|Touat-Cheikh Sidi Mohamed Belkebir Airport|DZ|0|
+BSK|Biskra|Biskra - Mohamed Khider Airport|DZ|1|
+ELG|El Menia|El Golea Airport|DZ|0|
+GHA|El Atteuf|Noumérat - Moufdi Zakaria Airport|DZ|0|
+HME|Hassi Messaoud|Hassi Messaoud-Oued Irara Krim Belkacem Airport|DZ|0|
+INZ|In Salah|In Salah Airport|DZ|0|
+TGR|Touggourt|Touggourt Sidi Madhi Airport|DZ|0|
+LOO|Laghouat|Laghouat - Molay Ahmed Medeghri Airport|DZ|0|
+ELU|Guemar|Guemar Airport - مطار قمار بالوادي|DZ|0|
+TMX|Timimoun|Timimoun Airport|DZ|0|
+OGX|Ouargla|Ain Beida Airport|DZ|0|
+IAM|In Aménas|Zarzaitine - In Aménas Airport|DZ|0|
+COO|Cotonou|Cotonou Cadjehoun International Airport|BJ|1|
+OUA|Ouagadougou|Ouagadougou Thomas Sankara International Airport|BF|1|
+BOY|Bobo Dioulasso|Bobo Dioulasso Airport|BF|1|
+ACC|Accra|Kotoka International Airport|GH|1|
+TML|Tamale|Yakubu Tali International Airport|GH|1|
+KMS|Kumasi|Prempeh I International Airport|GH|1|
+NYI|Sunyani|Sunyani Airport|GH|0|
+TKD|Sekondi-Takoradi|Takoradi Airport|GH|0|
+ABJ|Abidjan|Félix-Houphouët-Boigny International Airport|CI|1|
+BYK|Bouaké|Bouaké Airport|CI|0|
+HGO|Korhogo|Korhogo Airport|CI|0|
+SPY||San Pedro Airport|CI|0|
+DKA|Katsina|Umaru Musa Yar'adua Airport|NG|0|
+ABV|Abuja|Nnamdi Azikiwe International Airport|NG|1|
+QUO|Uyo|Akwa Ibom International Airport|NG|0|
+AKR|Akure|Akure Airport|NG|0|
+ABB|Asaba|Asaba International Airport|NG|1|
+BCU|Bauchi|Sir Abubakar Tafawa Balewa Bauchi State International Airport|NG|1|
+BNI|Benin|Benin Airport|NG|0|
+CBQ|Calabar|Margaret Ekpo International Airport|NG|0|
+ENU|Enegu|Akanu Ibiam International Airport|NG|1|
+GMO|Gombe|Gombe Lawanti International Airport|NG|0|
+IBA|Ibadan|Ibadan Airport|NG|0|
+ILR|Ilorin/Ogbomosho|General Tunde Idiagbon International Airport|NG|1|
+QOW|Owerri|Sam Mbakwe International Cargo Airport|NG|0|
+JOS|Jos|Yakubu Gowon Airport|NG|0|
+KAD|Kaduna|Kaduna International Airport|NG|1|
+KAN|Kano|Mallam Aminu Kano International Airport|NG|1|
+MIU|Maiduguri|Maiduguri International Airport|NG|1|
+MDI|Makurdi|Makurdi Airport|NG|0|
+LOS|Lagos|Murtala Muhammed International Airport|NG|1|
+PHC|Port Harcourt|Port Harcourt International Airport|NG|1|
+SKO|Sokoto|Sadiq Abubakar III International Airport|NG|1|
+QRW|Okpe|Warri Airport|NG|0|
+YOL|Yola|Yola Airport|NG|0|
+NIM|Niamey|Diori Hamani International Airport|NE|1|
+ZND|Zinder|Zinder Airport|NE|0|
+TBJ|Tabarka|Tabarka-Aïn Draham International Airport|TN|0|
+MIR|Monastir|Monastir Habib Bourguiba International Airport|TN|0|
+NBE|Enfidha|Enfidha - Hammamet International Airport|TN|0|
+TUN|Tunis|Tunis Carthage International Airport|TN|1|
+DJE|Mellita|Djerba Zarzis International Airport|TN|1|
+SFA|Sfax|Sfax Thyna International Airport|TN|0|
+TOE|Tozeur|Tozeur Nefta International Airport|TN|0|
+LFW|Lomé|Lomé–Tokoin International Airport|TG|1|
+ANR|Antwerp|Antwerp International Airport (Deurne)|BE|0|
+BRU|Zaventem|Brussels Airport|BE|1|
+CRL|Charleroi|Brussels South Charleroi Airport|BE|1|
+LGG|Grâce-Hollogne|Liège Airport|BE|0|
+OST|Oostende|Ostend-Bruges International Airport|BE|1|
+HDF|Zirchow|Heringsdorf Airport|DE|0|
+BER|Berlin|Berlin Brandenburg Airport|DE|1|
+DRS|Dresden|Dresden Airport|DE|1|
+ERF|Erfurt|Erfurt-Weimar Airport|DE|1|
+FRA|Frankfurt am Main|Frankfurt Main Airport|DE|1|
+FMO|Greven|Münster Osnabrück Airport|DE|1|
+HAM|Hamburg|Hamburg Helmut Schmidt Airport|DE|1|
+CGN|Köln|Cologne Bonn Airport|DE|1|
+DUS|Düsseldorf|Düsseldorf Airport|DE|1|
+MUC|Munich|Munich Airport|DE|1|
+NUE|Nuremberg|Nuremberg Airport|DE|1|
+LEJ|Schkeuditz|Leipzig/Halle Airport|DE|1|
+SCN|Saarbrücken|Saarbrücken Airport|DE|0|
+STR|Stuttgart|Stuttgart Airport|DE|1|
+HAJ|Hannover|Hannover Airport|DE|1|
+BRE|Bremen|Bremen Airport|DE|1|
+HHN|Frankfurt am Main|Frankfurt-Hahn Airport|DE|1|
+MHG|Mannheim|Mannheim-City Airport|DE|0|
+LBC|Lübeck|Lübeck Blankensee Airport|DE|0|
+FMM|Memmingen|Memmingen Allgau Airport|DE|1|
+PAD|Büren|Paderborn Lippstadt Airport|DE|1|
+NRN|Weeze|Weeze (Niederrhein) Airport|DE|1|
+DTM|Dortmund|Dortmund Airport|DE|1|
+FDH|Friedrichshafen|Bodensee Airport Friedrichshafen|DE|1|
+FKB|Rheinmünster|Karlsruhe Baden-Baden Airport|DE|1|
+KSF|Calden|Kassel Airport|DE|1|
+GWT|Sylt|Westerland Sylt Airport|DE|0|
+KDL|Kärdla|Kärdla Airport|EE|0|
+URE|Kuressaare|Kuressaare Airport|EE|0|
+EPU|Pärnu|Pärnu Airport|EE|0|
+TLL|Tallinn|Lennart Meri Tallinn Airport|EE|1|
+TAY|Tartu|Tartu Airport|EE|0|
+ENF|Enontekio|Enontekio Airport|FI|0|
+HEL|Helsinki|Helsinki Vantaa Airport|FI|1|
+IVL|Ivalo|Ivalo Airport|FI|1|
+JOE|Joensuu|Joensuu Airport|FI|0|
+JYV|Jyväskylän Maalaiskunta|Jyväskylä Airport|FI|0|
+KEM|Kemi / Tornio|Kemi-Tornio Airport|FI|0|
+KAJ|Kajaani|Kajaani Airport|FI|0|
+KOK|Kokkola / Kruunupyy|Kokkola-Pietarsaari Airport|FI|0|
+KAO|Kuusamo|Kuusamo Airport|FI|0|
+KTT|Kittilä|Kittilä International Airport|FI|1|
+KUO|Kuopio / Siilinjärvi|Kuopio Airport|FI|1|
+LPP|Lappeenranta|Lappeenranta Airport|FI|1|
+MHQ|Mariehamn|Mariehamn Airport|FI|0|
+OUL|Oulu / Oulunsalo|Oulu Airport|FI|1|
+POR|Pori|Pori Airport|FI|0|
+RVN|Rovaniemi|Rovaniemi Airport|FI|1|
+SVL|Savonlinna|Savonlinna Airport|FI|0|
+TMP|Tampere / Pirkkala|Tampere-Pirkkala Airport|FI|1|
+TKU|Turku|Turku Airport|FI|1|
+VAA|Vaasa|Vaasa Airport|FI|1|
+BFS|Belfast|Belfast International Airport|GB|1|
+BHD|Belfast|George Best Belfast City Airport|GB|0|
+LDY|Derry, Derry and Strabane|City of Derry Airport|GB|0|
+BHX|Birmingham, West Midlands|Birmingham Airport|GB|1|
+MAN|Manchester, Greater Manchester|Manchester Airport|GB|1|
+CAL|Campbeltown|Campbeltown Airport|GB|0|
+EOI|Eday|Eday Airport|GB|0|
+CWL|Cardiff|Cardiff International Airport|GB|1|
+BRS|Bristol|Bristol Airport|GB|1|
+LPL|Liverpool|Liverpool John Lennon Airport|GB|1|
+LTN|Luton, Luton|London Luton Airport|GB|1|
+BOH|Bournemouth|Bournemouth Airport|GB|0|
+SOU|Southampton|Southampton Airport|GB|0|
+NQY|Newquay|Cornwall Airport Newquay|GB|0|
+ACI|Saint Anne|Alderney Airport|GG|0|
+GCI|Saint Peter Port|Guernsey Airport|GG|0|
+JER|St. Peter|Jersey Airport|JE|0|
+LGW|London|London Gatwick Airport|GB|1|
+LCY|London|London City Airport|GB|0|
+LHR|London|London Heathrow Airport|GB|1|
+SEN|Southend-on-Sea, Essex|London Southend Airport|GB|0|
+HUY|Grimsby, Lincolnshire|Humberside Airport|GB|0|
+LBA|Leeds, West Yorkshire|Leeds Bradford Airport|GB|1|
+IOM|Castletown, Rushen|Isle of Man Airport|IM|1|
+NCL|Newcastle upon Tyne, Tyne and Wear|Newcastle International Airport|GB|1|
+MME|Darlington, Durham|Teesside International Airport|GB|0|
+EMA|Nottingham, Leicestershire|East Midlands Airport|GB|1|
+KOI|Kirkwall, Orkney Islands|Kirkwall Airport|GB|0|
+LSI|Lerwick, Shetland|Sumburgh Airport|GB|0|
+WIC|Wick|Wick John O'Groats Airport|GB|0|
+ABZ|Aberdeen|Aberdeen International Airport|GB|1|
+INV|Inverness, Highland|Inverness Airport|GB|0|
+GLA|Glasgow|Glasgow Airport|GB|1|
+EDI|Ingliston, Edinburgh|Edinburgh Airport|GB|1|
+ILY|Isle of Islay, Argyll and Bute|Islay Airport|GB|0|
+PIK|Prestwick, South Ayrshire|Glasgow Prestwick Airport|GB|1|
+BEB|Balivanich|Benbecula Airport|GB|0|
+DND|Dundee|Dundee Airport|GB|0|
+SYY|Stornoway, Western Isles|Stornoway Airport|GB|0|
+BRR|Eoligarry|Barra Airport|GB|0|
+TRE|Balemartine, Argyll and Bute|Tiree Airport|GB|0|
+NWI|Norwich, Norfolk|Norwich Airport|GB|0|
+STN|London, Essex|London Stansted Airport|GB|1|
+EXT|Exeter, Devon|Exeter International Airport|GB|0|
+MPN|Mount Pleasant|Mount Pleasant Airport / RAF Mount Pleasant|FK|0|
+AMS|Amsterdam|Amsterdam Airport Schiphol|NL|1|
+MST|Maastricht|Maastricht Aachen Airport|NL|1|
+EIN|Eindhoven|Eindhoven Airport|NL|1|
+GRQ|Groningen|Groningen Airport Eelde|NL|1|
+RTM|Rotterdam|Rotterdam The Hague Airport|NL|1|
+ORK|Cork|Cork International Airport|IE|1|
+CFN|Donegal|Donegal Airport|IE|0|
+DUB|Dublin|Dublin Airport|IE|1|
+NOC|Charlestown|Ireland West Airport Knock|IE|1|
+KIR|Farranfore|Kerry Airport|IE|0|
+SNN|Shannon|Shannon Airport|IE|1|
+AAR|Aarhus|Aarhus Airport|DK|1|
+BLL|Billund|Billund Airport|DK|1|
+CPH|Copenhagen|Copenhagen Kastrup Airport|DK|1|
+EBJ|Esbjerg|Esbjerg Airport|DK|0|
+KRP|Karup|Midtjyllands Airport / Air Base Karup|DK|0|
+ODE|Odense|Odense Hans Christian Andersen Airport|DK|1|
+RKE|Roskilde|Copenhagen Roskilde Airport|DK|0|
+RNN|Rønne|Bornholm Airport|DK|0|
+SGD|Sønderborg|Sønderborg Airport|DK|0|
+FAE|Vágar|Vágar Airport|FO|1|
+AAL|Aalborg|Aalborg Airport|DK|1|
+LUX|Luxembourg|Luxembourg-Findel International Airport|LU|1|
+AES|Ålesund|Ålesund Airport|NO|1|
+ANX|Andenes|Andøya Airport, Andenes|NO|0|
+ALF|Alta|Alta Airport|NO|0|
+BNN|Brønnøy|Brønnøysund Airport, Brønnøy|NO|0|
+BOO|Bodø|Bodø Airport|NO|1|
+BGO|Bergen|Bergen Airport, Flesland|NO|1|
+BJF|Båtsfjord|Båtsfjord Airport|NO|0|
+BVG|Berlevåg|Berlevåg Airport|NO|0|
+KRS|Kristiansand|Kristiansand Airport|NO|1|
+BDU|Målselv|Bardufoss Airport|NO|0|
+EVE|Evenes|Harstad/Narvik Airport|NO|1|
+FRO|Florø|Florø Airport|NO|0|
+OSL|Oslo|Oslo-Gardermoen International Airport|NO|1|
+HAU|Karmøy|Haugesund Airport, Karmøy|NO|0|
+HFT|Hammerfest|Hammerfest Airport|NO|0|
+HVG|Honningsvåg|Honningsvåg Airport, Valan|NO|0|
+KSU|Kvernberget|Kristiansund Airport, Kvernberget|NO|0|
+KKN|Kirkenes|Kirkenes Airport, Høybuktmoen|NO|0|
+LKN|Leknes|Leknes Airport|NO|0|
+MEH|Mehamn|Mehamn Airport|NO|0|
+MOL|Årø|Molde Airport, Årø|NO|0|
+MJF|Mosjøen|Mosjøen Airport, Kjærstad|NO|0|
+LKL|Lakselv|Lakselv Airport, Banak|NO|0|
+OLA|Ørland|Ørland Airport|NO|0|
+HOV|Ørsta|Ørsta-Volda Airport, Hovden|NO|0|
+MQN|Mo i Rana|Mo i Rana Airport, Røssvoll|NO|0|
+RVK|Rørvik|Rørvik Airport, Ryum|NO|0|
+RRS|Røros|Røros Airport|NO|0|
+LYR|Longyearbyen|Svalbard Airport, Longyear|NO|0|
+SVJ|Svolvær|Svolvær Airport, Helle|NO|0|
+SKN|Hadsel|Stokmarknes Airport, Skagen|NO|0|
+SRP|Leirvik|Stord Airport, Sørstokken|NO|0|
+SOJ|Sørkjosen|Sørkjosen Airport|NO|0|
+VAW|Vardø|Vardø Airport, Svartnes|NO|0|
+SSJ|Alstahaug|Sandnessjøen Airport, Stokka|NO|0|
+TOS|Tromsø|Tromsø Airport|NO|1|
+TRF|Sandefjord|Sandefjord Airport, Torp|NO|1|
+TRD|Trondheim|Trondheim Airport, Værnes|NO|1|
+VDS|Vadsø|Vadsø Airport|NO|0|
+SVG|Stavanger|Stavanger Airport, Sola|NO|1|
+BZG|Bydgoszcz|Ignacy Jan Paderewski Bydgoszcz Airport|PL|0|
+GDN|Gdańsk|Gdańsk Lech Wałęsa Airport|PL|1|
+KRK|Balice|Kraków John Paul II International Airport|PL|1|
+KTW|Katowice|Katowice Wojciech Korfanty International Airport|PL|1|
+LUZ|Lublin|Lublin Airport|PL|1|
+LCJ|Łódź|Łódź Władysław Reymont Airport|PL|1|
+WMI|Nowy Dwór Mazowiecki|Warsaw Modlin Airport|PL|1|
+POZ|Poznań|Poznań-Ławica Airport|PL|1|
+RDO|Radom|Warsaw Radom Airport|PL|0|
+RZE|Jasionka|Rzeszów-Jasionka Airport|PL|1|
+SZZ|Szczecin|Solidarity Szczecin–Goleniów Airport|PL|1|
+SZY|Szymany|Olsztyn-Mazury Airport|PL|0|
+WAW|Warsaw|Warsaw Chopin Airport|PL|1|
+WRO|Wrocław|Copernicus Wrocław Airport|PL|1|
+IEG|Nowe Kramsko|Zielona Góra-Babimost Airport|PL|0|
+RNB|Ronneby|Ronneby Airport|SE|0|
+GOT|Göteborg|Göteborg Landvetter Airport|SE|1|
+JKG|Jönköping|Jönköping Airport|SE|0|
+THN|Trollhättan|Trollhättan-Vänersborg Airport|SE|0|
+MXX|Mora|Mora Airport|SE|0|
+NYO|Nyköping|Stockholm Skavsta Airport|SE|1|
+SCR|Malung-Sälen|Scandinavian Mountains Airport|SE|1|
+KLR|Kalmar|Kalmar Airport|SE|0|
+MMX|Malmö|Malmö Sturup Airport|SE|1|
+HAD|Halmstad|Halmstad Airport|SE|0|
+VXO|Växjö|Växjö Kronoberg Airport|SE|0|
+GEV|Gällivare|Gällivare Airport|SE|0|
+KRF|Nyland|Kramfors-Sollefteå Höga Kusten Airport|SE|0|
+LYC|Lycksele|Lycksele Airport|SE|0|
+SDL|Sundsvall/ Härnösand|Sundsvall-Härnösand Airport|SE|0|
+OER|Örnsköldsvik|Örnsköldsvik Airport|SE|0|
+KRN|Kiruna|Kiruna Airport|SE|1|
+SFT|Skellefteå|Skellefteå Airport|SE|0|
+UME|Umeå|Umeå Airport|SE|1|
+VHM|Vilhelmina|Vilhelmina South Lapland Airport|SE|0|
+AJR|Arvidsjaur|Arvidsjaur Airport|SE|0|
+OSD|Östersund|Åre Östersund Airport|SE|0|
+ORB|Örebro|Örebro Airport|SE|0|
+KSD|Karlstad|Karlstad Airport|SE|0|
+VST|Stockholm / Västerås|Stockholm Västerås Airport|SE|1|
+LLA|Luleå|Luleå Airport|SE|1|
+ARN|Stockholm|Stockholm-Arlanda Airport|SE|1|
+BMA|Stockholm|Stockholm-Bromma Airport|SE|0|
+BLE|Borlange|Dala Airport|SE|0|
+LPI|Linköping|Linköping City Airport|SE|1|
+NRK|Norrköping|Norrköping Airport|SE|0|
+TYF|Torsby|Torsby Airport|SE|0|
+VBY|Visby|Visby Airport|SE|1|
+AGH|Ängelholm|Ängelholm-Helsingborg Airport|SE|0|
+FCN|Wurster Nordseeküste|Sea-Airport Cuxhaven/Nordholz / Nordholz Naval Airbase|DE|0|
+RLG|Laage|Rostock-Laage Airport|DE|0|
+RIX|Riga|Riga International Airport|LV|1|
+KUN|Kaunas|Kaunas International Airport|LT|1|
+PLQ|Palanga|Palanga International Airport|LT|1|
+VNO|Vilnius|Vilnius International Airport|LT|1|
+BFN|Bloemfontein|Bram Fischer International Airport|ZA|1|
+CPT|Cape Town|Cape Town International Airport|ZA|1|
+ELS|East London|King Phalo Airport|ZA|1|
+GRJ|George|George Airport|ZA|1|
+HDS|Hoedspruit|Eastgate Airport / Air Force Base Hoedspruit|ZA|0|
+KIM|Kimberley|Kimberley Airport|ZA|1|
+MQP|Mbombela|Kruger Mpumalanga International Airport|ZA|1|
+HLA|Johannesburg|Lanseria International Airport|ZA|1|
+DUR|Durban|King Shaka International Airport|ZA|1|
+MGH|Margate|Margate Airport|ZA|0|
+MBD|Mafeking|George Dick Montshioa Airport|ZA|0|
+MZQ|Mkuze|Mkuze Airport|ZA|0|
+JNB|Johannesburg|O.R. Tambo International Airport|ZA|1|
+PLZ|Gqeberha|Chief Dawid Stuurman International Airport|ZA|1|
+PHW|Phalaborwa|Hendrik Van Eck Airport|ZA|0|
+PZB|Pietermaritzburg|Pietermaritzburg Airport|ZA|0|
+PTG|Polokwane|Polokwane International Airport|ZA|1|
+RCB|Richards Bay|Richards Bay Airport|ZA|0|
+SIS|Sishen|Sishen Airport|ZA|0|
+SZK|Skukuza|Skukuza Airport|ZA|0|
+UTN|Upington|Upington Airport|ZA|0|
+UTT|Mthatha|K. D. Matanzima Airport|ZA|0|
+FRW|Francistown|Phillip Gaonwe Matante International Airport|BW|1|
+BBK|Kasane|Kasane International Airport|BW|1|
+MUB|Maun|Maun International Airport|BW|1|
+GBE|Gaborone|Sir Seretse Khama International Airport|BW|1|
+BZV|Brazzaville|Maya-Maya International Airport|CG|1|
+PNR|Pointe Noire|Antonio Agostinho-Neto International Airport|CG|1|
+SHO|Mpaka|King Mswati III International Airport|SZ|1|
+BGF|Bangui|Bangui M'Poko International Airport|CF|1|
+BSG|Bata|Bata International Airport|GQ|1|
+GEM|Mengomeyén|President Obiang Nguema International Airport|GQ|0|
+SSG|Malabo|Malabo International Airport|GQ|1|
+ASI|Cat Hill|RAF Ascension Island|SH|0|
+HLE|Jamestown|Saint Helena International Airport|SH|0|
+MRU|Plaine Magnien|Sir Seewoosagur Ramgoolam International Airport|MU|1|
+RRG|Port Mathurin|Sir Charles Gaetan Duval Airport|MU|0|
+DLA|Douala|Douala International Airport|CM|1|
+MVR|Maroua|Salak Airport|CM|0|
+NGE|N'Gaoundéré|N'Gaoundéré Airport|CM|0|
+GOU|Garoua|Garoua International Airport|CM|1|
+NSI|Yaoundé|Yaoundé Nsimalen International Airport|CM|1|
+LVI|Livingstone|Harry Mwanga Nkumbula International Airport|ZM|1|
+LUN|Lusaka|Kenneth Kaunda International Airport|ZM|1|
+MFU|Mfuwe|Mfuwe International Airport|ZM|1|
+NLA|Ndola|Simon Mwansa Kapwepwe International Airport|ZM|1|
+HAH|Moroni|Prince Said Ibrahim International Airport|KM|0|
+AJN|Ouani|Ouani Airport|KM|0|
+DZA|Dzaoudzi|Dzaoudzi Pamandzi International Airport|YT|1|
+RUN|Sainte-Marie|Roland Garros Airport|RE|1|
+ZSE|Saint-Pierre|Saint-Pierre Pierrefonds Airport|RE|1|
+TNR|Antananarivo|Ivato International Airport|MG|1|
+SMS|Vohilava|Sainte Marie Airport|MG|0|
+TMM|Toamasina|Toamasina Ambalamanasy Airport|MG|1|
+MOQ|Morondava|Morondava Airport|MG|0|
+DIE|Antisiranana|Arrachart Airport|MG|0|
+MJN|Mahajanga|Amborovy Airport|MG|1|
+NOS|Nosy Be|Nosy Be International Airport|MG|1|
+BPY|Besalampy|Besalampy Airport|MG|0|
+WMN|Maroantsetra|Maroantsetra Airport|MG|0|
+SVB|Sambava|Sambava Airport|MG|0|
+FTU|Tôlanaro|Tôlanaro Airport|MG|0|
+MNJ|Mananjary|Mananjary Airport|MG|0|
+TLE|Toliara|Toliara Airport|MG|0|
+SSY|Mbanza Congo|Mbanza Congo Airport|AO|0|
+NBJ|Luanda|Dr. Antonio Agostinho Neto International Airport|AO|1|
+CAB|Cabinda|Cabinda Airport|AO|0|
+CBT|Catumbela|Catumbela Airport|AO|0|
+DUE|Chitato|Dundo Airport|AO|0|
+VPE|Ngiva|Ngjiva Pereira Airport|AO|0|
+NOV|Huambo|Albano Machado Airport|AO|0|
+MEG|Malanje|Malanje Airport|AO|0|
+SPP|Menongue|Menongue Airport|AO|0|
+MSZ|Moçâmedes|Welwitschia Mirabilis International Airport|AO|0|
+GXG|Negage|Negage Airport|AO|0|
+SZA|Soyo|Soyo Airport|AO|0|
+SDD|Lubango|Lubango Mukanka International Airport|AO|0|
+OYE|Oyem|Oyem Airport|GA|0|
+POG|Port Gentil|Port Gentil International Airport|GA|1|
+MKU|Makokou|Makokou Airport|GA|0|
+LBV|Libreville|Libreville Leon M'ba International Airport|GA|1|
+MVB|Franceville|M'Vengue El Hadj Omar Bongo Ondimba International Airport|GA|0|
+PCP|São Tomé & Príncipe|Principe Airport|ST|0|
+TMS|São Tomé|São Tomé International Airport|ST|1|
+BEW|Beira|Beira International Airport|MZ|1|
+VPY|Chimoio|Chimoio Airport|MZ|0|
+INH|Inhambane|Inhambane Airport|MZ|0|
+VXC|Lichinga|Lichinga Airport|MZ|0|
+MPM|Maputo|Maputo Airport|MZ|1|
+MNC|Nacala|Nacala International Airport|MZ|0|
+APL|Nampula|Nampula Airport|MZ|1|
+POL|Pemba|Pemba Airport|MZ|0|
+UEL|Quelimane|Quelimane Airport|MZ|0|
+TET|Tete|Tete Airport|MZ|1|
+VNX|Vilanculo|Vilankulo Airport|MZ|0|
+SEZ|Victoria|Seychelles International Airport|SC|1|
+PRI|Praslin Island|Praslin Island Airport|SC|0|
+NDJ|N'Djamena|N'Djamena International Airport|TD|1|
+BUQ|Bulawayo|Joshua Mqabuko Nkomo International Airport|ZW|1|
+VFA|Victoria Falls|Victoria Falls International Airport|ZW|1|
+HRE|Harare|Robert Gabriel Mugabe International Airport|ZW|1|
+KAB|Kariba|Kariba Airport|ZW|0|
+BLZ|Blantyre|Chileka International Airport|MW|1|
+LLW|Lumbadzi|Kamuzu International Airport|MW|1|
+MSU|Maseru|Moshoeshoe I International Airport|LS|1|
+MPA|Mpacha|Katima Mulilo Airport|NA|0|
+LUD|Luderitz|Luderitz Airport|NA|0|
+OND|Ondangwa|Ondangwa Airport|NA|0|
+OMD|Oranjemund|Oranjemund Airport|NA|0|
+NDU|Rundu|Rundu Airport|NA|0|
+WVB|Walvis Bay|Walvis Bay International Airport|NA|1|
+ERS|Windhoek|Eros Airport|NA|0|
+WDH|Windhoek|Hosea Kutako International Airport|NA|1|
+FIH|Kinshasa|Ndjili International Airport|CD|1|
+FDU|Bandundu|Bandundu Airport|CD|0|
+KKW|Kikwit|Kikwit Airport|CD|0|
+MDK|Mbandaka|Mbandaka Airport|CD|0|
+BDT|Gbadolite|Gbadolite Airport|CD|0|
+GMA|Gemena|Gemena Airport|CD|0|
+FKI|Kisangani|Bangoka International Airport|CD|1|
+IRP|Isiro|Matari Airport|CD|0|
+BUX|Bunia|Bunia Airport|CD|0|
+GOM|Goma|Goma International Airport|CD|1|
+KND|Kindu|Kindu Airport|CD|0|
+FBM|Lubumbashi|Lubumbashi International Airport|CD|1|
+KWZ|Kolwezi|Kolwezi Airport|CD|0|
+FMI|Kalemie|Kalemie Airport|CD|0|
+KGA|Kananga|Kananga Airport|CD|0|
+MJM|Mbuji Mayi|Mbuji Mayi Airport|CD|0|
+BKO|Bamako|Modibo Keita International Airport|ML|1|
+GAQ|Gao|Gao International Airport|ML|0|
+KYS|Kayes|Kayes Dag Dag Airport|ML|0|
+MZI|Sévaré|Mopti Airport|ML|0|
+TOM|Timbuktu|Tombouktou Airport|ML|1|
+BJL|Banjul|Banjul International Airport|GM|1|
+FUE|El Matorral|Fuerteventura Airport|ES|1|
+VDE|El Hierro Island|El Hierro Airport|ES|0|
+SPC|Sta Cruz de la Palma, La Palma Island|La Palma Airport|ES|0|
+LPA|Gran Canaria Island|Gran Canaria Airport|ES|1|
+ACE|San Bartolomé|César Manrique-Lanzarote Airport|ES|1|
+TFS|Tenerife|Tenerife Sur Airport|ES|1|
+TFN|Tenerife|Tenerife Norte-Ciudad de La Laguna Airport|ES|1|
+MLN|Melilla|Melilla Airport|ES|0|
+FNA|Freetown|Lungi International Airport|SL|1|
+OXB|Bissau|Osvaldo Vieira International Airport|GW|1|
+JJU|Qaqortoq|Qaqortoq Airport|GL|0|
+MLW|Monrovia|Spriggs Payne Airport|LR|0|
+ROB|Monrovia|Roberts International Airport|LR|1|
+AGA|Agadir|Al Massira Airport|MA|1|
+TTA|Tan Tan|Tan Tan Airport|MA|0|
+OZG|Zagora|Zagora Airport|MA|1|
+UAR|Bouarfa|Bouarfa Airport|MA|0|
+FEZ|Saïss|Fes Saïss International Airport|MA|1|
+ERH|Errachidia|Moulay Ali Cherif Airport|MA|0|
+OUD|Ahl Angad|Oujda Angads Airport|MA|1|
+SMW|Smara|Smara Airport|EH|0|
+BEM|Oulad Yaich|Beni Mellal Airport|MA|1|
+RBA|Rabat|Rabat-Salé Airport|MA|1|
+VIL|Dakhla|Dakhla Airport|EH|1|
+ESU|Essaouira|Essaouira-Mogador Airport|MA|0|
+EUN|El Aaiún|Laayoune Hassan I International Airport|EH|1|
+CMN|Casablanca|Mohammed V International Airport|MA|1|
+NDR|Al Aaroui|Nador Al Aaroui International Airport|MA|1|
+RAK|Marrakesh|Marrakesh Menara Airport|MA|1|
+OZZ|Ouarzazate|Ouarzazate International Airport|MA|1|
+AHU|Al Hoceima|Cherif Al Idrissi Airport|MA|0|
+TTU|Tétouan|Sania Ramel Airport|MA|1|
+TNG|Tangier|Tangier Ibn Battuta Airport|MA|1|
+DSS|Dakar|Blaise Diagne International Airport|SN|1|
+ZIG|Ziguinchor|Ziguinchor Airport|SN|0|
+CSK|Cap Skirring|Cap Skirring Airport|SN|0|
+NKC|Nouakchott|Nouakchott–Oumtounsy International Airport|MR|1|
+NDB|Nouadhibou|Nouadhibou International Airport|MR|1|
+OUZ|Zouérate|Tazadit Airport|MR|0|
+CKY|Conakry|Ahmed Sékou Touré International Airport|GN|1|
+SID|Espargos|Amílcar Cabral International Airport|CV|1|
+BVC|Rabil|Aristides Pereira International Airport|CV|1|
+MMO|Vila do Maio|Maio Airport|CV|0|
+RAI|Praia|Nelson Mandela International Airport|CV|1|
+SNE|Preguiça|Preguiça Airport|CV|0|
+VXE|São Pedro|Cesaria Evora International Airport|CV|1|
+ADD|Addis Ababa|Addis Ababa Bole International Airport|ET|1|
+AMH|Arba Minch|Arba Minch Airport|ET|0|
+AXU|Axum|Axum Airport|ET|0|
+BJR|Bahir Dar|Bahir Dar Airport|ET|0|
+DIR|Dire Dawa|Aba Tenna Dejazmach Yilma International Airport|ET|1|
+GMB|Gambela|Gambela Airport|ET|0|
+GDQ|Azezo|Gondar Airport|ET|0|
+GDE|Gode|Gode Airport|ET|0|
+JIJ|Jijiga|Gerad Wilwal International Airport|ET|1|
+BCO|Jinka|Jinka Airport|ET|0|
+JIM|Jimma|Jimma Airport|ET|0|
+ABK|Kebri Dahar|Kebri Dahar Airport|ET|0|
+AWA|Hawassa|Hawassa International Airport|ET|1|
+MQX|Mekele|Mekele Alula Aba Nega Airport|ET|0|
+ASO|Asosa|Asosa Airport|ET|0|
+BJM|Bujumbura|Bujumbura Melchior Ndadaye International Airport|BI|1|
+GID|Gitega|Gitega Airport|BI|0|
+BSA|Bosaso|Bender Qassim International Airport|SO|1|
+HGA|Hargeisa|Egal International Airport|SO|1|
+BBO|Berbera|Berbera Airport|SO|0|
+MGQ|Mogadishu|Aden Adde International Airport|SO|1|
+JIB|Djibouti City|Djibouti-Ambouli Airport|DJ|1|
+DBB|El Alamein|El Alamein International Airport|EG|1|
+AAC|El Arish|El Arish International Airport|EG|1|
+ATZ|Asyut|Asyut International Airport|EG|1|
+HBE|Alexandria|Alexandria International Airport|EG|1|
+ABS|Abu Simbel|Abu Simbel Airport|EG|0|
+CAI|Cairo|Cairo International Airport|EG|1|
+CCE|New Cairo|Capital International Airport|EG|0|
+HRG|Hurghada|Hurghada International Airport|EG|1|
+LXR|Luxor|Luxor International Airport|EG|1|
+RMF|Marsa Alam|Marsa Alam International Airport|EG|1|
+MUH|Marsa Matruh|Mersa Matruh International Airport|EG|1|
+PSD|Port Said|Port Said International Airport|EG|1|
+HMB|Suhaj|Suhaj International Airport|EG|1|
+SSH|Sharm El Sheikh|Sharm El Sheikh International Airport|EG|1|
+ASW|Aswan|Aswan International Airport|EG|1|
+SPX|Al Jiza|Sphinx International Airport|EG|1|
+TCP|Taba|Taba International Airport|EG|0|
+ASM|Asmara|Asmara International Airport|ER|0|
+JUB|Juba|Juba International Airport|SS|1|
+ASV|Ol Tukai|Amboseli Airport|KE|0|
+EDL|Eldoret|Eldoret International Airport|KE|1|
+NBO|Nairobi|Jomo Kenyatta International Airport|KE|1|
+KIS|Kisumu|Kisumu International Airport|KE|1|
+LAU|Lamu|Manda Airport|KE|0|
+MYD|Malindi|Malindi International Airport|KE|0|
+MBA|Mombasa|Moi International Airport|KE|1|
+MRE|Serena|Mara Serena Lodge Airstrip|KE|0|
+NYK|Gathiuru|Nanyuki Civil Airport|KE|0|
+WIL|Nairobi|Nairobi Wilson Airport|KE|0|
+WJR|Wajir|Wajir Airport|KE|0|
+AKF|Kufra|Kufra Airport|LY|0|
+BEN|Benina|Benina International Airport|LY|1|
+MJI|Tripoli|Mitiga International Airport|LY|1|
+LAQ|Al Albraq|Al Abraq International Airport|LY|1|
+SEB|Sabha|Sabha Airport|LY|0|
+LTD|Ghadames|Ghadames Airport|LY|0|
+KGL|Kigali|Kigali International Airport|RW|1|
+KME|Kamembe|Kamembe Airport|RW|0|
+DOG|Dongola|Dongola Airport|SD|0|
+ELF|El Fasher|El Fasher Airport|SD|0|
+KSL|Kassala|Kassala Airport|SD|0|
+UYL|Nyala|Nyala Airport|SD|0|
+EBD|El-Obeid|El-Obeid Airport|SD|0|
+PZU|Port Sudan|Port Sudan New International Airport|SD|1|
+KRT|Khartoum|Khartoum International Airport|SD|1|
+MAK|Malakal|Malakal International Airport|SS|0|
+WUU|Wau|Wau Airport|SS|0|
+ARK|Arusha|Arusha Airport|TZ|0|
+DAR|Dar es Salaam|Julius Nyerere International Airport|TZ|1|
+DOD|Dodoma|Dodoma Airport|TZ|0|
+MBI|Mbeya|Songwe Airport|TZ|0|
+JRO|Arusha|Kilimanjaro International Airport|TZ|1|
+MYW|Mtwara|Mtwara Airport|TZ|0|
+MWZ|Mwanza|Mwanza International Airport|TZ|1|
+TGT|Tanga|Tanga Airport|TZ|0|
+ZNZ|Zanzibar|Abeid Amani Karume International Airport|TZ|1|
+RUA|Arua|Arua Airport|UG|0|
+EBB|Entebbe|Entebbe International Airport|UG|1|
+ULU|Gulu|Gulu Airport|UG|0|
+SRT|Soroti|Soroti Airport|UG|0|
+DHX|Kediri|Dhoho International Airport|ID|0|
+UGU|Bilogai|Bilorai Airport|ID|0|
+AYJ|Faizabad|Maharshi Valmiki International Airport|IN|0|
+AVR|Amravati|Amravati  Airport|IN|0|
+SDW|Chipi|Sindhudurg Airport|IN|0|
+NMI|Navi Mumbai|Navi Mumbai International Airport|IN|1|
+HGI|Hollongi|Itanagar Donyi Polo Hollongi Airport|IN|0|
+DXN|Gautam Buddha Nagar|Noida International Airport|IN|1|
+AHA|Ambikapur|Maa Mahamaya Airport|IN|0|
+BLD|Boulder City|Boulder City Municipal Airport|US|0|
+ABE|Allentown/Bethlehem|Lehigh Valley International Airport|US|0|
+ABI|Abilene|Abilene Regional Airport|US|0|
+ABQ|Albuquerque|Albuquerque International Sunport|US|1|
+ABR|Aberdeen|Aberdeen Regional Airport|US|0|
+ABY|Albany|Southwest Georgia Regional Airport|US|0|
+ACK|Nantucket|Nantucket Memorial Airport|US|0|
+ACT|Waco|Waco Regional Airport|US|0|
+ACV|Arcata/Eureka|California Redwood Coast-Humboldt County Airport|US|0|
+ACY|Atlantic City|Atlantic City International Airport|US|0|
+AEX|Alexandria|Alexandria International Airport|US|0|
+AGS|Augusta|Augusta Regional At Bush Field|US|0|
+AIA|Alliance|Alliance Municipal Airport|US|0|
+ALB|Albany|Albany International Airport|US|1|
+ALO|Waterloo|Waterloo Regional Airport|US|0|
+ALS|Alamosa|San Luis Valley Regional Airport/Bergman Field|US|0|
+ALW|Walla Walla|Walla Walla Regional Airport|US|0|
+AMA|Amarillo|Rick Husband Amarillo International Airport|US|0|
+AOO|Altoona|Altoona Blair County Airport|US|0|
+APN|Alpena|Alpena County Regional Airport|US|0|
+ART|Watertown|Watertown International Airport|US|0|
+ASE|Aspen|Aspen-Pitkin County Airport (Sardy Field)|US|0|
+ATL|Atlanta|Hartsfield Jackson Atlanta International Airport|US|1|
+ATW|Appleton|Appleton International Airport|US|0|
+ATY|Watertown|Watertown Regional Airport|US|0|
+AUG|Augusta|Augusta State Airport|US|0|
+AUS|Austin|Austin Bergstrom International Airport|US|1|
+AVL|Asheville|Asheville Regional Airport|US|0|
+AVP|Wilkes-Barre/Scranton|Wilkes-Barre/Scranton International Airport|US|0|
+AZO|Kalamazoo|Kalamazoo/Battle Creek International Airport|US|0|
+BKG|Branson|Branson Airport|US|0|
+BDL|Hartford|Bradley International Airport|US|1|
+BED|Bedford|Laurence G Hanscom Field|US|0|
+BFD|Bradford|Bradford Regional Airport|US|0|
+BFF|Scottsbluff|Western Neb. Rgnl/William B. Heilig Airport|US|0|
+BFI|Seattle|King County International Airport - Boeing Field|US|0|
+BFL|Bakersfield|Meadows Field|US|0|
+BGM|Binghamton|Greater Binghamton/Edwin A Link field|US|0|
+BGR|Bangor|Bangor International Airport|US|0|
+BHB|Bar Harbor|Hancock County-Bar Harbor Airport|US|0|
+BHM|Birmingham|Birmingham-Shuttlesworth International Airport|US|1|
+BIH|Bishop|Eastern Sierra Regional Airport|US|0|
+BIL|Billings|Billings Logan International Airport|US|0|
+BIS|Bismarck|Bismarck Municipal Airport|US|0|
+BJC|Denver|Rocky Mountain Metropolitan Airport|US|0|
+BKW|Beaver|Raleigh County Memorial Airport|US|0|
+BLI|Bellingham|Bellingham International Airport|US|0|
+BLV|Belleville|Scott AFB/Midamerica Airport|US|0|
+BMI|Bloomington/Normal|Central Illinois Regional Airport at Bloomington-Normal|US|0|
+BNA|Nashville|Nashville International Airport|US|1|
+BOI|Boise|Boise Air Terminal/Gowen Field|US|1|
+BOS|Boston|Boston Logan International Airport|US|1|
+BPT|Beaumont/Port Arthur|Jack Brooks Regional Airport|US|0|
+BQK|Brunswick|Brunswick Golden Isles Airport|US|0|
+BRD|Brainerd|Brainerd Lakes Regional Airport|US|0|
+BRL|Burlington|Southeast Iowa Regional Airport|US|0|
+BRO|Brownsville|Brownsville South Padre Island International Airport|US|0|
+BTM|Butte|Bert Mooney Airport|US|0|
+BTR|Baton Rouge|Baton Rouge Metropolitan Airport|US|0|
+BTV|Burlington|Patrick Leahy Burlington International Airport|US|0|
+BUF|Buffalo|Buffalo Niagara International Airport|US|1|
+BUR|Burbank|Hollywood Burbank/Bob Hope Airport|US|1|
+BWI|Baltimore|Baltimore/Washington International Thurgood Marshall Airport|US|1|
+BZN|Bozeman|Bozeman Yellowstone International Airport|US|0|
+CAE|Columbia|Columbia Metropolitan Airport|US|0|
+CAK|Akron|Akron Canton Regional Airport|US|0|
+CCR|Concord|Buchanan Field|US|0|
+CDC|Cedar City|Cedar City Regional Airport|US|0|
+CDR|Chadron|Chadron Municipal Airport|US|0|
+CEC|Crescent City|Jack Mc Namara Field Airport|US|0|
+CEZ|Cortez|Cortez Municipal Airport|US|0|
+CGI|Cape Girardeau|Cape Girardeau Regional Airport|US|0|
+CHA|Chattanooga|Chattanooga Metropolitan Airport (Lovell Field)|US|0|
+CHO|Charlottesville|Charlottesville Albemarle Airport|US|0|
+CHS|Charleston|Charleston International Airport|US|1|
+CID|Cedar Rapids|The Eastern Iowa Airport|US|0|
+CIU|Kincheloe|Chippewa County International Airport|US|0|
+CKB|Bridgeport|North Central West Virginia Airport|US|0|
+CLE|Cleveland|Cleveland Hopkins International Airport|US|1|
+CLL|College Station|Easterwood Field|US|0|
+CLT|Charlotte|Charlotte Douglas International Airport|US|1|
+CMH|Columbus|John Glenn Columbus International Airport|US|1|
+CMI|Savoy|University of Illinois Willard Airport|US|0|
+CMX|Hancock|Houghton County Memorial Airport|US|0|
+CNM|Carlsbad|Cavern City Air Terminal|US|0|
+CNY|Moab|Canyonlands Regional Airport|US|0|
+COD|Cody|Yellowstone Regional Airport|US|0|
+COS|Colorado Springs|City of Colorado Springs Municipal Airport|US|1|
+COU|Columbia|Columbia Regional Airport|US|0|
+CPR|Casper|Casper-Natrona County International Airport|US|0|
+CRP|Corpus Christi|Corpus Christi International Airport|US|0|
+CLD|Carlsbad|McClellan-Palomar Airport|US|0|
+CRW|Charleston|Yeager Airport|US|0|
+CSG|Columbus|Columbus Airport|US|0|
+CVG|Cincinnati / Covington|Cincinnati Northern Kentucky International Airport|US|1|
+CVN|Clovis|Clovis Municipal Airport|US|0|
+CWA|Mosinee|Central Wisconsin Airport|US|0|
+CYS|Cheyenne|Cheyenne Regional Jerry Olson Field|US|0|
+DAB|Daytona Beach|Daytona Beach International Airport|US|0|
+DAL|Dallas|Dallas Love Field|US|1|
+DAY|Dayton|James M. Cox Dayton International Airport|US|0|
+DBQ|Dubuque|Dubuque Regional Airport|US|0|
+DCA|Washington|Ronald Reagan Washington National Airport|US|1|
+DDC|Dodge City|Dodge City Regional Airport|US|0|
+DEC|Decatur|Decatur Airport|US|0|
+DEN|Denver|Denver International Airport|US|1|
+DFW|Dallas-Fort Worth|Dallas Fort Worth International Airport|US|1|
+DHN|Dothan|Dothan Regional Airport|US|0|
+DIK|Dickinson|Dickinson Theodore Roosevelt Regional Airport|US|0|
+DLH|Duluth|Duluth International Airport|US|0|
+DOV|Dover|Dover Civil Air Terminal/Dover Air Force Base|US|0|
+DRO|Durango|Durango La Plata County Airport|US|0|
+DSM|Des Moines|Des Moines International Airport|US|1|
+DSI|Destin|Destin Executive Airport|US|0|
+DTW|Detroit|Detroit Metropolitan Wayne County Airport|US|1|
+DUJ|Dubois|DuBois Regional Airport|US|0|
+DVL|Devils Lake|Devils Lake Regional Airport|US|0|
+EAR|Kearney|Kearney Regional Airport|US|0|
+EAT|Wenatchee|Pangborn Memorial Airport|US|0|
+EAU|Eau Claire|Chippewa Valley Regional Airport|US|0|
+ECP|Panama City Beach|Northwest Florida Beaches International Airport|US|0|
+EGE|Eagle|Eagle County Regional Airport|US|0|
+EKO|Elko|Elko Regional Airport|US|0|
+ELD|El Dorado|South Arkansas Regional Airport at Goodwin Field|US|0|
+ELM|Elmira/Corning|Elmira Corning Regional Airport|US|0|
+ELP|El Paso|El Paso International Airport|US|1|
+ERI|Erie|Erie International Tom Ridge Field|US|0|
+ESC|Escanaba|Delta County Airport|US|0|
+EUG|Eugene|Eugene Airport|US|0|
+EVV|Evansville|Evansville Regional Airport|US|0|
+EWB|New Bedford|New Bedford Regional Airport|US|0|
+EWN|New Bern|Coastal Carolina Regional Airport|US|0|
+EWR|Newark|Newark Liberty International Airport|US|1|
+EYW|Key West|Key West International Airport|US|0|
+FAR|Fargo|Hector International Airport|US|0|
+FAT|Fresno|Fresno Yosemite International Airport|US|1|
+FAY|Fayetteville|Fayetteville Regional Airport - Grannis Field|US|0|
+FRD|Friday Harbor|Friday Harbor Airport|US|0|
+FLG|Flagstaff|Flagstaff Pulliam Airport|US|0|
+FLL|Fort Lauderdale|Fort Lauderdale Hollywood International Airport|US|1|
+FLO|Florence|Florence Regional Airport|US|0|
+FNT|Flint|Bishop International Airport|US|0|
+FOD|Fort Dodge|Fort Dodge Regional Airport|US|0|
+FSD|Sioux Falls|Sioux Falls Regional Airport|US|0|
+FSM|Fort Smith|Fort Smith Regional Airport|US|0|
+FTW|Fort Worth|Fort Worth Meacham International Airport|US|0|
+FWA|Fort Wayne|Fort Wayne International Airport|US|0|
+GCC|Gillette|Northeast Wyoming Regional Airport|US|0|
+GCK|Garden City|Garden City Regional Airport|US|0|
+GCN|Grand Canyon - Tusayan|Grand Canyon National Park Airport|US|0|
+GDV|Glendive|Dawson Community Airport|US|0|
+GEG|Spokane|Spokane International Airport|US|1|
+GFK|Grand Forks|Grand Forks International Airport|US|0|
+GGG|Longview|East Texas Regional Airport|US|0|
+GGW|Glasgow|Glasgow Valley County Airport Wokal Field|US|0|
+GJT|Grand Junction|Grand Junction Regional Airport|US|0|
+GLH|Greenville|Mid Delta Regional Airport|US|0|
+GNV|Gainesville|Gainesville Regional Airport|US|0|
+FCA|Kalispell|Glacier Park International Airport|US|0|
+GPT|Gulfport|Gulfport Biloxi International Airport|US|0|
+GRB|Green Bay|Austin Straubel International Airport|US|0|
+GRI|Grand Island|Central Nebraska Regional Airport|US|0|
+GRK|Fort Cavazos|Killeen Regional Airport / Robert Gray Army Airfield|US|0|
+GRR|Grand Rapids|Gerald R. Ford International Airport|US|1|
+GSO|Greensboro|Piedmont Triad International Airport|US|1|
+GSP|Greenville/Greer/Spartanburg|Greenville-Spartanburg International Airport|US|0|
+GTF|Great Falls|Great Falls International Airport|US|0|
+GTR|Columbus/W Point/Starkville|Golden Triangle Regional Airport|US|0|
+GUC|Gunnison|Gunnison Crested Butte Regional Airport|US|0|
+GUP|Gallup|Gallup Municipal Airport|US|0|
+GYY|Gary|Gary/Chicago International Airport|US|0|
+DSY|Ta Noun|Dara Sakor International Airport|KH|1|
+KTI|Phnom Penh|Techo International Airport|KH|1|
+HDN|Hayden|Yampa Valley Airport|US|0|
+HGR|Hagerstown|Hagerstown Regional Richard A Henson Field|US|0|
+HHR|Hawthorne|Jack Northrop Field Hawthorne Municipal Airport|US|0|
+HIB|Hibbing|Range Regional Airport|US|0|
+HII|Lake Havasu City|Lake Havasu City Airport|US|0|
+HLN|Helena|Helena Regional Airport|US|0|
+HOB|Hobbs|Lea County Regional Airport|US|0|
+HOT|Hot Springs|Memorial Field Airport|US|0|
+HOU|Houston|William P. Hobby Airport|US|1|
+HPN|White Plains|Westchester County Airport|US|0|
+HRL|Harlingen|Valley International Airport|US|0|
+HRO|Harrison|Boone County Airport|US|0|
+HSV|Huntsville|Huntsville International Airport|US|0|
+HTS|Huntington|Tri-State Airport / Milton J. Ferguson Field|US|0|
+HVN|New Haven|Tweed New Haven Airport|US|0|
+HVR|Havre|Havre City County Airport|US|0|
+HHH|Hilton Head Island|Hilton Head Airport|US|0|
+HYA|Hyannis|Cape Cod Gateway Airport|US|0|
+HYS|Hays|Hays Regional Airport|US|0|
+IAD|Dulles|Washington Dulles International Airport|US|1|
+IAG|Niagara Falls|Niagara Falls International Airport|US|0|
+IAH|Houston|George Bush Intercontinental Airport|US|1|
+ICT|Wichita|Wichita Dwight D. Eisenhower National Airport|US|0|
+IDA|Idaho Falls|Idaho Falls Regional Airport|US|0|
+ILG|Wilmington|Wilmington Airport|US|0|
+ILM|Wilmington|Wilmington International Airport|US|0|
+IMT|Kingsford|Ford Airport|US|0|
+IND|Indianapolis|Indianapolis International Airport|US|1|
+INL|International Falls|Falls International Airport|US|0|
+IPL|Imperial|Imperial County Airport|US|0|
+IPT|Williamsport|Williamsport Regional Airport|US|0|
+IRK|Kirksville|Kirksville Regional Airport|US|0|
+ISP|Islip|Long Island MacArthur Airport|US|0|
+ITH|Ithaca|Ithaca Tompkins Regional Airport|US|0|
+AZA|Mesa|Mesa Gateway Airport|US|0|
+JAC|Jackson|Jackson Hole Airport|US|0|
+JAN|Jackson|Jackson-Medgar Wiley Evers International Airport|US|0|
+JAX|Jacksonville|Jacksonville International Airport|US|1|
+JBR|Jonesboro|Jonesboro Municipal Airport|US|0|
+JFK|New York|John F. Kennedy International Airport|US|1|
+JLN|Joplin|Joplin Regional Airport|US|0|
+JMS|Jamestown|Jamestown Regional Airport|US|0|
+USA|Concord|Concord-Padgett Regional Airport|US|0|
+JST|Johnstown|John Murtha Johnstown Cambria County Airport|US|0|
+LAF|West Lafayette|Purdue University Airport|US|0|
+LAL|Lakeland|Lakeland Linder International Airport|US|0|
+LAN|Lansing|Capital Region International Airport|US|0|
+LAR|Laramie|Laramie Regional Airport|US|0|
+LAS|Las Vegas|Harry Reid International Airport|US|1|
+LAW|Lawton|Lawton Fort Sill Regional Airport|US|0|
+LAX|Los Angeles|Los Angeles International Airport|US|1|
+LBB|Lubbock|Lubbock Preston Smith International Airport|US|0|
+LBE|Latrobe|Arnold Palmer Regional Airport|US|0|
+LBF|North Platte|North Platte Regional Airport Lee Bird Field|US|0|
+LBL|Liberal|Liberal Mid-America Regional Airport|US|0|
+LCH|Lake Charles|Lake Charles Regional Airport|US|0|
+LCK|Columbus|Rickenbacker International Airport|US|0|
+LEB|Lebanon|Lebanon Municipal Airport|US|0|
+LEX|Lexington|Blue Grass Airport|US|0|
+LFT|Lafayette|Lafayette Regional Airport|US|0|
+LGA|New York|LaGuardia Airport|US|1|
+LGB|Long Beach|Long Beach International Airport|US|1|
+LIT|Little Rock|Bill & Hillary Clinton National Airport/Adams Field|US|0|
+LNK|Lincoln|Lincoln Airport|US|0|
+LNS|Lancaster|Lancaster Airport|US|0|
+LRD|Laredo|Laredo International Airport|US|0|
+LRU|Las Cruces|Las Cruces International Airport|US|0|
+LSE|La Crosse|La Crosse Regional Airport|US|0|
+LUK|Cincinnati|Cincinnati Municipal Airport Lunken Field|US|0|
+LWB|Lewisburg|Greenbrier Valley Airport|US|0|
+LWS|Lewiston|Lewiston Nez Perce County Airport|US|0|
+LYH|Lynchburg|Lynchburg Regional Airport - Preston Glenn Field|US|0|
+MAF|Midland|Midland International Air and Space Port|US|0|
+MBS|Freeland|MBS International Airport|US|0|
+MCE|Merced|Merced Regional Macready Field|US|0|
+MCI|Kansas City|Kansas City International Airport|US|1|
+MCK|McCook|McCook Ben Nelson Regional Airport|US|0|
+MCN|Macon|Middle Georgia Regional Airport|US|0|
+MCO|Orlando|Orlando International Airport|US|1|
+MCW|Mason City|Mason City Municipal Airport|US|0|
+MDT|Harrisburg|Harrisburg International Airport|US|0|
+MDW|Chicago|Chicago Midway International Airport|US|1|
+MEI|Meridian|Key Field / Meridian Regional Airport|US|0|
+MEM|Memphis|Frederick W. Smith International Airport|US|1|
+MFE|McAllen|McAllen Miller International Airport|US|0|
+MFR|Medford|Rogue Valley International-Medford Airport|US|0|
+MGC|Michigan City|Michigan City Municipal Airport|US|0|
+MGM|Montgomery|Montgomery Regional (Dannelly Field) Airport|US|0|
+MGW|Morgantown|Morgantown Municipal Airport Walter L. (Bill) Hart Field|US|0|
+MHK|Manhattan|Manhattan Regional Airport|US|0|
+MHT|Manchester|Manchester-Boston Regional Airport|US|0|
+MIA|Miami|Miami International Airport|US|1|
+MKE|Milwaukee|General Mitchell International Airport|US|1|
+MKG|Muskegon|Muskegon County Airport|US|0|
+MKL|Jackson|McKellar-Sipes Regional Airport|US|0|
+MLB|Melbourne|Melbourne Orlando International Airport|US|0|
+MLI|Moline|Quad City International Airport|US|0|
+MLU|Monroe|Monroe Regional Airport|US|0|
+MMH|Mammoth Lakes|Mammoth Yosemite Airport|US|0|
+MOB|Mobile|Mobile Regional Airport|US|0|
+MOT|Minot|Minot International Airport|US|0|
+MRY|Monterey|Monterey Regional Airport|US|0|
+MSL|Muscle Shoals|Northwest Alabama Regional Airport|US|0|
+MSN|Madison|Dane County Regional Truax Field|US|0|
+MSO|Missoula|Missoula Montana Airport|US|0|
+MSP|Minneapolis|Minneapolis–Saint Paul International Airport / Wold–Chamberlain Field|US|1|
+MSS|Massena|Massena International Airport Richards Field|US|0|
+MSY|New Orleans|Louis Armstrong New Orleans International Airport|US|1|
+MTJ|Montrose|Montrose Regional Airport|US|0|
+MWA|Marion|Veterans Airport of Southern Illinois|US|0|
+MWL|Mineral Wells|Mineral Wells Regional Airport|US|0|
+MYL|McCall|McCall Municipal Airport|US|0|
+MYR|Myrtle Beach|Myrtle Beach International Airport|US|1|
+YUM|Yuma|Yuma International Airport / Marine Corps Air Station Yuma|US|0|
+OAJ|Richlands|Albert J Ellis Airport|US|0|
+OAK|Oakland|Oakland San Francisco Bay Airport|US|1|
+OGD|Ogden|Ogden Hinckley Airport|US|0|
+OGS|Ogdensburg|Ogdensburg International Airport|US|0|
+OKC|Oklahoma City|OKC Will Rogers World Airport|US|1|
+OLF|Wolf Point|L M Clayton Airport|US|0|
+OLM|Olympia|Olympia Regional Airport|US|0|
+OMA|Omaha|Eppley Airfield|US|1|
+ONT|Ontario|Ontario International Airport|US|1|
+OPF|Miami|Miami-Opa Locka Executive Airport|US|0|
+ORD|Chicago|Chicago O'Hare International Airport|US|1|
+ORF|Norfolk|Norfolk International Airport|US|1|
+ORH|Worcester|Worcester Regional Airport|US|0|
+ESD|Eastsound|Orcas Island Airport|US|0|
+OTH|North Bend|Southwest Oregon Regional Airport|US|0|
+OWB|Owensboro|Owensboro Daviess County Airport|US|0|
+OCE|Ocean City|Ocean City Municipal Airport|US|0|
+PAE|Everett|Seattle Paine Field International Airport|US|0|
+PAH|Paducah|Barkley Regional Airport|US|0|
+PBG|Plattsburgh|Plattsburgh International Airport|US|0|
+DJT|West Palm Beach|President Donald J. Trump International Airport|US|1|
+PDK|Atlanta|DeKalb Peachtree Airport|US|0|
+PDT|Pendleton|Eastern Oregon Regional Airport at Pendleton|US|0|
+PDX|Portland|Portland International Airport|US|1|
+PGA|Page|Page Municipal Airport|US|0|
+PGD|Punta Gorda|Punta Gorda Airport|US|0|
+PGV|Greenville|Pitt-Greenville Airport|US|0|
+PHF|Newport News|Newport News Williamsburg International Airport|US|0|
+PHL|Philadelphia|Philadelphia International Airport|US|1|
+PHX|Phoenix|Phoenix Sky Harbor International Airport|US|1|
+PIA|Peoria|General Wayne A. Downing Peoria International Airport|US|0|
+PIB|Moselle|Hattiesburg Laurel Regional Airport|US|0|
+PIE|Pinellas Park|St. Petersburg Clearwater International Airport|US|1|
+PIH|Pocatello|Pocatello Regional Airport|US|0|
+PIR|Pierre|Pierre Regional Airport|US|0|
+PIT|Pittsburgh|Pittsburgh International Airport|US|1|
+PKB|Parkersburg|Mid Ohio Valley Regional Airport|US|0|
+PLN|Pellston|Pellston Regional Airport of Emmet County Airport|US|0|
+PNS|Pensacola|Pensacola International Airport|US|1|
+PQI|Presque Isle|Presque Isle International Airport|US|0|
+PRC|Prescott|Prescott Regional Airport - Ernest A. Love Field|US|0|
+PSC|Pasco|Tri Cities Airport|US|0|
+PSM|Portsmouth|Portsmouth International Airport at Pease|US|0|
+PSP|Palm Springs|Palm Springs International Airport|US|1|
+PUB|Pueblo|Pueblo Memorial Airport|US|0|
+PUW|Pullman|Pullman-Moscow Regional Airport|US|0|
+PVD|Providence/Warwick|Rhode Island T. F. Green International Airport|US|1|
+PVU|Provo|Provo Municipal Airport|US|0|
+PWM|Portland|Portland International Jetport|US|1|
+RAP|Rapid City|Rapid City Regional Airport|US|0|
+RDD|Redding|Redding Municipal Airport|US|0|
+RDM|Redmond|Roberts Field|US|0|
+RDU|Raleigh/Durham|Raleigh-Durham International Airport|US|1|
+RFD|Chicago/Rockford|Chicago Rockford International Airport|US|0|
+RHI|Rhinelander|Rhinelander Oneida County Airport|US|0|
+RIC|Richmond|Richmond International Airport|US|1|
+RIW|Riverton|Central Wyoming Regional Airport|US|0|
+RKD|Rockland|Knox County Regional Airport|US|0|
+RKS|Rock Springs|Southwest Wyoming Regional Airport|US|0|
+RNO|Reno|Reno Tahoe International Airport|US|1|
+ROA|Roanoke|Roanoke–Blacksburg Regional Airport|US|0|
+ROC|Rochester|Frederick Douglass Greater Rochester International Airport|US|1|
+ROW|Roswell|Roswell Air Center Airport|US|0|
+RST|Rochester|Rochester International Airport|US|0|
+RSW|Fort Myers|Southwest Florida International Airport|US|1|
+RUT|Rutland|Rutland - Southern Vermont Regional Airport|US|0|
+SAF|Santa Fe|Santa Fe Municipal Airport|US|0|
+SAN|San Diego|San Diego International Airport|US|1|
+SAT|San Antonio|San Antonio International Airport|US|1|
+SAV|Savannah|Savannah Hilton Head International Airport|US|1|
+MQT|Gwinn|Marquette Sawyer Regional Airport|US|0|
+SBA|Santa Barbara|Santa Barbara Municipal Airport|US|0|
+SBD|San Bernardino|San Bernardino International Airport|US|1|
+SBN|South Bend|South Bend International Airport|US|0|
+SBP|San Luis Obispo|San Luis County Regional Airport|US|0|
+SBY|Salisbury|Salisbury Ocean City Wicomico Regional Airport|US|0|
+SCK|Stockton|Stockton Metropolitan Airport|US|0|
+SDF|Louisville|Louisville Muhammad Ali International Airport|US|1|
+SDY|Sidney|Sidney - Richland Regional Airport|US|0|
+SEA|Seattle|Seattle–Tacoma International Airport|US|1|
+SFB|Orlando|Orlando Sanford International Airport|US|1|
+SFO|San Francisco|San Francisco International Airport|US|1|
+SGF|Springfield|Springfield Branson National Airport|US|0|
+UST|St Augustine|Northeast Florida Regional Airport|US|0|
+SGU|St George|St George Regional Airport|US|0|
+SHD|Weyers Cave|Shenandoah Valley Regional Airport|US|0|
+SHR|Sheridan|Sheridan County Airport|US|0|
+SHV|Shreveport|Shreveport Regional Airport|US|0|
+SJC|San Jose|Mineta San Jose International Airport|US|1|
+SJT|San Angelo|San Angelo Regional Mathis Field|US|0|
+TSM|Taos|Taos Regional Airport|US|0|
+SLC|Salt Lake City|Salt Lake City International Airport|US|1|
+SLE|Salem|Salem-Willamette Valley Airport/McNary Field|US|0|
+SLK|Saranac Lake|Adirondack Regional Airport|US|0|
+SLN|Salina|Salina Municipal Airport|US|0|
+SMF|Sacramento|Sacramento International Airport|US|1|
+SMN|Salmon|Lemhi County Airport|US|0|
+SMX|Santa Maria|Santa Maria Public Airport Captain G Allan Hancock Field|US|0|
+SNA|Santa Ana|John Wayne Orange County International Airport|US|1|
+SOW|Show Low|Show Low Regional Airport|US|0|
+SPI|Springfield|Abraham Lincoln Capital Airport|US|0|
+SPS|Wichita Falls|Wichita Falls Municipal Airport / Sheppard Air Force Base|US|0|
+SQL|San Carlos|San Carlos Airport|US|0|
+SRQ|Sarasota/Bradenton|Sarasota Bradenton International Airport|US|1|
+STC|Saint Cloud|Saint Cloud Regional Airport|US|0|
+STL|St Louis|St. Louis Lambert International Airport|US|1|
+STS|Santa Rosa|Charles M. Schulz Sonoma County Airport|US|0|
+SUN|Hailey|Friedman Memorial Airport|US|0|
+SUX|Sioux City|Sioux Gateway Airport / Brigadier General Bud Day Field|US|0|
+SVC|Silver City|Grant County Airport|US|0|
+SWF|Newburgh|New York Stewart International Airport|US|0|
+SWO|Stillwater|Stillwater Regional Airport|US|0|
+SYR|Syracuse|Syracuse Hancock International Airport|US|1|
+TBN|Fort Leonard Wood|Waynesville-St. Robert Regional Airport-Forney Field|US|0|
+TEB|Teterboro|Teterboro Airport|US|0|
+TEX|Telluride|Telluride Regional Airport|US|0|
+TIW|Tacoma|Tacoma Narrows Airport|US|0|
+TLH|Tallahassee|Tallahassee International Airport|US|0|
+TOL|Toledo|Eugene F. Kranz Toledo Express Airport|US|0|
+TPA|Tampa|Tampa International Airport|US|1|
+TRI|Blountville|Tri-Cities Regional TN/VA Airport|US|0|
+TKF|Truckee|Truckee Tahoe Airport|US|0|
+TTN|Ewing Township|Trenton Mercer Airport|US|0|
+TUL|Tulsa|Tulsa International Airport|US|1|
+TUP|Tupelo|Tupelo Regional Airport|US|0|
+TUS|Tucson|Tucson International Airport|US|1|
+TVC|Traverse City|Cherry Capital Airport|US|0|
+TVF|Thief River Falls|Thief River Falls Regional Airport|US|0|
+TWF|Twin Falls|Joslin Field Magic Valley Regional Airport|US|0|
+TXK|Texarkana|Texarkana Regional Airport (Webb Field)|US|0|
+TYR|Tyler|Tyler Pounds Regional Airport|US|0|
+TYS|Knoxville/Maryville|McGhee Tyson Airport|US|1|
+UIN|Quincy|Quincy Regional Airport Baldwin Field|US|0|
+SCE|State College|State College Regional Airport|US|0|
+NPT|Newport|Newport State Airport|US|0|
+VCT|Victoria|Victoria Regional Airport|US|0|
+VEL|Vernal|Vernal Regional Airport|US|0|
+VLD|Valdosta|Valdosta Regional Airport|US|0|
+VPS|Valparaiso|Destin-Fort Walton Beach Airport|US|0|
+VRB|Vero Beach|Vero Beach Regional Airport|US|0|
+WST|Westerly|Westerly State Airport|US|0|
+WYS|West Yellowstone|Yellowstone Airport|US|0|
+XNA|Fayetteville/Springdale/Rogers|Northwest Arkansas National Airport|US|0|
+XWA|Williston|Williston Basin International Airport|US|0|
+YKM|Yakima|Yakima Air Terminal McAllister Field|US|0|
+BOR|Ton Phueng|Bokeo International Airport|LA|0|
+TIA|Rinas|Tirana International Airport Mother Teresa|AL|1|
+BOJ|Burgas|Burgas Airport|BG|1|
+PDV|Plovdiv|Plovdiv International Airport|BG|1|
+SOF|Sofia|Sofia Airport|BG|1|
+VAR|Varna|Varna Airport|BG|1|
+ECN|Tymbou|Ercan International Airport|CY|1|
+LCA|Larnaca|Larnaca International Airport|CY|1|
+PFO|Paphos|Paphos International Airport|CY|1|
+DBV|Dubrovnik|Dubrovnik Ruđer Bošković Airport|HR|1|
+OSI|Osijek|Osijek Airport|HR|0|
+PUY|Pula|Pula Airport|HR|1|
+RJK|Rijeka|Rijeka Airport|HR|1|
+BWK|Gornji Humac|Brač Airport|HR|0|
+SPU|Split|Split Saint Jerome Airport|HR|1|
+ZAG|Velika Gorica|Zagreb Franjo Tuđman International Airport|HR|1|
+ZAD|Zadar|Zadar Airport|HR|1|
+ALC|Alicante|Alicante-Elche Miguel Hernández Airport|ES|1|
+LEI|Almería|Almería Airport|ES|0|
+OVD|Ranón|Asturias Airport|ES|1|
+ODB|Córdoba|Córdoba Airport|ES|0|
+BIO|Bilbao|Bilbao Airport|ES|1|
+BCN|Barcelona|Josep Tarradellas Barcelona-El Prat Airport|ES|1|
+BJZ|Badajoz|Badajoz Airport|ES|0|
+CDT|Castellón de la Plana|Castellón-Costa Azahar Airport|ES|0|
+LCG|Culleredo|A Coruña Airport|ES|0|
+ILD|Lleida|Lleida-Alguaire Airport|ES|0|
+GRO|Girona|Girona-Costa Brava Airport|ES|1|
+GRX|Granada|F.G.L. Airport Granada-Jaén Airport|ES|0|
+IBZ|Ibiza|Ibiza Airport|ES|1|
+XRY|Jerez de la Frontera|Jerez Airport|ES|0|
+LEN|La Virgen del Camino|León Airport|ES|0|
+RJL|Logroño|Logroño-Agoncillo Airport|ES|0|
+MAD|Madrid|Adolfo Suárez Madrid–Barajas Airport|ES|1|
+AGP|Málaga|Málaga-Costa del Sol Airport|ES|1|
+MAH|Mahón|Menorca Airport|ES|1|
+RMU|Corvera|Region of Murcia International Airport|ES|1|
+PMI|Palma de Mallorca|Palma de Mallorca Airport|ES|1|
+PNA|Pamplona|Pamplona Airport|ES|0|
+REU|Reus|Reus Airport|ES|1|
+SLM|Salamanca|Salamanca Airport|ES|0|
+EAS|Hondarribia|San Sebastián Airport|ES|0|
+SCQ|Santiago de Compostela|Santiago-Rosalía de Castro Airport|ES|1|
+LEU|La Seu d'Urgell Pyrenees and Andorra|Pirineus - la Seu d'Urgel Airport|ES|0|
+VLC|Valencia|Valencia Airport|ES|1|
+VLL|Valladolid|Valladolid Airport|ES|0|
+VIT|Alava|Vitoria Airport|ES|0|
+VGO|Vigo|Vigo Airport|ES|0|
+SDR|Santander|Seve Ballesteros-Santander Airport|ES|0|
+ZAZ|Zaragoza|Zaragoza Airport|ES|1|
+SVQ|Seville|Seville Airport|ES|1|
+BOD|Bordeaux|Bordeaux–Mérignac Airport|FR|1|
+EGC|Bergerac|Bergerac Dordogne-Périgord airport|FR|0|
+LRH|La Rochelle|La Rochelle Île de Ré Airport|FR|0|
+PIS|Poitiers/Biard|Poitiers-Biard Airport|FR|0|
+LIG|Limoges/Bellegarde|Limoges Airport|FR|0|
+TLS|Toulouse/Blagnac|Toulouse-Blagnac Airport|FR|1|
+PUF|Pau/Pyrénées|Pau Pyrénées Airport|FR|0|
+LDE|Tarbes/Lourdes/Pyrénées|Tarbes-Lourdes-Pyrénées Airport|FR|0|
+BIQ|Biarritz|Biarritz Pays Basque airport|FR|0|
+DCM|Castres|Castres Mazamet Airport|FR|0|
+RDZ|Rodez/Marcillac|Rodez–Aveyron Airport|FR|0|
+DLE|Dole|Dole Tavaux Airport|FR|0|
+ETZ|Goin|Metz-Nancy-Lorraine Airport|FR|0|
+BIA|Bastia|Bastia-Poretta International airport|FR|1|
+CLY|Calvi|Calvi Sainte Catherine Airport|FR|0|
+FSC|Figari|Figari Sud-Corse Airport|FR|1|
+AJA|Ajaccio|Ajaccio Napoléon Bonaparte airport|FR|0|
+CMF|Chambéry|Chambéry Aix les Bains airport|FR|0|
+CFE|Clermont-Ferrand|Clermont-Ferrand Auvergne airport|FR|1|
+LYS|Colombier-Saugnieu, Rhône|Lyon Saint-Exupéry Airport|FR|1|
+NCY|Annecy|Annecy Meythet airport|FR|0|
+GNB|Grenoble|Grenoble Alpes Isère Airport|FR|0|
+AUR|Aurillac|Aurillac airport|FR|0|
+CCF|Carcassonne|Carcassonne Salvaza Airport|FR|0|
+MRS|Marignane, Bouches-du-Rhône|Marseille Provence Airport|FR|1|
+NCE|Nice, Alpes-Maritimes|Nice-Côte d'Azur Airport|FR|1|
+PGF|Perpignan/Rivesaltes|Perpignan-Rivesaltes (Llabanère) Airport|FR|0|
+MPL|Montpellier/Méditerranée|Montpellier-Méditerranée Airport|FR|1|
+BZR|Béziers|Béziers Vias airport|FR|0|
+AVN|Avignon|Avignon Caumont airport|FR|0|
+BVA|Beauvais|Beauvais-Tillé airport|FR|1|
+XCR|Chalons en Champagne|Chalons Vatry airport|FR|0|
+TUF|Tours, Indre-et-Loire|Tours Val de Loire Airport|FR|0|
+CDG|Paris|Charles de Gaulle International Airport|FR|1|
+ORY|Paris|Paris-Orly Airport|FR|1|
+LIL|Lesquin|Lille Airport|FR|1|
+BES|Brest|Brest Bretagne airport|FR|1|
+DOL|Deauville|Deauville Normandie airport|FR|0|
+CFR|Caen|Caen Carpiquet airport|FR|0|
+RNS|Saint-Jacques-de-la-Lande, Ille-et-Vilaine|Rennes-Saint-Jacques Airport|FR|0|
+NTE|Nantes|Nantes Atlantique Airport|FR|1|
+BSL|Bâle / Mulhouse|EuroAirport Basel–Mulhouse–Freiburg|FR|1|
+BVE|Brive|Brive Souillac airport|FR|0|
+SXB|Strasbourg|Strasbourg Airport|FR|1|
+TLN|Hyères, Var|Toulon-Hyères Airport|FR|0|
+FNI|Nîmes/Garons|Nîmes-Arles-Camargue Airport|FR|0|
+FSP|Saint-Pierre|Saint-Pierre Pointe-Blanche Airport|PM|0|
+AXD|Alexandroupolis|Alexandroupoli Democritus Airport|GR|0|
+ATH|Spata-Artemida|Athens Eleftherios Venizelos International Airport|GR|1|
+VOL|Nea Anchialos|Nea Anchialos National Airport|GR|0|
+JKH|Chios Island|Chios Island National Airport|GR|0|
+IOA|Ioannina|Ioannina King Pyrrhus National Airport|GR|0|
+HER|Heraklion|Heraklion International Nikos Kazantzakis Airport|GR|1|
+EFL|Kefallinia Island|Kefalonia International Airport "Anna Pollatou"|GR|1|
+KLX|Kalamata|Kalamata Airport|GR|0|
+KGS|Kos Island|Kos International Airport "Ippokratis"|GR|1|
+AOK|Karpathos Island|Karpathos Airport|GR|0|
+CFU|Kerkyra|Corfu Ioannis Kapodistrias International Airport|GR|1|
+KVA|Kavala|Kavala Alexander the Great International Airport|GR|1|
+KZI|Kozani|Kozani National Airport Filippos|GR|0|
+JMK|Mykonos|Mykonos Island National Airport|GR|0|
+MJT|Mytilene|Mytilene International Airport|GR|0|
+PVK|Preveza|Aktion National Airport|GR|0|
+RHO|Rhodes|Rhodes International Airport "Diagoras"|GR|1|
+GPA|Patras|Patras Araxos Agamemnon Airport|GR|0|
+CHQ|Souda|Chania International Airport|GR|1|
+JSI|Skiathos|Skiathos Island National Airport|GR|0|
+SMI|Samos Island|Samos Airport|GR|0|
+JTR|Santorini Island|Santorini International Airport|GR|1|
+JSH|Crete Island|Sitia Airport|GR|0|
+SKG|Thessaloniki|Thessaloniki Macedonia International Airport|GR|1|
+ZTH|Zakynthos|Zakynthos International Airport "Dionysios Solomos"|GR|1|
+BUD|Budapest|Budapest Liszt Ferenc International Airport|HU|1|
+DEB|Debrecen|Debrecen International Airport|HU|1|
+PEV|Pécs|Pécs-Pogány International Airport|HU|1|
+SOB|Sármellék|Hévíz–Balaton Airport|HU|0|
+CRV|Isola di Capo Rizzuto|Crotone Sant'Anna Pythagoras Airport|IT|0|
+BRI|Bari|Bari Karol Wojtyła International Airport|IT|1|
+FOG|Foggia|Foggia Gino Lisa Airport|IT|0|
+PSR|Pescara|Abruzzo Airport|IT|1|
+BDS|Brindisi|Brindisi Airport|IT|1|
+SUF|Lamezia Terme|Lamezia Terme Sant'Eufemia International Airport|IT|1|
+CIY|Comiso|Comiso Airport|IT|0|
+CTA|Catania|Catania-Fontanarossa Airport|IT|1|
+LMP|Lampedusa|Lampedusa Airport|IT|0|
+PNL|Pantelleria|Pantelleria Airport|IT|0|
+PMO|Palermo|Falcone–Borsellino Airport|IT|1|
+REG|Reggio Calabria|Reggio Calabria Airport|IT|0|
+TPS|Trapani|Vincenzo Florio Airport Trapani-Birgi|IT|0|
+AHO|Alghero|Alghero-Fertilia Airport|IT|0|
+CAG|Cagliari|Cagliari Elmas Airport|IT|1|
+OLB|Olbia|Olbia Costa Smeralda Airport|IT|1|
+MXP|Ferno|Milan Malpensa International Airport|IT|1|
+BGY|Orio al Serio|Il Caravaggio International Airport|IT|1|
+TRN|Caselle Torinese|Turin Airport|IT|1|
+GOA|Genova|Genoa Cristoforo Colombo Airport|IT|1|
+LIN|Segrate|Milano Linate Airport|IT|1|
+PMF|Parma|Parma Airport|IT|0|
+CUF|Levaldigi|Cuneo International Airport|IT|0|
+BZO|Bolzano|Bolzano Airport|IT|0|
+BLQ|Bologna|Bologna Guglielmo Marconi Airport|IT|1|
+TSF|Treviso|Treviso Airport|IT|1|
+FRL|Forlì|Forlì-Luigi Ridolfi International Airport|IT|0|
+VBS|Montichiari|Brescia Gabriele d'Annunzio Airport|IT|0|
+TRS|Ronchi dei Legionari/Trieste|Trieste Airport|IT|1|
+RMI|Rimini|Federico Fellini International Airport|IT|1|
+VRN|Caselle|Verona Villafranca Valerio Catullo Airport|IT|1|
+AOI|Falconara Marittima|Marche Airport|IT|0|
+VCE|Venezia|Venice Marco Polo Airport|IT|1|
+CIA|Rome|Ciampino–G. B. Pastine International Airport|IT|1|
+FCO|Rome|Rome–Fiumicino Leonardo da Vinci International Airport|IT|1|
+QSR|Salerno|Salerno Costa d'Amalfi Airport|IT|0|
+EBA|Campo nell'Elba|Marina di Campo Airport|IT|0|
+NAP|Napoli|Naples International Airport|IT|1|
+PSA|Pisa|Pisa International Airport|IT|1|
+FLR|Firenze|Florence Airport, Peretola|IT|1|
+PEG|Perugia|Perugia San Francesco d'Assisi – Umbria International Airport|IT|1|
+LJU|Zgornji Brnik|Ljubljana Jože Pučnik Airport|SI|1|
+MBX|Maribor|Maribor Edvard Rusjan Airport|SI|0|
+JCL|České Budějovice|České Budějovice South Bohemian Airport|CZ|1|
+KLV|Karlovy Vary|Karlovy Vary Airport|CZ|1|
+OSR|Mošnov|Leoš Janáček Airport Ostrava|CZ|1|
+PED|Pardubice|Pardubice Airport|CZ|1|
+PRG|Prague|Václav Havel Airport Prague|CZ|1|
+BRQ|Brno|Brno-Tuřany Airport|CZ|0|
+TLV|Tel Aviv|Ben Gurion International Airport|IL|1|
+ETM|Eilat|Ramon International Airport|IL|1|
+HFA|Haifa|Uri Michaeli Haifa International Airport|IL|0|
+MLA|Valletta|Malta International Airport|MT|1|
+GRZ|Feldkirchen bei Graz|Graz Airport|AT|1|
+INN|Innsbruck|Innsbruck Airport|AT|1|
+KLU|Klagenfurt am Wörthersee|Klagenfurt Airport|AT|1|
+LNZ|Linz|Linz-Hörsching Airport|AT|1|
+SZG|Salzburg|Salzburg Airport|AT|1|
+VIE|Vienna|Vienna International Airport|AT|1|
+SMA|Vila do Porto|Santa Maria Airport|PT|0|
+BGC|Bragança|Bragança Airport|PT|0|
+CAT|Cascais|Cascais Airport|PT|0|
+FLW|Santa Cruz das Flores|Flores Airport|PT|0|
+FAO|Faro|Faro - Gago Coutinho International Airport|PT|1|
+GRW|Santa Cruz da Graciosa|Graciosa Airport|PT|0|
+HOR|Horta|Horta Airport|PT|0|
+TER|Praia da Vitória|Lajes Airport|PT|0|
+FNC|Funchal|Cristiano Ronaldo International Airport|PT|1|
+PDL|Ponta Delgada|João Paulo II Airport|PT|1|
+PIX|Pico Island|Pico Airport|PT|0|
+PRM|Portimão|Portimão Airport|PT|0|
+OPO|Porto|Francisco de Sá Carneiro Airport|PT|1|
+PXO|Vila Baleira|Porto Santo Airport|PT|0|
+LIS|Lisbon|Lisbon Humberto Delgado Airport|PT|1|
+SJZ|Velas|São Jorge Airport|PT|0|
+VRL|Vila Real|Vila Real Airport|PT|0|
+VSE|Viseu|Aerodromo Goncalves Lobato (Viseu Airport)|PT|0|
+BNX|Mahovljani|Banja Luka International Airport|BA|1|
+OMO|Mostar|Mostar International Airport|BA|1|
+SJJ|Sarajevo|Sarajevo International Airport|BA|1|
+TZL|Dubrave Gornje|Tuzla International Airport|BA|1|
+ARW|Arad|Arad International Airport|RO|0|
+BCM|Bacău|Bacău George Enescu International  Airport|RO|1|
+BAY|Tăuții-Măgherăuș|Maramureș International Airport|RO|0|
+BBU|Bucharest|Bucharest Băneasa Aurel Vlaicu International Airport|RO|1|
+GHV|Brașov|Brașov-Ghimbav International Airport|RO|1|
+CND|Constanța|Mihail Kogălniceanu International Airport|RO|1|
+CLJ|Cluj-Napoca|Avram Iancu Cluj International Airport|RO|1|
+CRA|Craiova|Craiova International Airport|RO|1|
+IAS|Iaşi|Iaşi International Airport|RO|1|
+OMR|Oradea|Oradea International Airport|RO|1|
+OTP|Otopeni|Bucharest Henri Coandă International Airport|RO|1|
+SBZ|Sibiu|Sibiu International Airport|RO|1|
+SUJ|Satu Mare|Satu Mare International Airport|RO|0|
+SCV|Suceava|Suceava Ștefan cel Mare International Airport|RO|1|
+TGM|Recea|Târgu Mureş Transilvania International Airport|RO|0|
+TSR|Timişoara|Timișoara Traian Vuia International Airport|RO|1|
+GVA|Geneva|Geneva International Airport|CH|1|
+LUG|Agno|Lugano Airport|CH|0|
+BRN|Bern|Bern Airport|CH|0|
+ZRH|Zurich|Zürich Airport|CH|1|
+ACH|St. Gallen|Sankt Gallen Altenrhein Airport|CH|0|
+ESB|Ankara|Esenboğa International Airport|TR|1|
+AYT|Antalya|Antalya International Airport|TR|1|
+GZT|Gaziantep|Gaziantep Oğuzeli International Airport|TR|1|
+KFS|Kastamonu|Kastamonu Airport|TR|0|
+KYA|Konya|Konya Airport|TR|1|
+MZH|Amasya|Amasya Merzifon Airport|TR|0|
+VAS|Sivas|Sivas Nuri Demirağ Airport|TR|0|
+ONQ|Zonguldak|Zonguldak Çaycuma Airport|TR|0|
+MLX|Malatya|Malatya Erhaç Airport|TR|0|
+ASR|Kayseri|Kayseri Erkilet International Airport|TR|1|
+TJK|Tokat|Tokat Airport|TR|0|
+DNZ|Denizli|Çardak Airport|TR|0|
+NAV|Nevşehir|Nevşehir Kapadokya Airport|TR|1|
+BZI|Balıkesir|Balıkesir Airport|TR|0|
+CKZ|Çanakkale|Çanakkale Airport|TR|0|
+ADB|Gaziemir|Adnan Menderes International Airport|TR|1|
+YEI|Yenişehir|Bursa Yenişehir Airport|TR|0|
+DLM|Dalaman|Dalaman International Airport|TR|1|
+TEQ|Çorlu|Tekirdağ Çorlu Airport|TR|0|
+AOE|Eskişehir|Hasan Polatkan Airport|TR|1|
+KZR|Altıntaş|Zafer Airport|TR|0|
+EZS|Elazığ|Elazığ Airport|TR|0|
+OGU|Ordu|Ordu–Giresun Airport|TR|0|
+DIY|Diyarbakır|Diyarbakır Airport|TR|0|
+ERC|Erzincan|Erzincan Airport|TR|0|
+ERZ|Erzurum|Erzurum International Airport|TR|0|
+KSY|Kars|Kars Airport|TR|0|
+TZX|Trabzon|Trabzon International Airport|TR|0|
+VAN|Van|Van Ferit Melen Airport|TR|0|
+BAL|Batman|Batman Airport|TR|0|
+MSR|Muş|Muş Airport|TR|0|
+NOP|Sinop|Sinop Airport|TR|0|
+KCM|Kahramanmaraş|Kahramanmaraş Airport|TR|0|
+AJI|Ağrı|Ağrı Airport|TR|0|
+ADF|Adıyaman|Adıyaman Airport|TR|0|
+MQM|Mardin|Mardin Airport|TR|0|
+GNY|Şanlıurfa|Şanlıurfa GAP Airport|TR|1|
+IGD|Iğdır|Iğdır Airport|TR|0|
+BGG|Bingöl|Bingöl Airport|TR|0|
+NKT|Şırnak|Şırnak Şerafettin Elçi Airport|TR|0|
+YKO|Hakkari|Hakkari Yüksekova Airport|TR|0|
+HTY|Antakya|Hatay Airport|TR|0|
+COV|Tarsus|Çukurova International Airport|TR|1|
+ISE|Isparta|Süleyman Demirel International Airport|TR|0|
+EDO|Edremit|Balıkesir Koca Seyit Airport|TR|1|
+BJV|Bodrum|Milas Bodrum International Airport|TR|1|
+GZP|Gazipaşa|Gazipaşa-Alanya Airport|TR|0|
+SZF|Samsun|Samsun-Çarşamba Airport|TR|0|
+SAW|Pendik, Istanbul|Istanbul Sabiha Gökçen International Airport|TR|1|
+IST|Istanbul|İstanbul Airport|TR|1|
+RZV|Rize|Rize–Artvin Airport|TR|0|
+RMO|Chişinău|Chişinău International Airport|MD|1|
+OHD|Ohrid|Ohrid St. Paul the Apostle Airport|MK|1|
+SKP|Ilinden|Skopje International Airport|MK|1|
+GIB|Gibraltar|Gibraltar Airport|GI|1|
+BEG|Belgrade|Belgrade Nikola Tesla Airport|RS|1|
+KVO|Kraljevo|Morava Airport|RS|0|
+INI|Niš|Niš Constantine the Great Airport|RS|1|
+TGD|Podgorica|Podgorica Airport / Podgorica Golubovci Airbase|ME|1|
+TIV|Tivat|Tivat Airport|ME|0|
+LZG|Nanchong|Langzhong Gucheng Airport|CN|0|
+BTS|Bratislava|M. R. Štefánik Airport|SK|1|
+KSC|Košice|Košice International Airport|SK|0|
+SLD|Sliač|Sliač Airport|SK|0|
+TAT|Poprad|Poprad-Tatry Airport|SK|0|
+GDT|Cockburn Town|JAGS McCartney International Airport|TC|0|
+NCA|North Caicos|North Caicos Airport|TC|0|
+PLS|Providenciales|Providenciales International Airport|TC|1|
+XSC|South Caicos|South Caicos Airport|TC|0|
+BRX|Barahona|Maria Montez International Airport|DO|0|
+AZS|Samana|Samaná El Catey International Airport|DO|0|
+JBQ|La Isabela|La Isabela International Airport|DO|0|
+LRM|La Romana|Casa De Campo International Airport|DO|1|
+PUJ|Punta Cana|Punta Cana International Airport|DO|1|
+POP|Puerto Plata|Gregorio Luperon International Airport|DO|0|
+SDQ|Santo Domingo|Las Américas International Airport|DO|1|
+STI|Santiago|Cibao International Airport|DO|1|
+GUA|Guatemala City|La Aurora International Airport|GT|1|
+PBR|Puerto Barrios|Puerto Barrios Airport|GT|0|
+RER|Retalhuleu|Retalhuleu Airport|GT|0|
+FRS|San Benito|Mundo Maya International Airport|GT|0|
+LCE|La Ceiba|Golosón International Airport|HN|0|
+SAP|San Pedro Sula|Ramón Villeda Morales International Airport|HN|1|
+GJA|Guanaja|La Laguna Airport|HN|0|
+RTB|Coxen Hole|Juan Manuel Gálvez International Airport|HN|1|
+XPL|Palmerola|Palmerola International Airport|HN|1|
+TGU|Tegucigalpa|Toncontín Airport|HN|0|
+OCJ|Boscobel|Ian Fleming International Airport|JM|0|
+KIN|Kingston|Norman Manley International Airport|JM|1|
+MBJ|Montego Bay|Sangster International Airport|JM|1|
+KTP|Tinson Pen|Tinson Pen Airport|JM|0|
+ACA|Acapulco|General Juan N. Álvarez International Airport|MX|1|
+AGU|Aguascalientes|Aguascalientes International Airport|MX|1|
+HUX|Huatulco|Bahías de Huatulco International Airport|MX|1|
+CME|Ciudad del Carmen|Ciudad del Carmen International Airport|MX|0|
+CUL|Culiacán|Bachigualato Federal International Airport|MX|1|
+CTM|Chetumal|Chetumal International Airport|MX|0|
+CEN|Ciudad Obregón|Ciudad Obregón International Airport|MX|0|
+CPE|Campeche|Ingeniero Alberto Acuña Ongay International Airport|MX|0|
+CJS|Ciudad Juárez|Abraham González International Airport|MX|1|
+CUU|Chihuahua|General Roberto Fierro Villalobos International Airport|MX|1|
+CVM|Ciudad Victoria|General Pedro Jose Mendez International Airport|MX|0|
+CZM|Cozumel|Cozumel International Airport|MX|1|
+DGO|Durango|General Guadalupe Victoria International Airport|MX|0|
+TPQ|Tepic|Amado Nervo National Airport|MX|0|
+GDL|Guadalajara|Guadalajara International Airport|MX|1|
+GYM|Guaymas|General José María Yáñez International Airport|MX|0|
+HMO|Hermosillo|General Ignacio L. Pesqueira International Airport|MX|1|
+CLQ|Colima|Licenciado Miguel de la Madrid International Airport|MX|0|
+SLW|Saltillo|Plan de Guadalupe International Airport|MX|0|
+IZT|Ixtepec|General Antonio Cárdenas Rodríguez National Airport / Ixtepec Air Base|MX|0|
+LMM|Los Mochis|Valle del Fuerte International Airport|MX|0|
+BJX|Silao|Guanajuato International Airport|MX|1|
+LAP|La Paz|Manuel Márquez de León International Airport|MX|0|
+LTO|Loreto|Loreto International Airport|MX|1|
+MAM|Matamoros|General Servando Canales International Airport|MX|0|
+MID|Mérida|Manuel Crescencio Rejón International Airport|MX|1|
+MXL|Mexicali|General Rodolfo Sánchez Taboada International Airport|MX|0|
+MLM|Morelia|General Francisco J. Mujica International Airport|MX|1|
+MTT|Cosoleacaque|Minatitlán/Coatzacoalcos International Airport|MX|0|
+MEX|Mexico City|Mexico City Benito Juárez International Airport|MX|1|
+MTY|Monterrey|Monterrey International Airport|MX|1|
+MZT|Mazatlàn|General Rafael Buelna International Airport|MX|1|
+NLD|Nuevo Laredo|Quetzalcóatl International Airport|MX|0|
+OAX|Oaxaca|Xoxocotlán International Airport|MX|1|
+PAZ|Poza Rica|El Tajín National Airport|MX|0|
+PBC|Puebla|Hermanos Serdán International Airport|MX|1|
+PDS|Piedras Negras|Piedras Negras International Airport|MX|0|
+UPN|Uruapan|Uruapan - Licenciado y General Ignacio Lopez Rayon International Airport|MX|0|
+PVR|Puerto Vallarta|Puerto Vallarta International Airport|MX|1|
+PXM|Puerto Escondido|Puerto Escondido International Airport|MX|0|
+QRO|Querétaro|Querétaro Intercontinental Airport|MX|1|
+REX|Reynosa|General Lucio Blanco International Airport|MX|0|
+SJD|San José del Cabo|Los Cabos International Airport|MX|1|
+CSW|Cabo San Lucas|Cabo San Lucas International Airport|MX|0|
+NLU|Mexico City|Felipe Ángeles International Airport|MX|1|
+SLP|San Luis Potosí|Ponciano Arriaga International Airport|MX|0|
+TRC|Torreón|Francisco Sarabia Tinoco International Airport|MX|0|
+TGZ|Tuxtla Gutiérrez|Angel Albino Corzo International Airport|MX|0|
+TIJ|Tijuana|General Abelardo L. Rodriguez International Airport|MX|1|
+TQO|Tulum|Felipe Carrillo Puerto International Airport Tulum|MX|1|
+TAM|Ciudad Madero|General Francisco Javier Mina International Airport|MX|0|
+TLC|Toluca|Adolfo López Mateos International Airport|MX|1|
+TAP|Tapachula|Tapachula International Airport|MX|0|
+CUN|Cancún|Cancún International Airport|MX|1|
+VSA|Villahermosa|Carlos Rovirosa Pérez International Airport|MX|1|
+VER|Veracruz|General Heriberto Jara International Airport|MX|1|
+ZCL|Zacatecas|General Leobardo C. Ruiz International Airport|MX|0|
+ZIH|Ixtapa|Ixtapa-Zihuatanejo International Airport|MX|1|
+ZLO|Manzanillo|Playa de Oro International Airport|MX|0|
+BEF|Bluefields|Bluefields Airport|NI|0|
+MGA|Managua|Augusto C. Sandino (Managua) International Airport|NI|1|
+PUZ|Puerto Cabezas|Puerto Cabezas Airport|NI|0|
+BOC|Isla Colón|Bocas del Toro "Isla Colón" International Airport|PA|0|
+CTD|Chitré|Alonso Valderrama Airport|PA|0|
+CHX|Changuinola|Changuinola Captain Manuel Niño International Airport|PA|0|
+DAV|David|Enrique Malek International Airport|PA|0|
+ONX|Colón|Enrique Adolfo Jimenez Airport|PA|0|
+BLB|Panamá City|Panamá Pacífico International Airport|PA|0|
+PAC|Albrook|Marcos A. Gelabert International Airport|PA|0|
+PTY|Tocumen|Tocumen International Airport|PA|1|
+FON|La Fortuna|La Fortuna Arenal Airport|CR|0|
+GLF|Golfito|Golfito Airport|CR|0|
+LIR|Liberia|Daniel Oduber Quirós International Airport|CR|1|
+LIO|Limón|Limón International Airport|CR|0|
+NOB|Nicoya|Nosara Airport|CR|0|
+SJO|San José|Juan Santamaría International Airport|CR|1|
+PJM|Puerto Jimenez|Puerto Jimenez Airport|CR|0|
+SYQ|San Jose|Tobías Bolaños International Airport|CR|0|
+XQP|Quepos|Quepos Managua Airport|CR|0|
+SAL|San Salvador|El Salvador International Airport Saint Óscar Arnulfo Romero y Galdámez|SV|1|
+ILS|San Salvador|Ilopango International Airport|SV|0|
+CYA|Les Cayes|Antoine-Simon International Airport|HT|0|
+CAP|Cap Haitien|Cap Haitien International Airport|HT|1|
+JEE|Carrefour Sanon|Jérémie Airport|HT|0|
+PAP|Port-au-Prince|Toussaint Louverture International Airport|HT|1|
+BCA|Baracoa|Gustavo Rizo Airport|CU|0|
+BYM|Bayamo|Carlos Manuel de Cespedes Airport|CU|0|
+CCC|Cayo Coco|Jardines Del Rey Airport|CU|0|
+CFG|Cienfuegos|Jaime Gonzalez Airport|CU|0|
+CYO|Cayo Largo del Sur|Vilo Acuña International Airport|CU|0|
+CMW|Camaguey|Ignacio Agramonte International Airport|CU|1|
+SCU|Santiago|Antonio Maceo International Airport|CU|1|
+HAV|Havana|José Martí International Airport|CU|1|
+HOG|Holguin|Frank Pais International Airport|CU|1|
+MZO|Manzanillo|Sierra Maestra International Airport|CU|0|
+GER|Nueva Gerona|Rafael Cabrera Airport|CU|0|
+SNU|Santa Clara|Abel Santamaria International Airport|CU|1|
+TND|Trinidad|Alberto Delgado Airport|CU|0|
+VRA|Matanzas|Juan Gualberto Gomez International Airport|CU|1|
+VTU|Las Tunas|Hermanos Ameijeiras Airport|CU|0|
+CYB|West End|Charles Kirkconnell International Airport|KY|0|
+GCM|George Town|Owen Roberts International Airport|KY|1|
+ASD|Andros Town|Andros Town Airport|BS|0|
+TZN|Andros|Congo Town Airport|BS|0|
+MHH|Marsh Harbour|Leonard M. Thompson International Airport|BS|0|
+SAQ|Andros Island|San Andros Airport|BS|0|
+AXP|Spring Point|Spring Point Airport|BS|0|
+TCB|Treasure Cay|Treasure Cay Airport|BS|0|
+CCZ|Chub Cay|Chub Cay Airport|BS|0|
+BIM|South Bimini|South Bimini Airport|BS|0|
+ATC|Arthur's Town|Arthur's Town Airport|BS|0|
+TBI|Cat Island|New Bight Airport|BS|0|
+CRI|Colonel Hill|Colonel Hill Airport|BS|0|
+GGT|Moss Town|Exuma International Airport|BS|0|
+ELH|North Eleuthera|North Eleuthera Airport|BS|0|
+GHB|Governor's Harbour|Governor's Harbour Airport|BS|0|
+RSD|Rock Sound|Rock Sound International Airport|BS|0|
+FPO|Freeport|Grand Bahama International Airport|BS|1|
+IGA|Matthew Town|Inagua Airport|BS|0|
+LGI|Deadman's Cay|Deadman's Cay Airport|BS|0|
+SML|Stella Maris|Stella Maris Airport|BS|0|
+MYG|Abraham Bay Settlement|Mayaguana Airport|BS|0|
+NAS|Nassau|Lynden Pindling International Airport|BS|1|
+ZSA|San Salvador|San Salvador International Airport|BS|1|
+BZE|Belize City|Philip S. W. Goldson International Airport|BZ|1|
+PLJ|Placencia|Placencia Airport|BZ|0|
+RAR|Avarua|Rarotonga International Airport|CK|1|
+NAN|Nadi|Nadi International Airport|FJ|1|
+SUV|Nausori|Nausori International Airport|FJ|1|
+LBS|Labasa|Labasa Airport|FJ|0|
+TBU|Nuku'alofa|Fua'amotu International Airport|TO|1|
+HPA|Lifuka|Lifuka Island Airport|TO|0|
+VAV|Vava'u Island|Vava'u International Airport|TO|1|
+PHG|Port Harcourt|Port Harcourt City Airport / Port Harcourt Air Force Base|NG|0|
+FUN|Funafuti|Funafuti International Airport|TV|0|
+TRW|South Tarawa|Bonriki International Airport|KI|1|
+IUE|Alofi|Niue International Airport|NU|0|
+NLH|Ninglang|Ninglang Luguhu Airport|CN|0|
+WLS|Wallis Island|Hihifo Airport|WF|1|
+PHH|Pokhara|Pokhara International Airport|NP|1|
+APW|Apia|Faleolo International Airport|WS|1|
+PPG|Pago Pago|Pago Pago International Airport|AS|1|
+PPT|Papeete|Fa'a'ā International Airport|PF|1|
+RUR||Rurutu Airport|PF|0|
+TUB||Tubuai Airport|PF|0|
+AAA|Anaa|Anaa Airport|PF|0|
+FGU|Fangatau|Fangatau Airport|PF|0|
+TIH|Tuherahera|Tikehau Airport|PF|0|
+FAV||Fakarava Airport|PF|0|
+XMH||Manihi Airport|PF|0|
+GMR||Totegegie Airport|PF|0|
+KKR|Raitahiti|Kaukura Airport|PF|0|
+MKP|Makemo|Makemo Airport|PF|0|
+TKP||Takapoto Airport|PF|0|
+AXR||Arutua Airport|PF|0|
+MVT||Mataiva Airport|PF|0|
+AHE|Ahe Atoll|Ahe Airport|PF|0|
+TKX||Takaroa Airport|PF|0|
+NHV|Nuku Hiva|Nuku Hiva Airport|PF|0|
+AUQ|Hiva Oa Island|Hiva Oa-Atuona Airport|PF|0|
+BOB|Motu Mute|Bora Bora Airport|PF|0|
+RGI||Rangiroa Airport|PF|0|
+HUH|Fare|Huahine-Fare Airport|PF|0|
+MOZ|Moorea-Maiao|Moorea Temae Airport|PF|0|
+HOI|Otepa|Hao Airport|PF|0|
+MAU||Maupiti Airport|PF|0|
+RFP|Uturoa|Raiatea Airport|PF|0|
+SON|Luganville|Santo Pekoa International Airport|VU|0|
+VLI|Port Vila|Bauerfield International Airport|VU|1|
+TAH|Tanna Island|Whitegrass Airport|VU|0|
+TGJ|Tiga|Tiga Airport|NC|0|
+KNQ|Koné|Koné Airport|NC|0|
+ILP|Île des Pins|Île des Pins Airport|NC|0|
+LIF|Lifou|Lifou Airport|NC|0|
+GEA|Nouméa|Nouméa Magenta Airport|NC|0|
+MEE|Maré|Maré Airport|NC|0|
+TOU|Touho|Touho Airport|NC|0|
+UVE|Ouvéa|Ouvéa Airport|NC|0|
+NOU|Nouméa|La Tontouta International Airport|NC|1|
+AKL|Auckland|Auckland International Airport|NZ|1|오클랜드 奥克兰
+TUO|Taupo|Taupo Airport|NZ|0|
+CHC|Christchurch|Christchurch International Airport|NZ|1|
+CHT|Te One|Inia William Tuuta Memorial Airport|NZ|0|
+DUD|Dunedin|Dunedin International Airport|NZ|0|
+GIS|Gisborne|Gisborne Airport|NZ|0|
+HKK||Hokitika Airfield|NZ|0|
+HLZ|Hamilton|Hamilton International Airport|NZ|0|
+KKE|Kerikeri|Kerikeri Airport|NZ|0|
+KAT|Awanui|Kaitaia Airport|NZ|0|
+NPL|New Plymouth|New Plymouth Airport|NZ|0|
+NPE|Napier|Hawke's Bay Airport|NZ|0|
+NSN|Nelson|Nelson Airport|NZ|0|
+IVC|Invercargill|Invercargill Airport|NZ|0|
+PMR|Palmerston North|Palmerston North Airport|NZ|0|
+ZQN|Queenstown|Queenstown Airport|NZ|1|
+ROT|Rotorua|Rotorua Regional Airport|NZ|0|
+TRG|Tauranga|Tauranga Airport|NZ|0|
+TIU||Timaru Airport|NZ|0|
+BHE|Blenheim|Woodbourne Airport|NZ|0|
+WKA|Wanaka|Wanaka Airport|NZ|0|
+WHK|Whakatāne|Whakatāne Airport|NZ|0|
+WLG|Wellington|Wellington International Airport|NZ|1|
+WRE|Whangarei|Whangarei Airport|NZ|0|
+WSZ|Westport|Westport Airport|NZ|0|
+WAG|Wanganui|Wanganui Airport|NZ|0|
+HEA|Guzara|Herat - Khwaja Abdullah Ansari International Airport|AF|1|
+KBL|Kabul|Kabul International Airport|AF|1|
+KDH|Kandahar|Ahmad Shah Baba International Airport|AF|1|
+KHT|Khost|Khost International Airport|AF|0|
+MZR|Mazar-i-Sharif|Mazar-i-Sharif International Airport|AF|1|
+BAH|Manama|Bahrain International Airport|BH|1|
+OCS|Corisco Island|Corisco International Airport|GQ|1|
+AHB|Abha|Abha International Airport|SA|1|
+HOF|Hofuf|Al-Ahsa International Airport|SA|1|
+ULH|Al-Ula|Al-Ula International Airport|SA|1|
+ABT|Al-Baha|King Saud Bin Abdulaziz (Al Baha) Airport|SA|0|
+BHH|Bisha|Bisha Airport|SA|0|
+DMM|Ad Dammam|King Fahd International Airport|SA|1|
+DWD|Dawadmi|Dawadmi Domestic Airport|SA|0|
+GIZ|Jizan|Jizan Regional Airport / King Abdullah bin Abdulaziz Airport|SA|0|
+ELQ|Qassim|Prince Naif bin Abdulaziz International Airport|SA|1|
+URY|Gurayat|Gurayat Domestic Airport|SA|0|
+HAS|Hail|Hail International Airport|SA|1|
+JED|Jeddah|King Abdulaziz International Airport|SA|1|
+KMC|King Khaled Military City|King Khaled Military City Airport|SA|0|
+MED|Medina|Prince Mohammad Bin Abdulaziz Airport|SA|1|
+EAM|Najran|Najran Domestic Airport|SA|0|
+NUM|Sharma|Neom Bay Airport|SA|1|
+AQI|Qaisumah|Qaisumah–Hafar Al-Batin International Airport|SA|1|
+RAH|Rafha|Rafha Domestic Airport|SA|0|
+RUH|Riyadh|King Khalid International Airport|SA|1|
+RAE|Arar|Arar Domestic Airport|SA|0|
+SHW|Sharurah|Sharurah Domestic Airport|SA|0|
+AJF|Al-Jawf|Al-Jawf International Airport|SA|1|
+TUU|Tabuk|Prince Sultan bin Abdulaziz International Airport|SA|1|
+TIF|Taif|Taif International Airport|SA|1|
+TUI|Turaif|Turaif Domestic Airport|SA|0|
+WAE|Wadi Al Dawasir|Wadi Al Dawasir Domestic Airport|SA|0|
+EJH|Al Wajh|Al Wajh Domestic Airport|SA|0|
+YNB|Yanbu|Prince Abdulmohsen Bin Abdulaziz International Airport|SA|1|
+ABD|Abadan|Abadan Ayatollah Jami International Airport|IR|1|
+DEF|Dezful|Dezful Airport|IR|0|
+GCH|Gachsaran|Gachsaran Airport|IR|0|
+MRX|Mahshahr|Mahshahr Airport|IR|0|
+AWZ|Ahvaz|Qasem Soleimani International Airport|IR|1|
+AEU|Abu Musa|Abu Musa Island Airport|IR|0|
+BUZ|Bushehr|Bushehr Airport|IR|0|
+KIH|Kish Island|Kish International Airport|IR|1|
+BDH|Bandar Lengeh|Bandar Lengeh International Airport|IR|0|
+PGU|Khiyaroo|Persian Gulf International Airport|IR|0|
+KHK|Khark|Khark Airport|IR|0|
+KSH|Kermanshah|Shahid Ashrafi Esfahani Airport|IR|0|
+KHD||Khoram Abad Airport|IR|0|
+SDG||Sanandaj Airport|IR|0|
+KKS|Kashan|Kashan Airport|IR|0|
+IFN|Isfahan|Isfahan Shahid Beheshti International Airport|IR|1|
+RAS|Rasht|Sardar-e-Jangal Airport|IR|0|
+HDM|Hamadan|Hamadan Airport|IR|0|
+IKA|Tehran|Imam Khomeini International Airport|IR|1|
+THR|Tehran|Mehrabad International Airport|IR|1|
+PYK|Karaj|Payam International Airport|IR|1|
+BND|Bandar Abbas|Bandar Abbas International Airport|IR|1|
+KER|Kerman|Ayatollah Hashemi Rafsanjani International Airport|IR|1|
+BXR|Bam|Bam Airport|IR|0|
+GSM|Qeshm|Qeshm International Airport|IR|1|
+RJN|Rafsanjan|Rafsanjan Airport|IR|0|
+XBJ|Birjand|Birjand International Airport|IR|1|
+MHD|Mashhad|Mashhad International Airport|IR|1|
+BJB|Bojnord|Bojnord Airport|IR|0|
+AFZ|Sabzevar|Sabzevar National Airport|IR|0|
+NSH|Nowshahr|Nowshahr Airport|IR|0|
+RZR|Ramsar|Ramsar Airport|IR|0|
+SRY|Sari|Sari Dasht-e Naz International Airport|IR|0|
+LRR|Lar|Lar Airport|IR|0|
+LFM|Lamerd|Lamerd Airport|IR|0|
+SYZ|Shiraz|Shiraz Shahid Dastghaib International Airport|IR|1|
+ADU|Ardabil|Ardabil Airport|IR|0|
+OMH|Urmia|Urmia Airport|IR|0|
+TBZ|Tabriz|Tabriz International Airport|IR|1|
+AZD|Yazd|Shahid Sadooghi Airport|IR|0|
+ZBR|Konarak|Chabahar Konarak International Airport|IR|0|
+ZAH|Zahedan|Zahedan International Airport|IR|1|
+AMM|Amman|Queen Alia International Airport|JO|1|
+ADJ|Amman|Marka International (Amman Civil) Airport|JO|1|
+AQJ|Aqaba|King Hussein International Airport|JO|1|
+KWI|Kuwait City|Kuwait International Airport|KW|1|
+BEY|Beirut|Beirut Rafic Hariri International Airport|LB|1|
+DQM|Duqm|Duqm International Airport|OM|1|
+AUH|Abu Dhabi|Zayed International Airport|AE|1|
+AAN|Al Ain|Al Ain International Airport|AE|1|
+DXB|Dubai|Dubai International Airport|AE|1|
+DWC|Dubai|Al Maktoum International Airport|AE|1|
+FJR|Fujairah|Fujairah International Airport|AE|1|
+RKT|Ras Al Khaimah|Ras Al Khaimah International Airport|AE|1|
+SHJ|Sharjah|Sharjah International Airport|AE|1|
+KHS|Khasab|Khasab Airport|OM|0|
+MCT|Muscat/Seeb|Muscat International Airport|OM|1|
+SLL|Salalah|Salalah International Airport|OM|1|
+OHS|Suhar|Suhar International Airport|OM|1|
+BHV|Bahawalpur|Bahawalpur Airport|PK|0|
+CJL|Chitral|Chitral Airport|PK|0|
+DEA|Dera Ghazi Khan|Dera Ghazi Khan Airport|PK|0|
+LYP|Faisalabad|Faisalabad International Airport|PK|1|
+GWD|Gurandani|New Gwadar International Airport|PK|1|
+GIL|Gilgit|Gilgit Airport|PK|0|
+ISB|Attock|Islamabad International Airport|PK|1|
+KHI|Karachi|Jinnah International Airport|PK|1|
+LHE|Lahore|Allama Iqbal International Airport|PK|1|
+MUX|Multan|Multan International Airport|PK|1|
+WNS|Nawabashah|Shaheed Benazirabad Airport|PK|0|
+PEW|Peshawar|Bacha Khan International Airport|PK|1|
+UET|Quetta|Quetta International Airport|PK|1|
+RYK|Rahim Yar Khan|Shaikh Zaid Airport|PK|0|
+KDU|Skardu|Skardu International Airport|PK|1|
+SKZ|Sukkur|Begum Nusrat Bhutto International Airport Sukkur|PK|0|
+SKT|Sialkot|Sialkot International Airport|PK|1|
+TUK|Turbat|Turbat International Airport|PK|1|
+PZH|Fort Sandeman|Zhob Airport|PK|0|
+BGW|Baghdad|Baghdad International Airport / New Al Muthana Air Base|IQ|1|
+EBL|Arbil|Erbil International Airport|IQ|1|
+KIK|Kirkuk|Kirkuk International Airport|IQ|1|
+BSR|Basra|Basra International Airport|IQ|1|
+NJF|Najaf|Al Najaf International Airport|IQ|1|
+ISU|Sulaymaniyah|Jalal Talabani International Airport|IQ|0|
+ALP|Aleppo|Aleppo International Airport|SY|1|
+DAM|Damascus|Damascus International Airport|SY|1|
+KAC|Qamishli|Qamishli International Airport|SY|0|
+LTK|Latakia|Latakia International Airport|SY|0|
+DOH|Doha|Hamad International Airport|QA|1|
+ADE|Aden|Aden International Airport|YE|1|
+AAY|Al Ghaydah|Al Ghaydah International Airport|YE|0|
+RIY|Mukalla|Riyan International Airport|YE|1|
+SAH|Sanaa|Sanaa International Airport|YE|1|
+SCT|Mori|Socotra Airport|YE|0|
+GXF|Seiyun|Seiyun Hadhramaut International Airport|YE|1|
+TAI|Taiz|Taiz International Airport|YE|0|
+BTI|Barter Island|Barter Island Long Range Radar Station Airport|US|0|
+BET|Bethel|Bethel Airport|US|0|
+BRW|Utqiaġvik|Wiley Post Will Rogers Memorial Airport|US|0|
+CDB|Cold Bay|Cold Bay Airport|US|0|
+CDV|Cordova|Merle K (Mudhole) Smith Airport|US|0|
+DRG|Deering|Deering Airport|US|0|
+ADK|Adak|Adak Airport|US|0|
+DLG|Dillingham|Dillingham Airport|US|0|
+ADQ|Kodiak|Kodiak Airport|US|0|
+DUT|Unalaska|Tom Madsen (Dutch Harbor) Airport|US|0|
+EMK|Emmonak|Emmonak Airport|US|0|
+ENA|Kenai|Kenai Municipal Airport|US|0|
+FAI|Fairbanks|Fairbanks International Airport|US|0|
+ABL|Ambler|Ambler Airport|US|0|
+GAL|Galena|Edward G. Pitka Sr Airport|US|0|
+GKN|Gulkana|Gulkana Airport|US|0|
+GAM|Gambell|Gambell Airport|US|0|
+GST|Gustavus|Gustavus Airport|US|0|
+HCR|Holy Cross|Holy Cross Airport|US|0|
+HSL|Huslia|Huslia Airport|US|0|
+HNS|Haines|Haines Airport|US|0|
+HOM|Homer|Homer Airport|US|0|
+EGX|Egegik|Egegik Airport|US|0|
+IAN|Kiana|Bob Baker Memorial Airport|US|0|
+ILI|Iliamna|Iliamna Airport|US|0|
+UTO|Utopia Creek|Indian Mountain LRRS Airport|US|0|
+JNU|Juneau|Juneau International Airport|US|0|
+AKN|King Salmon|King Salmon Airport|US|0|
+AKP|Anaktuvuk Pass|Anaktuvuk Pass Airport|US|0|
+KTN|Ketchikan|Ketchikan International Airport|US|0|
+KLW|Klawock|Klawock Airport|US|0|
+LUR|Cape Lisburne|Cape Lisburne LRRS Airport|US|0|
+MCG|McGrath|McGrath Airport|US|0|
+MRI|Anchorage|Merrill Field|US|0|
+MYU|Mekoryuk|Mekoryuk Airport|US|0|
+ANC|Anchorage|Ted Stevens Anchorage International Airport|US|1|
+ANI|Aniak|Aniak Airport|US|0|
+ANV|Anvik|Anvik Airport|US|0|
+OME|Nome|Nome Airport|US|0|
+ORT|Northway|Northway Airport|US|0|
+OTZ|Kotzebue|Ralph Wien Memorial Airport|US|0|
+STG|St George|St George Airport|US|0|
+PSG|Petersburg|Petersburg James A Johnson Airport|US|0|
+PTH|Port Heiden|Port Heiden Airport|US|0|
+PTU|Platinum|Platinum Airport|US|0|
+NUI|Nuiqsut|Nuiqsut Airport|US|0|
+ARC|Arctic Village|Arctic Village Airport|US|0|
+RBY|Ruby|Ruby Airport|US|0|
+SVA|Savoonga|Savoonga Airport|US|0|
+SCC|Deadhorse|Deadhorse Airport|US|0|
+SDP|Sand Point|Sand Point Airport|US|0|
+SIT|Sitka|Sitka Rocky Gutierrez Airport|US|0|
+SNP|St Paul Island|St Paul Island Airport|US|0|
+ATK|Atqasuk|Atqasuk Edward Burnell Sr Memorial Airport|US|0|
+UNK|Unalakleet|Unalakleet Airport|US|0|
+VDZ|Valdez|Valdez Pioneer Field|US|0|
+WRG|Wrangell|Wrangell Airport|US|0|
+AIN|Wainwright|Wainwright Airport|US|0|
+YAK|Yakutat|Yakutat Airport|US|0|
+FYU|Fort Yukon|Fort Yukon Airport|US|0|
+ROP|Rota Island|Rota International Airport|MP|1|
+SPN|I Fadang, Saipan|Saipan International Airport|MP|0|
+GUM|Hagåtña|Antonio B. Won Pat International Airport|GU|1|
+TIQ|Tinian Island|Francisco Manglona Borja / Tinian International Airport|MP|0|
+HNM|Hana|Hana Airport|US|0|
+JHM|Lahaina|Kapalua Airport|US|0|
+KOA|Kailua-Kona|Ellison Onizuka Kona International Airport at Keāhole|US|1|
+LIH|Lihue, Kauai|Lihue Airport|US|1|
+MKK|Kaunakakai|Molokai Airport|US|0|
+MUE|Waimea|Waimea Kohala Airport|US|0|
+HNL|Honolulu, Oahu|Daniel K. Inouye International Airport|US|1|
+LNY|Lanai City|Lanai Airport|US|0|
+OGG|Kahului|Kahului International Airport|US|1|
+ITO|Hilo|Hilo International Airport|US|0|
+MAJ|Majuro Atoll|Marshall Islands International Airport|MH|1|
+KWA|Kwajalein|Bucholz Army Air Field|MH|0|
+CXI|Kiritimati|Cassidy International Airport|KI|1|
+PIZ|Point Lay|Point Lay LRRS Airport|US|0|
+TKK|Weno Island|Chuuk International Airport|FM|1|
+PNI|Pohnpei Island|Pohnpei International Airport|FM|0|
+ROR|Babelthuap Island|Roman Tmetuchl International Airport|PW|1|
+KSA|Okat|Kosrae International Airport|FM|1|
+YAP|Yap Island|Yap International Airport|FM|1|
+AWK|Wake Island|Wake Island Airfield|UM|0|
+KNH|Shang-I|Kinmen Airport|TW|0|金門尚義機場 金门尚义机场
+LZN|Matsu|Matsu Nangan Airport|TW|0|
+TTT|Taitung City|Taitung Airport|TW|0|台東機場
+KHH|Kaohsiung|Kaohsiung International Airport|TW|1|高雄國際航空站 小港國際機場
+CYI|Shuishang|Chiayi Airport|TW|0|嘉義航空站 水上機場
+KYD|Orchid Island|Lanyu Airport|TW|0|
+RMQ|Taichung|Taichung International Airport / Ching Chuang Kang Air Base|TW|1|臺中清泉崗機場
+MFK|Matsu|Matsu Beigan Airport|TW|0|
+TNN|Tainan|Tainan International Airport / Tainan Air Base|TW|1|臺南機場 臺南航空站
+MZG|Huxi|Penghu Magong Airport|TW|1|
+TSA|Taipei|Taipei Songshan International Airport|TW|1|台北松山機場 臺北松山機場 타이베이 송산 台北 松山
+TPE|Taoyuan|Taiwan Taoyuan International Airport|TW|1|Dayuan District. 臺灣桃園國際機場 타이베이 台北
+HUN|Hualien City|Hualien Chiashan Airport|TW|1|花蓮機場
+NRT|Narita|Narita International Airport|JP|1|成田国際空港 成田空港 東京都 東京成田 도쿄 나리타 东京 成田
+MMJ|Matsumoto|Shinshu-Matsumoto Airport|JP|0|
+IBR|Omitama|Ibaraki Airport|JP|1|茨城空港
+KIX|Osaka|Kansai International Airport|JP|1|오사카 간사이 大阪
+SHM|Shirahama|Nanki Shirahama Airport|JP|0|
+UKB|Kobe|Kobe Airport|JP|1|
+TJH|Toyooka|Konotori Tajima Airport|JP|0|
+OBO|Obihiro|Tokachi-Obihiro Airport|JP|0|
+CTS|Sapporo|New Chitose Airport|JP|1|新千歳空港 삿포로 札幌
+HKD|Hakodate|Hakodate Airport|JP|1|
+KUH|Kushiro|Kushiro Airport|JP|0|
+MMB|Ōzora|Memanbetsu Airport|JP|0|
+SHB|Nakashibetsu|Nakashibetsu Airport|JP|0|
+OKD|Sapporo|Sapporo Okadama Airport|JP|0|
+WKJ|Wakkanai|Wakkanai Airport|JP|0|
+AXJ|Amakusa|Amakusa Airport|JP|0|
+IKI|Iki|Iki Airport|JP|0|
+UBJ|Ube|Yamaguchi Ube Airport|JP|0|
+TSJ|Tsushima|Tsushima Airport|JP|0|
+MBE|Monbetsu|Monbetsu Airport|JP|0|
+AKJ|Higashikagura|Asahikawa Airport|JP|0|
+OIR|Okushiri Island|Okushiri Airport|JP|0|
+RIS|Rishiri|Rishiri Airport|JP|0|
+KUM|Yakushima|Yakushima Airport|JP|0|
+FUJ|Goto|Fukue Airport|JP|0|
+FUK|Fukuoka|Fukuoka Airport|JP|1|후쿠오카 福冈
+TNE|Tanegashima|New Tanegashima Airport|JP|0|
+KOJ|Kagoshima|Kagoshima Airport|JP|1|
+KMI|Miyazaki|Miyazaki Airport|JP|1|
+OIT|Oita|Oita Airport|JP|0|
+KKJ|Kitakyushu|Kitakyushu Airport|JP|1|
+HSG|Saga|Kyushu Saga International Airport|JP|1|
+KMJ|Kumamoto|Kumamoto Airport|JP|1|
+NGS|Nagasaki|Nagasaki Airport|JP|1|
+NGO|Tokoname|Chubu Centrair International Airport|JP|1|
+ASJ|Amami|Amami Airport|JP|0|
+OKE|Wadomari|Okinoerabu Airport|JP|0|
+KKX|Kikai|Kikai Airport|JP|0|
+TKN|Amagi|Tokunoshima Airport|JP|0|
+NKM|Nagoya|Nagoya Airport / JASDF Komaki Air Base|JP|0|名古屋飛行場
+KMQ|Kanazawa|Komatsu Airport / JASDF Komatsu Air Base|JP|1|
+OKI|Okinoshima|Oki Global Geopark Airport|JP|0|
+FSZ|Makinohara / Shimada|Mount Fuji Shizuoka Airport|JP|1|富士山静岡空港
+TOY|Toyama|Toyama Kitokito Airport|JP|0|
+NTQ|Wajima|Noto Satoyama Airport|JP|0|
+HIJ|Hiroshima|Hiroshima Airport|JP|1|広島空港
+OKJ|Okayama|Okayama Momotaro Airport|JP|1|
+IZO|Izumo|Izumo Enmusubi Airport|JP|0|
+YGJ|Yonago|Yonago Kitaro Airport / JASDF Miho Air Base|JP|0|
+IWK|Iwakuni|Iwakuni Kintaikyo Airport|JP|0|
+KCZ|Nankoku|Kochi Ryoma Airport|JP|1|
+MYJ|Matsuyama|Matsuyama Airport|JP|1|
+ITM|Osaka|Osaka Itami International Airport|JP|1|
+TTJ|Tottori|Tottori Sand Dunes Conan Airport|JP|0|鳥取砂丘コナン空港 鳥取 コナン
+TKS|Tokushima|Tokushima Awaodori Airport / JMSDF Tokushima Air Base|JP|1|
+TAK|Takamatsu|Takamatsu Airport|JP|1|
+IWJ|Masuda|Iwami Airport|JP|0|
+AOJ|Aomori|Aomori Airport|JP|1|
+GAJ|Higashine|Yamagata Airport|JP|0|
+SDS|Sado|Sado Airport|JP|0|
+FKS|Sukagawa|Fukushima Airport|JP|0|福島空港
+HNA|Hanamaki|Iwate Hanamaki Airport|JP|0|
+AXT|Akita|Akita Airport|JP|0|
+MSJ|Misawa|Misawa Airport / Misawa Air Base|JP|0|
+KIJ|Niigata|Niigata Airport|JP|1|新潟空港 新潟
+ONJ|Kitaakita|Odate Noshiro Airport|JP|0|
+SDJ|Natori|Sendai Airport|JP|1|
+SYO|Shonai|Shonai Airport|JP|0|
+HAC|Hachijojima|Hachijojima Airport|JP|0|
+OIM|Izu Oshima|Oshima Airport|JP|0|
+MYE|Miyakejima|Miyakejima Airport|JP|0|
+HND|Tokyo|Tokyo Haneda International Airport|JP|1|羽田空港 東京国際空港 東京 東京都 도쿄 하네다 东京 羽田
+MWX|Muan|Muan International Airport|KR|1|무안 광주 务安
+KWJ|Gwangju|Gwangju Airport|KR|0|광주 光州
+KUV|Gunsan|Gunsan Airport / Gunsan Air Base|KR|0|군산 群山
+RSU|Yeosu|Yeosu Airport|KR|0|여수 丽水
+WJU|Wonju|Wonju Airport / Hoengseong Air Base (K-38/K-46)|KR|0|원주 原州
+YNY|Gonghang-ro|Yangyang International Airport|KR|1|양양 속초 襄阳
+CJU|Jeju City|Jeju International Airport|KR|1|제주 济州
+PUS|Busan|Gimhae International Airport|KR|1|김해국제공항 金海國際空港 부산 김해 釜山
+HIN|Sacheon|Sacheon Airport / Sacheon Air Base|KR|0|사천 진주 泗川
+USN|Ulsan|Ulsan Airport|KR|0|울산 蔚山
+ICN|Seoul|Incheon International Airport|KR|1|서울 인천 首尔 仁川
+GMP|Seoul|Seoul Gimpo International Airport|KR|1|서울 김포 首尔 金浦
+KPO|Pohang|Pohang Airport (G-815/K-3)|KR|0|포항 浦项
+TAE|Daegu|Daegu International Airport|KR|1|대구 大邱
+CJJ|Cheongju|Cheongju International Airport|KR|1|청주 清州
+OKA|Naha|Naha International Airport|JP|1|那覇空港 오키나와 冲绳
+ISG|Ishigaki|New Ishigaki Airport|JP|0|
+UEO|Kumejima|Kumejima Airport|JP|0|
+MMD|Minamidaito|Minamidaito Airport|JP|0|
+MMY|Miyakojima|Miyako Airport|JP|0|
+KTD|Kitadaitōjima|Kitadaito Airport|JP|0|
+SHI|Miyakojima|Shimojishima Airport|JP|0|
+TRA|Tarama|Tarama Airport|JP|0|
+RNJ|Yoron|Yoron Airport|JP|0|
+OGN|Yonaguni|Yonaguni Airport|JP|0|
+SFS|Olongapo|Subic Bay International Airport / Naval Air Station Cubi Point|PH|1|
+CRK|Mabalacat|Clark International Airport / Clark Air Base|PH|1|
+LAO|Laoag City|Laoag International Airport|PH|1|
+DRP|Legazpi|Bicol International Airport|PH|1|
+MNL|Manila|Ninoy Aquino International Airport|PH|1|마닐라
+CBO|Datu Odin Sinsuat|Cotabato (Awang) Airport|PH|0|
+DVO|Davao|Francisco Bangoy International Airport|PH|1|
+BXU|Butuan|Bancasi Airport|PH|0|
+DPL|Dipolog|Dipolog Airport|PH|0|
+CGM|Mambajao|Camiguin Airport|PH|0|
+JOL|Jolo|Jolo Airport|PH|0|
+TWT|Bongao|Sanga Sanga Airport|PH|0|
+OZC|Ozamiz|Labo Airport|PH|0|
+PAG|Pagadian|Pagadian Airport|PH|0|
+GES|General Santos|General Santos International Airport|PH|1|
+SUG|Surigao City|Surigao Airport|PH|0|
+CGY|Laguindingan|Laguindingan International Airport|PH|1|
+ZAM|Zamboanga|Zamboanga International Airport|PH|1|
+TAG|Panglao|Bohol-Panglao International Airport|PH|1|
+SJI|San Jose|San Jose Airport|PH|0|
+WNP|Naga|Naga Airport|PH|0|
+BSO|Basco|Basco Airport|PH|0|
+TUG|Tuguegarao City|Tuguegarao Airport|PH|0|
+VRC|Virac|Virac Airport|PH|0|
+CYZ|Cauayan City|Cauayan Airport|PH|0|
+TAC|Tacloban City|Daniel Z. Romualdez Airport|PH|0|
+BCD|Bacolod City|Bacolod-Silay International Airport|PH|1|
+CYP|Calbayog City|Calbayog Airport|PH|0|
+DGT|Dumaguete City|Sibulan Airport|PH|0|
+MPH|Caticlan|Godofredo P. Ramos Airport|PH|0|
+CRM|Catarman|Catarman National Airport|PH|0|
+ILO|Cabatuan|Iloilo International Airport|PH|1|
+MBT|Masbate|Moises R. Espinosa Airport|PH|0|
+KLO|Kalibo|Kalibo International Airport|PH|1|
+CEB|Cebu City/Lapu-Lapu City|Mactan Cebu International Airport|PH|1|세부
+PPS|Puerto Princesa|Puerto Princesa International Airport / PAF Antonio Bautista Air Base|PH|1|
+RXS|Roxas City|Roxas Airport|PH|0|
+TBH|Tablas Island|Tugdan Airport|PH|0|
+USU|Coron|Francisco B. Reyes (Busuanga) Airport|PH|0|
+RSI|Hanak|Red Sea International Airport|SA|1|
+PRA|Parana|General Urquiza Airport|AR|0|
+ROS|Rosario|Rosario Islas Malvinas International Airport|AR|1|
+SFN|Santa Fe|Sauce Viejo Airport|AR|0|
+AEP|Buenos Aires|Aeroparque Jorge Newbery|AR|1|
+COR|Cordoba|Ingeniero Aeronáutico Ambrosio L.V. Taravella International Airport|AR|1|
+EZE|Buenos Aires|Ezeiza International Airport - Ministro Pistarini|AR|1|
+MDZ|Mendoza|Governor Francisco Gabrielli International Airport|AR|1|
+AFA|San Rafael|Suboficial Ay Santiago Germano Airport|AR|0|
+CTC|Catamarca|Coronel Felipe Varela International Airport|AR|0|
+SDE|Santiago del Estero|Vicecomodoro Angel D. La Paz Aragonés Airport|AR|0|
+IRJ|La Rioja|Capitan V A Almonacid Airport|AR|0|
+RHD|Termas de Río Hondo|Termas de Río Hondo international Airport|AR|0|
+TUC|San Miguel de Tucumán|Teniente Benjamín Matienzo International Airport|AR|1|
+UAQ|San Juan|Domingo Faustino Sarmiento Airport|AR|0|
+LUQ|San Luis|Brigadier Mayor D Cesar Raul Ojeda Airport|AR|0|
+CNQ|Corrientes|Corrientes Airport|AR|0|
+RES|Resistencia|Resistencia International Airport|AR|1|
+FMA|Formosa|Formosa National Airport|AR|0|
+IGR|Puerto Iguazu|Cataratas Del Iguazú International Airport|AR|0|
+PSS|Posadas|Libertador Gral D Jose De San Martin Airport|AR|0|
+SLA|Salta|Martín Miguel de Güemes International Airport|AR|1|
+JUJ|San Salvador de Jujuy|Gobernador Horacio Guzman International Airport|AR|1|
+CRD|Comodoro Rivadavia|General Enrique Mosconi International Airport|AR|1|
+EQS|Esquel|Esquel Brigadier Antonio Parodi International Airport|AR|0|
+LHS|Las Heras|Las Heras Airport|AR|0|
+REL|Rawson|Almirante Marco Andres Zar Airport|AR|0|
+VDM|Viedma / Carmen de Patagones|Gobernador Castello Airport|AR|0|
+PMY|Puerto Madryn|El Tehuelche Airport|AR|0|
+FTE|El Calafate|El Calafate - Commander Armando Tola International Airport|AR|0|
+PUD|Puerto Deseado|Puerto Deseado Airport|AR|0|
+RGA|Rio Grande|Gobernador Ramón Trejo Noel International Airport|AR|0|
+RGL|Rio Gallegos|Piloto Civil Norberto Fernández International Airport|AR|1|
+USH|Ushuaia|Ushuaia - Malvinas Argentinas International Airport|AR|0|
+PMQ|Perito Moreno|Perito Moreno Jalil Hamer Airport|AR|0|
+BHI|Bahía Blanca|Comandante Espora Airport|AR|0|
+SST|Santa Teresita|Santa Teresita Airport|AR|0|
+MDQ|Mar del Plata|Ástor Piazzola International Airport|AR|0|
+NQN|Neuquén|Presidente Perón International Airport|AR|1|
+NEC|Necochea|Necochea Airport|AR|0|
+RSA|Santa Rosa|Santa Rosa Airport|AR|0|
+BRC|San Carlos de Bariloche|Teniente Luis Candelaria International Airport|AR|1|
+CPC|Chapelco/San Martin de los Andes|Aviador C. Campos Airport|AR|0|
+JTC|Bauru|Bauru/Arealva–Moussa Nakhal Tobias State Airport|BR|0|
+AQA|Araraquara|Araraquara Airport|BR|0|
+AJU|Aracaju|Aracaju - Santa Maria Airport|BR|0|
+AFL|Alta Floresta|Piloto Osvaldo Marques Dias Airport|BR|0|
+ARU|Araçatuba|Araçatuba Airport|BR|0|
+AAX|Araxá|Romeu Zema Airport|BR|0|
+BEL|Belém|Val de Cans/Júlio Cezar Ribeiro International Airport|BR|1|
+BSB|Brasília|Presidente Juscelino Kubitschek International Airport|BR|1|
+BVB|Boa Vista|Atlas Brasil Cantanhede International Airport|BR|1|
+CAC|Cascavel|Coronel Adalberto Mendes da Silva Airport|BR|0|
+CNF|Belo Horizonte|Tancredo Neves International Airport|BR|1|
+CGR|Campo Grande|Campo Grande Airport|BR|0|
+XAP|Chapecó|Serafin Enoss Bertaso Airport|BR|0|
+CKS|Parauapebas|Carajás Airport|BR|0|
+CAW|Campos dos Goytacazes|Bartolomeu Lisandro Airport|BR|0|
+CMG|Corumbá|Corumbá International Airport|BR|0|
+CWB|Curitiba|Curitiba-Afonso Pena International Airport|BR|1|
+CXJ|Caxias Do Sul|Hugo Cantergiani Regional Airport|BR|0|
+CGB|Cuiabá|Várzea Grande–Marechal Rondon International Airport|BR|1|
+CZS|Cruzeiro Do Sul|Cruzeiro do Sul Airport|BR|0|
+PPB|Presidente Prudente|Presidente Prudente Airport|BR|0|
+MAO|Manaus|Eduardo Gomes International Airport|BR|1|
+IGU|Foz do Iguaçu|Cataratas International Airport|BR|1|
+FLN|Florianópolis|Hercílio Luz International Airport|BR|1|
+FEN|Fernando de Noronha|Fernando de Noronha Airport|BR|0|
+FOR|Fortaleza|Pinto Martins International Airport|BR|1|
+GIG|Rio De Janeiro|Rio de Janeiro Galeão – Tom Jobim International Airport|BR|1|
+GYN|Goiânia|Santa Genoveva International Airport|BR|1|
+GRU|São Paulo|São Paulo/Guarulhos–Governor André Franco Montoro International Airport|BR|1|
+GVR|Governador Valadares|Coronel Altino Machado Airport|BR|0|
+ATM|Altamira|Altamira Interstate Airport|BR|0|
+ITB|Itaituba|Itaituba Airport|BR|0|
+IOS|Ilhéus|Bahia - Jorge Amado Airport|BR|0|
+IPN|Ipatinga|Usiminas Airport|BR|0|
+IMP|Imperatriz|Prefeito Renato Moreira Airport|BR|0|
+JJD|Cruz|Comandante Ariston Pessoa Airport|BR|0|
+JDF|Juiz de Fora|Francisco de Assis Airport|BR|0|
+JPA|João Pessoa|Presidente Castro Pinto International Airport|BR|1|
+JOI|Joinville|Lauro Carneiro de Loyola Airport|BR|0|
+CPV|Campina Grande|Presidente João Suassuna Airport|BR|0|
+VCP|Campinas|Viracopos International Airport|BR|1|
+LAJ|Lages|Lages Airport|BR|0|
+LDB|Londrina|Governor José Richa Airport|BR|0|
+MAB|Marabá|João Correa da Rocha Airport|BR|0|
+MGF|Maringá|Regional de Maringá - Sílvio Name Júnior Airport|BR|0|
+MOC|Montes Claros|Mário Ribeiro Airport|BR|0|
+MII|Marília|Frank Miloye Milenkowichi–Marília State Airport|BR|0|
+MCZ|Maceió|Zumbi dos Palmares International Airport|BR|1|
+MCP|Macapá|Macapá - Alberto Alcolumbre International Airport|BR|0|
+MVF|Mossoró|Dix-Sept Rosado Airport|BR|0|
+MNX|Manicoré|Manicoré Airport|BR|0|
+NVT|Navegantes|Ministro Victor Konder International Airport|BR|1|
+GEL|Santo Ângelo|Santo Ângelo Airport|BR|0|
+POA|Porto Alegre|Porto Alegre-Salgado Filho International Airport|BR|1|
+PHB|Parnaíba|Parnaíba - Prefeito Doutor João Silva Filho International Airport|BR|0|
+PFB|Passo Fundo|Lauro Kurtz Airport|BR|0|
+PGZ|Ponta Grossa|Ponta Grossa Airport - Comandante Antonio Amilton Beraldo|BR|0|
+PMW|Palmas|Brigadeiro Lysias Rodrigues Airport|BR|0|
+PET|Pelotas|João Simões Lopes Neto International Airport|BR|0|
+PNZ|Petrolina|Senador Nilo Coelho Airport|BR|0|
+PMG|Ponta Porã|Ponta Porã Airport|BR|0|
+BPS|Porto Seguro|Porto Seguro International Airport|BR|1|
+PVH|Porto Velho|Governador Jorge Teixeira de Oliveira International Airport|BR|1|
+RBR|Rio Branco|Rio Branco-Plácido de Castro International Airport|BR|1|
+ROO|Rondonópolis|Maestro Marinho Franco Airport|BR|0|
+REC|Recife|Recife/Guararapes - Gilberto Freyre International Airport|BR|1|
+SDU|Rio de Janeiro|Santos Dumont Airport|BR|1|
+RAO|Ribeirão Preto|Leite Lopes Airport|BR|0|
+NAT|Natal|Rio Grande do Norte/São Gonçalo do Amarante–Governador Aluízio Alves International Airport|BR|1|
+SJK|São José Dos Campos|Professor Urbano Ernesto Stumpf Airport|BR|0|
+SLZ|São Luís|Marechal Cunha Machado International Airport|BR|1|
+RIA|Santa Maria|Santa Maria Airport|BR|0|
+STM|Santarém|Santarém - Maestro Wilson Fonseca International Airport|BR|0|
+CGH|São Paulo|Congonhas–Deputado Freitas Nobre Airport|BR|1|
+SJP|São José do Rio Preto|Prof. Eribelto Manoel Reino State Airport|BR|0|
+SSA|Salvador|Deputado Luiz Eduardo Magalhães International Airport|BR|1|
+TMT|Oriximiná|Trombetas Airport|BR|0|
+THE|Teresina|Senador Petrônio Portela Airport|BR|0|
+TFF|Tefé|Tefé Airport|BR|0|
+TBT|Tabatinga|Tabatinga International Airport|BR|0|
+TUR|Tucuruí|Tucuruí Airport|BR|0|
+SJL|São Gabriel da Cachoeira|São Gabriel da Cachoeira Airport|BR|0|
+PAV|Paulo Afonso|Paulo Afonso Airport|BR|0|
+URG|Uruguaiana|Rubem Berta Airport|BR|0|
+UDI|Uberlândia|Ten. Cel. Aviador César Bombonato Airport|BR|0|
+UBA|Uberaba|Mário de Almeida Franco Airport|BR|0|
+BVH|Vilhena|Brigadeiro Camarão Airport|BR|0|
+VIX|Vitória|Eurico de Aguiar Salles International Airport|BR|1|
+IZA|Juiz de Fora|Presidente Itamar Franco Airport|BR|0|
+ARI|Arica|Chacalluta International Airport|CL|0|
+CPO|Copiapo|Desierto de Atacama Airport|CL|0|
+BBA|Balmaceda|Balmaceda Airport|CL|0|
+CJC|Calama|El Loa Airport|CL|0|
+PUQ|Punta Arenas|President Carlos Ibáñez International Airport|CL|1|
+IQQ|Iquique|Diego Aracena International Airport|CL|1|
+SCL|Santiago|Comodoro Arturo Merino Benítez International Airport|CL|1|
+ESR|El Salvador|Ricardo García Posada Airport|CL|0|
+ANF|Antofagasta|Andrés Sabella Gálvez International Airport|CL|1|
+CCP|Concepcion|Carriel Sur International Airport|CL|1|
+IPC|Isla De Pascua|Mataveri International Airport|CL|1|
+ZOS|Osorno|Cañal Bajo Carlos Hott Siebert Airport|CL|0|
+PNT|Puerto Natales|Lieutenant Julio Gallardo Airport|CL|0|
+ZCO|Temuco|La Araucanía International Airport|CL|1|
+LSC|La Serena-Coquimbo|La Florida Airport|CL|0|
+PMC|Puerto Montt|El Tepual International Airport|CL|1|
+ZAL|Valdivia|Pichoy Airport|CL|0|
+OCC|Coca|Francisco De Orellana Airport|EC|0|
+CUE|Cuenca|Mariscal Lamar Airport|EC|0|
+GPS|Isla Baltra|Seymour Galapagos Ecological Airport|EC|0|
+GYE|Guayaquil|José Joaquín de Olmedo International Airport|EC|1|
+LTX|Latacunga|Cotopaxi International Airport|EC|0|
+XMS|Macas|Coronel E Carvajal Airport|EC|0|
+MEC|Manta|Eloy Alfaro International Airport|EC|0|
+UIO|Quito|Mariscal Sucre International Airport|EC|1|
+ETR|Santa Rosa|Santa Rosa - Artillery Colonel Victor Larrea International Airport|EC|0|
+SNC|Salinas/La Libertad|General Ulpiano Paez International Airport|EC|1|
+ESM|Tachina|Carlos Concha Torres International Airport|EC|1|
+TUA|Tulcán|Lieutenant Colonel Luis A. Mantilla International Airport|EC|0|
+ASU|Asunción|Silvio Pettirossi International Airport|PY|1|
+ENO|Encarnación|Teniente Ramon A. Ayub Gonzalez International Airport|PY|1|
+AGT|Ciudad del Este|Guaraní International Airport|PY|1|
+AXM|Armenia|El Eden Airport|CO|0|
+PUU|Puerto Asís|Tres De Mayo Airport|CO|0|
+BGA|Bucaramanga|Palonegro Airport|CO|0|
+BOG|Bogota|El Dorado International Airport|CO|1|
+BAQ|Barranquilla|Ernesto Cortissoz International Airport|CO|1|
+BSC|Bahía Solano|José Celestino Mutis Airport|CO|0|
+BUN|Buenaventura|Gerardo Tobar López Airport|CO|0|
+CUC|Cúcuta|Camilo Daza International Airport|CO|0|
+CTG|Cartagena|Rafael Nuñez International Airport|CO|1|
+CLO|Cali|Alfonso Bonilla Aragon International Airport|CO|1|
+TCO|Tumaco|La Florida Airport|CO|0|
+CZU|Corozal|Las Brujas Airport|CO|0|
+EJA|Barrancabermeja|Yariguíes Airport|CO|0|
+FLA|Florencia|Gustavo Artunduaga Paredes Airport|CO|0|
+GPI|Guapi|Guapi Airport|CO|0|
+IBE|Ibagué|Perales Airport|CO|0|
+IPI|Ipiales|San Luis Airport|CO|0|
+APO|Carepa|Antonio Roldán Betancur Airport|CO|0|
+LET|Leticia|Alfredo Vásquez Cobo International Airport|CO|0|
+EOH|Medellín|Enrique Olaya Herrera Airport|CO|0|
+MTR|Montería|Los Garzones Airport|CO|0|
+MVP|Mitú|Fabio Alberto Leon Bentley Airport|CO|0|
+MZL|Manizales|La Nubia Airport|CO|0|
+NVA|Neiva|Benito Salas Airport|CO|0|
+PCR|Puerto Carreño|German Olano Airport|CO|0|
+PDA|Puerto Inírida|Obando Cesar Gaviria Trujillo Airport|CO|0|
+PEI|Pereira|Matecaña International Airport|CO|0|
+PPN|Popayán|Guillermo León Valencia Airport|CO|0|
+PSO|Chachagüí|Antonio Nariño Airport|CO|0|
+PVA|Providencia|El Embrujo Airport|CO|0|
+MDE|Medellín|Jose Maria Córdova International Airport|CO|1|
+RCH|Riohacha|Almirante Padilla Airport|CO|0|
+SJE|San José Del Guaviare|Jorge E. Gonzalez Torres Airport|CO|0|
+SMR|Santa Marta|Simón Bolívar International Airport|CO|0|
+ADZ|San Andrés|Gustavo Rojas Pinilla International Airport|CO|1|
+SVI|San Vicente Del Caguán|Eduardo Falla Solano Airport|CO|0|
+TME|Tame|Gustavo Vargas Airport|CO|0|
+AUC|Arauca|Santiago Perez Airport|CO|0|
+UIB|Quibdó|El Caraño Airport|CO|0|
+VUP|Valledupar|Alfonso López Pumarejo Airport|CO|0|
+VVC|Villavicencio|Vanguardia Airport|CO|0|
+EYP|Yopal|El Alcaravan - Yopal Airport|CO|0|
+SRE|Sucre|Alcantarí International Airport|BO|1|
+CBB|Cochabamba|Jorge Wilsterman International Airport|BO|1|
+CIJ|Cobija|Capitán Aníbal Arab Airport|BO|0|
+SRZ|Santa Cruz|El Trompillo Airport|BO|0|
+GYA|Guayaramerín|Guayaramerín Airport|BO|0|
+LPB|La Paz / El Alto|El Alto International Airport|BO|1|
+ORU|Oruro|Juan Mendoza International Airport|BO|1|
+PSZ|Puerto Suárez|Capitán Av. Salvador Ogaya G. airport|BO|0|
+RIB|Riberalta|Capitán Av. Selin Zeitun Lopez Airport|BO|0|
+TJA|Tarija|Capitan Oriel Lea Plaza Airport|BO|0|
+TDD|Trinidad|Teniente Av. Jorge Henrich Arauz Airport|BO|0|
+UYU|Quijarro|Joya Andina International Airport|BO|1|
+VVI|Santa Cruz|Viru Viru International Airport|BO|1|
+PBM|Paramaribo|Johan Adolf Pengel International Airport|SR|1|
+CAY|Matoury|Cayenne – Félix Eboué Airport|GF|1|
+MPY|Maripasoula|Maripasoula Airport|GF|0|
+LDX|Saint-Laurent-du-Maroni|Saint-Laurent-du-Maroni Airport|GF|0|
+PCL|Pucallpa|Cap FAP David Abenzur Rengifo International Airport|PE|1|
+CHM|Chimbote|FAP Lieutenant Jaime Andres de Montreuil Morales Airport|PE|0|
+CIX|Chiclayo|Capitán FAP José A. Quiñones González International Airport|PE|1|
+AYP|Ayacucho|Air Force Colonel Alfredo Mendivil Duarte Airport|PE|0|
+LIM|Lima|Jorge Chávez International Airport|PE|1|
+JAE|Jaén|Shumba Airport|PE|0|
+JAU|Jauja|Francisco Carle Airport|PE|0|
+JUL|Juliaca|Inca Manco Capac International Airport|PE|1|
+CJA|Cajamarca|Mayor General FAP Armando Revoredo Iglesias Airport|PE|0|
+ILQ|Ilo|General Jorge Fernandez Maldon Airport|PE|0|
+TBP|Tumbes|Captain Pedro Canga Rodríguez International Airport|PE|0|
+YMS|Yurimaguas|Moises Benzaquen Rengifo Airport|PE|0|
+HUU|Huánuco|Alferez Fap David Figueroa Fernandini Airport|PE|0|
+CHH|Chachapoyas|Chachapoyas Airport|PE|0|
+IQT|Iquitos|Coronel FAP Francisco Secada Vignetta International Airport|PE|1|
+AQP|Arequipa|Rodríguez Ballón International Airport|PE|1|
+TRU|Trujillo|Capitán FAP Carlos Martínez de Pinillos International Airport|PE|1|
+TPP|Tarapoto|Cadete FAP Guillermo Del Castillo Paredes Airport|PE|0|
+TCQ|Tacna|Coronel FAP Carlos Ciriani Santa Rosa International Airport|PE|0|
+PEM|Puerto Maldonado|Padre Aldamiz International Airport|PE|0|
+PIU|Piura|PAF Captain Guillermo Concha Iberico International Airport|PE|0|
+TYL|Talara|Captain Victor Montes Arias International Airport|PE|0|
+NZC|Nazca|Maria Reiche Neuman Airport|PE|0|
+CUZ|Cusco|Alejandro Velasco Astete International Airport|PE|1|
+PDP|Punta del Este|Capitan Corbeta CA Curbelo International Airport|UY|0|
+MVD|Ciudad de la Costa|Carrasco General Cesáreo L. Berisso International Airport|UY|1|
+RVY|Rivera/Santana do Livramento|Pres. Gral. Óscar D. Gestido Binational Airport|UY|0|
+BLA|Barcelona|General José Antonio Anzoategui International Airport|VE|1|
+BNS|Barinas|Barinas Airport|VE|0|
+BRM|Barquisimeto|Jacinto Lara International Airport|VE|1|
+CAJ|Canaima|Canaima Airport|VE|0|
+CUP|Carúpano|General Francisco Bermúdez Airport|VE|0|
+CZE|Coro|José Leonardo Chirinos Airport|VE|0|
+CUM|Cumaná|Antonio José de Sucre Airport|VE|0|
+LSP|Paraguaná|Josefa Camejo International Airport|VE|0|
+MAR|Maracaibo|La Chinita International Airport|VE|1|
+PMV|Isla Margarita|Del Caribe Santiago Mariño International Airport|VE|1|
+CCS|Maiquetía|Maiquetía Simón Bolívar International Airport|VE|1|
+MUN|Maturín|José Tadeo Monagas International Airport|VE|0|
+PZO|Guyana City|General Manuel Carlos Piar International Airport|VE|1|
+SVZ|San Antonio del Tachira|Juan Vicente Gómez International Airport|VE|0|
+SNV|Santa Elena de Uairén|Santa Elena de Uairén Airport|VE|0|
+STD|Santo Domingo|Mayor Buenaventura Vivas International Airport|VE|0|
+SOM|El Tigre|San Tomé Airport|VE|0|
+VLN|Valencia|Arturo Michelena International Airport|VE|1|
+VIG|El Vigía|Juan Pablo Pérez Alfonso Airport|VE|0|
+VLV|Valera|Dr. Antonio Nicolás Briceño Airport|VE|0|
+AUX|Araguaína|Araguaína Airport|BR|0|
+GEO|Georgetown|Cheddi Jagan International Airport|GY|1|
+OGL|Ogle|Eugene F. Correia International Airport|GY|0|
+KAI|Kaieteur Falls|Kaieteur Airport|GY|0|
+LTM|Lethem|Lethem Airport|GY|0|
+ANU|Osbourn|V. C. Bird International Airport|AG|1|
+BGI|Bridgetown|Grantley Adams International Airport|BB|1|
+DCF|Canefield|Canefield Airport|DM|0|
+DOM|Marigot|Douglas-Charles Airport|DM|0|
+FDF|Fort-de-France|Martinique Aimé Césaire International Airport|MQ|1|
+SFG|Grand Case|Grand Case-l'Espérance Airport|MF|0|
+SBH|Gustavia|St. Jean Airport|BL|0|
+GBJ|Grand-Bourg|Marie-Galante Airport|GP|0|
+PTP|Pointe-à-Pitre|Maryse Condé International Airport|GP|1|
+GND|Saint George's|Maurice Bishop International Airport|GD|1|
+STT|Charlotte Amalie|Cyril E. King Airport|VI|1|
+STX|Christiansted|Henry E. Rohlsen Airport|VI|0|
+BQN|Aguadilla|Rafael Hernández International Airport|PR|0|
+CPX|Culebra|Benjamin Rivera Noriega Airport|PR|0|
+SIG|San Juan|Fernando Luis Ribas Dominicci Airport|PR|0|
+MAZ|Mayaguez|Eugenio Maria De Hostos Airport|PR|0|
+PSE|Ponce|Mercedita International Airport|PR|0|
+NRR|Ceiba|José Aponte de la Torre Airport|PR|0|
+SJU|San Juan|Luis Munoz Marin International Airport|PR|1|
+VQS|Vieques|Antonio Rivera Rodriguez Airport|PR|0|
+SKB|Basseterre|Robert L. Bradshaw International Airport|KN|1|
+NEV|Charlestown|Vance W. Amory International Airport|KN|0|
+SLU|Castries|George F. L. Charles Airport|LC|0|
+UVF|Vieux Fort|Hewanorra International Airport|LC|1|
+BKN|Balkanabat|Balkanabat International Airport|TM|0|
+AUA|Oranjestad|Queen Beatrix International Airport|AW|1|
+BON|Kralendijk|Flamingo International Airport|BQ|1|
+CUR|Willemstad|Hato International Airport|CW|1|
+EUX|Oranjestad|F. D. Roosevelt Airport|BQ|0|
+SXM|Sint Maarten|Princess Juliana International Airport|SX|1|
+SAB|Zion's Hill|Juancho E. Yrausquin Airport|BQ|0|
+AXA|The Valley|Clayton J. Lloyd International Airport|AI|0|
+MNI|Gerald's Park|John A. Osborne Airport|MS|1|
+TAB|Scarborough|A.N.R. Robinson International Airport|TT|1|
+POS|Port of Spain|Piarco International Airport|TT|1|
+EIS|Beef Island|Terrance B. Lettsome International Airport|VG|1|
+VIJ|Spanish Town|Virgin Gorda Airport|VG|0|
+SVD|Kingstown|Argyle International Airport|VC|1|
+BQU|Bequia|J F Mitchell Airport|VC|0|
+CIW|Canouan|Canouan Airport|VC|0|
+MQS|Lovell|Mustique Airport|VC|0|
+UNI|Union Island|Union Island International Airport|VC|0|
+BDA|Hamilton|L.F. Wade International Airport|BM|1|
+ALA|Almaty|Almaty International Airport|KZ|1|
+BXH|Balkhash|Balkhash Airport|KZ|0|
+TDK|Taldykorgan|Taldykorgan Airport|KZ|0|
+NQZ|Astana|Nursultan Nazarbayev International Airport|KZ|1|
+KOV|Kokshetau|Kokshetau International Airport|KZ|1|
+PPK|Petropavl|Petropavl International Airport|KZ|1|
+DMB|Taraz|Taraz International Airport|KZ|1|
+BSZ|Bishkek|Manas International Airport|KG|1|
+OSS|Osh|Osh International Airport|KG|1|
+IKG|Karakol|Karakol International Airport|KG|0|
+CIT|Shymkent|Shymkent International Airport|KZ|1|
+HSA|Turkıstan|Hazrat Sultan International Airport|KZ|1|
+DZN|Zhezkazgan|Zhezkazgan National Airport|KZ|1|
+KGF|Karaganda|Sary-Arka Airport|KZ|1|
+BXY|Baikonur|Baikonur Krayniy International Airport|KZ|1|
+KZO|Kyzylorda|Korkyt Ata International Airport|KZ|1|
+URA|Uralsk|Manshuk Mametova International Airport|KZ|1|
+UKK|Ust-Kamenogorsk|Oskemen International Airport|KZ|1|
+PWQ|Pavlodar|Pavlodar International Airport|KZ|1|
+PLX|Semey|Semei International Airport|KZ|1|
+SCO|Aktau|Aktau International Airport|KZ|1|
+GUW|Atyrau|Atyrau International Airport|KZ|1|
+AKX|Aktobe|Aktobe International Airport|KZ|1|
+KSN|Kostanay|Kostanay International Airport|KZ|1|
+GYD|Baku|Heydar Aliyev International Airport|AZ|1|
+GNJ|Ganja|Ganja International Airport|AZ|1|
+NAJ|Nakhchivan|Nakhchivan International Airport|AZ|1|
+GBB|Gabala|Gabala International Airport|AZ|0|
+LHL|Lachin|Lachin International Airport|AZ|0|
+IKU|Tamchy|Issyk-Kul International Airport|KG|1|
+LWN|Gyumri|Shirak International Airport|AM|1|
+EVN|Yerevan|Zvartnots International Airport|AM|1|
+YKS|Yakutsk|Platon Oyunsky Yakutsk International Airport|RU|1|
+NER|Neryungri|Chulman Airport|RU|0|
+MQJ|Khonuu|Moma Airport|RU|0|
+OLZ|Olyokminsk|Olyokminsk Airport|RU|0|
+USR|Ust-Nera|Ust-Nera Airport|RU|0|
+VYI|Vilyuisk|Vilyuisk Airport|RU|0|
+ULK|Lensk|Lensk Airport|RU|0|
+PYJ|Yakutia|Polyarny Airport|RU|0|
+MJZ|Mirny|Mirny Airport|RU|0|
+SYS|Saskylakh|Saskylakh Airport|RU|0|
+SEK|Srednekolymsk|Srednekolymsk Airport|RU|0|
+CKH|Chokurdah|Chokurdakh Airport|RU|0|
+CYX|Cherskiy|Cherskiy Airport|RU|0|
+IKS|Tiksi|Tiksi Airport|RU|0|
+ZKP|Zyryanka|Zyryanka Airport|RU|0|
+ZIX|Zhigansk|Zhigansk Airport|RU|0|
+KHX|Kihihi|Savannah Airstrip|UG|0|
+KUT|Kopitnari|David the Builder Kutaisi International Airport|GE|1|
+BUS|Batumi|Alexander Kartveli Batumi International Airport|GE|1|
+SUI|Sukhumi|Vladislav Ardzinba Sukhum International Airport|GE|1|
+TBS|Tbilisi|Tbilisi International Airport|GE|1|
+BQS|Blagoveschensk|Ignatyevo Airport|RU|0|
+KHV|Khabarovsk|Khabarovsk Novy Airport|RU|0|
+KXK|Komsomolsk-on-Amur|Komsomolsk-on-Amur Airport|RU|0|
+DYR|Anadyr|Ugolny Yuri Ryktheu Airport|RU|0|
+KPW|Keperveem|Keperveem Airport|RU|0|
+GDX|Magadan|Sokol Airport|RU|0|
+PWE|Apapelgino|Pevek Airport|RU|0|
+NLI|Nikolayevsk-na-Amure Airport|Nikolayevsk-na-Amure Airport|RU|0|
+OHO|Okhotsk|Okhotsk Airport|RU|0|
+PKC|Petropavlovsk-Kamchatsky|Yelizovo Airport|RU|1|
+UUS|Yuzhno-Sakhalinsk|Yuzhno-Sakhalinsk International Airport|RU|1|
+VVO|Artyom|Vladivostok International Airport|RU|1|
+HTA|Chita|Chita-Kadala International Airport|RU|1|
+BTK|Bratsk|Bratsk Airport|RU|0|
+IKT|Irkutsk|Irkutsk International Airport|RU|1|
+UKX|Ust-Kut|Ust-Kut Airport|RU|0|
+UUD|Ulan Ude|Baikal International Airport|RU|1|
+ARH|Archangelsk|Talagi Airport|RU|0|
+NNM|Naryan Mar|Naryan Mar Airport|RU|0|
+AMV|Amderma|Amderma Airport|RU|0|
+KSZ|Kotlas|Kotlas Airport|RU|0|
+LED|St. Petersburg|Pulkovo Airport|RU|1|
+MMK|Murmansk|Emperor Nicholas II Murmansk Airport|RU|1|
+PKV|Pskov|Princess Olga Pskov International Airport|RU|0|
+PES|Petrozavodsk|Petrozavodsk Airport|RU|0|
+CEE|Cherepovets|Cherepovets Airport|RU|0|
+VUS|Velikiy Ustyug|Velikiy Ustyug Airport|RU|0|
+BQT|Brest|Brest International Airport|BY|1|
+GME|Gomel|Gomel Airport|BY|0|
+KGD|Kaliningrad|Khrabrovo Airport|RU|1|
+MSQ|Minsk|Minsk National Airport|BY|1|
+MVQ|Mogilev|Mogilev Airport|BY|0|
+ABA|Abakan|Abakan International Airport|RU|1|
+BAX|Barnaul|Barnaul Gherman Titov International Airport|RU|1|
+KEJ|Kemerovo|Alexei Leonov Kemerovo International Airport|RU|1|
+EIE|Yeniseysk|Yeniseysk Airport|RU|0|
+VEO|Severo-Yeniseysk|Severo-Yeniseysk Airport|RU|0|
+VAQ|Vanavara|Vanavara Airport|RU|0|
+KJA|Krasnoyarsk|Krasnoyarsk International Airport|RU|1|
+KCY|Krasnoyarsk|Krasnoyarsk Cheremshanka Airport|RU|0|
+KYZ|Kyzyl|Kyzyl Airport|RU|0|
+OVB|Novosibirsk|Novosibirsk Tolmachevo Airport|RU|1|
+OMS|Omsk|Omsk Central Airport|RU|1|
+TOF|Tomsk|Tomsk Kamov Airport|RU|1|
+NOZ|Novokuznetsk|Spichenkovo Airport|RU|0|
+HTG|Khatanga|Khatanga Airport|RU|0|
+IAA|Igarka|Igarka Airport|RU|0|
+NSK|Norilsk|Alykel International Airport|RU|1|
+GDZ|Gelendzhik|Gelendzhik Airport|RU|0|
+KRR|Krasnodar|Krasnodar Pashkovsky International Airport|RU|1|
+GRV|Grozny|Akhmat Kadyrov Grozny International Airport|RU|1|
+MCX|Makhachkala|Makhachkala Uytash International Airport|RU|1|
+MRV|Mineralnyye Vody|Mineralnye Vody Airport|RU|1|
+NAL|Nalchik|Nalchik Airport|RU|0|
+OGZ|Beslan|Vladikavkaz Beslan International Airport|RU|0|
+IGT|Sunzha|Magas Airport|RU|0|
+STW|Stavropol|Stavropol Shpakovskoye Airport|RU|0|
+AER|Sochi|Sochi International Airport|RU|1|
+ASF|Astrakhan|Astrakhan Narimanovo Boris M. Kustodiev International Airport|RU|1|
+ESL|Elista|Elista Airport|RU|0|
+VOG|Volgograd|Volgograd International Airport|RU|1|
+CEK|Chelyabinsk|Kurchatov Chelyabinsk International Airport|RU|1|
+MQF|Magnitogorsk|Magnitogorsk International Airport|RU|1|
+SBT|Sabetta|Sabetta International Airport|RU|0|
+BVJ|Bovanenkovo|Bovanenkovo Airport|RU|0|
+SLY|Salekhard|Salekhard Airport|RU|0|
+HMA|Khanty-Mansiysk|Khanty Mansiysk Airport|RU|0|
+NYA|Nyagan|Nyagan Airport|RU|0|
+EYK||Beloyarskiy Airport|RU|0|
+OVS|Sovetskiy|Sovetskiy Airport|RU|0|
+URJ|Uray|Uray Airport|RU|0|
+IJK|Izhevsk|Izhevsk Airport|RU|0|
+KVX|Kirov|Pobedilovo Airport|RU|0|
+NYM|Nadym|Nadym Airport|RU|0|
+NUX|Novy Urengoy|Novy Urengoy Airport|RU|0|
+NJC|Nizhnevartovsk|Nizhnevartovsk Airport|RU|1|
+PEE|Perm|Perm International Airport|RU|1|
+KGP|Kogalym|Kogalym International Airport|RU|0|
+NOJ|Noyabrsk|Noyabrsk Airport|RU|0|
+SGC|Surgut|Surgut International Airport|RU|1|
+SVX|Yekaterinburg|Koltsovo Airport|RU|1|
+RMZ|Tobolsk|Tobolsk Remezov Airport|RU|0|
+TJM|Tyumen|Roshchino International Airport|RU|1|
+KRO|Kurgan|Kurgan Airport|RU|0|
+ASB|Ashgabat|Ashgabat International Airport|TM|1|
+KRW|Turkmenbaşy|Turkmenbaşy International Airport|TM|0|
+MYP|Mary|Mary International Airport|TM|0|
+TAZ|Daşoguz|Dashoguz International Airport|TM|1|
+CRZ|Türkmenabat|Türkmenabat International Airport|TM|1|
+DYU|Dushanbe|Dushanbe International Airport|TJ|1|
+TJU|Kulob|Kulob International Airport|TJ|1|
+LBD|Khujand|Khujand International Airport|TJ|1|
+KQT|Bokhtar|Bokhtar International Airport|TJ|1|
+NMA|Namangan|Namangan International Airport|UZ|1|
+AZN|Andijan|Andijan International Airport|UZ|0|
+FEG|Fergana|Fergana International Airport|UZ|0|
+NCU|Nukus|Nukus International Airport|UZ|1|
+UGC|Urgench|Urgench International Airport|UZ|1|
+NVI|Navoi|Navoi International Airport|UZ|0|
+BHK|Bukhara|Bukhara International Airport|UZ|1|
+SKD|Samarkand|Samarkand International Airport|UZ|1|
+TMJ|Termez|Termez Airport|UZ|0|
+TVT|Tashkent|Tashkent-Khumo International Airport|UZ|0|
+TAS|Tashkent|Tashkent International Airport|UZ|1|
+OMN|Zomin|Zomin Airport|UZ|0|
+KMW|Kostroma|Kostroma Sokerkino Airport|RU|0|
+IWA|Ivanovo|Ivanovo South Airport|RU|0|
+ZIA|Moscow|Zhukovsky International Airport|RU|1|
+DME|Moscow|Domodedovo International Airport|RU|1|
+IAR|Tunoshna|Golden Ring Yaroslavl International Airport|RU|1|
+SVO|Moscow|Sheremetyevo International Airport|RU|1|
+VOZ|Voronezh|Voronezh International Airport|RU|0|
+VKO|Moscow|Vnukovo International Airport|RU|1|
+UCT|Ukhta|Ukhta Airport|RU|0|
+PEX|Pechora|Pechora Airport|RU|0|
+USK|Usinsk|Usinsk Airport|RU|0|
+VKT|Vorkuta|Vorkuta Airport|RU|0|
+SCW|Syktyvkar|Syktyvkar Airport|RU|0|
+GOJ|Nizhny Novgorod|Nizhny Novgorod / Strigino International Airport|RU|1|
+UUA|Bugulma|Bugulma Airport|RU|0|
+KZN|Kazan|Kazan International Airport|RU|1|
+NBC|Nizhnekamsk|Begishevo Airport|RU|0|
+CSY|Cheboksary|Cheboksary Airport|RU|0|
+ULV|Ulyanovsk|Ulyanovsk Baratayevka Airport|RU|0|
+ULY|Cherdakly|Ulyanovsk Vostochny Airport|RU|0|
+REN|Orenburg|Orenburg Central Airport|RU|0|
+OSW|Orsk|Orsk Airport|RU|0|
+PEZ|Penza|Penza Airport|RU|0|
+SKX|Saransk|Saransk International Airport|RU|1|
+BWO|Balakovo|Balakovo Airport|RU|0|
+GSV|Saratov|Gagarin International Airport|RU|1|
+UFA|Ufa|Ufa International Airport|RU|1|
+KUF|Samara|Kurumoch International Airport|RU|1|
+REW|Rewa|Rewa Airport, Chorhata, REWA|IN|0|
+GDB|Gondia|Gondia Airport|IN|0|
+AMD|Ahmedabad|Sardar Vallabh Patel International Airport|IN|1|
+IXU|Aurangabad|Aurangabad Airport|IN|0|
+BOM|Mumbai|Chhatrapati Shivaji Maharaj International Airport|IN|1|
+BHJ|Bhuj|Bhuj Airport|IN|0|
+IXG|Belgaum|Belagavi Airport|IN|0|
+BDQ|Vadodara|Vadodara International Airport|IN|1|
+BHO|Bhopal|Raja Bhoj International Airport|IN|1|
+BHU|Bhavnagar|Bhavnagar Airport|IN|0|
+HBX|Hubballi|Hubballi Airport|IN|0|
+HSR|Rajkot|Rajkot International Airport|IN|1|
+IDR|Indore|Devi Ahilya Bai Holkar International Airport|IN|1|
+JLR|Jabalpur|Jabalpur Airport|IN|0|
+JGA|Jamnagar|Jamnagar Airport|IN|0|
+IXY|Kandla|Kandla Airport|IN|0|
+HJR|Khajuraho|Khajuraho Airport|IN|0|
+KLH|Kolhapur|Kolhapur Airport|IN|0|
+IXK|Keshod|Keshod Airport|IN|0|
+LTU|Latur|Murod Kond Airport|IN|0|
+NDC|Nanded|Nanded Airport|IN|0|
+NAG|Nagpur|Dr. Babasaheb Ambedkar International Airport|IN|1|
+ISK|Nashik|Nashik International Airport|IN|1|
+PNQ|Pune|Pune International Airport|IN|1|
+PBD|Porbandar|Porbandar Airport|IN|0|
+RPR|Raipur|Swami Vivekananda Airport|IN|0|
+SAG|Kakadi|Shirdi International Airport|IN|1|
+STV|Surat|Surat International Airport|IN|1|
+UDR|Udaipur|Maharana Pratap Airport|IN|0|
+CMB|Colombo|Bandaranaike International Colombo Airport|LK|1|
+BTC|Batticaloa|Batticaloa International Airport|LK|0|
+RML|Colombo|Colombo Ratmalana International Airport|LK|1|
+JAF|Jaffna|Jaffna International Airport|LK|1|
+KCT|Galle|Koggala Airport|LK|0|
+TRR|Trincomalee|China Bay Airport|LK|0|
+HRI|Mattala|Mattala Rajapaksa International Airport|LK|0|
+BBM|Battambang|Battambang Airport|KH|0|
+SAI|Siem Reap|Siem Reap-Angkor International Airport|KH|1|
+KOS|Preah Sihanouk|Sihanouk International Airport|KH|1|
+IXA|Agartala|Agartala - Maharaja Bir Bikram Airport|IN|0|
+IXB|Siliguri|Bagdogra Airport|IN|1|
+SHL|Shillong|Shillong Airport|IN|0|
+VNS|Varanasi|Lal Bahadur Shastri International Airport|IN|1|
+BBI|Bhubaneswar|Biju Patnaik International Airport|IN|1|
+PAB|Bilaspur|Bilaspur Airport|IN|0|
+CCU|Kolkata|Netaji Subhash Chandra Bose International Airport|IN|1|
+RDP|Durgapur|Kazi Nazrul Islam Airport|IN|0|
+DBR|Darbhanga|Darbhanga Airport|IN|0|
+GOP|Gorakhpur|Gorakhpur Airport|IN|0|
+GAU|Guwahati|Lokpriya Gopinath Bordoloi International Airport|IN|1|
+GAY|Gaya|Gaya Airport|IN|0|
+IMF|Imphal|Bir Tikendrajit International Airport|IN|1|
+JRH|Jorhat|Jorhat Airport|IN|0|
+IXS|Silchar|Silchar Airport|IN|0|
+AJL|Aizawl|Lengpui Airport|IN|0|
+IXI|Lilabari|Lilabari North Lakhimpur Airport|IN|0|
+DIB|Dibrugarh|Dibrugarh Airport|IN|0|
+DMU|Dimapur|Dimapur Airport|IN|0|
+PAT|Patna|Jay Prakash Narayan Airport|IN|0|
+IXR|Ranchi|Birsa Munda Airport|IN|0|
+TEZ||Tezpur Airport|IN|0|
+UKE|Bhawanipatna|Utkela Airport|IN|0|
+BZL|Barisal|Barisal Airport|BD|0|
+CXB|Cox's Bazar|Cox's Bazar Airport|BD|0|
+CGP|Chattogram|Shah Amanat International Airport|BD|1|
+DAC|Dhaka|Hazrat Shahjalal International Airport|BD|1|
+JSR|Jashore|Jessore Airport|BD|0|
+RJH|Rajshahi|Shah Makhdum Airport|BD|0|
+SPD|Saidpur|Saidpur Airport|BD|0|
+ZYL|Sylhet|Osmany International Airport|BD|1|
+HKG|Hong Kong|Hong Kong International Airport|HK|1|赤鱲角機場 홍콩 香港
+AGR|Agra|Agra Airport / Agra Air Force Station|IN|0|
+IXD|Allahabad|Prayagraj Airport|IN|0|
+ATQ|Amritsar|Sri Guru Ram Das Ji International Airport|IN|1|
+KUU|Bhuntar|Kullu Manali Airport|IN|0|
+BEK|Bareilly|Bareilly Air Force Station|IN|0|
+IXC|Chandigarh|Shaheed Bhagat Singh International Airport|IN|1|
+KNU|Kanpur|Kanpur Airport|IN|0|
+DED|Dehradun|Dehradun Jolly Grant Airport|IN|0|
+DEL|New Delhi|Indira Gandhi International Airport|IN|1|
+DHM|Kangra|Kangra Airport|IN|0|
+GWL|Gwalior|Gwalior Airport|IN|0|
+HSS|Hisar|Maharaja Agrasen International Airport|IN|1|
+HWR|Halwara|Halwara International Airport|IN|1|
+JDH|Jodhpur|Jodhpur Airport|IN|0|
+JAI|Jaipur|Jaipur International Airport|IN|1|
+JSA||Jaisalmer Airport|IN|0|
+IXJ|Jammu|Jammu Airport|IN|0|
+KQH|Ajmer|Kishangarh Airport Ajmer|IN|0|
+IXL|Leh|Leh Kushok Bakula Rimpochee Airport|IN|0|
+LKO|Lucknow|Chaudhary Charan Singh International Airport|IN|1|
+MZS|Moradabad|Moradabad Airport|IN|0|
+IXP|Pathankot|Pathankot Airport|IN|0|
+PGH|Pantnagar|Pantnagar Airport|IN|0|
+SXR|Srinagar|Srinagar International Airport|IN|1|
+LPQ|Luang Phabang|Luang Phabang International Airport|LA|1|
+PKZ|Pakse|Pakse International Airport|LA|1|
+VTE|Vientiane|Wattay International Airport|LA|1|
+MFM|Nossa Senhora do Carmo|Macau International Airport|MO|1|澳門國際機場 마카오 澳门
+BWA|Siddharthanagar|Gautam Buddha International Airport|NP|1|
+JKR|Janakpur|Janakpur Airport|NP|0|
+KTM|Kathmandu|Tribhuvan International Airport|NP|1|
+LUA|Lukla|Tenzing-Hillary Airport|NP|0|
+KEP|Nepalgunj|Nepalgunj Airport|NP|0|
+PKR|Pokhara|Pokhara Domestic Airport|NP|0|
+TPJ|Taplejung|Taplejung Airport|NP|0|
+BIR|Biratnagar|Biratnagar Airport|NP|0|
+AGX|Agatti|Agatti Airport|IN|0|
+BLR|Bengaluru|Kempegowda International Airport Bengaluru|IN|1|
+VGA|Vijayawada|Vijayawada International Airport|IN|1|
+CJB|Coimbatore|Coimbatore International Airport|IN|1|
+COK|Kochi|Cochin International Airport|IN|1|
+CCJ|Calicut|Calicut International Airport|IN|1|
+CDP|Kadapa|Kadapa Airport|IN|0|
+GOX|Mopa|Manohar International Airport|IN|1|
+GOI|Vasco da Gama|Goa Dabolim International Airport|IN|1|
+HYD|Hyderabad|Rajiv Gandhi International Airport|IN|1|
+CNN|Kannur|Kannur International Airport|IN|1|
+KJB|Orvakal|Kurnool Airport|IN|0|
+IXM|Madurai|Madurai Airport|IN|0|
+IXE|Mangaluru|Mangaluru International Airport|IN|1|
+MAA|Chennai|Chennai International Airport|IN|1|
+MYQ|Mysore|Mysore Airport|IN|0|
+IXZ|Port Blair|Veer Savarkar International Airport / INS Utkrosh|IN|1|
+PNY|Puducherry|Pondicherry Airport|IN|0|
+RJA|Madhurapudi|Rajahmundry Airport|IN|0|
+TIR|Tirupati|Tirupati International Airport|IN|1|
+TRZ|Tiruchirappalli|Tiruchirappalli International Airport|IN|1|
+TRV|Thiruvananthapuram|Thiruvananthapuram International Airport|IN|1|
+VTZ|Visakhapatnam|Alluri Sitarama Raju International Airport (Vizag)|IN|1|
+PBH|Paro|Paro International Airport|BT|1|
+NMF|Noonu Atoll|Maafaru International Airport|MV|0|
+GAN|Gan|Gan International Airport|MV|1|
+HAQ|Haa Dhaalu Atoll|Hanimaadhoo International Airport|MV|1|
+KDO|Kadhdhoo|Kadhdhoo Airport|MV|0|
+MLE|Malé|Velana International Airport|MV|1|
+KDM|Huvadhu Atoll|Kaadedhdhoo Airport|MV|0|
+VAM|Maamigili|Villa International Airport Maamigili|MV|0|
+DMK|Bangkok|Don Mueang International Airport|TH|1|
+TDX|Laem Ngop|Trat Airport|TH|0|
+BKK|Bangkok|Suvarnabhumi Airport|TH|1|방콕 曼谷
+UTP|Rayong|U-Tapao–Rayong–Pattaya International Airport|TH|1|
+CNX|Chiang Mai|Chiang Mai International Airport|TH|1|
+HGN|Mae Hong Son|Mae Hong Son Airport|TH|0|
+LPT||Lampang Airport|TH|0|
+NNT||Nan Airport|TH|0|
+CEI|Chiang Rai|Mae Fah Luang - Chiang Rai International Airport|TH|1|
+PHY||Phetchabun Airport|TH|0|
+HHQ|Hua Hin|Hua Hin Airport|TH|0|
+MAQ||Mae Sot Airport|TH|0|
+THS||Sukhothai Airport|TH|0|
+PHS|Phitsanulok|Phitsanulok Airport|TH|0|
+URT|Surat Thani|Surat Thani Airport|TH|0|
+NAW||Narathiwat Airport|TH|0|
+CJM|Chumphon|Chumphon Airport|TH|0|
+NST|Nakhon Si Thammarat|Nakhon Si Thammarat Airport|TH|0|
+KBV|Krabi|Krabi International Airport|TH|1|
+USM|Na Thon|Samui International Airport|TH|1|
+HKT|Phuket|Phuket International Airport|TH|1|
+UNN|Ranong|Ranong Airport|TH|0|
+HDY|Hat Yai|Hat Yai International Airport|TH|1|
+TST|Trang|Trang Airport|TH|0|
+UTH|Udon Thani|Udon Thani International Airport|TH|1|
+SNO||Sakon Nakhon Airport|TH|0|
+PXR|Surin|Surin Airport|TH|0|
+KKC|Khon Kaen|Khon Kaen Airport|TH|0|
+LOE||Loei Airport|TH|0|
+BFV|Buriram|Buri Ram Airport|TH|0|
+UBP|Ubon Ratchathani|Ubon Ratchathani Airport|TH|0|
+ROI|Roi Et|Roi Et Airport|TH|0|
+KOP|Nakhon Phanom|Nakhon Phanom Airport|TH|0|
+BMV|Buon Ma Thuot|Buon Ma Thuot Airport|VN|0|
+HPH|Haiphong|Cat Bi International Airport|VN|1|
+CAH|Ca Mau City|Cà Mau Airport|VN|0|
+CXR|Nha Trang/nha Trang aiurportCam Ranh|Cam Ranh International Airport / Cam Ranh Air Base|VN|1|
+VCS|Con Dao|Con Dao Airport|VN|0|
+VCA|Can Tho|Can Tho International Airport|VN|1|
+DIN|Dien Bien Phu|Dien Bien Phu Airport|VN|0|
+VDH|Dong Hoi|Dong Hoi Airport|VN|0|
+DLI|Da Lat|Lien Khuong Airport|VN|0|
+DAD|Da Nang|Da Nang International Airport|VN|1|다낭 岘港
+HAN|Hanoi|Noi Bai International Airport|VN|1|하노이 河内
+HUI|Huế|Phu Bai International Airport|VN|1|
+UIH|Quy Nohn|Phu Cat Airport|VN|0|
+PXU|Pleiku|Pleiku Airport|VN|0|
+PQC|Phu Quoc Island|Phú Quốc International Airport|VN|1|
+VKG|Rach Gia|Rach Gia Airport|VN|0|
+TBB|Tuy Hoa|Dong Tac Airport|VN|0|
+SGN|Ho Chi Minh City|Tan Son Nhat International Airport|VN|1|호치민 胡志明
+VDO|Van Don|Van Don International Airport|VN|0|
+VII|Vinh|Vinh Airport|VN|0|
+TVY|Dawei|Dawei Airport|MM|0|
+HEH|Heho|Heho Airport|MM|0|
+KET|Kengtung|Kengtung Airport|MM|0|
+KYP|Kyaukpyu|Kyaukpyu Airport|MM|0|
+KAW|Kawthoung|Kawthoung Airport|MM|0|
+LIW|Loikaw|Loikaw Airport|MM|0|
+LSH|Lashio|Lashio Airport|MM|0|
+MDL|Mandalay|Mandalay International Airport|MM|1|
+MGZ|Mkeik|Myeik Airport|MM|0|
+MYT|Myitkyina|Myitkyina Airport|MM|0|
+MOG|Mong Hsat|Mong Hsat Airport|MM|0|
+NYT|Naypyitaw|Nay Pyi Taw International Airport|MM|1|
+PBU|Putao|Putao Airport|MM|0|
+AKY|Sittwe|Sittwe Airport|MM|0|
+SNW|Thandwe|Thandwe Airport|MM|0|
+THL|Tachileik|Tachileik Airport|MM|0|
+RGN|Yangon|Yangon International Airport|MM|1|
+UPG|Makassar|Sultan Hasanuddin International Airport|ID|1|
+BIK|Biak|Frans Kaisiepo Airport|ID|0|
+TIM|Timika|Mozes Kilangin Airport|ID|0|
+BMU|Bima|Sultan Muhammad Salahuddin Airport|ID|0|
+DPS|Kuta, Badung|Denpasar I Gusti Ngurah Rai International Airport|ID|1|발리
+LOP|Mataram|Lombok International Airport|ID|1|
+TTE|Ternate|Sultan Babullah Airport|ID|0|
+TRT|Toraja|Toraja Airport|ID|0|
+PLW|Palu|Mutiara - SIS Al-Jufrie Airport|ID|0|
+PKY|Palangkaraya|Tjilik Riwut Airport|ID|0|
+YIA|Yogyakarta|Yogyakarta International Airport|ID|1|
+CXP|Cilacap|Tunggul Wulung Airport|ID|0|
+DJJ|Sentani|Dortheys Hiyo Eluay International Airport|ID|1|
+OKL|Oksibil|Oksibil Airport|ID|0|
+MKQ|Merauke|Mopah International Airport|ID|0|
+TMH|Tanah Merah|Tanah Merah Airport|ID|0|
+BPN|Balikpapan|Sultan Aji Muhammad Sulaiman Sepinggan International Airport|ID|1|
+TRK|Tarakan|Juwata International Airport / Suharnoko Harbani AFB|ID|0|
+AAP|Samarinda|Aji Pangeran Tumenggung Pranoto International Airport|ID|0|
+NAH|Tabukan Utara, Sangihe Islands|Naha Airport|ID|0|
+MDC|Manado|Sam Ratulangi International Airport|ID|1|
+TJG|Tanta-Tabalong|Warukin Airport|ID|0|
+BDJ|Banjarbaru|Syamsudin Noor International Airport|ID|1|
+LUV|Langgur|Karel Sadsuitubun Airport|ID|0|
+NAM|Namniwel|Namniwel Airport|ID|0|
+AMQ|Ambon|Pattimura International Airport|ID|1|
+BEJ|Tanjung Redeb - Borneo Island|Kalimarau Airport|ID|0|
+MLG|Malang|Abdul Rachman Saleh Airport|ID|0|
+JOG|Yogyakarta|Adisutjipto International Airport|ID|0|
+SOC|Surakarta|Adisoemarmo International Airport|ID|1|
+SUB|Surabaya|Juanda International Airport|ID|1|
+SRG|Semarang|Jenderal Ahmad Yani Airport|ID|1|
+FKQ|Fakfak|Fakfak Airport|ID|0|
+KNG|Kaimana|Utarom Airport|ID|0|
+MKW|Manokwari|Rendani Airport|ID|0|
+SOQ|Sorong|Domine Eduard Osok Airport|ID|0|
+KOE|Kupang|El Tari Airport|ID|0|
+WMX|Wamena|Wamena Airport|ID|0|
+WNI|Wangi-wangi Island|Matahora Airport|ID|0|
+KXB|Kolaka|Sangia Nibandera Airport|ID|0|
+BTU|Bintulu|Bintulu Airport|MY|0|
+KCH|Kuching|Kuching International Airport|MY|1|
+LMN|Limbang|Limbang Airport|MY|0|
+MKM|Mukah|Mukah Airport|MY|0|
+MUR|Marudi|Marudi Airport|MY|0|
+MYY|Miri|Miri Airport|MY|0|
+SBW|Sibu|Sibu Airport|MY|0|
+BBN|Bario|Bario Airport|MY|0|
+LDU|Lahad Datu|Lahad Datu Airport|MY|0|
+BKI|Kota Kinabalu|Kota Kinabalu International Airport|MY|1|
+LBU|Labuan|Labuan Airport|MY|0|
+SDK|Sandakan|Sandakan Airport|MY|0|
+TWU|Tawau|Tawau Airport|MY|0|
+MZV|Mulu|Mulu Airport|MY|0|
+BWN|Bandar Seri Begawan|Brunei International Airport|BN|1|
+PKU|Pekanbaru|Sultan Syarif Kasim II International Airport / Roesmin Nurjadin AFB|ID|0|
+DUM|Dumai|Pinang Kampai Airport|ID|0|
+KJT|Kertajati|Kertajati International Airport|ID|0|
+BDO|Bandung|Husein Sastranegara International Airport|ID|0|
+BTH|Batam|Hang Nadim International Airport|ID|1|
+TNJ|Tanjung Pinang-Bintan Island|Raja Haji Fisabilillah International Airport|ID|0|
+HLP|Jakarta|Halim Perdanakusuma International Airport|ID|1|
+CGK|Jakarta|Soekarno-Hatta International Airport|ID|1|
+TKG|Bandar Lampung|Radin Inten II International Airport|ID|0|
+GNS|Gunungsitoli|Binaka Airport|ID|0|
+KNO|Beringin|Kualanamu International Airport|ID|1|
+FLZ|Sibolga|Dr. Ferdinand Lumban Tobing Airport|ID|0|
+LSR|Kutacane|Alas Leuser Airport|ID|0|
+NPO|Nanga Pinoh-Borneo Island|Nanga Pinoh Airport|ID|0|
+KTG|Ketapang|Rahadi Osman Airport|ID|0|
+NTX|Ranai-Natuna Besar Island|Ranai Airport|ID|0|
+PNK|Pontianak|Supadio International Airport|ID|1|
+PSU|Putussibau-Borneo Island|Pangsuma Airport|ID|0|
+SQG|Sintang|Tebelian Airport|ID|0|
+PGK|Pangkal Pinang|Depati Amir Airport|ID|0|
+BKS|Bengkulu|Fatmawati Soekarno Airport|ID|0|
+PLM|Palembang|Sultan Mahmud Badaruddin II Airport|ID|0|
+PDO|Talang Gudang-Sumatra Island|Pendopo Airport|ID|0|
+PDG|Padang|Minangkabau International Airport|ID|1|
+MEQ|Kuala Pesisir|Cut Nyak Dhien Airport|ID|0|
+TXE|Takengon|Rembele Airport|ID|0|
+BTJ|Banda Aceh|Sultan Iskandar Muda International Airport|ID|1|
+TOD|Tioman Island|Tioman Airport|MY|0|
+AOR|Alor Satar|Sultan Abdul Halim Airport|MY|0|
+KBR|Kota Baharu|Sultan Ismail Petra Airport|MY|0|
+KUA|Kuantan|Kuantan Airport|MY|0|
+IPH|Ipoh|Sultan Azlan Shah Airport|MY|1|
+JHB|Johor Bahru|Senai International Airport|MY|1|
+KUL|Sepang|Kuala Lumpur International Airport|MY|1|쿠알라룸푸르
+LGK|Langkawi|Langkawi International Airport|MY|1|
+MKZ|Malacca|Malacca International Airport|MY|0|
+TGG|Kuala Terengganu|Sultan Mahmud Airport|MY|0|
+PEN|Penang|Penang International Airport|MY|1|
+SZB|Subang|Sultan Abdul Aziz Shah International Airport|MY|1|
+UAI|Suai|Commander in Chief of FALINTIL, Kay Rala Xanana Gusmão, International Airport|TL|0|
+DIL|Dili|Presidente Nicolau Lobato International Airport|TL|1|
+BCH|Baucau|Baucau Airport|TL|0|
+OEC|Oecussi-Ambeno|Oecusse Route of the Sandalwood International Airport|TL|1|
+XSP|Seletar|Seletar Airport|SG|0|
+SIN|Singapore|Singapore Changi Airport|SG|1|싱가포르 新加坡
+ALH|Albany|Albany Airport|AU|0|
+ARM|Armidale|Armidale Airport|AU|0|
+AYQ|Yulara|Ayers Rock Connellan Airport|AU|0|
+BCI|Barcaldine|Barcaldine Airport|AU|0|
+ASP|Alice Springs|Alice Springs Airport|AU|0|
+BNE|Brisbane|Brisbane International Airport|AU|1|
+OOL|Gold Coast|Gold Coast Airport|AU|1|
+BKQ|Blackall|Blackall Airport|AU|0|
+CNS|Cairns|Cairns International Airport|AU|1|
+CTL|Charleville|Charleville Airport|AU|0|
+BVI||Birdsville Airport|AU|0|
+BHQ|Broken Hill|Broken Hill Airport|AU|0|
+HTI|Hamilton Island|Hamilton Island Airport|AU|0|
+BEU|Bedourie|Bedourie Airport|AU|0|
+BRK||Bourke Airport|AU|0|
+ISA|Mount Isa|Mount Isa Airport|AU|0|
+MKY|Mackay|Mackay Airport|AU|0|
+BNK|Ballina|Ballina Byron Gateway Airport|AU|0|
+OKY||Oakey Army Aviation Centre|AU|0|
+BQL||Boulia Airport|AU|0|
+PPP|Proserpine|Proserpine Whitsunday Coast Airport|AU|0|
+ROK|Rockhampton|Rockhampton Airport|AU|0|
+BME|Broome|Broome International Airport|AU|1|
+MCY|Maroochydore|Sunshine Coast Airport|AU|1|
+BHS|Bathurst|Bathurst Airport|AU|0|
+TSV|Townsville|Townsville Airport / RAAF Base Townsville|AU|0|
+BDB|Bundaberg|Bundaberg Airport|AU|0|
+WEI|Weipa|Weipa Airport|AU|0|
+WTB|Toowoomba|Toowoomba Wellcamp Airport|AU|1|
+CVQ|Carnarvon|Carnarvon Airport|AU|0|
+CAZ||Cobar Airport|AU|0|
+CPD|Coober Pedy|Coober Pedy Airport|AU|0|
+CNJ|Cloncurry|Cloncurry Airport|AU|0|
+CED||Ceduna Airport|AU|0|
+CFS|Coffs Harbour|Coffs Harbour Airport|AU|0|
+CTN||Cooktown Airport|AU|0|
+CMA||Cunnamulla Airport|AU|0|
+CNB||Coonamble Airport|AU|0|
+CUQ|Coen|Coen Airport|AU|0|
+OOM|Cooma|Cooma Snowy Mountains Airport|AU|0|
+DPO|Devonport|Devonport Airport|AU|0|
+ELC|Elcho Island|Elcho Island Airport|AU|0|
+EMD|Emerald|Emerald Airport|AU|0|
+EPR|Esperance|Esperance Airport|AU|0|
+FIZ||Fitzroy Crossing Airport|AU|0|
+GET|Moonyoonooka|Geraldton Airport|AU|0|
+GLT|Gladstone|Gladstone Airport|AU|0|
+GTE|Groote Eylandt|Groote Eylandt Airport|AU|0|
+GFF|Griffith|Griffith Airport|AU|0|
+HVB|Hervey Bay|Hervey Bay Airport|AU|0|
+HID|Horn|Horn Island Airport|AU|0|
+MHU|Mount Hotham|Mount Hotham Airport|AU|0|
+KNS||King Island Airport|AU|0|
+KWM|Kowanyama|Kowanyama Airport|AU|0|
+KGC||Kingscote Airport|AU|0|
+LNO|Leonora|Leonora Airport|AU|0|
+IRG|Lockhart River|Lockhart River Airport|AU|0|
+LSY|Lismore|Lismore Airport|AU|0|
+LHG||Lightning Ridge Airport|AU|0|
+LRE|Longreach|Longreach Airport|AU|0|
+LER||Leinster Airport|AU|0|
+AVV|Geelong/Melbourne|Melbourne Avalon International Airport|AU|1|
+ABX|East Albury|Albury Airport|AU|0|
+MKR||Meekatharra Airport|AU|0|
+MEB|Essendon Fields|Melbourne Essendon Airport|AU|0|
+MIM|Merimbula|Merimbula Airport|AU|0|
+MNG|Maningrida|Maningrida Airport|AU|0|
+HBA|Hobart|Hobart International Airport|AU|1|
+MQL|Mildura|Mildura Airport|AU|0|
+LST|Launceston|Launceston Airport|AU|0|
+MBW|Melbourne|Melbourne Moorabbin Airport|AU|0|
+MEL|Melbourne|Melbourne Airport|AU|1|
+MMG||Mount Magnet Airport|AU|0|
+MRZ|Moree|Moree Airport|AU|0|
+MOV|Moranbah|Moranbah Airport|AU|0|
+MYA|Moruya|Moruya Airport|AU|0|
+MGB|Mount Gambier|Mount Gambier Airport|AU|0|
+NRA|Narrandera|Narrandera Airport|AU|0|
+NAA|Narrabri|Narrabri Airport|AU|0|
+NTN|Normanton|Normanton Airport|AU|0|
+ZNE|Newman|Newman Airport|AU|0|
+ADL|Adelaide|Adelaide International Airport|AU|1|
+PUG||Port Augusta Airport|AU|0|
+PBO|Paraburdoo|Paraburdoo Airport|AU|0|
+CCK|West Island|Cocos (Keeling) Islands Airport|CC|1|
+DRW|Darwin|Darwin International Airport / RAAF Darwin|AU|1|
+GOV|Nhulunbuy|Gove Airport|AU|0|
+KTA|Karratha|Karratha Airport|AU|0|
+KGI|Broadwood|Kalgoorlie Boulder Airport|AU|0|
+PKE|Parkes|Parkes Airport|AU|0|
+KNX|Kununurra|East Kimberley Regional (Kununurra) Airport|AU|0|
+PLO|Port Lincoln|Port Lincoln Airport|AU|0|
+LEA|Exmouth|Learmonth Airport|AU|0|
+PQQ|Port Macquarie|Port Macquarie Airport|AU|0|
+PTJ||Portland Airport|AU|0|
+PHE|Port Hedland|Port Hedland International Airport|AU|1|
+PER|Perth|Perth International Airport|AU|1|
+XCH|Flying Fish Cove|Christmas Island International Airport|CX|0|
+ULP||Quilpie Airport|AU|0|
+RMA|Roma|Roma Airport|AU|0|
+CBR|Canberra|Canberra Airport|AU|0|
+DBO|Dubbo|Dubbo City Regional Airport|AU|0|
+MJK|Denham|Shark Bay Airport|AU|0|
+SNB|Milikapiti|Snake Bay Airport|AU|0|
+NLK|Burnt Pine|Norfolk Island International Airport|NF|0|
+SYD|Sydney|Sydney Kingsford Smith International Airport|AU|1|시드니 悉尼
+TMW|Tamworth|Tamworth Airport|AU|0|
+WGA|Forest Hill|Wagga Wagga Airport|AU|0|
+XTG|Thargomindah|Thargomindah Airport|AU|0|
+THG|Biloela|Thangool Airport|AU|0|
+TCA|Tennant Creek|Tennant Creek Airport|AU|0|
+WNR|Windorah|Windorah Airport|AU|0|
+WYA|Whyalla|Whyalla Airport|AU|0|
+WGE||Walgett Airport|AU|0|
+NTL|Williamtown|Newcastle Airport|AU|1|
+WUN||Wiluna Airport|AU|0|
+WIN||Winton Airport|AU|0|
+BWT|Burnie|Wynyard Airport|AU|0|
+PEK|Beijing|Beijing Capital International Airport|CN|1|北京 北京首都国际机场 北京首都机场 北京机场 베이징 北京
+PKX|Beijing|Beijing Daxing International Airport|CN|1|베이징 다싱 北京 大兴
+CDE|Chengde|Chengde Puning Airport|CN|0|
+CIF|Chifeng|Chifeng Yulong Airport|CN|0|
+BPE|Qinhuangdao|Qinhuangdao Beidaihe Airport|CN|0|
+DSN|Ordos|Ordos Ejin Horo International Airport|CN|1|鄂尔多斯
+DAT|Datong|Datong Yungang International Airport|CN|1|
+ERL|Erenhot|Erenhot Saiwusu International Airport|CN|0|
+YIE|Arxan|Arxan Yi'ershi Airport|CN|0|
+HDG|Handan|Handan Airport|CN|0|
+HET|Hohhot|Hohhot Baita International Airport|CN|1|
+HUO|Holingol|Holingol Huolinhe Airport|CN|0|
+HLD|Hailar|Hulunbuir Hailar Airport|CN|1|
+LFQ|Linfen|Linfen Yaodu Airport|CN|0|
+LLV|Lüliang|Lüliang Dawu Airport|CN|0|
+NZH|Manzhouli|Manzhouli Xijiao Airport|CN|0|
+BAV|Baotou|Baotou Donghe International Airport|CN|1|包头东河
+SZH|Shuozhou|Shuozhou Zirun Airport|CN|0|朔州滋润机场
+SJW|Shijiazhuang|Shijiazhuang Zhengding International Airport|CN|1|
+TSN|Tianjin|Tianjin Binhai International Airport|CN|1|톈진 천진 天津
+TGO|Tongliao|Tongliao Airport|CN|0|
+UCB|Ulanqab|Ulanqab Jining Airport|CN|0|
+WUA|Wuhai|Wuhai Airport|CN|0|乌海机场
+XIL|Xilinhot|Xilinhot Airport|CN|0|
+YCU|Yuncheng|Yuncheng Yanhu International Airport|CN|1|
+TYN|Taiyuan|Taiyuan Wusu International Airport|CN|1|
+RLK|Bayannur|Bayannur Tianjitai Airport|CN|0|
+ZQZ|Zhangjiakou|Zhangjiakou Ningyuan Airport|CN|0|张家口宁远机场 张家口
+NZL|Zhalantun|Zhalantun Genghis Khan Airport|CN|0|
+BHY|Beihai|Beihai Fucheng Airport|CN|0|北海，北海福成机场
+AEB|Baise|Baise (Bose) Bama Airport|CN|0|百色右江机场
+CGD|Changde|Changde Taohuayuan Airport|CN|0|
+HJJ|Huaihua|Huaihua Zhijiang Airport|CN|0|
+HCZ|Chenzhou|Chenzhou Beihu Airport|CN|0|
+DYG|Zhangjiajie|Zhangjiajie Hehua International Airport|CN|1|张家界 张家界荷花国际机场，荷花
+FUO|Foshan|Foshan Shadi Airport|CN|0|
+CAN|Guangzhou|Guangzhou Baiyun International Airport|CN|1|광저우 广州
+CSX|Changsha|Changsha Huanghua International Airport|CN|1|长沙黄花国际机场 창사 长沙
+HCJ|Hechi|Hechi Jinchengjiang Airport|CN|0|
+HNY|Hengyang|Hengyang Nanyue Airport|CN|0|
+HUZ|Huizhou|Huizhou Pingtan Airport|CN|0|
+KWL|Guilin|Guilin Liangjiang International Airport|CN|1|구이린 계림 桂林
+LLF|Yongzhou|Yongzhou Lingling Airport|CN|0|
+NNG|Nanning|Nanning Wuxu International Airport|CN|1|南宁吴圩机场 난닝 南宁
+SWA|Jieyang|Jieyang Chaoshan International Airport|CN|1|산터우 산토우 제양 汕头 揭阳 潮汕
+ZUH|Zhuhai|Zhuhai Jinwan Airport|CN|1|珠海 珠海金湾机场 珠海三灶机场 주하이 珠海
+WGN|Shaoyang|Shaoyang Wugang Airport|CN|0|
+SZX|Shenzhen|Shenzhen Bao'an International Airport|CN|1|深圳 深圳宝安国际机场 선전 심천 深圳
+WUZ|Tangbu|Wuzhou Xijiang Airport|CN|0|
+YLX|Yulin|Yulin Fumian Airport|CN|0|
+YYA|Yueyang|Yueyang Sanhe Airport|CN|0|
+LZH|Liuzhou|Liuzhou Bailian Airport / Bailian Air Base|CN|0|
+ZHA|Zhanjiang|Zhanjiang Wuchuan International Airport|CN|1|
+CGO|Zhengzhou|Zhengzhou Xinzheng International Airport|CN|1|정저우 郑州
+EHU|Ezhou|Ezhou Huahu International Airport|CN|1|
+ENH|Enshi|Enshi Xujiaping Airport|CN|0|
+WUH|Wuhan|Wuhan Tianhe International Airport|CN|1|우한 武汉
+SHS|Jingzhou|Jingzhou Shashi Airport|CN|0|
+LYA|Luoyang|Luoyang Beijiao Airport|CN|1|
+HPG|Shennongjia|Shennongjia Hongping Airport|CN|0|
+WDS|Shiyan|Shiyan Wudangshan Airport|CN|0|
+XFN|Xiangyang|Xiangyang Liuji Airport|CN|0|
+XAI|Xinyang|Xinyang Minggang Airport|CN|0|信阳明港机场
+YIH|Yichang|Yichang Sanxia Airport|CN|0|
+HAK|Haikou|Haikou Meilan International Airport|CN|1|하이커우 海口
+BAR|Qionghai|Qionghai Bo'ao Airport|CN|0|
+SYX|Sanya|Sanya Phoenix International Airport|CN|1|싼야 삼아 三亚
+RGO|Hoemun-ri|Orang (Chongjin) Airport|KP|0|
+FNJ|Pyongyang|Pyongyang Sunan International Airport|KP|1|
+DSO|Sŏndŏng-ni|Sondok Airport|KP|0|
+WOS|Wonsan|Wonsan Kalma Airport|KP|0|
+DNH|Dunhuang|Dunhuang Mogao International Airport|CN|1|
+HXD|Delingha|Haixi Delingha Airport|CN|0|
+GMQ|Golog|Golog Maqên Airport|CN|0|
+GOQ|Golmud|Golmud Airport|CN|0|
+GYU|Guyuan|Guyuan Liupanshan Airport|CN|0|
+HTT|Mengnai|Huatugou Airport|CN|0|
+HZG|Hanzhong|Hanzhong Chenggu Airport|CN|0|
+INC|Yinchuan|Yinchuan Hedong International Airport|CN|1|银川 银川河东国际机场，宁夏
+JIC|Jinchang|Jinchang Jinchuan Airport|CN|0|
+JGN|Jiayuguan|Jiayuguan International Airport|CN|1|
+LHW|Lanzhou|Lanzhou Zhongchuan International Airport|CN|1|兰州中川国际机场
+LNL|Longnan|Longnan Chengzhou Airport|CN|0|
+IQN|Qingyang|Qingyang Xifeng Airport|CN|0|
+THQ|Tianshui|Tianshui Maijishan Airport|CN|0|天水麦积山机场
+GXH|Gannan|Gannan Xiahe Airport|CN|0|
+XNN|Haidong|Xining Caojiabao International Airport|CN|1|
+XIY|Xi'an|Xi'an Xianyang International Airport|CN|1|西安咸阳国际机场 시안 서안 西安
+ENY|Yan'an|Yan'an Nanniwan Airport|CN|0|
+UYN|Yulin|Yulin Yuyang Airport|CN|0|
+YUS|Yushu|Yushu Batang Airport|CN|0|
+ZHY|Zhongwei|Zhongwei Shapotou Airport|CN|0|
+YZY|Zhangye|Zhangye Ganzhou Airport|CN|0|张掖甘州机场
+AVK|Arvaikheer|Arvaikheer Airport|MN|0|
+LTI|Altai|Altai Airport|MN|0|
+BYN|Bayankhongor|Bayankhongor Airport|MN|0|
+UGA|Bulgan|Bulgan Airport|MN|0|
+COQ||Choibalsan Airport|MN|0|
+UBN|Ulaanbaatar|Ulaanbaatar Chinggis Khaan International Airport|MN|1|
+DLZ|Dalanzadgad|Dalanzadgad Airport|MN|0|
+HVD|Khovd|Khovd Airport|MN|0|
+MXV|Mörön|Mörön Airport|MN|0|
+ULO|Ulaangom|Ulaangom Airport|MN|0|
+ULG|Ölgii|Ölgii Mongolei International Airport|MN|0|
+BSD|Baoshan|Baoshan Yunrui Airport|CN|0|
+CWJ|Lincang|Cangyuan Washan Airport|CN|0|
+DLU|Dali|Dali Fengyi Airport|CN|0|
+DIG|Diqing|Diqing Shangri-La Airport|CN|0|
+JHG|Jinghong|Xishuangbanna Gasa International Airport|CN|1|
+JMJ|Pu'er|Lancang Jingmai Airport|CN|0|
+LNJ|Lincang|Lincang Boshang Airport|CN|0|
+LJG|Lijiang|Lijiang Sanyi International Airport|CN|1|丽江三义机场
+LUM|Dehong|Dehong Mangshi International Airport|CN|0|
+KMG|Kunming|Kunming Changshui International Airport|CN|1|쿤밍 곤명 昆明
+XMN|Xiamen|Xiamen Gaoqi International Airport|CN|1|厦门高崎国际机场 샤먼 하문 厦门
+AQG|Anqing|Anqing Tianzhushan Airport / Anqing North Air Base|CN|0|
+CZX|Changzhou|Changzhou Benniu International Airport|CN|0|
+KHN|Nanchang|Nanchang Changbei International Airport|CN|1|
+DOY|Dongying|Dongying Shengli Airport|CN|0|
+FUG|Yingzhou, Fuyang|Fuyang Xiguan Airport|CN|0|
+FOC|Fuzhou|Fuzhou Changle International Airport|CN|1|푸저우 福州
+HGH|Hangzhou|Hangzhou Xiaoshan International Airport|CN|1|杭州萧山国际机场 항저우 杭州
+HZA|Heze|Heze Mudan Airport|CN|0|
+JDZ|Jingdezhen|Jingdezhen Luojia Airport|CN|0|
+JNG|Jining|Jining Da'an Airport|CN|0|济宁大安机场，济宁
+TNA|Jinan|Jinan Yaoqiang International Airport|CN|1|지난 济南
+JUZ|Quzhou|Quzhou Airport|CN|0|
+LYG|Lianyungang|Lianyungang Huaguoshan International Airport|CN|1|
+LCX|Longyan|Liancheng Guanzhishan Airport|CN|0|
+HYN|Taizhou|Taizhou Luqiao Airport|CN|0|
+LYI|Linyi|Linyi Qiyang Airport|CN|0|
+NGB|Ningbo|Ningbo Lishe International Airport|CN|1|닝보 宁波
+NKG|Nanjing|Nanjing Lukou International Airport|CN|1|난징 남경 南京
+NTG|Nantong|Nantong Xingdong International Airport|CN|0|
+HFE|Hefei|Hefei Xinqiao International Airport|CN|1|合肥，合肥新桥机场
+PVG|Shanghai|Shanghai Pudong International Airport|CN|1|上海 上海浦东国际机场 浦东 상하이 푸동 上海 浦东
+TAO|Qingdao|Qingdao Jiaodong International Airport|CN|1|칭다오 청도 青岛
+JJN|Quanzhou|Quanzhou Jinjiang International Airport|CN|1|취안저우 泉州
+RIZ|Rizhao|Rizhao Shanzihe Airport|CN|0|
+HIA|Huai'an|Huai'an Lianshui Airport|CN|1|淮安 淮安涟水机场
+SQJ|Sanming|Sanming Shaxian Airport|CN|0|
+SQD|Shangrao|Shangrao Sanqingshan Airport|CN|0|
+SHA|Shanghai|Shanghai Hongqiao International Airport|CN|1|上海 上海虹桥 上海虹桥国际机场 상하이 훙차오 上海 虹桥
+TXN|Huangshan|Huangshan Tunxi International Airport|CN|1|
+WHA|Wuhu|Wuhu Xuanzhou Airport|CN|0|
+WEF|Weifang|Weifang Nanyuan Airport|CN|0|
+WEH|Weihai|Weihai Dashuibo Airport|CN|0|웨이하이 위해 威海
+WUX|Wuxi|Sunan Shuofang International Airport|CN|1|우시 쑤저우 소주 无锡 苏州
+WUS|Wuyishan|Nanping Wuyishan Airport|CN|0|
+WNZ|Wenzhou|Wenzhou Longwan International Airport|CN|1|温州永强机场
+XUZ|Xuzhou|Xuzhou Guanyin International Airport|CN|0|
+YTY|Yangzhou|Yangzhou Taizhou Airport|CN|0|
+YIC|Yichun|Yichun Mingyueshan Airport|CN|0|
+YNZ|Yancheng|Yancheng Nanyang International Airport|CN|1|
+YNT|Yantai|Yantai Penglai International Airport|CN|1|옌타이 연태 烟台
+YIW|Yiwu/Jinhua|Yiwu Airport|CN|1|
+HSN|Zhoushan|Zhoushan Putuoshan International Airport|CN|1|
+NGQ|Shiquanhe|Ngari Gunsa Airport|CN|0|
+AVA|Anshun|Anshun Huangguoshu Airport|CN|0|
+BPX|Bangda|Qamdo Bangda Airport|CN|0|
+BFJ|Bijie|Bijie Feixiong Airport|CN|0|
+CKG|Chongqing|Chongqing Jiangbei International Airport|CN|1|충칭 重庆
+DZH|Dazhou|Dazhou Jinya Airport|CN|0|
+DCY|Garzê|Daocheng Yading Airport|CN|0|
+GYS|Guangyuan|Guangyuan Panlong Airport|CN|0|
+KWE|Guiyang|Guiyang Longdongbao International Airport|CN|1|
+JZH|Ngawa|Jiuzhai Huanglong Airport|CN|0|
+KGT|Garzê|Kangding Airport|CN|0|
+KJH|Kaili|Kaili Huangping Airport|CN|0|
+LXA|Shannan|Lhasa Gonggar International Airport|CN|1|
+LZO|Luzhou|Luzhou Yunlong Airport|CN|0|
+WMT|Zunyi|Zunyi Maotai Airport|CN|0|
+MIG|Mianyang|Mianyang Nanjiao Airport|CN|0|
+HZH|Liping|Liping Airport|CN|0|
+LZY|Nyingchi|Nyingchi Mainling Airport|CN|0|
+LPF|Liupanshui|Liupanshui Yuezhao Airport|CN|0|
+JIQ|Qianjiang|Qianjiang Wulingshan Airport|CN|0|
+RKZ|Xigazê|Xigaze Peace Airport / Shigatse Air Base|CN|1|
+TCZ|Baoshan|Tengchong Tuofeng Airport|CN|0|
+TFU|Chengdu|Chengdu Tianfu International Airport|CN|1|청두 텐푸 成都 天府
+TEN|Tongren|Tongren Fenghuang Airport|CN|0|
+CTU|Chengdu|Chengdu Shuangliu International Airport|CN|1|成都双流国际机场 청두 成都 双流
+CQW|Wulong|Chongqing Xiannüshan Airport|CN|0|
+XIC|Liangshan|Xichang Qingshan Airport|CN|0|
+YBP|Yibin|Yibin Wuliangye Airport|CN|0|
+ACX|Xingyi|Xingyi Wanfenglin Airport|CN|0|
+PZI|Panzhihua|Panzhihua Bao'anying Airport|CN|0|攀枝花保安营机场
+ZYI|Zunyi|Zunyi Xinzhou Airport|CN|0|
+AKU|Aksu|Aksu Hongqipo Airport|CN|0|
+AAT|Altay|Altay Xuedu Airport|CN|0|
+BPL|Bole|Bole Alashankou Airport|CN|0|
+IQM|Qiemo|Qiemo Yudu Airport|CN|0|
+FYN|Fuyun|Fuyun Koktokay Airport|CN|0|
+HMI|Hami|Hami Airport|CN|0|
+KRL|Korla|Korla Licheng Airport|CN|0|
+KJI|Burqin|Burqin Kanas Airport|CN|0|
+NLT|Xinyuan|Xinyuan Nalati Airport|CN|0|
+RQA|Ruoqiang Town|Ruoqiang Loulan Airport|CN|0|
+QSZ|Shache|Shache Airport|CN|0|
+KHG|Kashgar|Kashgar Laining International Airport|CN|1|喀什徕宁国际机场 喀什机场
+TLQ|Turpan|Turpan Jiaohe Airport|CN|0|
+HTN|Hotan|Hotan Airport|CN|0|
+URC|Ürümqi|Ürümqi Tianshan International Airport|CN|1|乌鲁木齐天山国际机场 乌鲁木齐 乌鲁木齐地窝堡机场
+YIN|Ili|Ili Yining International Airport|CN|0|
+AOG|Anshan|Anshan Teng'ao Airport / Anshan Air Base|CN|0|
+DBC|Baicheng|Baicheng Chang'an Airport|CN|0|
+NBS|Baishan|Changbaishan Airport|CN|0|
+CGQ|Changchun|Changchun Longjia International Airport|CN|1|창춘 长春
+CHG|Shuangta, Chaoyang|Chaoyang Airport|CN|0|
+DDG|Dandong|Dandong Langtou International Airport|CN|0|
+DTU|Heihe|Wudalianchi Dedu Airport|CN|0|
+FYJ|Fuyuan|Fuyuan Dongji Airport|CN|0|
+HRB|Harbin|Harbin Taiping International Airport|CN|1|하얼빈 哈尔滨
+HEK|Heihe|Heihe Aihui Airport|CN|0|
+JGD|Jiagedaqi|Daxing'anling Elunchun Airport|CN|0|
+JMU|Jiamusi|Jiamusi Songjiang International Airport|CN|0|佳木斯 佳木斯东郊机场 佳木斯松江机场
+JSJ|Jiansanjiang|Jiansanjiang Shidi Airport|CN|0|
+JXA|Jixi|Jixi Xingkaihu Airport|CN|0|
+JNZ|Jinzhou|Jinzhou Bay Airport|CN|0|
+LDS|Yichun|Yichun Lindu Airport|CN|0|
+MDG|Mudanjiang|Mudanjiang Hailang International Airport|CN|0|
+OHE|Mohe|Mohe Gulian Airport|CN|0|
+NDG|Qiqihar|Qiqihar Sanjiazi Airport|CN|1|齐齐哈尔 齐齐哈尔三家子机场
+YSQ|Qian Gorlos Mongol Autonomous County|Songyuan Chaganhu Airport|CN|0|
+DLC|Dalian|Dalian Zhoushuizi International Airport|CN|1|다롄 대련 大连
+TNH|Tonghua|Tonghua Sanyuanpu Airport|CN|0|
+SHE|Shenyang|Shenyang Taoxian International Airport|CN|1|沈阳 沈阳桃仙国际机场 선양 심양 沈阳
+YNJ|Yanji|Yanji Chaoyangchuan Airport|CN|0|옌지 연길 延吉
+YKH|Yingkou|Yingkou Lanqi Airport|CN|0|
