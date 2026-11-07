@@ -214,7 +214,7 @@ a svg,.small svg{width:14px;height:14px;vertical-align:-2px}
 .ag-day{display:flex;flex-direction:column;gap:4px}.ag-date{font-size:12px;font-weight:700;color:var(--muted)}
 .ag-ev{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--surface-2);cursor:pointer;font-size:13px}
 .ag-ev:hover{outline:1px solid var(--border)}.ag-ev i{width:8px;height:8px;border-radius:50%;flex:none}.ag-ev span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}.ag-ev em{font-style:normal;font-size:11px;color:var(--muted);white-space:nowrap}
-.sched-btns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:-2px 0 12px}.sched-btns .btn{justify-content:center;padding:8px 6px}
+.sched-btns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:-2px 0 12px}.sched-btns .btn{justify-content:center;padding:8px 6px}
 @media (max-width:760px){.sched .strip{grid-template-columns:repeat(7,minmax(0,1fr))}.sched h3{flex-wrap:nowrap;font-size:13.5px}.sched-btns .btn{font-size:12.5px}}
 
 .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;background:radial-gradient(circle at 20% 0%,var(--accent-soft),transparent 60%),var(--bg)}
@@ -1070,7 +1070,7 @@ function scheduleCard() {
     return `<div class="sd ${d === td ? 'today' : ''}" data-act="cal-day" data-date="${d}"><div class="w">${dn.toLocaleDateString(LANG === 'ko' ? 'ko-KR' : 'en-US', { weekday: 'short', timeZone: 'UTC' })}</div><div class="n">${dn.getUTCDate()}</div><div class="dots">${es.slice(0, 4).map(e => `<i style="background:var(${EVT[e.type][0]})"></i>`).join('')}</div></div>`; }).join('');
   const agenda = days.filter(d => by[d]).map(d => `<div class="ag-day"><div class="ag-date">${d === td ? t('today') : fmtDate(d, { short: true, wd: true })}</div>${by[d].sort((x, y) => order.indexOf(x.type) - order.indexOf(y.type)).map(e => `<div class="ag-ev" data-act="cal-ev" ${e.id ? `data-id="${e.id}"` : ''} ${e.appt ? `data-appt="${e.appt}"` : ''}><i style="background:var(${EVT[e.type][0]})"></i><span>${esc(e.label)}</span><em>${t(EVT[e.type][1])}</em></div>`).join('')}</div>`).join('');
   return `<div class="card sched" style="margin-top:14px"><h3>📅 ${t('sched_title')}<span class="sp"></span><a class="small" href="#calendar">${t('open_cal')} →</a></h3>
-    <div class="sched-btns"><button class="btn sm" data-act="ev-new" data-k="flight">✈️ ${t('k_flight')}</button><button class="btn sm" data-act="ev-new" data-k="shoot">🎬 ${t('k_shoot')}</button><button class="btn sm" data-act="ev-new" data-k="stay">🏨 ${t('k_stay')}</button><button class="btn sm" data-act="ev-new" data-k="meeting">🤝 ${t('k_meeting')}</button></div>
+    <div class="sched-btns"><button class="btn sm" data-act="ev-new" data-k="flight">✈️ ${t('k_flight')}</button><button class="btn sm" data-act="ev-new" data-k="shoot">🎬 ${t('k_shoot')}</button><button class="btn sm" data-act="ev-new" data-k="stay">🏨 ${t('k_stay')}</button></div>
     <div class="strip">${strip}</div>
     <div class="agenda">${agenda || `<div class="empty small">${t('sched_empty')}</div>`}</div></div>`;
 }
@@ -1469,7 +1469,7 @@ function calEvents() {
   }
   for (const a of list('appts')) {
     const type = a.kind === 'flight' ? 'flight' : a.kind === 'stay' ? 'stay' : a.kind === 'shoot' ? 'film' : 'appt';
-    const lbl = apptLabel(a) + (a.who && a.who !== 'both' ? ' · ' + whoLabel(a.who) : '');
+    const lbl = apptLabel(a);
     if (a.endDate && a.endDate > a.date) { for (let d = a.date, i = 0; d <= a.endDate && i < 60; d = C.addDays(d, 1), i++) ev.push({ date: d, type, label: i ? (a.kind === 'stay' ? '🏨 ' + (a.title || '') : lbl) : lbl, appt: a.id, cont: i > 0 }); }
     else ev.push({ date: a.date, type, label: lbl, appt: a.id, time: a.time });
   }
@@ -1523,7 +1523,7 @@ ACT['cal-day'] = (el, e) => {
     if (a === 'camp') quickCampaign({ filmDate: date }); if (a === 'appt') apptModal(null, date, 'other'); if (a === 'flight') apptModal(null, date, 'flight'); if (a === 'exp') expenseModal(null, { date }); };
   setTimeout(() => document.addEventListener('click', function h(ev) { if (!p.contains(ev.target)) { p.remove(); document.removeEventListener('click', h); } }), 0);
 };
-const EV_KINDS = [['flight', '✈️'], ['shoot', '🎬'], ['stay', '🏨'], ['meeting', '🤝'], ['other', '📌']];
+const EV_KINDS = [['flight', '✈️'], ['shoot', '🎬'], ['stay', '🏨'], ['other', '📌']];
 const WHO = [['both', 'who_both'], ['konan', null], ['seohee', null]];
 function whoLabel(w) { const s = settings(); return w === 'konan' ? s.youName : w === 'seohee' ? s.partnerName : t('who_both'); }
 function apptLabel(a) {
@@ -1547,7 +1547,6 @@ function apptModal(a, date, kind) {
       <div class="field" data-k="multi"><label id="a-elbl">${t('end_date')}</label><input type="date" class="inp" id="a-end" value="${a.endDate || ''}"></div>
       <div class="field" data-k="flight"><label>${t('fl_arrive')}</label><input type="time" class="inp" id="a-etime" value="${a.endTime || ''}"></div>
     </div>
-    <div class="field"><label>${t('who')}</label>${chips('a-who', [['both', t('who_both')], ['konan', st.youName], ['seohee', st.partnerName]], a.who || 'both')}</div>
     <div class="field"><label>${t('campaign')} (${t('optional')})</label><select class="inp" id="a-camp"><option value="">—</option>${camps().filter(c => !c.archived || c.id === a.campaignId).sort((x, y) => x.brand.localeCompare(y.brand)).map(c => `<option value="${c.id}" ${a.campaignId === c.id ? 'selected' : ''}>${esc(c.brand)}</option>`).join('')}</select></div>
     <div class="field"><label>${t('notes')}</label><input class="inp" id="a-note" value="${esc(a.note || '')}" placeholder="${t('ev_note_ph')}"></div>
   </div>
@@ -1570,7 +1569,7 @@ function apptModal(a, date, kind) {
     if (end && end < date) return toast(t('end_before'), 'bad');
     await put('appts', editing ? a.id : uid('a'), { kind, title, date, endDate: end, time: $('#a-time', el).value || null, endTime: kind === 'flight' ? ($('#a-etime', el).value || null) : null, tz: $('#a-tz', el).value,
       from: kind === 'flight' ? from : null, to: kind === 'flight' ? to : null, flightNo: kind === 'flight' ? $('#a-fno', el).value.trim().toUpperCase() : null,
-      who: chipVal(el, 'a-who'), campaignId: $('#a-camp', el).value || null, note: $('#a-note', el).value.trim() }, { replace: !editing });
+      campaignId: $('#a-camp', el).value || null, note: $('#a-note', el).value.trim() }, { replace: !editing });
     m.close(); toast(t('toast_saved')); };
   if (editing) $('#a-del', el).onclick = async () => { if (await confirmBox(t('delete'), esc(apptLabel(a)), t('delete'), true)) { await del('appts', a.id); m.close(); } };
 }
