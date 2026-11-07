@@ -214,7 +214,8 @@ a svg,.small svg{width:14px;height:14px;vertical-align:-2px}
 .ag-day{display:flex;flex-direction:column;gap:4px}.ag-date{font-size:12px;font-weight:700;color:var(--muted)}
 .ag-ev{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--surface-2);cursor:pointer;font-size:13px}
 .ag-ev:hover{outline:1px solid var(--border)}.ag-ev i{width:8px;height:8px;border-radius:50%;flex:none}.ag-ev span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}.ag-ev em{font-style:normal;font-size:11px;color:var(--muted);white-space:nowrap}
-@media (max-width:760px){.sched .strip{grid-template-columns:repeat(7,minmax(0,1fr))}.sched h3{flex-wrap:wrap}}
+.sched-btns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:-2px 0 12px}.sched-btns .btn{justify-content:center;padding:8px 6px}
+@media (max-width:760px){.sched .strip{grid-template-columns:repeat(7,minmax(0,1fr))}.sched h3{flex-wrap:nowrap;font-size:13.5px}.sched-btns .btn{font-size:12.5px}}
 
 .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;background:radial-gradient(circle at 20% 0%,var(--accent-soft),transparent 60%),var(--bg)}
 .auth-card{width:min(400px,100%);background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-lg);padding:28px 24px;display:flex;flex-direction:column;gap:12px}
@@ -1068,8 +1069,8 @@ function scheduleCard() {
   const strip = days.map(d => { const es = by[d] || []; const dn = new Date(d + 'T00:00:00Z');
     return `<div class="sd ${d === td ? 'today' : ''}" data-act="cal-day" data-date="${d}"><div class="w">${dn.toLocaleDateString(LANG === 'ko' ? 'ko-KR' : 'en-US', { weekday: 'short', timeZone: 'UTC' })}</div><div class="n">${dn.getUTCDate()}</div><div class="dots">${es.slice(0, 4).map(e => `<i style="background:var(${EVT[e.type][0]})"></i>`).join('')}</div></div>`; }).join('');
   const agenda = days.filter(d => by[d]).map(d => `<div class="ag-day"><div class="ag-date">${d === td ? t('today') : fmtDate(d, { short: true, wd: true })}</div>${by[d].sort((x, y) => order.indexOf(x.type) - order.indexOf(y.type)).map(e => `<div class="ag-ev" data-act="cal-ev" ${e.id ? `data-id="${e.id}"` : ''} ${e.appt ? `data-appt="${e.appt}"` : ''}><i style="background:var(${EVT[e.type][0]})"></i><span>${esc(e.label)}</span><em>${t(EVT[e.type][1])}</em></div>`).join('')}</div>`).join('');
-  return `<div class="card sched" style="margin-top:14px"><h3>📅 ${t('sched_title')}<span class="sp"></span>
-    <button class="btn sm" data-act="ev-new" data-k="flight">✈️ ${t('k_flight')}</button><button class="btn sm" data-act="ev-new" data-k="shoot">🎬 ${t('k_shoot')}</button><button class="btn sm hide-m" data-act="ev-new" data-k="stay">🏨 ${t('k_stay')}</button><a class="btn sm ghost" href="#calendar">${t('open_cal')} →</a></h3>
+  return `<div class="card sched" style="margin-top:14px"><h3>📅 ${t('sched_title')}<span class="sp"></span><a class="small" href="#calendar">${t('open_cal')} →</a></h3>
+    <div class="sched-btns"><button class="btn sm" data-act="ev-new" data-k="flight">✈️ ${t('k_flight')}</button><button class="btn sm" data-act="ev-new" data-k="shoot">🎬 ${t('k_shoot')}</button><button class="btn sm" data-act="ev-new" data-k="stay">🏨 ${t('k_stay')}</button><button class="btn sm" data-act="ev-new" data-k="meeting">🤝 ${t('k_meeting')}</button></div>
     <div class="strip">${strip}</div>
     <div class="agenda">${agenda || `<div class="empty small">${t('sched_empty')}</div>`}</div></div>`;
 }
