@@ -1864,7 +1864,7 @@ function claimSheet(f, apptId) {
       ${late ? `<div class="issue"><b>!</b><div>${t('cl_late')}</div></div>` : ''}
       <div class="hint">${t('cl_how')}</div>
       <div class="cl-rows">${rows.map(([l, v]) => `<div class="cl-row" data-act="cl-copy" data-v="${esc(v === '—' ? '' : v)}"><span class="small muted">${esc(l)}</span><b>${esc(v)}</b><span class="small" style="color:var(--accent)">${v === '—' ? '' : t('copy')}</span></div>`).join('')}</div>
-      <div class="row" style="gap:8px;margin-top:10px"><button class="btn" data-act="cl-copy" data-v="${esc(all)}">${ic('copy')} ${t('cl_copy_all')}</button><a class="btn primary" style="text-decoration:none" href="${prog === 'asiana' ? 'https://flyasiana.com' : KE_CLAIM()}" target="_blank" rel="noopener">${prog === 'asiana' ? 'Asiana' : 'Korean Air'} ↗</a></div>
+      <div class="row" style="gap:8px;margin-top:10px"><button class="btn" data-act="cl-copy" data-v="${esc(all)}">${ic('copy')} ${t('cl_copy_all')}</button><a class="btn primary" style="text-decoration:none" href="${prog === 'asiana' ? 'https://flyasiana.com' : KE_CLAIM()}" target="_blank" rel="noopener" data-act="open-chrome">${prog === 'asiana' ? 'Asiana' : 'Korean Air'} ↗</a></div>
       ${apptId ? `<div class="field" style="margin-top:10px"><label>${t('cl_mark')}</label>${tick('cl-mark', cl)}</div>` : ''}
     </details>
   </div>`);
@@ -1895,6 +1895,19 @@ function toClaim() {
   return list('appts').filter(a => a.kind === 'flight' && a.date && a.date >= from && ffInfo(a.flightNo, a.date).prog !== null && !(done(a, 'you') && done(a, 'partner')))
     .sort((x, y) => x.date.localeCompare(y.date));
 }
+
+// Open a web page in Google Chrome (iPhone: googlechromes:// scheme; Android: intent). Falls back to the normal browser.
+ACT['open-chrome'] = el => {
+  const url = el.getAttribute('href'); const ua = navigator.userAgent;
+  let chrome = null;
+  if (/iPhone|iPad|iPod/i.test(ua)) chrome = url.replace(/^https:\/\//, 'googlechromes://').replace(/^http:\/\//, 'googlechrome://');
+  else if (/Android/i.test(ua)) chrome = 'intent://' + url.replace(/^https?:\/\//, '') + '#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=' + encodeURIComponent(url) + ';end';
+  if (!chrome) { window.open(url, '_blank', 'noopener'); return; }
+  let left = false; const onHide = () => { if (document.hidden) left = true; };
+  document.addEventListener('visibilitychange', onHide);
+  window.location.href = chrome;
+  setTimeout(() => { document.removeEventListener('visibilitychange', onHide); if (!left && !document.hidden) window.open(url, '_blank', 'noopener'); }, 1800);
+};
 
 /* ===== APP part 3: payments view, expenses, finance, reports, setup, boot ===== */
 VIEWS_R.payments = () => {
