@@ -510,7 +510,7 @@ const CORE = (() => {
 
 /* ===== Translations: English / 한국어 ===== */
 const I18N = { en: {
-tagline:'Creator business studio', nav_overview:'Overview', nav_campaigns:'Campaigns', nav_calendar:'Calendar', nav_payments:'Deposits & Payments', nav_expenses:'Expenses', nav_finance:'Finance', nav_reports:'Reports', nav_setup:'Settings',
+tagline:'Creator business studio', archived:'Archived', unarchive:'Restore', mig_archived:'Notion history imported and archived on Nov 7, 2026 — tap to view the original import notes', archived_note:'Archived (imported history before November). Kept for reports, but hidden from Outstanding, Overdue and review.', nav_overview:'Overview', nav_campaigns:'Campaigns', nav_calendar:'Calendar', nav_payments:'Deposits & Payments', nav_expenses:'Expenses', nav_finance:'Finance', nav_reports:'Reports', nav_setup:'Settings',
 light:'Light', dark:'Dark', system:'System', collapse:'Collapse', loading:'Loading shared data…', new_campaign:'New campaign', expense:'Expense',
 sync_on:'Synced', sync_off:'Not saved', sync_wait:'Connecting', sync_tip:'Changes are saved to the shared database and appear for both of you live.',
 ban_local:'Shared storage is not available in this view (signed out or opened outside Claude). Changes you make now last only until you close this page.',
@@ -598,7 +598,7 @@ fl_paidNoAmount:'Notion “Paid” is checked but no amount was recorded.', fl_m
 fl_missingAmount:'Amount missing.', fl_missingPayer:'“Paid by” missing.', fl_missingDate:'Expense date missing (reporting month kept).', fl_missingFx:'CNY expense without an FX rate.', fl_noSourceUrl:'No Notion URL in the CSV row.', fl_possibleDuplicate:'Possible duplicate of another record — check before counting twice.', fl_categoryCheck:'Category may be wrong (check).',
 f_brand:'Brand', f_status:'Status', f_fee:'Fee', f_currency:'Currency', f_filmDate:'Filming date', f_actPubDate:'Actual publication', f_expPubDate:'Planned publication', f_notes:'Notes', f_termsType:'Terms', f_depositMode:'Deposit', f_platforms:'Platforms', f_city:'City', f_contact:'Contact', f_wechat:'WeChat', f_description:'Description', f_location:'Location', f_account:'Account', f_bookingDate:'Booking date', f_filmTime:'Filming time', f_filmTz:'Time zone', f_depositPct:'Deposit %', f_depositFixed:'Deposit amount', f_depositDue:'Deposit deadline', f_termsDays:'Terms days', f_manualDue:'Due date', f_taxCountry:'Tax country', f_taxAmountKrw:'Tax amount', f_taxPaid:'Tax paid', f_notionUrl:'Notion URL', f_reportMonth:'Reporting month', f_fxToKrw:'FX rate'
 }, ko: {
-tagline:'크리에이터 비즈니스 스튜디오', nav_overview:'개요', nav_campaigns:'캠페인', nav_calendar:'캘린더', nav_payments:'계약금 & 입금', nav_expenses:'경비', nav_finance:'재무', nav_reports:'리포트', nav_setup:'설정',
+tagline:'크리에이터 비즈니스 스튜디오', archived:'보관됨', unarchive:'복원', mig_archived:'노션 기록을 가져와 2026년 11월 7일에 보관함 — 눌러서 원래 가져오기 메모 보기', archived_note:'보관됨 (11월 이전 가져온 기록). 리포트용으로 보관되며 미수금·연체·확인 목록에서는 숨겨집니다.', nav_overview:'개요', nav_campaigns:'캠페인', nav_calendar:'캘린더', nav_payments:'계약금 & 입금', nav_expenses:'경비', nav_finance:'재무', nav_reports:'리포트', nav_setup:'설정',
 light:'라이트', dark:'다크', system:'시스템', collapse:'접기', loading:'공유 데이터 불러오는 중…', new_campaign:'새 캠페인', expense:'경비',
 sync_on:'동기화됨', sync_off:'저장 안 됨', sync_wait:'연결 중', sync_tip:'변경 사항은 공유 데이터베이스에 저장되며 두 사람 모두에게 실시간으로 보입니다.',
 ban_local:'이 화면에서는 공유 저장소를 사용할 수 없습니다(로그아웃 상태이거나 Claude 밖에서 열림). 지금 입력한 내용은 페이지를 닫으면 사라집니다.',
@@ -800,7 +800,8 @@ function paymentKRW(p) {
   return C.toKRW(Number(p.amount), 'CNY', { recordRate: c?.fxToKrw, date: p.date, rates: rates() });
 }
 const expenseKRW = e => C.toKRW(Number(e.amount), e.currency, { recordRate: e.fx, date: e.date || (e.reportMonth && e.reportMonth + '-15'), rates: rates() });
-function flagsOf(c) { return (c.flags || []).filter(f => !(c.resolvedFlags || []).includes(f)); }
+function flagsOf(c) { if (c.archived) return []; return (c.flags || []).filter(f => !(c.resolvedFlags || []).includes(f)); }
+const liveCamps = () => camps().filter(c => !c.archived);
 
 /* ---------- UI primitives ---------- */
 let renderQueued = false;
@@ -894,7 +895,7 @@ function storageBanner() {
   if (S.stale) return `<div class="banner warn">${t('ban_stale')}</div>`;
   return '';
 }
-function overdueCount() { return camps().filter(c => sumOf(c).overdue.length).length; }
+function overdueCount() { return liveCamps().filter(c => sumOf(c).overdue.length).length; }
 function render() {
   if (typeof AUTH_GATE === 'function' && AUTH_GATE()) return;
   applyTheme(); document.documentElement.lang = LANG;
@@ -986,15 +987,17 @@ function metrics(r) {
     const s = sumOf(c);
     if (C.CONFIRMED_SET.has(c.status) && C.inRange(C.contractDate(c), r)) { m.contractedN++; if (s.fee === null) m.unknownFeeN++; else C.addTo(m.contracted, c.currency, s.fee); }
     if (C.CONFIRMED_SET.has(c.status) && c.status !== 'Completed' && C.inRange(C.contractDate(c), r)) m.confirmedN++;
+    if (c.archived) continue;
     if (s.outstanding) C.addTo(m.outstanding, c.currency, s.outstanding);
     s.overdue.forEach(o => C.addTo(m.overdue, c.currency, o.amount)); if (s.overdue.length) m.overdueN++;
   }
   for (const p of ps) {
     const amt = Number(p.amount) || 0;
+    if (!p.date && p.archived && UI.period !== 'all') continue;
     if (!p.date) { if (UI.period === 'all') { C.addTo(m.cash, p.currency, amt); if (p.type === 'deposit') C.addTo(m.deposits, p.currency, amt); } C.addTo(m.undated, p.currency, amt); m.undatedN++; }
     else if (C.inRange(p.date, r)) { C.addTo(m.cash, p.currency, amt); if (p.type === 'deposit') C.addTo(m.deposits, p.currency, amt); }
-    if (p.landStatus === 'held' || p.landStatus === 'transit') { C.addTo(m.waiting, p.currency, amt); m.waitingN++; }
-    if (p.landStatus === 'unknown') C.addTo(m.unconfirmedLand, p.currency, amt);
+    if (!p.archived && (p.landStatus === 'held' || p.landStatus === 'transit')) { C.addTo(m.waiting, p.currency, amt); m.waitingN++; }
+    if (!p.archived && p.landStatus === 'unknown') C.addTo(m.unconfirmedLand, p.currency, amt);
     if (p.landStatus === 'landed' && C.inRange(p.landDate || p.date, r)) m.landedKrw += C.landedKRW(p, S.data.transfers) || 0;
   }
   for (const e of list('expenses')) if (C.expenseInRange(e, r)) C.addTo(m.expenses, e.currency, Number(e.amount) || 0);
@@ -1009,9 +1012,9 @@ VIEWS_R.overview = () => {
   const kpi = (lbl, val, sub, cls = '', act = '') => `<div class="card kpi ${cls}" ${act}><div class="lbl">${lbl}</div><div class="val">${val}</div>${sub ? `<div class="sub">${sub}</div>` : ''}</div>`;
   const upcomingFilm = camps().filter(c => c.status !== 'Cancelled' && c.filmDate && c.filmDate >= td && c.filmDate <= C.addDays(td, 30)).sort((a, b) => a.filmDate < b.filmDate ? -1 : 1);
   const upcomingPub = camps().filter(c => !['Cancelled', 'Completed', 'Published'].includes(c.status) && c.expPubDate && !c.actPubDate && c.expPubDate <= C.addDays(td, 30)).sort((a, b) => a.expPubDate < b.expPubDate ? -1 : 1);
-  const overdueList = camps().map(c => [c, sumOf(c)]).filter(([, s]) => s.overdue.length);
-  const flows = [7, 30, 60].map(d => [d, C.expectedInflows(camps(), pays(), d, td)]);
-  const counts = Object.fromEntries(C.STATUSES.map(s => [s, 0])); camps().forEach(c => counts[c.status] = (counts[c.status] || 0) + 1);
+  const overdueList = liveCamps().map(c => [c, sumOf(c)]).filter(([, s]) => s.overdue.length);
+  const flows = [7, 30, 60].map(d => [d, C.expectedInflows(liveCamps(), pays(), d, td)]);
+  const counts = Object.fromEntries(C.STATUSES.map(s => [s, 0])); liveCamps().forEach(c => counts[c.status] = (counts[c.status] || 0) + 1);
   const maxCount = Math.max(1, ...Object.values(counts));
   const stColor = { Inquiry: 'var(--faint)', Negotiating: 'var(--info)', Confirmed: 'var(--accent)', Filmed: 'var(--accent-2)', Editing: 'var(--warn)', Published: 'var(--good)', Completed: '#0e9a6a', Cancelled: 'var(--bad)' };
   const li = (c, date, sub, extra = '') => `<div class="it" data-act="open-campaign" data-id="${c.id}"><div class="dt">${fmtDate(date, { short: true }).replace(' ', '<b>').replace(/$/, '</b>')}</div><div class="mn"><div class="b">${esc(c.brand)}</div><div class="small muted">${sub}</div></div>${extra}</div>`;
@@ -1082,11 +1085,13 @@ function monthlyChart() {
 VIEWS_R.campaigns = () => {
   const f = UI.camp; const q = C.norm(f.q);
   const all = camps();
-  const counts = { active: 0, all: all.length }; C.STATUSES.forEach(s => counts[s] = 0);
-  all.forEach(c => { counts[c.status]++; if (!['Completed', 'Cancelled'].includes(c.status)) counts.active++; });
+  const counts = { active: 0, all: all.length, archived: 0 }; C.STATUSES.forEach(s => counts[s] = 0);
+  all.forEach(c => { if (c.archived) { counts.archived++; return; } counts[c.status]++; if (!['Completed', 'Cancelled'].includes(c.status)) counts.active++; });
   let rows = all.map(c => [c, sumOf(c)]).filter(([c, s]) => {
+    if (f.status === 'archived') { if (!c.archived) return false; }
+    else if (f.status !== 'all' && c.archived) return false;
     if (f.status === 'active' && ['Completed', 'Cancelled'].includes(c.status)) return false;
-    if (!['active', 'all'].includes(f.status) && c.status !== f.status) return false;
+    if (!['active', 'all', 'archived'].includes(f.status) && c.status !== f.status) return false;
     if (f.platform && !(c.platforms || []).includes(f.platform)) return false;
     if (f.cur && c.currency !== f.cur) return false;
     if (f.pay === 'overdue' && !s.overdue.length) return false;
@@ -1109,7 +1114,7 @@ VIEWS_R.campaigns = () => {
     <span style="flex:1"></span>
     <select class="inp" style="width:auto" data-cf="sort">${opts([['film_desc', t('s_film_desc')], ['film_asc', t('s_film_asc')], ['due', t('s_due')], ['out', t('s_out')], ['fee', t('s_fee')], ['brand', t('s_brand')], ['updated', t('s_updated')]], f.sort)}</select>
   </div>
-  <div class="chips" style="margin-bottom:14px">${[['active', t('active')], ...C.STATUSES.map(s => [s, tStatus(s)]), ['all', t('all')]].map(([k, l]) => `<span class="chip ${f.status === k ? 'on' : ''}" data-act="camp-status" data-v="${k}">${l} <span style="opacity:.6">${counts[k] ?? 0}</span></span>`).join('')}</div>
+  <div class="chips" style="margin-bottom:14px">${[['active', t('active')], ...C.STATUSES.map(s => [s, tStatus(s)]), ['archived', '🗄 ' + t('archived')], ['all', t('all')]].map(([k, l]) => `<span class="chip ${f.status === k ? 'on' : ''}" data-act="camp-status" data-v="${k}">${l} <span style="opacity:.6">${counts[k] ?? 0}</span></span>`).join('')}</div>
   ${rows.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr>
     <th>${t('brand')}</th><th>${t('status')}</th><th class="hide-m">${t('platform')}</th><th>${t('filming')}</th><th class="num">${t('fee')}</th><th class="hide-m" style="min-width:130px">${t('received')}</th><th class="num">${t('outstanding')}</th><th class="hide-m">${t('next_due')}</th><th></th></tr></thead><tbody>
     ${rows.map(([c, s]) => `<tr data-act="open-campaign" data-id="${c.id}">
@@ -1240,6 +1245,7 @@ function openCampaign(id) {
   const d = drawer(`<header><button class="btn icon ghost" data-dclose>${ic('x')}</button><h2>${esc(c.brand)}</h2>${statusPill(c.status)}</header>
   <div class="body">
     <div class="issue remote-note" style="display:none"><b>↻</b><div>${t('remote_changed')} <button class="btn sm" data-act="reload-drawer">${t('reload')}</button></div></div>
+    ${c.archived ? `<div class="issue"><b>🗄</b><div style="flex:1">${t('archived_note')}</div><button class="btn sm" data-act="unarchive" data-id="${c.id}">${t('unarchive')}</button></div>` : ''}
     ${fl.length ? `<div class="stack">${fl.map(f => `<div class="issue"><b>⚑</b><div style="flex:1">${t('fl_' + f)}</div><button class="btn sm" data-act="resolve-flag" data-id="${c.id}" data-f="${f}">${t('mark_resolved')}</button></div>`).join('')}</div>` : ''}
     <div class="card"><h3>${t('money')}</h3><div id="d-money" class="stack">${moneyBlock(c)}</div></div>
     <div class="card"><h3>${t('payments')}<span class="sp"></span></h3><div id="d-pays">${paymentRows(c)}</div></div>
@@ -1323,6 +1329,7 @@ async function saveCampaignDrawer(d) {
   if (changed.status === 'Published' && !out.actPubDate) toast(t('hint_pubdate'));
   try { await put('campaigns', id, changed); DRAWER.dirty = false; toast(t('toast_saved')); closeDrawer(); } catch {}
 }
+ACT['unarchive'] = async el => { await put('campaigns', el.dataset.id, { archived: false }); toast(t('toast_saved')); closeDrawer(); };
 ACT['reload-drawer'] = () => { const id = DRAWER?.id; DRAWER = null; closeDrawer(); openCampaign(id); };
 ACT['resolve-flag'] = async el => { const c = S.data.campaigns[el.dataset.id] || S.data.expenses[el.dataset.id]; const coll = S.data.campaigns[el.dataset.id] ? 'campaigns' : 'expenses';
   await put(coll, c.id, { resolvedFlags: [...(c.resolvedFlags || []), el.dataset.f] }); el.closest('.issue').remove(); toast(t('toast_resolved')); };
@@ -1504,7 +1511,7 @@ VIEWS_R.payments = () => {
   const tabs = [['recv', t('tab_recv')], ['tx', t('tab_tx')], ['land', '🏦 ' + t('tab_land')]];
   let body = '';
   if (tab === 'recv') {
-    const rows = camps().filter(c => c.status !== 'Cancelled').map(c => [c, sumOf(c)]).filter(([c, s]) => s.outstanding || s.fee === null || s.overdue.length)
+    const rows = liveCamps().filter(c => c.status !== 'Cancelled').map(c => [c, sumOf(c)]).filter(([c, s]) => s.outstanding || s.fee === null || s.overdue.length)
       .sort((a, b) => (b[1].overdue.length - a[1].overdue.length) || ((a[1].due?.date || '9') > (b[1].due?.date || '9') ? 1 : -1));
     body = rows.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('brand')}</th><th class="num">${t('fee')}</th><th class="num hide-m">${t('received')}</th><th class="num">${t('outstanding')}</th><th class="hide-m">${t('deposit')}</th><th>${t('next_due')}</th><th></th></tr></thead><tbody>
       ${rows.map(([c, s]) => `<tr data-act="open-campaign" data-id="${c.id}"><td><div class="b">${esc(c.brand)}</div><div class="small muted">${tStatus(c.status)}</div></td>
@@ -1524,7 +1531,7 @@ VIEWS_R.payments = () => {
     ${ps.map(p => `<tr data-act="edit-payment" data-id="${p.id}"><td class="nowrap small">${p.date ? fmtDate(p.date) : `<span class="flag">${t('date_unknown')}</span>`}</td><td>${esc(S.data.campaigns[p.campaignId]?.brand || t('deleted_camp'))}</td><td><span class="pill">${t('pt_' + p.type)}</span></td><td class="num b">${F(Number(p.amount), p.currency)}</td><td class="hide-m small">${p.via ? t('via_' + p.via) : '—'}</td><td>${landPill(p)}</td><td class="hide-m small muted">${esc(p.note || '')}</td></tr>`).join('')}</tbody></table></div>` : `<div class="card empty">${t('no_payments')}</div>`}`;
   }
   if (tab === 'land') {
-    const ps = pays(); const sel = UI.landSel;
+    const ps = pays().filter(p => !p.archived); const sel = UI.landSel;
     const held = ps.filter(p => p.landStatus === 'held'), transit = ps.filter(p => p.landStatus === 'transit'), unk = ps.filter(p => !p.landStatus || p.landStatus === 'unknown');
     const sumC = a => { const z = C.zero(); a.forEach(p => C.addTo(z, p.currency, Number(p.amount))); return z; };
     const trs = list('transfers').sort((a, b) => b.date > a.date ? 1 : -1);
@@ -1655,7 +1662,7 @@ VIEWS_R.finance = () => {
     const ctx = { recordRate: c.fxToKrw, date: C.contractDate(c), rates: rates() };
     if (C.inRange(C.contractDate(c), r)) { if (s.fee === null) unknownFee++; else { C.addTo(signed, c.currency, s.fee); note('signed', C.toKRW(s.fee, c.currency, ctx)); }
       if (c.taxAmountKrw) { tax += Number(c.taxAmountKrw); if (c.taxPaid) taxPaid += Number(c.taxAmountKrw); } }
-    if (s.outstanding) { C.addTo(recvb, c.currency, s.outstanding); note('recvb', C.toKRW(s.outstanding, c.currency, { ...ctx, date: td })); }
+    if (s.outstanding && !c.archived) { C.addTo(recvb, c.currency, s.outstanding); note('recvb', C.toKRW(s.outstanding, c.currency, { ...ctx, date: td })); }
   }
   for (const p of pays()) { const inR = p.date ? C.inRange(p.date, r) : UI.period === 'all'; if (!inR) continue; C.addTo(recv, p.currency, Number(p.amount)); note('recv', paymentKRW(p)); if (p.type === 'deposit') { C.addTo(dep, p.currency, Number(p.amount)); note('dep', paymentKRW(p)); } }
   for (const e of list('expenses')) if (C.expenseInRange(e, r)) { C.addTo(exp, e.currency, Number(e.amount) || 0); note('exp', expenseKRW(e)); }
@@ -1855,11 +1862,11 @@ VIEWS_R.setup = () => {
       <div class="field full"><label>${t('accounts')}</label><input class="inp" data-sf="accounts" value="${esc(st.accounts.join(', '))}" placeholder="${t('accounts_ph')}"></div>
       <div class="field full"><label>${t('platforms')}</label><input class="inp" data-sf="platforms" value="${esc(st.platforms.join(', '))}"></div>
     </div><div class="row" style="margin-top:10px"><button class="btn primary" data-act="save-settings">${t('save')}</button></div></div>
-    <div class="card"><h3>${t('migration')}</h3>${mig ? `<div class="stack small">
+    <div class="card"><h3>${t('migration')}</h3>${mig ? `<details><summary class="small muted" style="cursor:pointer">${t('mig_archived')}</summary><div class="stack small" style="margin-top:8px">
       <div>${t('mig_when', { d: new Date(mig.at).toLocaleString(LANG === 'ko' ? 'ko-KR' : 'en-US') })}</div>
       <div class="row">${Object.entries(mig.counts || {}).map(([k, v]) => `<span class="pill acc">${esc(k)}: ${v}</span>`).join('')}</div>
       ${(mig.issues || []).map(i => `<div class="issue"><b>⚑</b><div>${esc(LANG === 'ko' && i.ko ? i.ko : i.en)}</div></div>`).join('')}
-      <div class="hint">${esc(LANG === 'ko' && mig.noteKo ? mig.noteKo : mig.note || '')}</div></div>` : `<div class="hint">${t('mig_none')}</div>`}</div>
+      <div class="hint">${esc(LANG === 'ko' && mig.noteKo ? mig.noteKo : mig.note || '')}</div></div></details>` : `<div class="hint">${t('mig_none')}</div>`}</div>
   </div>
   <div class="card" style="margin-top:14px"><h3>⚑ ${t('review_queue')} <span class="faint">(${fc.length + fe.length})</span></h3>
     ${fc.length + fe.length ? `<div class="list">${fc.map(c => `<div class="it" data-act="open-campaign" data-id="${c.id}"><div class="mn"><div class="b">🎬 ${esc(c.brand)}</div><div class="small muted">${flagsOf(c).map(f => t('fl_' + f)).join(' · ')}</div></div></div>`).join('')}${fe.map(e => `<div class="it" data-act="edit-expense" data-id="${e.id}"><div class="mn"><div class="b">🧾 ${esc(e.name)}</div><div class="small muted">${flagsOf(e).map(f => t('fl_' + f)).join(' · ')}</div></div></div>`).join('')}</div>` : `<div class="hint">${t('review_empty')}</div>`}
