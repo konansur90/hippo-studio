@@ -126,6 +126,16 @@
   const SB_URL = "https://zdeadziwaylwnlbibptk.supabase.co";
   const SB_KEY = "sb_publishable_OsIYBg-UgXKdbz4H5yCBcg_UN5WS17P";
   const SHORTCUT = "Health Dashboard";
+  const BUILD = "2026-11-10.2";   // bump on every release; the page reloads itself when a newer one is published
+  async function checkForUpdate() {
+    try {
+      const html = await (await fetch(location.pathname + "?v=" + Date.now(), { cache: "no-store" })).text();
+      const m = html.match(/const BUILD = "([^"]+)"/);
+      if (m && m[1] !== BUILD) { const k = "healthReloadedFor"; if (sessionStorage.getItem(k) !== m[1]) { sessionStorage.setItem(k, m[1]); location.reload(); } }
+    } catch (e) {}
+  }
+  checkForUpdate();
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") checkForUpdate(); });
   const STALE_MIN = 20;          // auto-sync when data is older than this
   const sb = supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, autoRefreshToken: true, storageKey: "hippo-auth" } });
   const $ = (id) => document.getElementById(id);
