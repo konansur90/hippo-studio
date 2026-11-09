@@ -366,7 +366,7 @@ const CORE = (() => {
   }
   const inRange = (iso, r) => !!iso && iso >= r.from && iso <= r.to;
   // Campaign attribution date for "contracted revenue"
-  const contractDate = c => c.bookingDate || (c.reportMonth ? c.reportMonth + '-01' : null) || c.filmDate || null;
+  const contractDate = c => (c.reportMonth ? c.reportMonth + '-01' : null) || c.filmDate || c.bookingDate || null;
   // Expense attribution: reporting month first, then date
   const expenseDate = e => e.reportMonth ? e.reportMonth + '-01' : e.date || null;
   const expenseInRange = (e, r) => {
