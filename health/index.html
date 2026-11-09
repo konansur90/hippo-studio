@@ -61,7 +61,16 @@
   .err{color:var(--bad);font-size:13px;min-height:1em}
   .hidden{display:none!important}
   .seg{display:flex;background:var(--surface-2);border-radius:12px;padding:3px;gap:3px;position:sticky;top:calc(env(safe-area-inset-top) + 6px);z-index:5;box-shadow:var(--shadow)}
-  .seg button{flex:1;border:0;background:transparent;color:var(--muted);font:600 14px Inter,system-ui;padding:8px 0;border-radius:9px;cursor:pointer}
+  .seg button{flex:1;border:0;background:transparent;color:var(--muted);font:600 14px Inter,system-ui;padding:8px 0;border-radius:9px;cursor:pointer;min-width:0}
+  .today-list{display:flex;flex-direction:column}
+  .trow{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:12px 0;border-bottom:1px solid var(--border)}
+  .trow:last-child{border-bottom:0}
+  .trow .n{font-weight:600}
+  .trow .v{font-size:22px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+  .trow .v small{font-size:13px;font-weight:500;color:var(--muted)}
+  .trow .avg{grid-column:1 / -1;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+  .trow .bar{grid-column:1 / -1;height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden}
+  .trow .bar i{display:block;height:100%;border-radius:3px}
   .seg button.on{background:var(--surface);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.12)}
   .banner{background:var(--surface-2);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--muted)}
 </style>
@@ -96,9 +105,12 @@
     </div>
 
     <div class="seg" id="seg" role="tablist" aria-label="Chart range">
-      <button data-r="30">30 days</button><button data-r="90">3 months</button><button data-r="365">1 year</button><button data-r="all">All</button>
+      <button data-r="today">Today</button><button data-r="7">1W</button><button data-r="30">1M</button><button data-r="90">3M</button><button data-r="365">1Y</button><button data-r="all">All</button>
     </div>
 
+    <div class="card hidden" id="todayCard"><h2>Today</h2><p class="sub">So far today, compared with your average over the previous 7 days</p><div class="today-list" id="todayList"></div></div>
+
+    <div id="rangeCharts" style="display:flex;flex-direction:column;gap:18px">
     <div class="card"><h2>Sleep <span class="rl"></span></h2><p class="sub sleepSub"></p>
       <ul class="legend"><li><i style="background:var(--c1)"></i>Deep</li><li><i style="background:var(--c2)"></i>REM</li><li><i style="background:var(--c3)"></i>Core</li><li><i style="background:var(--mutedbar)"></i>No stage data</li></ul>
       <div class="chart" id="sleepChart"></div></div>
@@ -110,7 +122,8 @@
       <div class="card"><h2>HRV <span class="rl"></span></h2><p class="sub">ms · higher usually means better recovery</p><div class="chart" id="hrvChart"></div></div>
     </div>
 
-    <div class="card"><h2>Weight <span class="rl"></span></h2><p class="sub" id="weightSub"></p><div class="chart" id="weightChart"></div></div>
+    <div class="card"><h2>Weight <span id="wrl"></span></h2><p class="sub" id="weightSub"></p><div class="chart" id="weightChart"></div></div>
+    </div>
 
     <div class="card"><h2>Recent workouts</h2><p class="sub" id="wkSub"></p>
       <div class="tw"><table><thead><tr><th>Date</th><th>Workout</th><th class="num">Min</th><th class="num">kcal</th><th class="num">Avg HR</th></tr></thead><tbody id="wkBody"></tbody></table></div></div>
@@ -126,7 +139,7 @@
   const SB_URL = "https://zdeadziwaylwnlbibptk.supabase.co";
   const SB_KEY = "sb_publishable_OsIYBg-UgXKdbz4H5yCBcg_UN5WS17P";
   const SHORTCUT = "Health Dashboard";
-  const BUILD = "2026-11-10.3";   // bump on every release; the page reloads itself when a newer one is published
+  const BUILD = "2026-11-10.4";   // bump on every release; the page reloads itself when a newer one is published
   async function checkForUpdate() {
     try {
       const html = await (await fetch(location.pathname + "?v=" + Date.now(), { cache: "no-store" })).text();
@@ -146,9 +159,9 @@
   const hm = (h) => { const t = Math.round(h * 60); return Math.floor(t / 60) + "h " + String(t % 60).padStart(2, "0") + "m"; };
   let DATA = { summary: null, daily: [], workouts: [], weight: [] };
   let polling = null;
-  const RANGES = { "30": { days: 30, label: "· last 30 days" }, "90": { days: 90, label: "· last 3 months" }, "365": { days: 365, label: "· last year" }, "all": { days: 3650, label: "· all time" } };
-  let range = "30"; try { range = localStorage.getItem("healthRange") || "30"; } catch (e) {}
-  if (!RANGES[range]) range = "30";
+  const RANGES = { "today": { days: 8, label: "· today" }, "7": { days: 7, label: "· last 7 days" }, "30": { days: 30, label: "· last 30 days" }, "90": { days: 90, label: "· last 3 months" }, "365": { days: 365, label: "· last year" }, "all": { days: 3650, label: "· all time" } };
+  let range = "7"; try { range = localStorage.getItem("healthRange") || "7"; } catch (e) {}
+  if (!RANGES[range]) range = "7";
   document.querySelectorAll("#seg button").forEach((b) => {
     b.classList.toggle("on", b.dataset.r === range);
     b.onclick = async () => { range = b.dataset.r; try { localStorage.setItem("healthRange", range); } catch (e) {}
@@ -235,6 +248,11 @@
     chg($("k_hrv_c"), s.hrv_change != null ? +s.hrv_change : null, (v) => fmt1(v) + " ms", true);
 
     document.querySelectorAll(".rl").forEach((e) => (e.textContent = RANGES[range].label));
+    $("wrl").textContent = RANGES[range].days < 90 ? "· last 3 months" : RANGES[range].label;
+    const isToday = range === "today";
+    $("todayCard").classList.toggle("hidden", !isToday);
+    $("rangeCharts").classList.toggle("hidden", isToday);
+    if (isToday) { renderToday(); return; }
     let daily = DATA.daily.map((r) => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, k === "day" || v == null ? v : +v])));
     if (range === "all") { const first = daily.findIndex((r) => Object.keys(r).some((k) => k !== "day" && k !== "unstaged_hr" && r[k] != null)); daily = first > 0 ? daily.slice(first) : daily; }
     const weekly = daily.length > 100;
@@ -250,7 +268,7 @@
     line($("rhrChart"), rows.map((r) => ({ x: parseDay(r.day), y: r.resting_hr })), css("--c4"), "bpm", weekly);
     line($("hrvChart"), rows.map((r) => ({ x: parseDay(r.day), y: r.hrv_ms })), css("--c5"), "ms", weekly);
     const wt = DATA.weight.map((r) => ({ x: parseDay(r.day), y: +r.kg, fat: r.fat_pct }));
-    if (wt.length) { line($("weightChart"), wt, css("--c1"), "kg", wt.length && (wt[wt.length - 1].x - wt[0].x) / 864e5 > 100); $("weightSub").textContent = `${wt.length} weigh-ins${range === "30" ? " · last 3 months (weigh-ins are sparse)" : ""}`; }
+    if (wt.length) { line($("weightChart"), wt, css("--c1"), "kg", wt.length && (wt[wt.length - 1].x - wt[0].x) / 864e5 > 100); $("weightSub").textContent = `${wt.length} weigh-ins`; }
     else empty($("weightChart"), "No weigh-ins in this period.");
 
     $("wkSub").textContent = s.workouts_7d != null ? `${s.workouts_7d} in the last 7 days` : "";
@@ -261,6 +279,44 @@
       const tr = tb.insertRow();
       [[wf(new Date(w.started_at)), ""], [w.name || "—", ""], [w.duration_min != null ? fmt0(w.duration_min) : "—", "num"], [w.active_kcal != null ? fmt0(w.active_kcal) : "—", "num"], [w.avg_hr != null ? fmt0(w.avg_hr) : "—", "num"]]
         .forEach(([t, c]) => { const td = tr.insertCell(); td.textContent = t; if (c) td.className = c; });
+    });
+  }
+
+  // Today vs the previous 7 days
+  function renderToday() {
+    const d = DATA.daily.map((r) => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, k === "day" || v == null ? v : +v])));
+    const today = d[d.length - 1] || {}, prev = d.slice(0, -1);
+    const avg = (k) => { const v = prev.map((r) => r[k]).filter((x) => x != null); return v.length ? d3.mean(v) : null; };
+    const items = [
+      { n: "Steps", k: "steps", f: fmt0, u: "", c: "--c4", up: true },
+      { n: "Active energy", k: "active_kcal", f: fmt0, u: "kcal", c: "--c2", up: true },
+      { n: "Exercise", k: "exercise_min", f: fmt0, u: "min", c: "--c3", up: true },
+      { n: "Sleep last night", k: "sleep_hr", f: (v) => hm(v), u: "", c: "--c1", up: true },
+      { n: "Resting heart rate", k: "resting_hr", f: fmt0, u: "bpm", c: "--c4", up: false, noBar: true },
+      { n: "HRV", k: "hrv_ms", f: fmt0, u: "ms", c: "--c5", up: true, noBar: true },
+    ];
+    const list = $("todayList"); list.replaceChildren();
+    items.forEach((it) => {
+      const v = today[it.k], a = avg(it.k);
+      const row = document.createElement("div"); row.className = "trow";
+      const n = document.createElement("div"); n.className = "n"; n.textContent = it.n;
+      const val = document.createElement("div"); val.className = "v";
+      val.textContent = v != null ? it.f(v) : "—";
+      if (v != null && it.u) { const sm = document.createElement("small"); sm.textContent = " " + it.u; val.appendChild(sm); }
+      const av = document.createElement("div"); av.className = "avg";
+      if (a == null) av.textContent = "No 7-day average yet";
+      else {
+        let t = "7-day avg " + it.f(a) + (it.u ? " " + it.u : "");
+        if (v != null && !it.noBar) t += " · " + Math.round((v / a) * 100) + "% of your usual";
+        if (v != null && it.noBar) { const diff = v - a; t += " · " + (Math.abs(diff) < 0.5 ? "same as usual" : (diff > 0 ? "+" : "−") + fmt1(Math.abs(diff)) + " " + it.u); av.classList.add((diff > 0) === it.up ? "good" : Math.abs(diff) < 0.5 ? "x" : "bad"); }
+        av.textContent = t;
+      }
+      row.append(n, val, av);
+      if (!it.noBar && a) {
+        const bar = document.createElement("div"); bar.className = "bar"; const i = document.createElement("i");
+        i.style.width = Math.min(100, ((v || 0) / a) * 100) + "%"; i.style.background = css(it.c); bar.appendChild(i); row.appendChild(bar);
+      }
+      list.appendChild(row);
     });
   }
 
@@ -318,7 +374,7 @@
     el.replaceChildren();
     const pts = raw.filter((p) => p.y != null && !isNaN(p.y));
     if (!pts.length) return empty(el, "No data in this period.");
-    const W = Math.max(200, el.clientWidth), H = 160, m = { t: 10, r: 8, b: 22, l: 0 };
+    const W = Math.max(200, el.clientWidth), H = 160, m = { t: 10, r: 14, b: 22, l: 0 };
     const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
     const ext = d3.extent(pts, (p) => p.y), pad = Math.max(1, (ext[1] - ext[0]) * 0.15);
     const y = d3.scaleLinear().domain([ext[0] - pad, ext[1] + pad]).nice(4).range([H - m.b, m.t]);
