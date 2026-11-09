@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Health</title>
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Health">
+<meta name="theme-color" content="#e2344e"><link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f7fb; --surface:#fff; --surface-2:#f1f3f9; --border:#e3e6ef;
+    --text:#14161f; --muted:#646a7e; --faint:#9aa0b3;
+    --accent:#e2344e; --good:#12a36b; --bad:#d6455d;
+    --c1:#4f7cff; --c2:#e8743b; --c3:#2fa37a; --c4:#e2344e; --c5:#8a63ff; --mutedbar:#c9cdd8;
+    --grid:#eceef4; --shadow:0 1px 2px rgba(20,22,40,.04),0 4px 16px rgba(20,22,40,.05); --r:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0e1017; --surface:#161923; --surface-2:#1d212e; --border:#2a2f3e; --text:#eceef5; --muted:#9aa1b5; --faint:#646b80;
+      --good:#3ccf8e; --bad:#ff6b81; --c1:#6f93ff; --c2:#ff8f5a; --c3:#4cc497; --c4:#ff5c74; --c5:#a58bff; --mutedbar:#3a4052; --grid:#232838; --shadow:none; }
+  }
+  *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+  body{padding:calc(env(safe-area-inset-top) + 14px) 16px calc(env(safe-area-inset-bottom) + 28px)}
+  .wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+  header{display:flex;align-items:center;gap:12px}
+  header img{width:40px;height:40px;border-radius:10px}
+  header h1{font-size:26px;margin:0;font-weight:700;letter-spacing:-.02em;flex:1}
+  .btn{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:999px;padding:8px 14px;font:600 14px Inter,system-ui;cursor:pointer}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .sync{color:var(--muted);font-size:13px;margin:-8px 0 0}
+  .take{font-size:16px;line-height:1.5;margin:0}
+  .take b{font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  @media (max-width:560px){ .grid.stack{grid-template-columns:1fr} }
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);min-width:0}
+  .lbl{color:var(--muted);font-size:13px;margin:0}
+  .big{font-size:32px;font-weight:700;letter-spacing:-.02em;margin:6px 0 4px;font-variant-numeric:tabular-nums}
+  .big small{font-size:14px;font-weight:500;color:var(--muted)}
+  .chg{font-size:13px;margin:0;color:var(--muted);font-variant-numeric:tabular-nums}
+  .good{color:var(--good)} .bad{color:var(--bad)}
+  h2{font-size:17px;margin:0 0 4px;font-weight:600}
+  .sub{color:var(--muted);font-size:13px;margin:0 0 10px}
+  .chart{position:relative;min-height:170px}
+  .chart svg text{fill:var(--muted);font-size:11px;font-family:Inter,system-ui}
+  .chart .grid line{stroke:var(--grid)}
+  .tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:6px 9px;font-size:12px;box-shadow:0 6px 20px rgba(0,0,0,.15);white-space:nowrap;z-index:2}
+  .tip .d{color:var(--muted)}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:0 0 8px;padding:0;list-style:none}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+  th{text-align:left;color:var(--muted);font-weight:500;font-size:12px;padding:6px 8px 6px 0;border-bottom:1px solid var(--border)}
+  td{padding:9px 8px 9px 0;border-bottom:1px solid var(--border);white-space:nowrap}
+  .num{text-align:right}
+  .tw{overflow-x:auto}
+  .empty{color:var(--muted);font-size:13px;padding:14px 0}
+  .login{max-width:360px;margin:12vh auto 0;display:flex;flex-direction:column;gap:12px;text-align:center}
+  .login input{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:12px;padding:12px 14px;font:16px Inter,system-ui}
+  .err{color:var(--bad);font-size:13px;min-height:1em}
+  .hidden{display:none!important}
+  .banner{background:var(--surface-2);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section id="login" class="login hidden">
+    <img src="icon-192.png" alt="" style="width:72px;height:72px;border-radius:18px;margin:0 auto">
+    <h1 style="margin:0;font-size:24px">Health</h1>
+    <p class="sub">Sign in with your Hippo Studio account.</p>
+    <input id="email" type="email" placeholder="Email" autocomplete="username">
+    <input id="pw" type="password" placeholder="Password" autocomplete="current-password">
+    <button class="btn primary" id="signin">Sign in</button>
+    <div class="err" id="loginErr"></div>
+  </section>
+
+  <section id="app" class="hidden" style="display:flex;flex-direction:column;gap:18px">
+    <header>
+      <img src="icon-192.png" alt="">
+      <h1>Health</h1>
+      <button class="btn" id="syncBtn">Sync</button>
+    </header>
+    <p class="sync" id="syncLine">Loading…</p>
+    <div class="banner hidden" id="syncBanner">Syncing from Apple Health… this page updates by itself when the new numbers arrive.</div>
+    <p class="take" id="take"></p>
+
+    <div class="grid">
+      <div class="card"><p class="lbl">Sleep · latest night</p><p class="big" id="k_sleep">—</p><p class="chg" id="k_sleep_c"></p></div>
+      <div class="card"><p class="lbl">Steps · today so far</p><p class="big" id="k_steps">—</p><p class="chg" id="k_steps_c"></p></div>
+      <div class="card"><p class="lbl">Resting HR · 7-day avg</p><p class="big" id="k_rhr">—</p><p class="chg" id="k_rhr_c"></p></div>
+      <div class="card"><p class="lbl">HRV · 7-day avg</p><p class="big" id="k_hrv">—</p><p class="chg" id="k_hrv_c"></p></div>
+    </div>
+
+    <div class="card"><h2>Sleep, last 14 nights</h2>
+      <ul class="legend"><li><i style="background:var(--c1)"></i>Deep</li><li><i style="background:var(--c2)"></i>REM</li><li><i style="background:var(--c3)"></i>Core</li><li><i style="background:var(--mutedbar)"></i>No stage data</li></ul>
+      <div class="chart" id="sleepChart"></div></div>
+
+    <div class="card"><h2>Steps, last 30 days</h2><div class="chart" id="stepsChart"></div></div>
+
+    <div class="grid stack">
+      <div class="card"><h2>Resting HR</h2><p class="sub">bpm · lower usually means better recovery</p><div class="chart" id="rhrChart"></div></div>
+      <div class="card"><h2>HRV</h2><p class="sub">ms · higher usually means better recovery</p><div class="chart" id="hrvChart"></div></div>
+    </div>
+
+    <div class="card"><h2>Weight</h2><p class="sub" id="weightSub">Last 12 months from your scale</p><div class="chart" id="weightChart"></div></div>
+
+    <div class="card"><h2>Recent workouts</h2><p class="sub" id="wkSub"></p>
+      <div class="tw"><table><thead><tr><th>Date</th><th>Workout</th><th class="num">Min</th><th class="num">kcal</th><th class="num">Avg HR</th></tr></thead><tbody id="wkBody"></tbody></table></div></div>
+
+    <p class="sub" style="text-align:center"><a href="#" id="signout" style="color:var(--muted)">Sign out</a></p>
+  </section>
+</div>
+
+<script src="../supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script>
+(() => {
+  const SB_URL = "https://zdeadziwaylwnlbibptk.supabase.co";
+  const SB_KEY = "sb_publishable_OsIYBg-UgXKdbz4H5yCBcg_UN5WS17P";
+  const SHORTCUT = "Health Dashboard";
+  const STALE_MIN = 20;          // auto-sync when data is older than this
+  const RETRY_GAP_MIN = 10;      // don't auto-launch the shortcut more often than this
+  const sb = supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, autoRefreshToken: true, storageKey: "hippo-auth" } });
+  const $ = (id) => document.getElementById(id);
+  const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  const fmt0 = d3.format(",.0f"), fmt1 = d3.format(".1f");
+  const parseDay = d3.utcParse("%Y-%m-%d"), dayLbl = d3.utcFormat("%a %b %-d"), mdLbl = d3.utcFormat("%-m/%-d");
+  const hm = (h) => { const t = Math.round(h * 60); return Math.floor(t / 60) + "h " + String(t % 60).padStart(2, "0") + "m"; };
+  let DATA = { summary: null, daily: [], workouts: [], weight: [] };
+  let polling = null;
+
+  // ---------- auth ----------
+  async function start() {
+    const { data } = await sb.auth.getSession();
+    if (!data.session) return showLogin();
+    showApp(); await load(); maybeAutoSync();
+  }
+  function showLogin() { $("login").classList.remove("hidden"); $("app").classList.add("hidden"); }
+  function showApp() { $("login").classList.add("hidden"); $("app").classList.remove("hidden"); }
+  $("signin").onclick = async () => {
+    $("loginErr").textContent = "";
+    const { error } = await sb.auth.signInWithPassword({ email: $("email").value.trim(), password: $("pw").value });
+    if (error) { $("loginErr").textContent = error.message; return; }
+    showApp(); await load(); maybeAutoSync();
+  };
+  $("signout").onclick = async (e) => { e.preventDefault(); await sb.auth.signOut(); showLogin(); };
+
+  // ---------- data ----------
+  async function load() {
+    const [s, d, w, wt] = await Promise.all([
+      sb.rpc("health_summary"), sb.rpc("health_daily", { days: 30 }), sb.rpc("health_workouts", { n: 10 }), sb.rpc("health_weight", { days: 365 }),
+    ]);
+    const err = s.error || d.error || w.error || wt.error;
+    if (err) { $("syncLine").textContent = /not allowed/.test(err.message) ? "This account can't see the health data." : "Couldn't load: " + err.message; return; }
+    DATA = { summary: s.data || {}, daily: d.data || [], workouts: w.data || [], weight: wt.data || [] };
+    render();
+  }
+  function lastSyncMin() { const t = DATA.summary && DATA.summary.last_sync; return t ? (Date.now() - new Date(t)) / 60000 : Infinity; }
+
+  // ---------- sync via Shortcut ----------
+  function launchShortcut() {
+    try { localStorage.setItem("healthLastLaunch", String(Date.now())); } catch (e) {}
+    const f = document.createElement("iframe"); f.style.display = "none";
+    f.src = "shortcuts://run-shortcut?name=" + encodeURIComponent(SHORTCUT);
+    document.body.appendChild(f); setTimeout(() => f.remove(), 3000);
+    $("syncBanner").classList.remove("hidden");
+    const before = DATA.summary && DATA.summary.last_sync; let tries = 0;
+    clearInterval(polling);
+    polling = setInterval(async () => {
+      tries++; await load();
+      if ((DATA.summary && DATA.summary.last_sync) !== before || tries > 20) { clearInterval(polling); $("syncBanner").classList.add("hidden"); }
+    }, 4000);
+  }
+  function maybeAutoSync() {
+    let last = 0; try { last = +localStorage.getItem("healthLastLaunch") || 0; } catch (e) {}
+    if (lastSyncMin() > STALE_MIN && (Date.now() - last) / 60000 > RETRY_GAP_MIN) launchShortcut();
+  }
+  $("syncBtn").onclick = launchShortcut;
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && !$("app").classList.contains("hidden")) load(); });
+
+  // ---------- render ----------
+  function chg(el, v, unitFmt, goodUp) {
+    el.className = "chg";
+    if (v == null) { el.textContent = "no comparison yet"; return; }
+    const good = goodUp ? v > 0 : v < 0;
+    if (v !== 0) el.classList.add(good ? "good" : "bad");
+    el.textContent = (v === 0 ? "no change" : (v > 0 ? "+" : "−") + unitFmt(Math.abs(v))) + " vs prev 7 days";
+  }
+  function render() {
+    const s = DATA.summary;
+    const ago = (() => { const m = lastSyncMin(); if (!isFinite(m)) return "never"; if (m < 1) return "just now"; if (m < 60) return Math.round(m) + " min ago"; if (m < 1440) return Math.round(m / 60) + " h ago"; return Math.round(m / 1440) + " days ago"; })();
+    $("syncLine").textContent = "Last synced " + ago;
+    const parts = [];
+    if (s.last_sleep_hr != null) parts.push(`Your latest recorded night was <b>${hm(+s.last_sleep_hr)}</b> of sleep.`);
+    if (s.steps_today != null) parts.push(`You're at <b>${fmt0(s.steps_today)}</b> steps today.`);
+    if (s.weight_kg != null) parts.push(`Last weigh-in: <b>${fmt1(s.weight_kg)} kg</b>${s.body_fat != null ? ` at <b>${fmt1(s.body_fat)}%</b> body fat` : ""}.`);
+    $("take").innerHTML = parts.join(" ");
+    $("k_sleep").innerHTML = s.last_sleep_hr != null ? `${fmt1(s.last_sleep_hr)} <small>h</small>` : "—";
+    chg($("k_sleep_c"), s.sleep_change != null ? +s.sleep_change : null, (v) => fmt1(v) + " h", true);
+    $("k_steps").textContent = s.steps_today != null ? fmt0(s.steps_today) : "—";
+    $("k_steps_c").className = "chg"; $("k_steps_c").textContent = s.steps_7d != null ? "7-day avg " + fmt0(s.steps_7d) : "";
+    $("k_rhr").innerHTML = s.rhr_7d != null ? `${fmt1(s.rhr_7d)} <small>bpm</small>` : "—";
+    chg($("k_rhr_c"), s.rhr_change != null ? +s.rhr_change : null, (v) => fmt1(v) + " bpm", false);
+    $("k_hrv").innerHTML = s.hrv_7d != null ? `${fmt1(s.hrv_7d)} <small>ms</small>` : "—";
+    chg($("k_hrv_c"), s.hrv_change != null ? +s.hrv_change : null, (v) => fmt1(v) + " ms", true);
+
+    const daily = DATA.daily.map((r) => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, k === "day" || v == null ? v : +v])));
+    const sleepRows = daily.slice(-14);
+    if (sleepRows.some((r) => r.sleep_hr != null))
+      bars($("sleepChart"), sleepRows, ["deep_hr", "rem_hr", "core_hr", "unstaged_hr"], [css("--c1"), css("--c2"), css("--c3"), css("--mutedbar")], (d) => d + "h",
+        (r) => r.sleep_hr == null ? ["No data"] : [hm(r.sleep_hr) + " asleep"].concat(r.deep_hr != null ? ["Deep " + hm(r.deep_hr) + " · REM " + hm(r.rem_hr || 0) + " · Core " + hm(r.core_hr || 0)] : []));
+    else empty($("sleepChart"), "No sleep recorded in the last 14 nights. Wear your Watch to bed to fill this in.");
+    bars($("stepsChart"), daily, ["steps"], [css("--c4")], d3.format("~s"), (r) => [r.steps == null ? "No data" : fmt0(r.steps) + " steps"]);
+    line($("rhrChart"), daily.map((r) => ({ x: parseDay(r.day), y: r.resting_hr })), css("--c4"), "bpm");
+    line($("hrvChart"), daily.map((r) => ({ x: parseDay(r.day), y: r.hrv_ms })), css("--c5"), "ms");
+    const wt = DATA.weight.map((r) => ({ x: parseDay(r.day), y: +r.kg, fat: r.fat_pct }));
+    if (wt.length) { line($("weightChart"), wt, css("--c1"), "kg", true); $("weightSub").textContent = `Last 12 months · ${wt.length} weigh-ins`; }
+    else empty($("weightChart"), "No weigh-ins in the last 12 months.");
+
+    $("wkSub").textContent = s.workouts_7d != null ? `${s.workouts_7d} in the last 7 days` : "";
+    const tb = $("wkBody"); tb.replaceChildren();
+    if (!DATA.workouts.length) { const tr = tb.insertRow(); const td = tr.insertCell(); td.colSpan = 5; td.className = "empty"; td.textContent = "No workouts yet"; }
+    const wf = d3.timeFormat("%b %-d, %-I:%M %p");
+    DATA.workouts.forEach((w) => {
+      const tr = tb.insertRow();
+      [[wf(new Date(w.started_at)), ""], [w.name || "—", ""], [w.duration_min != null ? fmt0(w.duration_min) : "—", "num"], [w.active_kcal != null ? fmt0(w.active_kcal) : "—", "num"], [w.avg_hr != null ? fmt0(w.avg_hr) : "—", "num"]]
+        .forEach(([t, c]) => { const td = tr.insertCell(); td.textContent = t; if (c) td.className = c; });
+    });
+  }
+
+  // ---------- charts ----------
+  function empty(el, msg) { el.replaceChildren(); const p = document.createElement("p"); p.className = "empty"; p.textContent = msg; el.appendChild(p); }
+  function tipFor(el) {
+    const tip = document.createElement("div"); tip.className = "tip"; tip.hidden = true; el.appendChild(tip);
+    return { show(x, y, title, lines) { tip.replaceChildren(); const d = document.createElement("div"); d.className = "d"; d.textContent = title; tip.appendChild(d);
+      lines.forEach((l) => { const e = document.createElement("div"); e.textContent = l; tip.appendChild(e); }); tip.hidden = false;
+      tip.style.left = Math.max(0, Math.min(el.clientWidth - tip.offsetWidth, x - tip.offsetWidth / 2)) + "px"; tip.style.top = Math.max(0, y - tip.offsetHeight - 8) + "px"; },
+      hide() { tip.hidden = true; } };
+  }
+  function yAxisWidth(svg, scale, fmt) {
+    const g = svg.append("g").call(d3.axisLeft(scale).ticks(4).tickFormat(fmt).tickSize(0));
+    let w = 0; g.selectAll("text").each(function () { w = Math.max(w, this.getComputedTextLength()); }); g.remove(); return w + 8;
+  }
+  function bars(el, rows, keys, colors, fmt, tipLines) {
+    el.replaceChildren();
+    const W = Math.max(260, el.clientWidth), H = 170, m = { t: 8, r: 2, b: 22, l: 0 };
+    const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
+    const total = (r) => keys.reduce((s, k) => s + (r[k] || 0), 0);
+    const y = d3.scaleLinear().domain([0, d3.max(rows, total) || 1]).nice(4).range([H - m.b, m.t]);
+    m.l = yAxisWidth(svg, y, fmt);
+    svg.append("g").attr("class", "grid").selectAll("line").data(y.ticks(4)).join("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y).attr("y2", y);
+    svg.append("g").attr("transform", `translate(${m.l - 4},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(fmt).tickSize(0)).call((g) => g.select(".domain").remove());
+    const x = d3.scaleBand().domain(rows.map((r) => r.day)).range([m.l, W - m.r]).padding(0.25);
+    const every = Math.ceil(rows.length / Math.max(2, Math.floor((W - m.l) / 48)));
+    svg.append("g").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickSize(0).tickPadding(6)
+      .tickValues(rows.map((r) => r.day).filter((d, i) => (rows.length - 1 - i) % every === 0)).tickFormat((d) => mdLbl(parseDay(d)))).call((g) => g.select(".domain").remove());
+    d3.stack().keys(keys).value((r, k) => r[k] || 0)(rows).forEach((layer, i) => {
+      svg.append("g").selectAll("rect").data(layer).join("rect").attr("x", (d) => x(d.data.day)).attr("width", x.bandwidth())
+        .attr("y", (d) => y(d[1])).attr("height", (d) => Math.max(0, y(d[0]) - y(d[1]))).attr("rx", keys.length === 1 ? 3 : 0).style("fill", colors[i]);
+    });
+    const tip = tipFor(el);
+    svg.append("g").selectAll("rect").data(rows).join("rect").attr("x", (d) => x(d.day) - (x.step() * x.padding()) / 2).attr("width", x.step())
+      .attr("y", m.t).attr("height", H - m.b - m.t).style("fill", "transparent")
+      .on("pointerenter pointermove", (ev, d) => tip.show(x(d.day) + x.bandwidth() / 2, y(total(d)), dayLbl(parseDay(d.day)), tipLines(d)))
+      .on("pointerleave", () => tip.hide());
+  }
+  function line(el, raw, color, unit, monthTicks) {
+    el.replaceChildren();
+    const pts = raw.filter((p) => p.y != null && !isNaN(p.y));
+    if (!pts.length) return empty(el, "No data in this period.");
+    const W = Math.max(200, el.clientWidth), H = 160, m = { t: 10, r: 8, b: 22, l: 0 };
+    const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
+    const ext = d3.extent(pts, (p) => p.y), pad = Math.max(1, (ext[1] - ext[0]) * 0.15);
+    const y = d3.scaleLinear().domain([ext[0] - pad, ext[1] + pad]).nice(4).range([H - m.b, m.t]);
+    m.l = yAxisWidth(svg, y, d3.format("d"));
+    svg.append("g").attr("class", "grid").selectAll("line").data(y.ticks(4)).join("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y).attr("y2", y);
+    svg.append("g").attr("transform", `translate(${m.l - 4},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(d3.format("d")).tickSize(0)).call((g) => g.select(".domain").remove());
+    const x = d3.scaleUtc().domain(d3.extent(raw, (p) => p.x)).range([m.l, W - m.r]);
+    svg.append("g").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - m.l) / 70))).tickSize(0).tickPadding(6)
+      .tickFormat(monthTicks ? d3.utcFormat("%b") : mdLbl)).call((g) => g.select(".domain").remove());
+    svg.append("path").datum(pts).attr("fill", "none").attr("stroke-width", 2).style("stroke", color).attr("d", d3.line().x((p) => x(p.x)).y((p) => y(p.y)));
+    svg.append("g").selectAll("circle").data(pts).join("circle").attr("r", 2.5).attr("cx", (p) => x(p.x)).attr("cy", (p) => y(p.y)).style("fill", color);
+    const tip = tipFor(el); const dot = svg.append("circle").attr("r", 5).style("fill", color).attr("opacity", 0);
+    svg.append("rect").attr("x", m.l).attr("y", m.t).attr("width", W - m.l - m.r).attr("height", H - m.t - m.b).style("fill", "transparent")
+      .on("pointerenter pointermove", (ev) => { const t = x.invert(d3.pointer(ev)[0]); const p = pts[d3.leastIndex(pts, (q) => Math.abs(q.x - t))];
+        dot.attr("cx", x(p.x)).attr("cy", y(p.y)).attr("opacity", 1);
+        tip.show(x(p.x), y(p.y), dayLbl(p.x), [fmt1(p.y) + " " + unit].concat(p.fat != null ? [fmt1(p.fat) + "% body fat"] : [])); })
+      .on("pointerleave", () => { tip.hide(); dot.attr("opacity", 0); });
+  }
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => DATA.summary && render(), 150); });
+
+  start();
+})();
+</script>
+</body>
+</html>
