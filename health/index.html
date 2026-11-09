@@ -82,7 +82,7 @@
     <header>
       <img src="icon-192.png" alt="">
       <h1>Health</h1>
-      <button class="btn" id="syncBtn">Sync</button>
+      <a class="btn" id="syncBtn" href="shortcuts://run-shortcut?name=Health%20Dashboard" style="text-decoration:none">Sync</a>
     </header>
     <p class="sync" id="syncLine">Loading…</p>
     <div class="banner hidden" id="syncBanner"></div>
@@ -115,7 +115,7 @@
     <div class="card"><h2>Recent workouts</h2><p class="sub" id="wkSub"></p>
       <div class="tw"><table><thead><tr><th>Date</th><th>Workout</th><th class="num">Min</th><th class="num">kcal</th><th class="num">Avg HR</th></tr></thead><tbody id="wkBody"></tbody></table></div></div>
 
-    <p class="sub" style="text-align:center"><a href="#" id="signout" style="color:var(--muted)">Sign out</a></p>
+    <p class="sub" style="text-align:center"><a href="#" id="signout" style="color:var(--muted)">Sign out</a> · <span id="ver"></span></p>
   </section>
 </div>
 
@@ -126,7 +126,7 @@
   const SB_URL = "https://zdeadziwaylwnlbibptk.supabase.co";
   const SB_KEY = "sb_publishable_OsIYBg-UgXKdbz4H5yCBcg_UN5WS17P";
   const SHORTCUT = "Health Dashboard";
-  const BUILD = "2026-11-10.2";   // bump on every release; the page reloads itself when a newer one is published
+  const BUILD = "2026-11-10.3";   // bump on every release; the page reloads itself when a newer one is published
   async function checkForUpdate() {
     try {
       const html = await (await fetch(location.pathname + "?v=" + Date.now(), { cache: "no-store" })).text();
@@ -135,6 +135,7 @@
     } catch (e) {}
   }
   checkForUpdate();
+  document.getElementById("ver").textContent = "version " + BUILD;
   document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") checkForUpdate(); });
   const STALE_MIN = 20;          // auto-sync when data is older than this
   const sb = supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, autoRefreshToken: true, storageKey: "hippo-auth" } });
@@ -191,7 +192,6 @@
   function launchShortcut() {
     syncStartedAt = Date.now(); syncBefore = DATA.summary && DATA.summary.last_sync;
     banner("Running your Health Dashboard shortcut… come back here when it finishes and the numbers will refresh.");
-    window.location.href = "shortcuts://run-shortcut?name=" + encodeURIComponent(SHORTCUT);
     clearInterval(polling); let tries = 0;
     polling = setInterval(async () => { tries++; await checkSync(); if (!syncStartedAt || tries > 30) clearInterval(polling); }, 4000);
   }
@@ -205,7 +205,7 @@
   function maybeAutoSync() {
     if (lastSyncMin() > STALE_MIN && !syncStartedAt) banner("Data is " + agoText() + " old. Tap Sync to pull the latest from Apple Health.");
   }
-  $("syncBtn").onclick = launchShortcut;
+  $("syncBtn").addEventListener("click", launchShortcut);   // no preventDefault: the tap itself follows the shortcuts:// link
   document.addEventListener("visibilitychange", async () => { if (document.visibilityState === "visible" && !$("app").classList.contains("hidden")) { if (syncStartedAt) await checkSync(); else { await load(); maybeAutoSync(); } } });
 
   // ---------- render ----------
