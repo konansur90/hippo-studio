@@ -60,6 +60,9 @@
   .login input{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:12px;padding:12px 14px;font:16px Inter,system-ui}
   .err{color:var(--bad);font-size:13px;min-height:1em}
   .hidden{display:none!important}
+  .seg{display:flex;background:var(--surface-2);border-radius:12px;padding:3px;gap:3px;position:sticky;top:calc(env(safe-area-inset-top) + 6px);z-index:5;box-shadow:var(--shadow)}
+  .seg button{flex:1;border:0;background:transparent;color:var(--muted);font:600 14px Inter,system-ui;padding:8px 0;border-radius:9px;cursor:pointer}
+  .seg button.on{background:var(--surface);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.12)}
   .banner{background:var(--surface-2);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--muted)}
 </style>
 </head>
@@ -92,18 +95,22 @@
       <div class="card"><p class="lbl">HRV · 7-day avg</p><p class="big" id="k_hrv">—</p><p class="chg" id="k_hrv_c"></p></div>
     </div>
 
-    <div class="card"><h2>Sleep, last 14 nights</h2>
+    <div class="seg" id="seg" role="tablist" aria-label="Chart range">
+      <button data-r="30">30 days</button><button data-r="90">3 months</button><button data-r="365">1 year</button><button data-r="all">All</button>
+    </div>
+
+    <div class="card"><h2>Sleep <span class="rl"></span></h2><p class="sub sleepSub"></p>
       <ul class="legend"><li><i style="background:var(--c1)"></i>Deep</li><li><i style="background:var(--c2)"></i>REM</li><li><i style="background:var(--c3)"></i>Core</li><li><i style="background:var(--mutedbar)"></i>No stage data</li></ul>
       <div class="chart" id="sleepChart"></div></div>
 
-    <div class="card"><h2>Steps, last 30 days</h2><div class="chart" id="stepsChart"></div></div>
+    <div class="card"><h2>Steps <span class="rl"></span></h2><p class="sub" id="stepsSub"></p><div class="chart" id="stepsChart"></div></div>
 
     <div class="grid stack">
-      <div class="card"><h2>Resting HR</h2><p class="sub">bpm · lower usually means better recovery</p><div class="chart" id="rhrChart"></div></div>
-      <div class="card"><h2>HRV</h2><p class="sub">ms · higher usually means better recovery</p><div class="chart" id="hrvChart"></div></div>
+      <div class="card"><h2>Resting HR <span class="rl"></span></h2><p class="sub">bpm · lower usually means better recovery</p><div class="chart" id="rhrChart"></div></div>
+      <div class="card"><h2>HRV <span class="rl"></span></h2><p class="sub">ms · higher usually means better recovery</p><div class="chart" id="hrvChart"></div></div>
     </div>
 
-    <div class="card"><h2>Weight</h2><p class="sub" id="weightSub">Last 12 months from your scale</p><div class="chart" id="weightChart"></div></div>
+    <div class="card"><h2>Weight <span class="rl"></span></h2><p class="sub" id="weightSub"></p><div class="chart" id="weightChart"></div></div>
 
     <div class="card"><h2>Recent workouts</h2><p class="sub" id="wkSub"></p>
       <div class="tw"><table><thead><tr><th>Date</th><th>Workout</th><th class="num">Min</th><th class="num">kcal</th><th class="num">Avg HR</th></tr></thead><tbody id="wkBody"></tbody></table></div></div>
@@ -129,6 +136,14 @@
   const hm = (h) => { const t = Math.round(h * 60); return Math.floor(t / 60) + "h " + String(t % 60).padStart(2, "0") + "m"; };
   let DATA = { summary: null, daily: [], workouts: [], weight: [] };
   let polling = null;
+  const RANGES = { "30": { days: 30, label: "· last 30 days" }, "90": { days: 90, label: "· last 3 months" }, "365": { days: 365, label: "· last year" }, "all": { days: 3650, label: "· all time" } };
+  let range = "30"; try { range = localStorage.getItem("healthRange") || "30"; } catch (e) {}
+  if (!RANGES[range]) range = "30";
+  document.querySelectorAll("#seg button").forEach((b) => {
+    b.classList.toggle("on", b.dataset.r === range);
+    b.onclick = async () => { range = b.dataset.r; try { localStorage.setItem("healthRange", range); } catch (e) {}
+      document.querySelectorAll("#seg button").forEach((x) => x.classList.toggle("on", x === b)); await load(); };
+  });
 
   // ---------- auth ----------
   async function start() {
@@ -149,7 +164,7 @@
   // ---------- data ----------
   async function load() {
     const [s, d, w, wt] = await Promise.all([
-      sb.rpc("health_summary"), sb.rpc("health_daily", { days: 30 }), sb.rpc("health_workouts", { n: 10 }), sb.rpc("health_weight", { days: 365 }),
+      sb.rpc("health_summary"), sb.rpc("health_daily", { days: RANGES[range].days }), sb.rpc("health_workouts", { n: 10 }), sb.rpc("health_weight", { days: Math.max(RANGES[range].days, 90) }),
     ]);
     const err = s.error || d.error || w.error || wt.error;
     if (err) { $("syncLine").textContent = /not allowed/.test(err.message) ? "This account can't see the health data." : "Couldn't load: " + err.message; return; }
@@ -205,18 +220,24 @@
     $("k_hrv").innerHTML = s.hrv_7d != null ? `${fmt1(s.hrv_7d)} <small>ms</small>` : "—";
     chg($("k_hrv_c"), s.hrv_change != null ? +s.hrv_change : null, (v) => fmt1(v) + " ms", true);
 
-    const daily = DATA.daily.map((r) => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, k === "day" || v == null ? v : +v])));
-    const sleepRows = daily.slice(-14);
-    if (sleepRows.some((r) => r.sleep_hr != null))
-      bars($("sleepChart"), sleepRows, ["deep_hr", "rem_hr", "core_hr", "unstaged_hr"], [css("--c1"), css("--c2"), css("--c3"), css("--mutedbar")], (d) => d + "h",
-        (r) => r.sleep_hr == null ? ["No data"] : [hm(r.sleep_hr) + " asleep"].concat(r.deep_hr != null ? ["Deep " + hm(r.deep_hr) + " · REM " + hm(r.rem_hr || 0) + " · Core " + hm(r.core_hr || 0)] : []));
-    else empty($("sleepChart"), "No sleep recorded in the last 14 nights. Wear your Watch to bed to fill this in.");
-    bars($("stepsChart"), daily, ["steps"], [css("--c4")], d3.format("~s"), (r) => [r.steps == null ? "No data" : fmt0(r.steps) + " steps"]);
-    line($("rhrChart"), daily.map((r) => ({ x: parseDay(r.day), y: r.resting_hr })), css("--c4"), "bpm");
-    line($("hrvChart"), daily.map((r) => ({ x: parseDay(r.day), y: r.hrv_ms })), css("--c5"), "ms");
+    document.querySelectorAll(".rl").forEach((e) => (e.textContent = RANGES[range].label));
+    let daily = DATA.daily.map((r) => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, k === "day" || v == null ? v : +v])));
+    if (range === "all") { const first = daily.findIndex((r) => Object.keys(r).some((k) => k !== "day" && k !== "unstaged_hr" && r[k] != null)); daily = first > 0 ? daily.slice(first) : daily; }
+    const weekly = daily.length > 100;
+    const rows = weekly ? toWeeks(daily) : daily;
+    const per = weekly ? "Average per day, by week" : "";
+    document.querySelector(".sleepSub").textContent = weekly ? "Average per night, by week" : "Each night";
+    $("stepsSub").textContent = weekly ? per : "Each day";
+    if (rows.some((r) => r.sleep_hr != null))
+      bars($("sleepChart"), rows, ["deep_hr", "rem_hr", "core_hr", "unstaged_hr"], [css("--c1"), css("--c2"), css("--c3"), css("--mutedbar")], (d) => d + "h",
+        (r) => r.sleep_hr == null ? ["No data"] : [hm(r.sleep_hr) + " asleep" + (weekly ? " (avg)" : "")].concat(r.deep_hr != null ? ["Deep " + hm(r.deep_hr) + " · REM " + hm(r.rem_hr || 0) + " · Core " + hm(r.core_hr || 0)] : []), weekly);
+    else empty($("sleepChart"), "No sleep recorded in this period. Wear your Watch to bed to fill this in.");
+    bars($("stepsChart"), rows, ["steps"], [css("--c4")], d3.format("~s"), (r) => [r.steps == null ? "No data" : fmt0(r.steps) + " steps" + (weekly ? " / day avg" : "")], weekly);
+    line($("rhrChart"), rows.map((r) => ({ x: parseDay(r.day), y: r.resting_hr })), css("--c4"), "bpm", weekly);
+    line($("hrvChart"), rows.map((r) => ({ x: parseDay(r.day), y: r.hrv_ms })), css("--c5"), "ms", weekly);
     const wt = DATA.weight.map((r) => ({ x: parseDay(r.day), y: +r.kg, fat: r.fat_pct }));
-    if (wt.length) { line($("weightChart"), wt, css("--c1"), "kg", true); $("weightSub").textContent = `Last 12 months · ${wt.length} weigh-ins`; }
-    else empty($("weightChart"), "No weigh-ins in the last 12 months.");
+    if (wt.length) { line($("weightChart"), wt, css("--c1"), "kg", wt.length && (wt[wt.length - 1].x - wt[0].x) / 864e5 > 100); $("weightSub").textContent = `${wt.length} weigh-ins${range === "30" ? " · last 3 months (weigh-ins are sparse)" : ""}`; }
+    else empty($("weightChart"), "No weigh-ins in this period.");
 
     $("wkSub").textContent = s.workouts_7d != null ? `${s.workouts_7d} in the last 7 days` : "";
     const tb = $("wkBody"); tb.replaceChildren();
@@ -226,6 +247,20 @@
       const tr = tb.insertRow();
       [[wf(new Date(w.started_at)), ""], [w.name || "—", ""], [w.duration_min != null ? fmt0(w.duration_min) : "—", "num"], [w.active_kcal != null ? fmt0(w.active_kcal) : "—", "num"], [w.avg_hr != null ? fmt0(w.avg_hr) : "—", "num"]]
         .forEach(([t, c]) => { const td = tr.insertCell(); td.textContent = t; if (c) td.className = c; });
+    });
+  }
+
+  // Weekly averages (Monday weeks) for long ranges; null-aware.
+  function toWeeks(daily) {
+    const wk = d3.utcMonday, groups = d3.groups(daily, (r) => d3.utcFormat("%Y-%m-%d")(wk.floor(parseDay(r.day))));
+    const avg = (rs, k) => { const v = rs.map((r) => r[k]).filter((x) => x != null); return v.length ? d3.mean(v) : null; };
+    return groups.map(([day, rs]) => {
+      const o = { day };
+      ["steps", "active_kcal", "exercise_min", "resting_hr", "hrv_ms", "sleep_hr", "deep_hr", "rem_hr", "core_hr"].forEach((k) => (o[k] = avg(rs, k)));
+      const slept = rs.filter((r) => r.sleep_hr != null);
+      o.unstaged_hr = slept.length ? d3.mean(slept, (r) => r.unstaged_hr || 0) : null;
+      if (o.sleep_hr != null && o.deep_hr == null) o.unstaged_hr = o.sleep_hr;
+      return o;
     });
   }
 
@@ -242,9 +277,9 @@
     const g = svg.append("g").call(d3.axisLeft(scale).ticks(4).tickFormat(fmt).tickSize(0));
     let w = 0; g.selectAll("text").each(function () { w = Math.max(w, this.getComputedTextLength()); }); g.remove(); return w + 8;
   }
-  function bars(el, rows, keys, colors, fmt, tipLines) {
+  function bars(el, rows, keys, colors, fmt, tipLines, weekly) {
     el.replaceChildren();
-    const W = Math.max(260, el.clientWidth), H = 170, m = { t: 8, r: 2, b: 22, l: 0 };
+    const W = Math.max(260, el.clientWidth), H = 170, m = { t: 8, r: 12, b: 22, l: 0 };
     const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
     const total = (r) => keys.reduce((s, k) => s + (r[k] || 0), 0);
     const y = d3.scaleLinear().domain([0, d3.max(rows, total) || 1]).nice(4).range([H - m.b, m.t]);
@@ -254,7 +289,7 @@
     const x = d3.scaleBand().domain(rows.map((r) => r.day)).range([m.l, W - m.r]).padding(0.25);
     const every = Math.ceil(rows.length / Math.max(2, Math.floor((W - m.l) / 48)));
     svg.append("g").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickSize(0).tickPadding(6)
-      .tickValues(rows.map((r) => r.day).filter((d, i) => (rows.length - 1 - i) % every === 0)).tickFormat((d) => mdLbl(parseDay(d)))).call((g) => g.select(".domain").remove());
+      .tickValues(rows.map((r) => r.day).filter((d, i) => (rows.length - 1 - i) % every === 0)).tickFormat((d) => (weekly && rows.length > 30 ? d3.utcFormat("%b") : mdLbl)(parseDay(d)))).call((g) => g.select(".domain").remove());
     d3.stack().keys(keys).value((r, k) => r[k] || 0)(rows).forEach((layer, i) => {
       svg.append("g").selectAll("rect").data(layer).join("rect").attr("x", (d) => x(d.data.day)).attr("width", x.bandwidth())
         .attr("y", (d) => y(d[1])).attr("height", (d) => Math.max(0, y(d[0]) - y(d[1]))).attr("rx", keys.length === 1 ? 3 : 0).style("fill", colors[i]);
@@ -262,7 +297,7 @@
     const tip = tipFor(el);
     svg.append("g").selectAll("rect").data(rows).join("rect").attr("x", (d) => x(d.day) - (x.step() * x.padding()) / 2).attr("width", x.step())
       .attr("y", m.t).attr("height", H - m.b - m.t).style("fill", "transparent")
-      .on("pointerenter pointermove", (ev, d) => tip.show(x(d.day) + x.bandwidth() / 2, y(total(d)), dayLbl(parseDay(d.day)), tipLines(d)))
+      .on("pointerenter pointermove", (ev, d) => tip.show(x(d.day) + x.bandwidth() / 2, y(total(d)), (weekly ? "Week of " : "") + dayLbl(parseDay(d.day)), tipLines(d)))
       .on("pointerleave", () => tip.hide());
   }
   function line(el, raw, color, unit, monthTicks) {
@@ -278,7 +313,7 @@
     svg.append("g").attr("transform", `translate(${m.l - 4},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(d3.format("d")).tickSize(0)).call((g) => g.select(".domain").remove());
     const x = d3.scaleUtc().domain(d3.extent(raw, (p) => p.x)).range([m.l, W - m.r]);
     svg.append("g").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - m.l) / 70))).tickSize(0).tickPadding(6)
-      .tickFormat(monthTicks ? d3.utcFormat("%b") : mdLbl)).call((g) => g.select(".domain").remove());
+      .tickFormat((() => { const span = (x.domain()[1] - x.domain()[0]) / 864e5; return span > 540 ? d3.utcFormat("%Y") : span > 100 || monthTicks ? d3.utcFormat("%b") : mdLbl; })())).call((g) => g.select(".domain").remove());
     svg.append("path").datum(pts).attr("fill", "none").attr("stroke-width", 2).style("stroke", color).attr("d", d3.line().x((p) => x(p.x)).y((p) => y(p.y)));
     svg.append("g").selectAll("circle").data(pts).join("circle").attr("r", 2.5).attr("cx", (p) => x(p.x)).attr("cy", (p) => y(p.y)).style("fill", color);
     const tip = tipFor(el); const dot = svg.append("circle").attr("r", 5).style("fill", color).attr("opacity", 0);
