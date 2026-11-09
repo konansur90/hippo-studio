@@ -85,7 +85,7 @@
       <button class="btn" id="syncBtn">Sync</button>
     </header>
     <p class="sync" id="syncLine">Loading…</p>
-    <div class="banner hidden" id="syncBanner">Syncing from Apple Health… this page updates by itself when the new numbers arrive.</div>
+    <div class="banner hidden" id="syncBanner"></div>
     <p class="take" id="take"></p>
 
     <div class="grid">
@@ -127,7 +127,6 @@
   const SB_KEY = "sb_publishable_OsIYBg-UgXKdbz4H5yCBcg_UN5WS17P";
   const SHORTCUT = "Health Dashboard";
   const STALE_MIN = 20;          // auto-sync when data is older than this
-  const RETRY_GAP_MIN = 10;      // don't auto-launch the shortcut more often than this
   const sb = supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, autoRefreshToken: true, storageKey: "hippo-auth" } });
   const $ = (id) => document.getElementById(id);
   const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
@@ -171,28 +170,33 @@
     DATA = { summary: s.data || {}, daily: d.data || [], workouts: w.data || [], weight: wt.data || [] };
     render();
   }
+  function agoText() { const m = lastSyncMin(); if (!isFinite(m)) return "never"; if (m < 1) return "just now"; if (m < 60) return Math.round(m) + " min"; if (m < 1440) return Math.round(m / 60) + " h"; return Math.round(m / 1440) + " days"; }
   function lastSyncMin() { const t = DATA.summary && DATA.summary.last_sync; return t ? (Date.now() - new Date(t)) / 60000 : Infinity; }
 
   // ---------- sync via Shortcut ----------
+  // iOS only lets a home-screen web app open Shortcuts from a direct tap, so syncing starts from the Sync button.
+  // The shortcut runs, you come back here, and the page reloads its numbers when it becomes visible again.
+  let syncStartedAt = 0, syncBefore = null;
+  function banner(msg) { const b = $("syncBanner"); b.textContent = msg || ""; b.classList.toggle("hidden", !msg); }
   function launchShortcut() {
-    try { localStorage.setItem("healthLastLaunch", String(Date.now())); } catch (e) {}
-    const f = document.createElement("iframe"); f.style.display = "none";
-    f.src = "shortcuts://run-shortcut?name=" + encodeURIComponent(SHORTCUT);
-    document.body.appendChild(f); setTimeout(() => f.remove(), 3000);
-    $("syncBanner").classList.remove("hidden");
-    const before = DATA.summary && DATA.summary.last_sync; let tries = 0;
-    clearInterval(polling);
-    polling = setInterval(async () => {
-      tries++; await load();
-      if ((DATA.summary && DATA.summary.last_sync) !== before || tries > 20) { clearInterval(polling); $("syncBanner").classList.add("hidden"); }
-    }, 4000);
+    syncStartedAt = Date.now(); syncBefore = DATA.summary && DATA.summary.last_sync;
+    banner("Running your Health Dashboard shortcut… come back here when it finishes and the numbers will refresh.");
+    window.location.href = "shortcuts://run-shortcut?name=" + encodeURIComponent(SHORTCUT);
+    clearInterval(polling); let tries = 0;
+    polling = setInterval(async () => { tries++; await checkSync(); if (!syncStartedAt || tries > 30) clearInterval(polling); }, 4000);
+  }
+  async function checkSync() {
+    if (!syncStartedAt) return;
+    await load();
+    const now = DATA.summary && DATA.summary.last_sync;
+    if (now && now !== syncBefore) { syncStartedAt = 0; banner(""); return; }
+    if (Date.now() - syncStartedAt > 120000) { syncStartedAt = 0; banner("No new data arrived. Open the Shortcuts app and run Health Dashboard to see if it shows an error."); }
   }
   function maybeAutoSync() {
-    let last = 0; try { last = +localStorage.getItem("healthLastLaunch") || 0; } catch (e) {}
-    if (lastSyncMin() > STALE_MIN && (Date.now() - last) / 60000 > RETRY_GAP_MIN) launchShortcut();
+    if (lastSyncMin() > STALE_MIN && !syncStartedAt) banner("Data is " + agoText() + " old. Tap Sync to pull the latest from Apple Health.");
   }
   $("syncBtn").onclick = launchShortcut;
-  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && !$("app").classList.contains("hidden")) load(); });
+  document.addEventListener("visibilitychange", async () => { if (document.visibilityState === "visible" && !$("app").classList.contains("hidden")) { if (syncStartedAt) await checkSync(); else { await load(); maybeAutoSync(); } } });
 
   // ---------- render ----------
   function chg(el, v, unitFmt, goodUp) {
@@ -204,8 +208,8 @@
   }
   function render() {
     const s = DATA.summary;
-    const ago = (() => { const m = lastSyncMin(); if (!isFinite(m)) return "never"; if (m < 1) return "just now"; if (m < 60) return Math.round(m) + " min ago"; if (m < 1440) return Math.round(m / 60) + " h ago"; return Math.round(m / 1440) + " days ago"; })();
-    $("syncLine").textContent = "Last synced " + ago;
+    const ago = agoText();
+    $("syncLine").textContent = "Last synced " + (ago === "never" || ago === "just now" ? ago : ago + " ago");
     const parts = [];
     if (s.last_sleep_hr != null) parts.push(`Your latest recorded night was <b>${hm(+s.last_sleep_hr)}</b> of sleep.`);
     if (s.steps_today != null) parts.push(`You're at <b>${fmt0(s.steps_today)}</b> steps today.`);
