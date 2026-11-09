@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cloud Timer</title>
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Cloud Timer">
+<meta name="theme-color" content="#5b5bf0"><link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f7fb; --surface:#ffffff; --surface-2:#f1f3f9; --border:#e3e6ef;
+    --text:#14161f; --muted:#646a7e; --faint:#9aa0b3;
+    --accent:#5b5bf0; --accent-2:#7c5cff; --accent-soft:#ececff;
+    --good:#12a36b; --good-soft:#e3f7ee; --warn:#d98a00; --warn-soft:#fff3db;
+    --night:#7c5cff; --night-soft:#ececff; --track:#e8eaf3;
+    --shadow:0 1px 2px rgba(20,22,40,.04),0 4px 16px rgba(20,22,40,.05);
+    --shadow-lg:0 12px 40px rgba(20,22,40,.18);
+    --r:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e1017; --surface:#161923; --surface-2:#1d212e; --border:#2a2f3e;
+      --text:#eceef5; --muted:#9aa1b5; --faint:#646b80;
+      --accent:#8b8bff; --accent-2:#a58bff; --accent-soft:#25264a;
+      --good:#3fd197; --good-soft:#123326; --warn:#f2b23c; --warn-soft:#3a2c0f;
+      --night:#a58bff; --night-soft:#25264a; --track:#232736;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+      --shadow-lg:0 12px 40px rgba(0,0,0,.5);
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;-webkit-tap-highlight-color:transparent}
+  body{padding:calc(16px + env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom))}
+  .wrap{max-width:440px;margin:0 auto}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .logo{width:38px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:grid;place-items:center;font-size:17px;box-shadow:0 4px 12px rgba(91,91,240,.35)}
+  header h1{font-size:18px;margin:0;font-weight:700;letter-spacing:-.2px}
+  .icon-btn{background:var(--surface);border:1px solid var(--border);color:var(--text);box-shadow:var(--shadow);
+    border-radius:10px;padding:8px 12px;font-size:14px;font-weight:550;font-family:inherit;cursor:pointer}
+  .ring-box{position:relative;width:250px;height:250px;margin:14px auto 6px}
+  .ring-box svg{width:100%;height:100%;transform:rotate(-90deg)}
+  .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .big{font-size:50px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-1px}
+  .sub{color:var(--muted);font-size:14px;margin-top:8px}
+  .status{text-align:center;font-size:15px;font-weight:600;margin:4px 0 16px;min-height:22px}
+  .main-btn{display:block;width:100%;text-align:center;text-decoration:none;font-family:inherit;
+    border:none;border-radius:var(--r);padding:17px;font-size:17px;font-weight:700;cursor:pointer;color:#fff}
+  .go{background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 18px rgba(91,91,240,.35)}
+  .wait{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent)}
+  .nightc{background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+  .ghost{background:transparent;border:1px solid var(--border);color:var(--muted);font-weight:550;font-size:14px;padding:12px;margin-top:10px;box-shadow:none}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px;box-shadow:var(--shadow)}
+  .card.accent{background:linear-gradient(135deg,var(--accent),var(--accent-2));border:none;color:#fff}
+  .card.accent .k,.card.accent .n{color:rgba(255,255,255,.8)}
+  .card .k{color:var(--muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+  .card .v{font-size:24px;font-weight:700;margin-top:4px;font-variant-numeric:tabular-nums}
+  .card .n{color:var(--muted);font-size:12px;margin-top:2px}
+  .wide{grid-column:1 / -1}
+  .bars{display:flex;align-items:flex-end;gap:6px;height:90px;margin-top:10px}
+  .bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+  .bar i{display:block;width:100%;background:var(--accent-soft);border-radius:5px 5px 2px 2px;min-height:2px}
+  .bar.today i{background:linear-gradient(180deg,var(--accent-2),var(--accent))}
+  .bar span{font-size:11px;color:var(--muted);margin-top:4px}
+  .bar b{font-size:11px;color:var(--text);font-weight:600;margin-bottom:3px}
+  .log{list-style:none;padding:0;margin:8px 0 0;font-size:14px}
+  .log li{display:flex;justify-content:space-between;padding:7px 0;border-top:1px solid var(--border)}
+  .log li:first-child{border-top:none}
+  .tag{font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px}
+  .t-ok{background:var(--good-soft);color:var(--good)} .t-early{background:var(--warn-soft);color:var(--warn)} .t-night{background:var(--night-soft);color:var(--night)}
+  .note{color:var(--faint);font-size:12px;text-align:center;margin-top:12px;line-height:1.5}
+  .overlay{position:fixed;inset:0;background:rgba(10,12,24,.5);display:none;align-items:flex-end;justify-content:center;z-index:10}
+  .overlay.show{display:flex}
+  .sheet{background:var(--surface);border-top-left-radius:20px;border-top-right-radius:20px;width:100%;max-width:480px;box-shadow:var(--shadow-lg);
+    padding:20px 18px calc(24px + env(safe-area-inset-bottom));max-height:90vh;overflow:auto}
+  .sheet h2{margin:0 0 6px;font-size:19px}
+  .sheet p{color:var(--muted);font-size:14px;line-height:1.5;margin:6px 0 14px}
+  label.f{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--border);font-size:15px}
+  label.f input{background:var(--surface-2);border:1px solid var(--border);color:var(--text);border-radius:9px;padding:8px;width:110px;font-size:15px;font-family:inherit;text-align:right}
+  ol.steps{padding-left:20px;font-size:14px;line-height:1.6;color:var(--text)}
+  ol.steps li{margin-bottom:6px}
+  code{background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:1px 6px;font-size:13px;font-weight:600}
+  #night{position:fixed;inset:0;background:#07070d;color:#5d5f78;display:none;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:30px;z-index:5}
+  #night.show{display:flex}
+  #night .moon{font-size:46px;opacity:.55}
+  #night h2{color:#8a8cb0;font-weight:600;font-size:24px;margin:16px 0 8px}
+  #night p{font-size:16px;line-height:1.6;max-width:300px;margin:0 0 6px}
+  #night .wins{color:#6f62b8;font-size:14px;margin-top:14px}
+  #night button{margin-top:40px;background:transparent;border:1px solid #1e1f2e;color:#3c3e52;border-radius:12px;padding:12px 18px;font-size:13px;font-family:inherit}
+  .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%);
+    background:var(--text);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:20;box-shadow:var(--shadow-lg)}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="logo">☁️</div><h1>Cloud Timer</h1></div>
+    <div>
+      <button class="icon-btn" id="setupBtn">iPhone setup</button>
+      <button class="icon-btn" id="settingsBtn">⚙︎</button>
+    </div>
+  </header>
+
+  <div class="ring-box">
+    <svg viewBox="0 0 120 120">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--accent-2)"/></linearGradient></defs><circle cx="60" cy="60" r="52" fill="none" stroke="var(--track)" stroke-width="9"/>
+      <circle id="ring" cx="60" cy="60" r="52" fill="none" stroke="url(#g)" stroke-width="9" stroke-linecap="round"
+        stroke-dasharray="326.73" stroke-dashoffset="0"/>
+    </svg>
+    <div class="ring-center">
+      <div class="big" id="clock">--:--</div>
+      <div class="sub" id="clockSub"></div>
+    </div>
+  </div>
+  <div class="status" id="status"></div>
+
+  <a class="main-btn go" id="vapeBtn" href="#">I vaped</a>
+  <button class="main-btn ghost" id="undoBtn" style="display:none">Undo last entry</button>
+
+  <div class="grid">
+    <div class="card accent"><div class="k">Today</div><div class="v" id="sToday">0</div><div class="n" id="sTodayN"></div></div>
+    <div class="card"><div class="k">Interval</div><div class="v" id="sInt">50m</div><div class="n" id="sIntN"></div></div>
+    <div class="card"><div class="k">Clean nights</div><div class="v" id="sNights">0</div><div class="n" id="sNightsN">in a row</div></div>
+    <div class="card"><div class="k">Early today</div><div class="v" id="sEarly">0</div><div class="n">before the timer</div></div>
+    <div class="card wide"><div class="k">Last 7 days</div><div class="bars" id="bars"></div></div>
+    <div class="card wide"><div class="k">Today's log</div><ul class="log" id="log"></ul></div>
+  </div>
+  <div class="note" id="syncNote"></div>
+</div>
+
+<!-- Night lock -->
+<div id="night">
+  <div class="moon">☾</div>
+  <h2>It's night.</h2>
+  <p>The vape can wait until morning.</p>
+  <p>Go back to bed.</p>
+  <div class="wins" id="nightWins"></div>
+  <button id="nightVape">I vaped anyway</button>
+</div>
+
+<!-- Early confirm -->
+<div class="overlay" id="earlySheet">
+  <div class="sheet">
+    <h2>Timer's not done yet</h2>
+    <p id="earlyText"></p>
+    <a class="main-btn wait" id="earlyConfirm" href="#">Log it anyway</a>
+    <button class="main-btn ghost" id="earlyCancel">I'll wait</button>
+  </div>
+</div>
+
+<!-- Night vape confirm -->
+<div class="overlay" id="nightSheet">
+  <div class="sheet">
+    <h2>Log a night vape?</h2>
+    <p>That'll end tonight's clean-night streak. No timer gets set at night, so nothing will wake you.</p>
+    <button class="main-btn nightc" id="nightConfirm">Log it</button>
+    <button class="main-btn ghost" id="nightCancel">Back to bed</button>
+  </div>
+</div>
+
+<!-- Settings -->
+<div class="overlay" id="settingsSheet">
+  <div class="sheet">
+    <h2>Settings</h2>
+    <p>The gap between vapes grows by the step every few days, starting from your start date.</p>
+    <label class="f">Starting interval (min)<input type="number" id="fStart" min="5" max="600"></label>
+    <label class="f">Add each step (min)<input type="number" id="fStep" min="0" max="120"></label>
+    <label class="f">Step every (days)<input type="number" id="fEvery" min="1" max="60"></label>
+    <label class="f">Max interval (min)<input type="number" id="fMax" min="10" max="1440"></label>
+    <label class="f">Night lock starts<input type="time" id="fNs"></label>
+    <label class="f">Night lock ends<input type="time" id="fNe"></label>
+    <label class="f">Shortcut name<input type="text" id="fName" style="width:150px;text-align:left"></label>
+    <button class="main-btn go" id="saveSettings" style="margin-top:14px">Save</button>
+    <button class="main-btn ghost" id="restartPlan">Restart taper from today</button>
+    <button class="main-btn ghost" id="closeSettings">Close</button>
+  </div>
+</div>
+
+<!-- Setup -->
+<div class="overlay" id="setupSheet">
+  <div class="sheet">
+    <h2>One-time iPhone setup</h2>
+    <p>This lets the "I vaped" button start a real Clock timer, so your phone alerts you even when this page is closed.</p>
+    <ol class="steps">
+      <li>Open the <b>Shortcuts</b> app and tap <b>+</b>.</li>
+      <li>Rename the shortcut to <code id="setupName">Cloud Timer</code> (exactly).</li>
+      <li>Add the action <b>Get Numbers from Input</b>. Leave its input as <b>Shortcut Input</b>.</li>
+      <li>Add the action <b>Start Timer</b>. Tap the time, choose the <b>Numbers</b> variable, and set the unit to <b>minutes</b>.</li>
+      <li>Tap <b>Done</b>. Then press <b>Test</b> below. Your Clock app should start a 1-minute timer.</li>
+    </ol>
+    <a class="main-btn go" id="testBtn" href="#">Test (1-minute timer)</a>
+        <button class="main-btn ghost" id="closeSetup">Close</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+  const MIN = 60000, DAY = 86400000;
+  const DEFAULTS = { start:50, step:5, every:3, max:240, nightStart:"00:00", nightEnd:"07:00", shortcut:"Cloud Timer" };
+  let state = { settings:{...DEFAULTS}, planStart: startOfDay(Date.now()), log:[] };
+
+  // ---------- helpers ----------
+  function startOfDay(t){ const d = new Date(t); d.setHours(0,0,0,0); return d.getTime(); }
+  function hm(s){ const [h,m] = String(s||"0:0").split(":").map(Number); return (h||0)*60 + (m||0); }
+  function fmtTime(t){ const d=new Date(t); return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"); }
+  function fmtDur(ms){
+    ms = Math.max(0, ms); const s = Math.ceil(ms/1000);
+    const h = Math.floor(s/3600), m = Math.floor((s%3600)/60), ss = s%60;
+    return h ? h+":"+String(m).padStart(2,"0")+":"+String(ss).padStart(2,"0") : m+":"+String(ss).padStart(2,"0");
+  }
+  function $(id){ return document.getElementById(id); }
+  function toast(msg){ const t=$("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove("show"),2200); }
+
+  function inNight(t){
+    const s = state.settings, d = new Date(t), m = d.getHours()*60 + d.getMinutes();
+    const a = hm(s.nightStart), b = hm(s.nightEnd);
+    if (a === b) return false;
+    return a < b ? (m >= a && m < b) : (m >= a || m < b);
+  }
+  // The night window (start,end timestamps) that begins at or after time t
+  function nextNightStart(t){
+    const a = hm(state.settings.nightStart); const d = new Date(t); d.setHours(Math.floor(a/60), a%60, 0, 0);
+    if (d.getTime() <= t) d.setDate(d.getDate()+1);
+    return d.getTime();
+  }
+  function intervalMin(t){
+    const s = state.settings;
+    const days = Math.max(0, Math.floor((startOfDay(t) - state.planStart) / DAY));
+    const steps = Math.floor(days / Math.max(1, s.every));
+    return Math.min(s.max, s.start + steps * s.step);
+  }
+  function nextStepDate(t){
+    const s = state.settings;
+    const days = Math.max(0, Math.floor((startOfDay(t) - state.planStart) / DAY));
+    const nextSteps = Math.floor(days / Math.max(1, s.every)) + 1;
+    return state.planStart + nextSteps * Math.max(1, s.every) * DAY;
+  }
+  function lastEntry(){ return state.log.length ? state.log[state.log.length-1] : null; }
+  function shortcutUrl(min){
+    return "shortcuts://run-shortcut?name=" + encodeURIComponent(state.settings.shortcut) + "&input=text&text=" + encodeURIComponent(String(min));
+  }
+
+  // ---------- storage ----------
+  function saveLocal(){ try{ localStorage.setItem("vapeTimerState", JSON.stringify(state)); }catch(e){} }
+  function loadLocal(){
+    try{ const raw = localStorage.getItem("vapeTimerState"); if (raw) return JSON.parse(raw); }catch(e){}
+    return null;
+  }
+  function applyLoaded(obj){
+    if (!obj || typeof obj !== "object") return;
+    state = {
+      settings: { ...DEFAULTS, ...(obj.settings||{}) },
+      planStart: typeof obj.planStart === "number" ? obj.planStart : state.planStart,
+      log: Array.isArray(obj.log) ? obj.log.filter(e => e && typeof e.t === "number") : []
+    };
+    if (state.settings.shortcut === "Vape Timer") state.settings.shortcut = "Cloud Timer";
+  }
+  function save(){ saveLocal(); }
+  // ---------- actions ----------
+  function addEntry(kind){
+    const now = Date.now();
+    state.log.push({ t: now, kind });
+    // keep ~120 days
+    const cutoff = now - 120*DAY;
+    state.log = state.log.filter(e => e.t >= cutoff);
+    save(); render();
+  }
+  // Decide what the main button does right now; returns {min, timerOk}
+  function timerPlan(now){
+    const min = intervalMin(now);
+    const end = now + min*MIN;
+    const timerOk = end < nextNightStart(now);
+    return { min, timerOk };
+  }
+  function prepareLink(el){
+    const p = timerPlan(Date.now());
+    el.href = p.timerOk ? shortcutUrl(p.min) : "#";
+    return p;
+  }
+
+  // ---------- render ----------
+  const RING = 326.73;
+  function render(){
+    const now = Date.now();
+    const night = inNight(now);
+    $("night").classList.toggle("show", night);
+
+    const iv = intervalMin(now);
+    const last = lastEntry();
+    const btn = $("vapeBtn");
+    let remain = 0;
+    if (last) remain = last.t + intervalMin(last.t)*MIN - now;
+
+    if (!last){
+      $("clock").textContent = "Ready";
+      $("clockSub").textContent = "Tap below after your next vape";
+      $("status").textContent = ""; setRing(1, "url(#g)");
+      btn.className = "main-btn go"; btn.textContent = "I vaped";
+    } else if (remain > 0){
+      $("clock").textContent = fmtDur(remain);
+      $("clockSub").textContent = "until " + fmtTime(last.t + intervalMin(last.t)*MIN);
+      $("status").innerHTML = '<span style="color:var(--accent)">Wait for the timer</span>';
+      setRing(1 - remain/(intervalMin(last.t)*MIN), "url(#g)");
+      btn.className = "main-btn wait"; btn.textContent = "I vaped (early)";
+    } else {
+      $("clock").textContent = "+" + fmtDur(-remain);
+      $("clockSub").textContent = "past your timer";
+      $("status").innerHTML = '<span style="color:var(--good)">Allowed now · every extra minute counts</span>';
+      setRing(1, "var(--good)");
+      btn.className = "main-btn go"; btn.textContent = "I vaped";
+    }
+    prepareLink(btn);
+    $("undoBtn").style.display = last && now - last.t < 10*MIN ? "block" : "none";
+
+    // stats
+    const today0 = startOfDay(now);
+    const today = state.log.filter(e => e.t >= today0);
+    $("sToday").textContent = today.length;
+    const y0 = today0 - DAY;
+    const yCount = state.log.filter(e => e.t >= y0 && e.t < today0).length;
+    $("sTodayN").textContent = "yesterday: " + yCount;
+    $("sInt").textContent = iv + "m";
+    $("sIntN").textContent = iv >= state.settings.max ? "at your max" :
+      "→ " + Math.min(state.settings.max, iv + state.settings.step) + "m on " + new Date(nextStepDate(now)).toLocaleDateString(undefined,{month:"short",day:"numeric"});
+    $("sEarly").textContent = today.filter(e => e.kind === "early").length;
+    const streak = cleanNightStreak(now);
+    $("sNights").textContent = streak;
+    $("nightWins").textContent = streak ? streak + " clean night" + (streak>1?"s":"") + " in a row. Keep it going." : "Make tonight the first clean night.";
+
+    // bars
+    const bars = $("bars"); bars.innerHTML = "";
+    const counts = [];
+    for (let i=6;i>=0;i--){
+      const d0 = today0 - i*DAY, d1 = d0 + DAY;
+      counts.push({ d:d0, c: state.log.filter(e => e.t>=d0 && e.t<d1).length, today: i===0 });
+    }
+    const mx = Math.max(1, ...counts.map(x=>x.c));
+    counts.forEach(x=>{
+      const el = document.createElement("div"); el.className = "bar" + (x.today ? " today" : "");
+      const lab = new Date(x.d).toLocaleDateString(undefined,{weekday:"short"}).slice(0,2);
+      el.innerHTML = "<b>"+(x.c||"")+"</b><i style='height:"+(x.c/mx*70)+"%'></i><span>"+lab+"</span>";
+      bars.appendChild(el);
+    });
+
+    // log
+    const ul = $("log"); ul.innerHTML = "";
+    if (!today.length){ ul.innerHTML = "<li style='color:var(--muted)'>Nothing yet today</li>"; }
+    today.slice().reverse().forEach(e=>{
+      const li = document.createElement("li");
+      const i = state.log.indexOf(e), prev = i > 0 ? state.log[i-1] : null;
+      let okLabel = "on time";
+      if (prev){
+        const over = Math.floor((e.t - (prev.t + intervalMin(prev.t)*MIN)) / MIN);
+        if (over >= 1) okLabel = "+" + (over >= 60 ? Math.floor(over/60) + "h " + (over%60) + "m" : over + "m") + " extra";
+      }
+      const tag = e.kind==="early" ? "<span class='tag t-early'>early</span>" : e.kind==="night" ? "<span class='tag t-night'>night</span>" : "<span class='tag t-ok'>" + okLabel + "</span>";
+      li.innerHTML = "<span>"+fmtTime(e.t)+"</span>"+tag; ul.appendChild(li);
+    });
+  }
+  function setRing(frac, color){
+    const r = $("ring"); r.style.stroke = color;
+    r.setAttribute("stroke-dashoffset", String(RING * (1 - Math.max(0, Math.min(1, frac)))));
+  }
+  // Count consecutive finished nights (most recent first) with no night entries, since plan start
+  function cleanNightStreak(now){
+    const s = state.settings, a = hm(s.nightStart), b = hm(s.nightEnd);
+    if (a === b) return 0;
+    let streak = 0;
+    // walk back over night windows that have ended
+    let endDay = new Date(now); endDay.setHours(Math.floor(b/60), b%60, 0, 0);
+    if (endDay.getTime() > now) endDay.setDate(endDay.getDate()-1);
+    const firstLog = state.log.length ? state.log[0].t : now;
+    const earliest = Math.max(state.planStart, startOfDay(firstLog));
+    for (let i=0;i<365;i++){
+      const end = endDay.getTime();
+      const len = ((b - a + 1440) % 1440) * MIN;
+      const start = end - len;
+      if (start < earliest) break;
+      const hit = state.log.some(e => e.t >= start && e.t < end);
+      if (hit) break;
+      streak++;
+      endDay.setDate(endDay.getDate()-1);
+    }
+    return streak;
+  }
+
+  // ---------- events ----------
+  function afterLog(p, kind){
+    addEntry(kind);
+    if (p.timerOk) toast("Logged. Starting a " + p.min + "-min iPhone timer…");
+    else toast("Logged. Night lock starts before your next one, so no timer tonight.");
+  }
+  $("vapeBtn").addEventListener("click", function(ev){
+    const now = Date.now(), last = lastEntry();
+    const early = last && (last.t + intervalMin(last.t)*MIN > now);
+    if (early){
+      ev.preventDefault();
+      const remain = last.t + intervalMin(last.t)*MIN - now;
+      $("earlyText").textContent = "You've got " + fmtDur(remain) + " left. Most cravings pass in a few minutes. Want to try waiting?";
+      prepareLink($("earlyConfirm"));
+      $("earlySheet").classList.add("show");
+      return;
+    }
+    const p = prepareLink(this);
+    if (!p.timerOk) ev.preventDefault();
+    afterLog(p, "ok");
+  });
+  $("earlyConfirm").addEventListener("click", function(ev){
+    const p = prepareLink(this);
+    if (!p.timerOk) ev.preventDefault();
+    $("earlySheet").classList.remove("show");
+    afterLog(p, "early");
+  });
+  $("earlyCancel").onclick = ()=>{ $("earlySheet").classList.remove("show"); toast("Nice. Hold on."); };
+
+  $("nightVape").onclick = ()=> $("nightSheet").classList.add("show");
+  $("nightCancel").onclick = ()=> $("nightSheet").classList.remove("show");
+  $("nightConfirm").onclick = ()=>{ $("nightSheet").classList.remove("show"); addEntry("night"); toast("Logged. Tomorrow night's a fresh start."); };
+
+  $("undoBtn").onclick = ()=>{ state.log.pop(); save(); render(); toast("Removed the last entry"); };
+
+  function fillSettings(){
+    const s = state.settings;
+    $("fStart").value = s.start; $("fStep").value = s.step; $("fEvery").value = s.every; $("fMax").value = s.max;
+    $("fNs").value = s.nightStart; $("fNe").value = s.nightEnd; $("fName").value = s.shortcut;
+  }
+  $("settingsBtn").onclick = ()=>{ fillSettings(); $("settingsSheet").classList.add("show"); };
+  $("closeSettings").onclick = ()=> $("settingsSheet").classList.remove("show");
+  $("saveSettings").onclick = ()=>{
+    const n = (id, d)=>{ const v = parseInt($(id).value,10); return isFinite(v) && v>=0 ? v : d; };
+    const s = state.settings;
+    s.start = Math.max(5, n("fStart", s.start)); s.step = n("fStep", s.step);
+    s.every = Math.max(1, n("fEvery", s.every)); s.max = Math.max(s.start, n("fMax", s.max));
+    s.nightStart = $("fNs").value || s.nightStart; s.nightEnd = $("fNe").value || s.nightEnd;
+    s.shortcut = ($("fName").value || "").trim() || DEFAULTS.shortcut;
+    $("setupName").textContent = s.shortcut;
+    save(); render(); $("settingsSheet").classList.remove("show"); toast("Settings saved");
+  };
+  $("restartPlan").onclick = ()=>{ state.planStart = startOfDay(Date.now()); save(); render(); toast("Taper restarts from today"); };
+
+  $("setupBtn").onclick = ()=>{ $("setupName").textContent = state.settings.shortcut; $("testBtn").href = shortcutUrl(1); $("setupSheet").classList.add("show"); };
+  $("closeSetup").onclick = ()=> $("setupSheet").classList.remove("show");
+  document.querySelectorAll(".overlay").forEach(o => o.addEventListener("click", e => { if (e.target === o) o.classList.remove("show"); }));
+
+  // ---------- start ----------
+  applyLoaded(loadLocal());
+  render();
+  setInterval(render, 1000);
+  document.addEventListener("visibilitychange", ()=>{ if (!document.hidden) render(); });
+  $("syncNote").textContent = "Saved on this phone";
+  try{ navigator.storage && navigator.storage.persist && navigator.storage.persist(); }catch(e){}
+  if ("serviceWorker" in navigator){ navigator.serviceWorker.register("sw.js").catch(()=>{}); }
+})();
+</script>
+</body>
+</html>
