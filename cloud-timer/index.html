@@ -197,7 +197,9 @@
       <li>Add the action <b>Start Timer</b>. Tap the time, choose the <b>Numbers</b> variable, and set the unit to <b>minutes</b>.</li>
       <li>Tap <b>Done</b>. Then press <b>Test</b> below. Your Clock app should start a 1-minute timer.</li>
     </ol>
-    <a class="main-btn go" id="testBtn" href="#">Test (1-minute timer)</a>
+    <a class="main-btn go" id="testBtn" href="#">Test A (1-minute timer)</a>
+    <a class="main-btn ghost" id="testBtnB" href="#" style="color:var(--accent);border-color:var(--accent)">Test B (1-minute timer)</a>
+    <p style="margin-top:12px">Try both. Whichever one stays in Cloud Timer instead of jumping to the Shortcuts app becomes the one the app uses.</p>
         <button class="main-btn ghost" id="closeSetup">Close</button>
   </div>
 </div>
@@ -208,7 +210,7 @@
 (function(){
   "use strict";
   const MIN = 60000, DAY = 86400000;
-  const DEFAULTS = { start:50, step:5, every:3, max:240, nightStart:"00:00", nightEnd:"07:00", shortcut:"Cloud Timer" };
+  const DEFAULTS = { start:50, step:5, every:3, max:240, nightStart:"00:00", nightEnd:"07:00", shortcut:"Cloud Timer", launch:"frame" };
   let state = { settings:{...DEFAULTS}, planStart: startOfDay(Date.now()), log:[] };
 
   // ---------- helpers ----------
@@ -250,6 +252,14 @@
   function lastEntry(){ return state.log.length ? state.log[state.log.length-1] : null; }
   function shortcutUrl(min){
     return "shortcuts://run-shortcut?name=" + encodeURIComponent(state.settings.shortcut) + "&input=text&text=" + encodeURIComponent(String(min));
+  }
+
+  // Launch the shortcut. "frame" loads the link in a hidden frame (like the Claude-hosted version did); "link" opens it directly.
+  function launch(url){
+    if (!url || url === "#") return;
+    if (state.settings.launch === "link"){ window.location.href = url; return; }
+    const f = document.createElement("iframe"); f.style.display = "none"; f.src = url;
+    document.body.appendChild(f); setTimeout(()=>f.remove(), 3000);
   }
 
   // ---------- storage ----------
@@ -413,13 +423,15 @@
       $("earlySheet").classList.add("show");
       return;
     }
+    ev.preventDefault();
     const p = prepareLink(this);
-    if (!p.timerOk) ev.preventDefault();
+    if (p.timerOk) launch(this.href);
     afterLog(p, "ok");
   });
   $("earlyConfirm").addEventListener("click", function(ev){
+    ev.preventDefault();
     const p = prepareLink(this);
-    if (!p.timerOk) ev.preventDefault();
+    if (p.timerOk) launch(this.href);
     $("earlySheet").classList.remove("show");
     afterLog(p, "early");
   });
@@ -450,7 +462,9 @@
   };
   $("restartPlan").onclick = ()=>{ state.planStart = startOfDay(Date.now()); save(); render(); toast("Taper restarts from today"); };
 
-  $("setupBtn").onclick = ()=>{ $("setupName").textContent = state.settings.shortcut; $("testBtn").href = shortcutUrl(1); $("setupSheet").classList.add("show"); };
+  $("setupBtn").onclick = ()=>{ $("setupName").textContent = state.settings.shortcut; $("testBtn").href = shortcutUrl(1); $("testBtnB").href = shortcutUrl(1); $("setupSheet").classList.add("show"); };
+  $("testBtn").addEventListener("click", function(ev){ ev.preventDefault(); state.settings.launch = "frame"; save(); launch(shortcutUrl(1)); toast("Using method A"); });
+  $("testBtnB").addEventListener("click", function(ev){ ev.preventDefault(); state.settings.launch = "link"; save(); launch(shortcutUrl(1)); toast("Using method B"); });
   $("closeSetup").onclick = ()=> $("setupSheet").classList.remove("show");
   document.querySelectorAll(".overlay").forEach(o => o.addEventListener("click", e => { if (e.target === o) o.classList.remove("show"); }));
 
